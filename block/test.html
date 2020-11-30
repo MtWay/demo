@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>测试</title>
+		<style type="text/css">
+			.danbao {
+				width: 100px;
+				height: 100px;
+				background: #f00;
+			}
+			
+			.address {
+				width: 100px;
+				height: 100px;
+				background: #ff0;
+			}
+			body{overflow: hidden;}
+			input::-webkit-input-placeholder {
+				color: #f00;
+			}
+			
+			input:-moz-placeholder {
+				color: #999;
+			}
+			
+			input::-moz-placeholder {
+				color: #999;
+			}
+			
+			input:-ms-input-placeholder {
+				color: #666;
+			}
+			
+			input::-webkit-input-placeholder {
+				color: #f00;
+			}
+			
+			input {
+				color: #00f;
+			}
+			
+			:-moz-placeholder {
+				color: #909;
+			}
+			
+			::-moz-placeholder {
+				color: #909;
+			}
+			
+			:-ms-input-placeholder {
+				color: #909;
+			}
+			.box{width: 100px;background: #f00;height: 100px;}
+			.box:after{content: "";display: block;width: 100px;height: 100px;background: #00f;top: 100px;position:relative;}
+			.box:hover .son{opacity: 1;display: block;}
+			.son{width: 100px;height: 100px;background: #0f0;opacity:0;transition:1s linear;margin-left: 100px;display: none;}
+		</style>
+		<!--<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+//			$(function() {
+//				$(".address").hover(function() {
+//					$(this).after($('.danbao'));
+//				})
+//				var a = {};
+//				console.log(a);
+//				a['b'] = 1;
+//				console.log(a['b']);
+//				
+//			})
+				function Foo(){
+					this.getName = function(){
+						console.log(3);
+						return {
+							getName:getName
+						}
+					};
+					getName = function(){
+						console.log(1);
+					}
+					return this;
+				}
+				Foo.getName=function(){
+					console.log(2);
+				}
+				Foo.prototype.getName=function(){
+					console.log(6);
+				}
+				var getName = function(){
+					console.log(4);
+				}
+				function getName(){
+					console.log(5);
+				}
+				Foo.getName();//2  //2
+				console.log("----------------------")
+				getName();//4  //4
+				console.log("----------------------")
+				Foo().getName();//1  //1
+				console.log("----------------------")
+				getName();//1   //1
+				console.log("----------------------")
+				new Foo.getName();//3   //2 new (Foo.getName) //2
+				console.log("----------------------")
+				new (Foo.getName)()  //2
+				console.log("----------------------")
+//				console.log(new Foo);
+				new Foo().getName();//2  //3new之后只能调用prototype的方法(new Foo).getName()//3
+				console.log("-----------1-----------");
+				(new Foo()).getName(); //3 1
+//				new new Foo().getName();//2  //3  (new (new Foo).getName)
+				console.log("----------------------");
+				new Foo().getName().getName(); //2
+				console.log("----------------------");
+				(new Foo().getName().getName)(); //2
+				console.log("----------------------");
+				(((new Foo()).getName()).getName)();
+				console.log("----------------------");
+				new (new Foo().getName)();
+				
+				
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="son">
+				
+			</div>
+		</div>
+		
+		<div class="danbao">
+			<input type="text" name="" id="" value="" placeholder="123456" />
+		</div>
+		<div class="address">
+
+		</div>
+
+		<li>
+			<a target="_blank" href="/car/cardetail.htm?id=708000715">
+				<img src="http://img.hx2cars.com/upload/image/20170616/small/400_300.jpg" alt="奥迪奥迪A6LA6L 2.0T FSI 舒适型图片" />
+			</a>
+			<p class="title">
+				<a target="_blank" href="/car/cardetail.htm?id=708000715" title="浙江省杭州市西湖区未上牌奥迪奥迪A6LA6L 2.0T FSI 舒适型">未上牌奥迪奥迪A6LA6L 2.0T FSI 舒适型</a>
+			</p>
+			<p>
+				<span class="diqu">浙江省杭州市西湖区</span>
+				<span class="jiage">￥<span class="bigFont">40.0</span>万</span>
+			</p>
+
+		</li>
+
+	</body>
+
+</html>

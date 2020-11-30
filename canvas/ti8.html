@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var array = [];
+for(var i = 0; i <3; i++) {
+ array.push(() => i);
+}
+console.log(array)
+var newArray = array.map(el => el());
+console.log(newArray); // ??   
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

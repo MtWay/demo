@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+}
+.section{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.box{
+	width: 200%;
+	height: 100%;
+	background: #fff;
+	position: relative;
+}
+
+.list{
+	width: 25vw;
+	height: 100%;
+	background: #f00;
+	text-align: center;
+	line-height: 100%;
+	float: left;
+	position: relative;
+	animation: name ease-in-out 0.5s forwards;
+}
+
+.list:nth-child(1){
+	background: #ff0;
+}
+.list:nth-child(2){
+	background: #f0f;
+}
+.list:nth-child(3){
+	background: #0f0;
+}
+
+.list:nth-child(2n){
+	transform: translateY(25%);
+}
+
+.list:nth-child(2n-1){
+	transform: translateY(-25%);
+}
+
+@keyframes name{
+	from{}
+	to{transform: translateY(0);}
+}
+

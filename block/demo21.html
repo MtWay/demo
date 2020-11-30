@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		    <div  name="pox">我是pox</div>
+         <div  name="pox">我是pox</div>
+         <div  name="pox">我是pox</div>
+         <div  name="pox">我是pox</div>
+         <div  name="pox">我是pox</div>   
+         <script type="text/javascript">
+         	
+function getByName(Name){ 
+    var i=document.getElementsByName(Name)
+       if(i>0){
+        return i;
+    }else{
+        var aEle=document.getElementsByTagName('*'); 
+        var arr=[];  
+         for(var i=0;i<aEle.length;i++){
+         if(aEle[i].getAttribute("name")==Name){
+            arr.push(aEle[i])
+                }
+            }
+         return arr; 
+        }
+    }
+var a = document.getElementsByName("pox")
+ a = getByName("pox")
+console.log(a)
+         </script>
+	</body>
+</html>

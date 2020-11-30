@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>一个时钟</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: #fff;
+			}
+			
+			.wrap {
+				width: 1000px;
+				overflow: hidden;
+				height: 800px;
+				margin: 100px auto 0;
+				background: #000;
+				/*background: url(img/f28f240cb4f8156ba242bfd1feb7dc30.jpg) no-repeat;*/
+				background-size:100% ;
+				padding: 20px;
+				animation: name linear 5s infinite;
+				
+			}
+			
+			.list li {
+			list-style: none;
+				width: 20px;
+				height: 20px;
+				background: #34eabc;
+				position: relative;
+				float: left;
+			}
+			
+			.list li:after {
+				display: block;
+				position: absolute;
+				width: 2px;
+				height: 20px;
+				content: "";
+				background: #aaa;
+				transform: translateZ( -10px);
+			}
+			
+			.list li:before {
+				display: block;
+				position: absolute;
+				width: 2px;
+				height: 20px;
+				content: "";
+				background: #ddd;
+				transform: translateZ( -20px);
+			}
+			
+			.list {
+
+			}
+			
+			@keyframes name {
+				0% {
+					transform: rotateX(15deg) rotateY(15deg);
+				}
+				15%{
+					transform: rotateX(15deg) rotateY(-15deg);
+				}	
+				50% {
+					transform: rotateX(-15deg) rotateY(-15deg);
+				}
+				75%{
+					transform: rotateX(-15deg) rotateY(15deg);
+				}
+				100% {
+					transform: rotateX(15deg) rotateY(15deg);
+				}
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="list">
+				<ul>
+					<li class="lt"></li>
+					<li class="lb"></li>
+					<li class="top"></li>
+					<li class="bot"></li>
+					<li class="rt"></li>
+					<li class="rb"></li>
+					<li class="mid"></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

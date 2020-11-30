@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin-left: 100px;
+			}
+			.list{
+				width: 100px;
+				height: 100px;
+				float: left;
+				background: #f60;
+				color: #fff;
+				text-align: center;
+				line-height: 100px;
+				border-radius:25px 25px 0 0 ;
+				position: relative;
+				
+			}
+			.bor{
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background: #f60;
+				left: -50px;
+				bottom: 0;
+			}
+			.bor:before{
+				content: "";
+				border-radius:0 0 25px  0 ;
+				background: #fff;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			
+				.quar-radius {
+ width: 96px; height: 96px;
+ border-radius: 0 0 50% 0;
+ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+ box-shadow: 0 0 0 100px teal;
+ 
+			}
+			.shape-hollow {
+ animation: starIn 2s infinite;
+  background-color: rgba(0,0,0,.75);
+ /* 实际开发需要-webkit- */
+ mask: no-repeat center;
+ mask-image: linear-gradient(black, black), url(./star.svg); mask-size: cover, 120px 120px;
+mask-composite: exclude;
+mask-composite: source-out;
+}
+@keyframes starIn {
+ from { mask-size: 100%, 0 0; }
+ to { mask-size: 100%, 300% 300%; }
+}
+			
+			
+			.flow-colorful {
+ height: 150px;
+ background: linear-gradient(to right, red, orange,
+yellow, green, cyan, blue, purple);
+ animation: hue 1s linear infinite;
+}
+@keyframes hue {
+ from { filter: hue-rotate(0deg); }
+ to { filter: hue-rotate(360deg); }
+}
+
+.flow-slogon {
+ font-size: 120px;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background: linear-gradient(to right, red, fuchsia);
+ animation: hue 6s linear infinite;
+ color: #fff;
+}
+		</style>
+	</head>
+	<body>
+		<h2 class="flow-slogon">神tm的死亡之翼</h2>
+		<div class="flow-colorful">
+			
+		</div>
+		<div class="shape-hollow">
+			102345646
+		</div>
+		<div class="quar-radius">
+			
+		</div>
+		<div class="list cur">
+			<div class="bor">
+			
+		</div>
+			tab1
+		</div>
+		<div class="list">
+			tab2
+		</div>
+		<div class="list">
+			tab3
+		</div>
+		<div class="list">
+			tab4
+		</div>
+	</body>
+</html>

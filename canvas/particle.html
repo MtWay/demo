@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>粒子demo</title>
+			<style type="text/css">
+				body{margin: 0;padding: 0;overflow: hidden;height: 100%;}
+				/*canvas{background: #0f0 ;}*/
+			</style>
+			<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				$(function(){
+					resize();
+					var can = $('canvas')[0].getContext('2d');
+//					can.moveTo(1,1);
+//					can.lineTo(100,100);
+					
+//					can.arc(100,100,100,100,0,Math.PI,true);
+//					can.stroke();
+					
+					
+					var box = [];
+					 w= $("canvas").width();
+					 h = $("canvas").height();
+					//放点
+					var index = 100;
+					for(let i =0;i<100;i++){
+						let a = {
+							x:w*Math.random(),
+							y:h*Math.random(),
+							vx:Math.random()*2-1,
+							vy:Math.random()*2-1
+						}
+						box.push(a);
+					}
+					var timer= setInterval(evey,20)
+					
+//					动画
+					function evey(){
+						can.clearRect(0,0,w,h);
+						for(let i in box){
+							drew(box[i].x,box[i].y,can);
+							for(var j=i;j<box.length;j++){
+								var a = box[i];
+								var b  = box[j];
+								var l = Math.sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));
+								if(l<200){
+									if(b.vx==0 && b.vy==0 && l>80){
+										box[i].x-=((a.x-b.x)*0.02);
+										box[i].y-=((a.y-b.y)*0.02);
+									}
+									can.beginPath();
+									can.lineWidth =30/l;
+									can.fillStyle="#f00"
+									can.strokeStyle='#fea5bc';
+									can.moveTo(a.x,a.y);
+									can.lineTo(b.x,b.y);
+									can.stroke();
+									can.closePath();
+									
+								}
+							}
+							box[i].x+=box[i].vx;
+							if(box[i].x>w || box[i].x<0){
+							box[i].vx=-box[i].vx;
+							box[i].x+=box[i].vx;
+							}
+							box[i].y+=box[i].vy;
+							if(box[i].y>h || box[i].y<0){
+							box[i].vy=-box[i].vy;
+							box[i].y+=box[i].vy;
+							}
+							
+						}
+						
+					}
+					$(window).resize(resize);
+					$(document).mousemove(function(e){
+						if(box.length>index){
+							box.pop();
+						}
+						var e = e || window.event;
+						box.push({
+							x:e.clientX,
+							y:e.clientY,
+							vx:0,
+							vy:0
+						})
+					})
+//					$(document).click(function(){
+//						let a = {
+//							x:w*Math.random(),
+//							y:h*Math.random(),
+//							vx:Math.random()*2-1,
+//							vy:Math.random()*2-1
+//						}
+//						box.push(a);
+//						index==
+//					})
+				})
+				//调整画布尺寸
+				function resize(){
+					 w= $(window).width();
+					 h = $(window).height();
+					$("canvas").attr({width:w,height:h});
+				}
+//				画点
+				function drew(x,y,can){
+						can.beginPath();
+						can.fillStyle='#f00';
+						can.arc(x,y,2,2*Math.PI,0,true);
+						can.fill();
+						can.closePath();
+					}
+			</script>
+	</head>
+	<body>
+		<canvas id="" width="" height=""></canvas>
+	</body>
+</html>

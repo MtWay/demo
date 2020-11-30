@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>数独</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			tr{
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			td{
+				height: 50px;
+				width: 50px;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<table border="1" cellspacing="0" cellpadding="0" id="box">
+				<tr><th></th></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				
+			</table>
+		</div>
+		<script type="text/javascript">
+			/**
+ * @param {character[][]} board
+ * @return {void} Do not return anything, modify board in-place instead.
+ */
+var solveSudoku = function(board) {
+    //			去重
+			function isRepeat(arr) {
+				let hash = {};
+				for(let i in arr) {
+					if(arr[i] != "." && hash[arr[i]])
+						return true;
+					hash[arr[i]] = true;
+				}
+				return false;
+			}
+
+			function isRepeats(arr) {
+				for(let a = 0; a < arr.length; a++) {
+					if(isRepeat(arr[a])) {
+						return true;
+					}
+				}
+				return false;
+			}
+
+			//输出纵向的array
+			function column(arr) {
+				let t = [];
+				for(let i = 0; i < arr.length; i++) {
+					t[i] = []
+					for(let j = 0; j < arr[i].length; j++) {
+						t[i][j] = arr[j][i];
+					}
+				}
+//				console.log(t)
+				return t;
+			}
+
+			//输出3*3为单位的数组
+			function nine(arr) {
+//				console.log(arr)
+				let x = y = 0;
+				let t = [];
+				for(let a = 0; a < 9; a++) {
+					t[a] = [];
+					for(let i = 0; i < 3; i++) {
+						for(let j = 0; j < 3; j++) {
+							t[a].push(arr[x * 3 + i][y * 3 + j])
+						}
+					}
+					x++;
+					if(x == 3) {
+						x = 0;
+						y++;
+					}
+				}
+//				console.log(t) 
+				return t
+			}
+			
+			//把九宫格还原回去
+			function unnine(arr){
+				let x = y = 0;
+				let t = [];
+				for(let a = 0; a < 9; a++) {
+					t[a] = [];
+					for(let i = 0; i < 3; i++) {
+						for(let j = 0; j < 3; j++) {
+							var m = i * 3 +y;
+							var n = x * 3 + j;
+							t[a].push(arr[m][n])
+						}
+					}
+					x++;
+					if(x == 3) {
+						x = 0;
+						y++;
+					}
+				}
+				return t;
+			}
+			
+//			console.log(nine(arr))
+//			console.log(unnine(nine(arr)))
+			
+			//判断每个都不重复
+			function all(arr) {
+				let a1 = JSON.parse(JSON.stringify(arr));
+				let a2 = column(arr);
+				let a3 = nine(arr);
+
+				if(isRepeats(a1) || isRepeats(a2) || isRepeats(a3)) {
+					return false
+				}
+				return true;
+			}
+			
+//			console.log(all(arr))
+//			console.log(all(abb))
+//			console.log(all(acc))
+//			console.log(all(add))
+			Array.prototype.arrRmove=function(a){
+//				console.log(this);
+				for(var i = 0 ;i<this.length;i++){
+					if(a == this[i]){
+						this.splice(i,1);
+						break;
+//						i--;
+					}
+				}
+			}
+			
+			function arrRmove1(arr,a){
+				for(var i = 0 ;i<arr.length;i++){
+					if(a == arr[i]){
+						arr.splice(i,1);
+						break;
+//						i--;
+					}
+				}
+			}
+			var exp = ['1','2','3','4','5','6','7','8','9']
+			
+			function count(arr){
+				var a =JSON.parse(JSON.stringify(exp));				
+				for(var i = 0;i<arr.length;i++){
+//					if(arr[i]==1){
+//						console.log(1)
+//					}
+					if(a.indexOf(arr[i])>-1){
+						a.arrRmove(arr[i])
+					}
+				}
+				
+				for(var i = 0;i<arr.length;i++){
+					if(arr[i]=='.'){
+						countflag =0;
+						arr[i]=a;
+					}else if(typeof arr[i] =="object"){
+						countflag =0;
+						var t = same(arr[i],a);
+						if(t.length==1){
+							arr[i]=t[0];
+						}else{
+							arr[i]=t;
+						}
+					}
+				}
+//				console.log(countflag)
+				return arr;
+//				console.log(a)
+			}
+			
+			//返回两个数组的相同点
+			function same(a,b){
+				var t = [];
+				for(var i= 0;i<a.length;i++){
+					if(b.indexOf(a[i])>-1){
+						t.push(a[i])
+					}
+				}
+				return t;
+			}
+			
+			var b = ["8", "3", ".", ".", "7", ".", ".", ".", "."];
+//			count(b);
+
+			//计算2维数组
+			function count2(arr) {
+				countflag =1;
+				for(var i=0;i<arr.length;i++){
+					arr[i]=count(arr[i])
+				}
+				return arr;
+			}
+			
+			var countflag = 1,num=0;
+			function count3(arr){
+				num++;
+			arr = count2(arr);//分别验算横
+			arr = column(count2(column(arr)));//纵
+			arr = unnine(count2(nine(arr)));//9小格
+				console.log(arr)
+				if( num>10){
+					return arr ;
+				}else{
+					showdata(arr)
+					setTimeout(function(){
+						return count3(arr)
+					},500)
+				}
+			}
+    var tss =  count3(board);
+    console.log(tss)
+    return tss
+};
+function showdata(arr){
+	var str = ""
+	for(var i = 0;i<arr.length;i++){
+		str+="<tr>"
+		for(var j = 0;j<arr[i].length;j++){
+			str+="<td>";
+			if(!isNaN(Number(arr[i][j]))){
+				str+=arr[i][j]
+			}
+			str+="</td>"
+		}
+		str+="</tr>"
+	}
+	$("#box").html(str)
+}
+
+solveSudoku([["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]])
+			
+		</script>
+	</body>
+
+</html>

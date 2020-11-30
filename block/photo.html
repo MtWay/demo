@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<title>图片缩放</title>
+		<style type="text/css">
+		*{margin: 0; padding: 0;}
+		body{overflow: hidden;}
+			img{width: 100%;transition: all 0.2s linear;position: absolute;}
+			.scale{transform: scale(2);}
+			.box{width: 100%;overflow-x: scroll;height: 281px;position: relative;}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(document).click(prevent_bubble)
+				
+				function cl(e){
+					var e = e || window.event;
+					console.log(e);
+					$("img").toggleClass("scale");
+				}
+			})
+			var prevent_bubble = function(e_input){
+	var ev = e_input || window.event;
+	console.log(ev)
+	if (ev.stopPropagation) {
+		ev.stopPropagation();
+	}else if (window.event) {//IE
+		window.event.cancelBubble = true;//IE
+	}
+}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+		<img src="img/QQ图片20171013160629.jpg"/>
+		</div>
+		字不能动
+	</body>
+</html>

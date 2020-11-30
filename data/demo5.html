@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#can{border: 1px solid #f00;}
+			img{animation:coin 1.25s linear infinite 100ms; }
+			@keyframes coin{
+				50%{transform: rotateY(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/coin3.png" id="img"/>
+		<canvas id="can" width="" height=""></canvas>
+		
+		<script type="text/javascript">
+			var can =document.getElementById("can");
+			var ctx = can.getContext("2d");
+			var deg = 0;
+
+//			ctx.transform()
+			loop()
+			function loop(){
+				resize();
+			ctx.translate(50,50)
+				deg+=0.1;
+				var img = document.getElementById("img");
+				ctx.rotate(deg)
+				ctx.drawImage(img,0,0)
+				requestAnimationFrame(loop)
+			}
+			function resize(){
+				can.width=118;
+				can.height=199;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,193 @@
+                  <p><label>手机：</label><span>${(user.mobile)!''}</span></p>                  <#if user.personcar !=1 && user.company?? && user.company!=''><p><label>公司：</label><span id="ICompany">${(user.company)!''}</span></p></#if>
+<div class="BOX hide">
+                          <div class="BOX_price">
+                          	   <div id="erweima">
+                               <b class="QR_code" id="QRcode">
+                               <#if carpf?? && carpf!="">
+          							<img src="http://www.hx2car.com//servlet/pcarQrCode/${car.id!''}.jpg"/>
+          						<#else>
+            						<img src="http://www.hx2car.com//servlet/carQrCode/${car.id!''}.jpg"/>
+            				   </#if>
+            				   <p>扫码，手机浏览</p>
+                               </b>
+                               </div>
+                               <div class="price"><i><#if carpf?? && carpf!="">批发价：<#else>￥</#if></i><span><#if carpf?? && carpf!=""><#if isNoCar==null && isNoCar!=2>面议<#else>${(common_func.formatPrice(simCar.tradePrice))!''}</#if><#else>${(common_func.formatPrice(simCar.money))!''}</#if></span><i style="text-decoration :line-through ;"><#if carpf?? && carpf!="">原价：${(common_func.formatPrice(simCar.money))!''}</#if></i>
+                               <#if isNewCar?exists && isNewCar ==1>
+                               		<i class="yishou"></i>
+                               </#if>
+                               <#if isReplacement?exists && isReplacement ==1>
+                               		<i class="lianbao"></i>
+                               </#if>
+                               <#if aliRecordsuser?? &&aliRecordsuser!="" >
+                               		<i class="danbao"></i>
+                               </#if>
+                               <#if giftPackage??>
+                               <div class="GShow">
+                     			    <input id="giftid" type="hidden" value="${giftPackage.id}">
+	                     	 	    <div style="cursor:pointer;">抢购大礼包</div>
+							     	<div class="SList" style="display: none;">
+									    <div class="LTop">
+											<i class="TClose" onclick="$('.SList').hide();"></i>
+											<p class="TTitle">${giftPackage.giftname}</p>
+											<p class="TGifts">输入验证码，开启大礼包</p>
+									   </div>
+									   <div class="LList">
+										<p class="LNumber"><span>您的手机</span><input id="Codenumber" type="text" placeholder="请输入手机号" onfocus="this.placeholder=''"><em style="display:none">号码错误</em></p>
+										<p class="LPic"><span>图片验证码</span><input id="registerCodes" type="text" placeholder="请输入验证码" onfocus="this.placeholder=''><em style="display:none">错误</em><b><img title="点击刷新" style="height: 26px;width: 75px;" src="/servlet/yzCode.jpg" onclick="javascript:this.src=&quot;/servlet/yzCode.jpg?rnd=&quot;+Math.random();"></b></p>
+										<p class="LTel"><span>手机验证码</span><input id="CodeYZM" type="text" placeholder="请输入验证码" onfocus="this.placeholder=''><em style="display:none">错误</em><b id="showbtn" style="display: block;">获取验证码</b><b style="display: none; background-color: rgb(80, 165, 212);">0秒后再发</b></p>
+										<p class="LTip">抢购大礼包，3日内，购买车辆即可得到大礼包，礼包更替以等价礼品代替。</p>
+										<p class="LButton" id="GiftQG" onclick="CodeYZM();">抢！抢！抢！</p>
+									    </div>
+								   </div>
+								   <div id="SListSOk" class="SList GCon" style="height: 346px; display: none;">
+									    <div class="LTop">
+										<i class="TClose" onclick="$('.SList').hide();"></i>
+										<p class="TTitle">${giftPackage.giftname}</p>
+										<p class="TGifts">
+											<#if giftPackage.materialsone!=''><span><i></i>${giftPackage.materialsone}</span></#if>
+											<#if giftPackage.materialstwo!=''><span><i></i>${giftPackage.materialstwo}</span></#if>
+											<#if giftPackage.materialsthree!=''><span><i></i>${giftPackage.materialsthree}</span></#if>
+											<#if giftPackage.materialsfour!=''><span><i></i>${giftPackage.materialsfour}</span></#if>
+										</p>
+									    </div>
+									    <div class="LList">
+										    <p class="LTip">请注意接收短信，凭电话号及短信到店内领取大礼包。</p>
+										    <p class="LButton" onclick="GiftWCCZ();">关闭</p>
+									   </div>
+								  </div>
+                               </div>
+                               </#if>
+                               </div>
+
+                               <div class="explain"><span style="float:left;"><#if carConfigure ?? && carConfigure!=""&& carConfigure.guide_price ?? && carConfigure.guide_price!="" && carConfigure.guide_price!="未知">新车指导价：${carConfigure.guide_price!''}万；<#else><#if newtrade?exists><#if newtrade!="未知" && newtrade!="0">新车指导价：${newtrade}万；</#if></#if></#if>
+                               </span><span style="float:left;width: 110px; height: 20px; line-height:15px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;">联系车主：${(user.username)!''}</span>
+                               <!--<#if user.personcar != 1><div class="cheliao_icon" id="lxiren" style="cursor:pointer;">
+                                         <#if salesman??>
+                                         <ul id="allren" style="display:none">
+                     						           <li><a onclick="chatWindowShow('${salesman.name}','${salesman.huanxinid}','${car.id}','sendon');">业务员：${salesman.name}</a></li>
+                                         </ul>
+           								               </#if>
+                                    </div>
+                                </#if>-->
+                               </div>
+                          </div>
+                          <div class="BOX_phone"><span class="num">
+                          		${(user.phone)!''}&nbsp;&nbsp;
+        					<#if user.mobile ?? && user.mobile!="" && user.phone!=user.mobile>
+		        				${(user.mobile)!''}
+        					</#if>
+
+        					</span>
+                  <!--<span class="private_ass" id="assistant">私人助理</span>-->
+        					<#if aliRecordsuser?? &&aliRecordsuser!="" ><#if hadchange!=null && hadchange=="hadchange"><span class="danbaoinfo_car">此车已成交</span><#elseif canchage!=null && canchage=="canchage"><span class="button" id="WBook" title="点击进入订单页" >出价</span><#else><span class="danbaoinfo_car">此车已预定</span></#if><#else><#if carpf?? && carpf!=""><span class="button" id="yypifa">预约批发</span><#else><span class="button" id="WBook">出价</span></#if></#if>
+
+        					</div>
+                     </div>
+
+
+
+
+<!--吸顶的-->
+	<span class="on" id="detail" lang="#DDetail"><a class="detail">车辆详情</a></span>
+                     <#if  user.personcar !=1 && user.address ?? && user.address !=''>
+                     <span><a class="address" lang="#DMap">看车地址</a></span>
+                     </#if>
+                     <span><a class="tend">价格走势</a></span>
+                     <#if fourshow?? && fourshow!="">
+                     <span><a class="cx_4s">4S查询记录</a></span>
+                     <#else>
+                     <#if carConfigure?exists><span><a class="newcar">新车配置</a></span></#if>
+                     </#if>
+                     
+                     
+                     
+                     <!--小图的-->
+                     <#if simCar.getSmallPicList("90_60")?? && simCar.getSmallPicList("90_60")?size gt 0>
+						  <#list simCar.getSmallPicList("90_60") as pic>
+						  <#if pic_index >
+						  <input id="pic_index" type="hidden" value="${(pic_index)!''}">
+                          <a target="_blank" href="/car/carphoto/${(simCar.id)!''}">
+                          <li id="focusBigImg_${(pic_index)!''}" p_img="${(common_func.getCarPic(pic))!''}" <#if pic_index ==0> src="${(common_func.getCarPic(pic))!''}" class="select"</#if>>
+                            <img src="${(common_func.getCarPic(pic))!''}"/></li>
+                           </a>
+                          </#if>
+            			  </#list>
+            		<#else>
+            			  <li>
+            				<img  src="${staticServer}/web/car/images/car.jpg" width="75" height="50px"/><i></i>
+            			  </li>
+            		</#if>
+
+
+
+<div class="cont_title">
+                    <#--一进来的已选条件-->
+                        <div class="L">已选条件：</div>
+                        <div class="condition">
+                        <#--多选车系-->
+                        <#if  d_cars?? && (d_cars?size>0)>
+	                           <div class="Middle_list" id="pinp" style="z-index:30;">
+					                    <p><#list d_cars as d_car> ${(d_car.title)!''}</#list></p>
+                         				<a data-cl="${d_cars?size}"></a>
+			                    		<div class="onbox" id="hx_pinpShow">
+			                            	<p>已选品牌车系：</p>
+			                            <#list d_cars as d_car>
+			 								<span><a class="del" data-cl="${d_car_index}"></a><em> ${(d_car.title)!''}</em></span>
+			                            </#list>
+			                    		</div>
+					            </div>
+					    </#if>
+                    	<#if searchVo.year != null && searchVo.year !="" >
+        					<span style="z-index:28;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'y',''))}">${(searchVo.year)!''}年<i></i></a></span>
+        				</#if>
+        				<#if searchVo.country != null && searchVo.country !="" >
+        					<span style="z-index:26;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'c',''))}">${(webutil.getCountry(searchVo.country))!''}<i></i></a></span>
+        				</#if>
+        				<#if searchVo.priceInterval != null && searchVo.priceInterval !="" >
+        					<span style="z-index:24;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'j',''))}">${(searchVo.priceInterval)!''}万<i></i></a></span>
+        				</#if>
+        				<#if carkind?? ><#list carkind as kind><span style="z-index:22;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'k',''))}">${(kind)!''}<i></i></a></span></#list></#if>
+        				<#if searchVo.standard != null && searchVo.standard !="" >
+        					<span style="z-index:20;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'e',''))}">${(searchVo.standardname)!''}<i></i></a></span>
+        				</#if>
+        				<#if searchVo.carProperty != null && searchVo.carProperty !="" >
+        					<span style="z-index:18;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'z',''))}">${searchVo.carPropertyname!''}<i></i></a></span>
+        				</#if>
+        				<#if searchVo.door != null && searchVo.door !="" >
+        					<span style="z-index:16;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'d',''))}">${searchVo.doorname!''}<i></i></a></span>
+        				</#if>
+
+        				<#if searchVo.mileage != null && searchVo.mileage !="" >
+        					<span style="z-index:14;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'m',''))}">${(searchVo.mileage)!''}万公里<i></i></a></span>
+        				</#if>
+        				<#if searchVo.gear != null && searchVo.gear !="" >
+        					<span style="z-index:12;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'g',''))}">${(webutil.getAuto(searchVo.gear))!''}<i></i></a></span>
+        				</#if>
+        				<#if searchVo.color != null && searchVo.color !="">
+        					<span style="z-index:8;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'s',''))}">${(searchVo.colorname)!''}<i></i></a></span>
+        				</#if>
+        				<#if searchVo.keyword != null && searchVo.keyword !="">
+        					<span style="z-index:6;"><a href="${contextPath}${(webutil.getSearchMulu(mulu,'t',''))}">${(searchVo.keyword)!''}<i></i></a></span>
+        				</#if>
+        				<#--多选省市-->
+        					
+				  		<#if  areacodes?? && (areacodes?size>0)>
+				             <div class="Middle_list" id="shengs" style="z-index:10;">
+				                   <p ><#list areacodes as area>${(common_func.formatLocation(webutil.getAreaName(area)))!''}  </#list></p>
+				                   <a href="${contextPath}${(webutil.getSearchMulu(mulu,'station',''))}"></a>
+				                    <div class="onbox" id="shengShow">
+				                         <p>已选省市：</p>
+				                          <#list areacodes as area>
+				 							<span><a class="del" data-cl="${'l'+area}"></a><em> ${(common_func.formatLocation(webutil.getAreaName(area)))!''} </em></span> 
+				                         </#list>
+				                    </div>
+				              </div>
+						<#else>
+							<span style="z-index:11;width:15px;"><a>全国</a></span>
+						</#if>
+        				<#if more !=null && more!="a1" >
+                        	<em><a href="${contextPath}/quanguo/soa1" style="color:#f60">清空搜索条件</a></em>
+                        	<em class="take" id="Condition">条件订阅</em>
+                        </#if>
+                        </div>
+                    </div>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>射线</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			canvas{border: 1px solid #f00;margin: 20px auto;display: block;}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				var can  =$("#can")[0];
+				var ctx = can.getContext("2d");
+					ctx.fillStyle="#f00";
+					ctx.strokeStyle="#f00";
+				
+				$(document).mousemove(function(e){
+					var x = e.clientX-$("#can").offset().left-400;
+					var y = e.clientY-$("#can").offset().top-300;
+						
+					resize();
+					ctx.beginPath();
+					ctx.strokeStyle="#f00";
+					ctx.moveTo(400,300);
+					var sx = 400/x;
+					var sy = 300/y;
+					if(Math.abs(sx)>Math.abs(sy)){
+						var s = (x*Math.abs(sx))/(y*Math.abs(sx));
+						x=800;
+						y=400/s+300;
+						if(s<0){
+							x=0;
+						}
+//						y=600;
+//						x=y*s;
+					}else{
+						var s = (x*Math.abs(sy))/(y*Math.abs(sy));
+						y=600;
+						if(s<0){
+							y=0;
+						}
+						x=300*s+400;
+//						x=800;
+//						y=x/s;
+					}
+//					var s = ?Math.abs(sx):Math.abs(sy);
+					ctx.lineTo(x,y);
+//					ctx.lineTo(x*s+400,y*s+300);
+					console.log('s:'+s+"x:"+x+"y:"+y)
+					ctx.fill();
+					ctx.stroke();
+				})
+				
+				function resize(){
+					$("#can").attr("width",'800');
+					}
+			})
+		</script>
+	</head>
+	<body>
+		<canvas id="can" width="800" height="600"></canvas>
+	</body>
+</html>

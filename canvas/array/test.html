@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>继承</title>
+		<script type="text/javascript">
+			function classA(color){
+				this.color = color;
+				this.sayColor=function(){
+				console.log(this.color);
+				}
+				this.log=function(){
+					console.log(1)
+				}
+			}
+			
+			function classB(color,name){
+//				this.a = classA;
+//				this.a(color);
+//				delete this.a;
+//				this;
+				
+				this.name = name ;
+				this.sayName = function(){
+					console.log(this.name);
+				}
+			}
+			classB.prototype=new classA();
+			
+			
+			var objA= new classA("#f00","Nichol");
+			var objB= new classB("#ff0","Nicholas");
+			
+			console.log(objB)
+			
+			objA.sayColor();
+//			objA.sayName();
+			objB.color="0ff"
+			objB.name="mt";
+			objB.sayColor();
+			objB.sayName();
+			console.log(objB instanceof classA);
+			console.log(objA instanceof classB);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

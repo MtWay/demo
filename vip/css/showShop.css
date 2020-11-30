@@ -1,0 +1,124 @@
+body,
+p,
+img,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+h1,
+h2,
+h3,
+h4,
+a,
+input {
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑',Helvetica,  arial;
+	text-shadow: none;
+}
+html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    overflow-x:hidden ;
+    background: #f6f6f6;
+}
+.header{
+	line-height: 9.6rem;
+	color: #fff;
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-align: center;
+	background: url(../img/bg-shop.png) no-repeat center;
+	background-size: 100%;
+}
+
+.dot{
+	padding:  0 1.9rem;
+	position: relative;
+}
+
+/*左右圆点*/
+.dot:after,.dot:before{
+	content: "";
+	width: 0.5rem;
+	height: 0.5rem;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	border-radius: 50%;
+	margin-top: -0.25rem;
+}
+.dot:after{
+	right: 0;
+}
+.dot:before{
+	left: 0;
+}
+
+/*0.5px边框*/
+/*.halfBorder{
+     position: relative;
+}
+.halfBorder:after{
+     content: "";
+     width: 200%;
+     height: 200%;
+     position: absolute;
+     border:1px solid #f60;
+     transform: scale(0.5);
+     transform-origin:left top;
+     left: -0.5px;
+     top: -0.5px;
+}*/
+
+section{
+	margin-bottom: 0.8rem;
+	background: #fff;
+	padding:3.1rem 1.2rem 2.5rem;
+}
+
+.box{
+	padding:0 1rem 2.5rem;
+	border: 1px solid #bdbdbd;
+}
+
+.title{
+	height: 3.8rem;
+	line-height: 1;
+	text-align: center;
+}
+/*半开口*/
+.center{
+	color: #f60;
+	font-size: 1.2rem;
+	background: #fff;
+	padding: 0 1.55rem;
+	position: relative;
+	top: -0.6rem;
+}
+.center:after{
+	position: absolute;
+	content: "";
+	width: 2.7rem;
+	transform: rotate(-60deg);
+	transform-origin: right;
+	height: 1px;
+	background: #bdbdbd;
+	right: 0;
+	top: 50%;
+	margin-top: -0.5px;
+}
+
+
+.imgBox{
+	border: 1px solid #ff1200;	
+}
+
+.imgBox img{
+	width: 100%;
+}
+

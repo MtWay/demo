@@ -1,0 +1,22 @@
+*{margin: 0 ;padding: 0;}
+.hide{ display: none;}
+body{background: url(../img/7cbc481b3dded46ed402959651c82817.jpg) no-repeat ;overflow: hidden;background-size:100vw 100vh ;}
+.box{height: 25vh;background: #000;transition: all 0.2s 0.2s;position: absolute;left: 0;width: 100%;}
+.box.after{opacity: 0.1;}
+.box.red{background: #f00;animation: name 0.4s ease-in infinite ;}
+@keyframes name{
+	from{background: #f00;}
+	to{background: #fff;}
+}
+.son{height: 100%;background: #999;transform: scale(0);transition: all 0.2s;}
+.after .son{transform: scale(1);}
+.col li{width: 25%;height:100vh;box-sizing: border-box;border-right: 1px solid #fff;float: left;list-style: none;position: relative;transition: 0.05s;}
+.col li:nth-child(4){border: none;}
+#start{color: #FFFFFF;font-size: 20px;text-align: center;line-height: 25vh;}
+#numshow{position: fixed;top: 15px;font-size: 30px;text-align: center;color: #f00;z-index: 1;width: 100%;}
+
+.model{width: 60vw;height: 40vw;background: #fff;position: fixed;top: 50%;left: 20vw;margin-top: -25vw;box-sizing: border-box;opacity: 0.9;padding: 2vw;text-align: center;}
+.model h4{line-height: 9vw;height:9vw;font-size: 20px;}
+.model .msg-b{font-size: 14px;color: #db1500;}
+#num{color: #f00;font-size: 18px;}
+.model .btn{width: 50%;position: absolute;bottom: 5vw;background: #f60;color: #fff;border-radius:5px;font-size: 16px;height: 10vw;line-height: 10vw;left: 25%;}

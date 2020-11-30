@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3d球体</title>
+		<style type="text/css">
+			body{margin: 0 ;padding: 0;}
+			canvas{background: #000000;display: block;margin: 0 auto;}
+			div{display: none;}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id="can" width="800" height="800"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById('can');
+			var context = canvas.getContext('2d'),r = 2,map=[],deg=10,degx=10,degy=1,wd=10;
+			context.fillStyle="#fff"
+			context.translate(400,400)
+			//度转角
+			hd = a=>Math.PI*2*a/360;
+			var md = 360/deg ;  // 10度经度
+			var hmd = 400/wd ;  // 20高度
+			for(var i = 0;i<md;i++){
+				var arr = [];	
+				var ja = hd(deg*i);
+				for(var j = 0;j<hmd;j++){
+				var jb = hd(wd*j)
+				var x = 200*Math.sin(ja)*Math.cos(jb);
+				var y = 200*Math.sin(ja)*Math.sin(jb);
+				var z = 200*Math.cos(ja);
+//				console.log(y)
+//				var z =  Math.sqrt(Math.abs(md/2-j)/md*2*Math.abs(md/2-i)/md*2);
+				console.log(z)
+				var d = new dot({x:x,y:y,z:z});
+				map.push(d);
+				}
+			}
+			var num = 500
+		
+			
+			for(var i = 1;i<num;i++){
+				var ja = Math.acos( ((2*i)-1)/num - 1);
+//				console.log(ja)
+				var jb = ja*Math.sqrt(num*Math.PI);
+				var x = 200*Math.sin(ja)*Math.cos(jb);
+				var y = 200*Math.sin(ja)*Math.sin(jb);
+				var z = 200*Math.cos(ja);
+				var d = new dot({x:x,y:y,z:z});
+//				map.push(d);
+			}
+			console.log(map)
+
+//			context.strokeStyle="#fff"
+			loop()
+			function loop(){
+//				canvas.width=canvas.width;
+			context.clearRect(-400,-400,800,800);
+			var l = map.length;
+//			deg+=10;
+//			if(deg>360){
+//				deg = 0
+//			}
+			for(var i = 0;i<l;i++){
+				var radius= (map[i].z+400)/500 ;
+//				console.log(radius)
+//				x缩减 	
+//				var x = Math.cos(Math.abs(map[i].y)/200*Math.PI/2)*map[i].x;
+				var x = map[i].x;
+				var y = map[i].y;
+				var z = map[i].z;
+//				context.beginPath()
+				var opa = radius/2;
+				context.fillStyle="rgba(255,255,255,"+opa+")";
+				context.strokeStyle="rgba(255,255,255,"+opa+")";
+//				context.arc(x,y,radius,Math.PI*2,0,true);
+				
+				if(i>1&&map[i].cz==map[i-1].cz){
+					context.lineTo(x,y)
+				}else{
+					context.beginPath()
+					context.moveTo(x,y)
+					
+				}
+//				console.log(x+","+y)
+				
+				context.lineTo(x,y);
+				context.stroke();
+//				context.fill();
+				context.beginPath()
+				context.moveTo(x,y)
+				var du  = Math.PI*2*degx/360;
+				map[i].y=y*Math.cos(du)-z*Math.sin(du);
+				map[i].z=z*Math.cos(du)+y*Math.sin(du);
+				
+				var z = map[i].z;
+				var du  = Math.PI*2*degy/360;
+				map[i].x=x*Math.cos(du)+z*Math.sin(du);
+				map[i].z=z*Math.cos(du)-x*Math.sin(du);
+				//
+				}
+			requestAnimationFrame(loop)
+			}
+			var cleft =canvas.offsetLeft;
+			canvas.onmousemove=function(e){
+				var e = e || window.e;
+				var x = e.clientX-cleft-400;
+				var y = e.clientY-400;
+				degx=-y/100;
+				degy=x/100;
+			}
+			
+//			setInterval(loop,1000/60) 	
+			
+			function dot(opt){
+				this.x = opt.x;
+				this.y = opt.y;
+				this.z = opt.z;
+				this.cz = opt.z;
+				this.r = r;
+			}
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

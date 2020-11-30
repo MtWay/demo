@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>碰撞检测</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			canvas {
+				width: 800px;
+				height: 600px;
+				margin: 0 auto;
+				display: block;
+				border: 1px solid #f00;
+			}
+			div{display: none;}
+		</style>
+		<input type="checkbox" name="" id="" value="" />
+		<table border="" cellspacing="" cellpadding="">
+			<tr><th>Header</th></tr>
+			<tr><td>Data</td></tr>
+		</table>
+		
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				resize();
+				var can = document.getElementById('can');
+				var ctx = can.getContext('2d');
+				var arr = [];
+				for(var i = 0; i < 10; i++) {
+					var x = Math.random() * 790 - 50;
+					var y = Math.random() * 590 - 50;
+					var vx = Math.random() * 20 - 10,
+						vy = Math.random() * 20 - 10,
+						color = {
+							r: Math.floor(Math.random() * 255),
+							g: Math.floor(Math.random() * 255),
+							b: Math.floor(Math.random() * 255),
+							a: 0.3,
+						}
+						r = Math.random() * 30 + 20;//半径20到50
+						
+					arr.push(new ball({
+						x: x,
+						y: y,
+						z: 0,
+						vx: vx,
+						vy: vy,
+						r: r,
+						color:color
+					}));
+				}
+				console.log(arr)
+
+				var timer = setInterval(loop, 1000 / 60)
+				loop()
+
+				function loop() {
+					clear();
+					var len = arr.length;
+					for(var i = 0; i < len; i++) {
+						ctx.beginPath()
+//						ctx.fillStyle = "#FF0000";
+						ctx.fillStyle = "rgba("+arr[i].color.r+","+arr[i].color.g+","+arr[i].color.b+","+arr[i].color.a+")";
+						ctx.arc(arr[i].x, arr[i].y, arr[i].r, 0, Math.PI * 2, true);
+						ctx.fill();
+						arr[i].x += arr[i].vx;
+						arr[i].y += arr[i].vy;
+						if(arr[i].x > 800 - arr[i].r || arr[i].x < 0 + arr[i].r) {
+							arr[i].vx = -arr[i].vx;
+							if(arr[i].x > 800 - arr[i].r) {
+								arr[i].x = 800 - arr[i].r;
+							} else {
+								arr[i].x = 0 + arr[i].r
+							}
+
+						}
+
+						if(arr[i].y > 600 - arr[i].r || arr[i].y < 0 + arr[i].r) {
+							arr[i].vy = -arr[i].vy;
+							if(arr[i].y > 600 - arr[i].r) {
+								arr[i].y = 600 - arr[i].r;
+							} else {
+								arr[i].y = 0 + arr[i].r
+							}
+						}
+						//俩球相碰
+						for(var j=i+1;j<len;j++){
+								var l = arr[j].r+arr[i].r;
+								var sl =Math.sqrt( Math.pow(Math.abs(arr[i].x-arr[j].x),2)+Math.pow(Math.abs(arr[i].y-arr[j].y),2));
+								if(sl<l){
+//								arr[i].vx = arr[j].vx+arr[i].vx;
+//								arr[i].vy = arr[j].vy+arr[i].vy;
+//								arr[j].vx = arr[i].vx+arr[j].vx;
+//								arr[j].vy = arr[i].vy+arr[j].vy;
+//var ax = (arr[i].vx+arr[j].vx)/2;
+//var ay = (arr[i].vy+arr[j].vy)/2;
+//质量相同的对心碰撞
+//var vxi = arr[j].vx;
+//var vyi = arr[j].vy;
+//var vxj = arr[i].vx;
+//var vyj = arr[i].vy;
+
+//质量不同
+var vxi = ((arr[i].r-arr[j].r)*arr[i].vx+arr[j].r*arr[j].vx*2)/(arr[j].r+arr[i].r);
+var vyi = ((arr[i].r-arr[j].r)*arr[i].vy+arr[j].r*arr[j].vy*2)/(arr[j].r+arr[i].r);
+var vxj = ((arr[j].r-arr[i].r)*arr[j].vx+arr[i].r*arr[i].vx*2)/(arr[j].r+arr[i].r);
+var vyj = ((arr[j].r-arr[i].r)*arr[j].vy+arr[i].r*arr[i].vy*2)/(arr[j].r+arr[i].r);
+
+//								arr[i].vx = ax-arr[i].vx;
+//								arr[i].vy = ay-arr[i].vy;
+//								arr[j].vx = ax-arr[j].vx;
+//								arr[j].vy = ay-arr[j].vy;
+
+
+								arr[i].vx = vxi;
+								arr[i].vy = vyi;
+								arr[j].vx = vxj;
+								arr[j].vy = vyj;
+								
+								}
+						}
+					}
+				}
+
+				function ball(option) {
+					this.x = option.x;
+					this.y = option.y;
+					this.z = option.z;
+					this.vx = option.vx;
+					this.vy = option.vy;
+					this.r = option.r;
+					this.color=option.color;
+				}
+
+				//调整画布尺寸
+				function resize() {
+					w = $("canvas").width();
+					h = $("canvas").height();
+					$("canvas").attr({
+						width: w,
+						height: h
+					});
+				}
+				function clear() {
+  ctx.fillStyle = 'rgba(255,255,255,0.3)';
+  ctx.fillRect(0,0,can.width,can.height);
+}
+			})
+		</script>
+	</head>
+
+	<body>
+		<canvas id="can" width="" height=""></canvas>
+	</body>
+
+</html>

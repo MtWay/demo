@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>阴阳loding</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				background: #778898;
+			}
+			
+			.box {
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -200px;
+				margin-left: -200px;
+				background: linear-gradient(black 50%, #fff 0);
+				border-radius: 50%;
+				animation: name 2s infinite linear;
+				/*transition: all 0.5s;*/
+			}
+			/*白底黑点*/
+			
+			.box:after {
+				width: 66.66px;
+				position: absolute;
+				display: block;
+				height: 66.66px;
+				content: "";
+				background: #fff;
+				border: 66.66px solid #000;
+				top: 100px;
+					transform:scale(0.5) ;
+				/*transform: translateY(-50%);*/
+					transform-origin: left;
+				left: 0;
+				border-radius: 50%;
+				animation:2s -1s s infinite ease-in-out;
+			}
+			
+			.box:before {
+				width: 66.66px;
+				position: absolute;
+				display: block;
+				height: 66.66px;
+				content: "";
+				background: #000;
+				border: 66.66px solid #fff;
+					transform:scale(0.5) ;
+					transform-origin: right;
+				/*transform: translateY(-50%);*/
+				top: 100px;
+				right: 0;
+				border-radius: 50%;
+				animation: 2s s infinite ease-in-out;
+			}
+			@keyframes s{
+				from{}
+				50%{
+					/*width: 100px;border-width: 100px;height: 100px;*/
+					transform:scale(1.5) ;
+				}
+				to{}
+			}
+			
+			
+			
+			@keyframes name {
+				from{transform: rotate(360deg) ;}
+				50%{transform: rotate(180deg) ;}
+				to{transform: rotate(0deg) ;}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+
+		</div>
+	</body>
+
+</html>

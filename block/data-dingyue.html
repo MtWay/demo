@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="custommcarsend" class=" layer-subscriber width455 myModel" style="display: none; z-index: 999999999999; ">
+       <div class="title">
+            		<span>条件订阅</span>
+        </div>
+        <div class="price-part4">
+				<img src="http://static.hx2cars.com/resource/web/page/images/appcode.png"/>
+				<p>扫描下载app</p>
+		</div>
+        <div class="layer-content">
+            <div class="price-part1 font14">
+                <span class="part1-l">已选条件：</span>
+                <div id="filtershow_mcarsend" class="part1-r">
+                <#if areacodes?? && (areacodes?size>0)>
+                   <#list areacodes as kind>
+                        <p id="dAreaCode" data-id="${kind}">${(common_func.formatLocation(webutil.getAreaName(kind)))!''}</p>
+                   </#list>
+	           </#if>
+                <#if  d_cars?? && (d_cars?size>0)>
+                     <#list d_cars as kind>
+                          <p id="dBrand" data-id="t${kind.id}">${kind.title!''}</p>
+                      </#list>
+                </#if>
+                <#if searchVo.year != null && searchVo.year !="" >
+                    <p id="dyear" data-id="${searchVo.year}">${(searchVo.year)!''}年</p>
+                </#if>
+                <#if searchVo.country != null && searchVo.country !="" >
+                    <p id="dcountry" data-id="${searchVo.country}">${(webutil.getCountry(searchVo.country))!''}</p>
+                </#if>
+                <#if searchVo.priceInterval != null && searchVo.priceInterval !="" >
+                    <p id="dpriceInterval" data-id="${searchVo.priceInterval}">${(searchVo.priceInterval)!''}万</p>
+                </#if>
+                <#if searchVo.carKind != null && searchVo.carKind !="" >
+                	<p id="dcarKind" data-id="${searchVo.carKind}">${(webutil.getCarKindName(searchVo.carKind))!''}</p>
+                </#if>
+                <#if searchVo.bigTypemore != null && searchVo.bigTypemore !="" >
+                    <p id="dbigTypemore" data-id="${searchVo.bigTypemore}">${(webutil.getBigTypeMore(searchVo.bigTypemore))!''}</p>
+                </#if>
+                <#if searchVo.standard != null && searchVo.standard !="" >
+                    <p id="dstandard" data-id="${searchVo.standard}">${(searchVo.standardname)!''}</p>
+                </#if>
+                <#if searchVo.carProperty != null && searchVo.carProperty !="" >
+                    <p id="dcarProperty" data-id="${searchVo.carProperty}">${searchVo.carPropertyname!''}</p>
+                </#if>
+                <#if searchVo.door != null && searchVo.door !="" >
+                    <p id="ddoor" data-id="${searchVo.door}">${searchVo.doorname!''}</p>
+                </#if>
+            	<#if searchVo.mileage != null && searchVo.mileage !="" >
+                    <p id="dmileage" data-id="${searchVo.mileage}">${(searchVo.mileage)!''}万公里</p>
+                </#if>
+                <#if searchVo.gear != null && searchVo.gear !="" >
+                    <p id="dgear" data-id="${searchVo.gear}">${(webutil.getAuto(searchVo.gear))!''}</p>
+                </#if>
+                <#if searchVo.color != null && searchVo.color !="">
+                    <p id="dcolor" data-id="${searchVo.color}">${(searchVo.colorname)!''}</p>
+                </#if>
+                <#if tiaojians?? && tiaojians==0>
+                    <p id="dAreaCode" data-id="10000">全国</p>
+                </#if>
+                </div>
+            </div>
+            <div class="price-part2">
+                <ul>
+                    <li>
+                        <span class="part2-l">联系方式：</span>
+                        <div class="part2-r">
+                            <input id="mobile" type="text" class="input-price1 input-price2" maxlength="11" placeholder="请填写您的手机号！">
+                            <span id="t_mobile" class="ml10 col99 fn-left"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="price-part3">
+                <div class="mt10">
+                    <span id="error">您订阅的车源信息会通过<i>华夏二手车app</i>或短信<i>免费</i>发送给您</span>
+                </div>
+            </div>
+			
+        </div>
+        <div class="layer-bottom">
+			<a id="sendNews" class="btn btn-org mr10">提交</a>
+            <a class="btn btn-gray mr10" id="closeNews">取消</a>
+        </div>
+</div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				height: 100px;
+				border: 1px solid #f00;
+				line-height: 100px;
+				width: 100px;
+				float: left;
+				text-align: center;
+			}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".box1").click(function(){
+					window.location.reload();
+				});
+				$(".box2").click(function(){
+					window.location=window.location
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box box1">
+			recload
+		</div>
+		<div class="box box2">
+			href
+		</div>
+	</body>
+</html>

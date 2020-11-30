@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				position: fixed;
+				top: 100px;
+				width: 100px;
+				height: 100px;
+				background: #f00;
+				left: 100px;
+			}
+			canvas{width: 100%;height: 100%;object-fit: fill;}
+/*video{display: none}*/
+li{
+	list-style: none;
+	float: left;
+	width: 300px;
+	
+}
+li img{
+	width: 100%;
+}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul>
+				<li>
+					<!--<video width="800" height="600" src="img/video.mp4" preload="auto" controls="controls" x5-playsinline="" playsinline="" webkit-playsinline="" id="video2" x5-video-player-type="h5"></video>-->
+					<img src="chapter6/textures/4.jpg"/>
+					<i></i>
+				</li>
+				<li>
+					<video width="800" height="600" preload="auto" id="video3" src="http://hx2car.oss-cn-shanghai.aliyuncs.com/hx2car/pxaXMQRs4y.MOV" controls="controls" x5-playsinline="" playsinline="" webkit-playsinline="" x5-video-player-type="h5"  >
+						
+					</video>
+					<img src="chapter6/textures/758px-Canestra_di_frutta_(Caravaggio).jpg"/>
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="box">
+			
+		</div>
+		
+		<!--<video style="position: relative;  object-fit: fill;"  preload="auto" id="video1" playsinline="" x-webkit-airplay="" webkit-playsinline="" x5-video-player-type="h5"  src="img/video.mp4"></video>-->
+<canvas id="myCanvas" width="200" height="200"></canvas>
+<script type="text/javascript">
+	var timer=null;
+var video=document.getElementById('video3');
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+canvas.width = window.innerWidth*2;  //获取屏幕宽度作为canvas的宽度  这个设置的越大，画面越清晰（相当于绘制的图像大，然后被css缩小）
+canvas.height = window.innerHeight*2;
+function draw1() {
+   video.play();
+    timer = setInterval(function(){
+//    if(video.currentTime >=3.8){   //视频时间在3.8s时停止
+//       video.pause();
+//       clearInterval(timer);
+//    };
+stats.update();
+//    context.drawImage(video, 0, 0, canvas.width, canvas.height);//绘制视频
+   },16);
+};
+draw1()
+
+var mark = false;
+ var  stats = new Stats();
+
+  stats.setMode(0);
+
+  stats.domElement.style.position = 'absolute';
+
+  stats.domElement.style.right = '0px';
+
+  stats.domElement.style.top = '0px';
+
+  document.body.appendChild(stats.domElement);
+//loop()
+//
+function loop(){
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);//绘制视频
+      if(mark){
+stats.update();
+      	
+      	requestAnimationFrame(loop);
+      }
+	
+}
+
+$("li").click(function(){
+	mark = true;
+//	stop();
+//	video.pause();
+	video = $(this).find("video")[0];
+	video.play();
+//	console.log(video.currentTime+'/'+video.duration)
+//	loop()
+})
+
+function stop(){
+	$("li video").each(function(i,n){
+		console.log(n);
+		n.pause();
+	})
+}
+</script>
+	</body>
+</html>

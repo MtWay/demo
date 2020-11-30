@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.box{
+				width: 100px;;height: 100px;
+				position: absolute;
+				cursor: pointer;
+				border: 1px solid #ff0;
+				top: 0;
+				z-index: 2;
+			}
+			.wrap{
+				width: 200px;
+				height: 200px;
+				background: #f00;
+				position: relative;
+			}
+			.bg{
+				width: 100%;
+				height: 100%;
+				background: #00f;
+				overflow: hidden;
+				position: absolute;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="bg">
+			<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg"/>
+			</div>
+			<span class="box">
+				
+			</span>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$(".box").click(function(){
+					alert(1)
+				})
+			})
+		</script>
+	</body>
+</html>

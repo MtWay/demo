@@ -1,0 +1,298 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员登录——会员中心</title>
+<script type="text/javascript">
+	var STATICSERVER="http://static.hx2cars.com/resource";
+	var CONTEXTPATH="";
+	var REDIRECTURL = "";
+</script>
+<link href="http://static.hx2cars.com/resource/web/member_new/css/common.css" rel="stylesheet" type="text/css">
+<link href="css/registers.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/common/js/jquery/jquery.min.js" ></script>
+<script type="text/javascript"  src="http://static.hx2cars.com/resource/web/common/js/md5.js"></script>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/advert/js/newLoginAds.js" charset="utf-8"> </script>
+<!--<script type="text/javascript" src="http://www.hx2car.com/upload/ads/js/LoginAds/1/2017/0328.js"></script>-->
+<script type="text/javascript"  src="http://static.hx2cars.com/resource/web/member_new/js/login_new.js"></script>
+<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".model-login span").click(function(){
+			$(".selec").removeClass("selec");
+			$(this).addClass("selec");
+			var index= $(this).index();
+			$(".model-tab").addClass("hide").eq(index).removeClass("hide")
+		})
+		$(".close").click(function(){
+			$(".model").hide()
+		})
+//		$(".login_R_top span").on({
+//			hover:function(){
+//				if($(this).index())
+//				$(this).parent().find(".move").css("left","140px");
+//				else
+//				$(this).parent().find(".move").css("left","0px");
+//			},
+//			click:function(){
+//				mark=$(this).index()?0:1;
+//			},
+//			mouseout:function(){
+//				if(mark)
+//				$(this).parent().find(".move").css("left","0px");
+//				else
+//				$(this).parent().find(".move").css("left","140px");
+//			}
+//		});
+	})
+</script>
+</head>
+<body>
+<div class="register_top">
+     <div class="content">
+          <div class="content_L">
+          	<a href="http://www.hx2car.com"><span class="logo" style="cursor:pointer;"></span></a>
+          	<span class="logo_title">欢迎登录</span>
+          </div>
+     </div>
+</div>
+<div class="login">
+     <div id="newLoginAds" class="login_L">
+     	<a class="click" href="/ads/hxapp.htm" target="_blank">
+     	<img src="images/left.png"/></a>
+     </div>
+     <div class="login_wrap">
+     <div class="login_R">
+          <div class="login_R_top">
+               <span onclick="chooseLogin(0)">手机验证登录<i class="move"></i></span>
+               <span class="select" onclick="chooseLogin(1)">华夏账号登录<i class="move"></i></span>
+          </div>
+          <div id="login_staff" class="login_R_content" style="display:none;">
+               <div class="login_error" style="display:none;"></div>
+               <div class="account">
+                    <div class="inputbox6"><span class="account_tel"></span>
+                    	<input type="text" placeholder="手机号登录"/>
+                    </div>
+                    <div><div class="inputbox7"><input type="text" placeholder="请输入验证码" id="fiCode"/></div><img class="yzm2" src="/servlet/yzCode.jpg" onclick="javascript:this.src=&quot;/servlet/yzCode.jpg?rnd=&quot;+Math.random();" title="点击刷新"/></div>
+                    <div><div class="inputbox7"><input type="text" placeholder="请输入验证码" id="fiCode2"/></div><span id="gaincode" class="yzm">获取验证码</span></div>
+                    <div style="display:none;" class="account_tishi"><input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">下次自动登录</label></div>
+                    <div class="Button4" onclick="goStaffLogin()">立即登录</div>
+               </div>
+          </div>
+          <div class="login_R_content" >
+                  <form id="myform" action="/sys/gologin.htm?" method="post" >
+                    <div class="account">
+                         <div class="inputbox6">
+                              <span class="account_icon"></span>
+                              <input type="text" id="login_name" name="login_name" placeholder="请输入华夏帐号"/>
+                         </div>
+                         <div class="inputbox6">
+                              <span class="account_password"></span>
+                              <input type="password" id="password_m" name="password_m" placeholder="请输入密码"/>
+                              <input id="password" name="password" type="hidden" />
+                         </div>
+                         <div><div class="inputbox7"><input id="verify_code" name="verifyCode" type="text" placeholder="请输入验证码" onkeyup="picCodeVerify();"/></div><img class="yzm2" src="http://www.hx2car.com/servlet/yzCode.jpg" onclick="javascript:this.src=&quot;http://www.hx2car.com/servlet/yzCode.jpg?rnd=&quot;+Math.random();" title="点击刷新"/></div>
+                         <div class="account_tishi">
+                              <a href="/sys/findpassword.htm" target="_blank">忘记密码？</a>
+                              <input id="isSave" type="checkbox" name="checkbox" value="1">
+                              <label for="checkbox1">下次自动登录</label>
+                         </div>
+                         <div class="Button4" onclick="userLogin()">立即登录</div>
+                         <div class="account_tishi2">还没有华夏账号？<a href="/user/register.htm">免费注册</a></div>
+                    </div>
+               </form>
+          </div>
+     </div>
+     <div class="login_code">
+     	<div class="login_code_top">
+     		手机扫描，安全登录
+     	</div>
+     	<div class="login_code_body">
+     		<img src="images/code.png"/>
+     	</div>
+     	<div class="login_code_bottom">
+     		<img src="images/sao.png"/>
+     		<div class="right">
+     			<p>打开<span>华夏二手车</span>手机APP扫一扫登录</p>
+     		</div>
+     	</div>
+     </div>
+     
+</div>
+</div>
+<div class="model">
+	<div class="black">
+		
+	</div>
+	<div class="model-box1 model-box hide">
+		<i class="icon close"></i>
+		<p>检测到您<span>18767103367</span>已注册的华夏账号</p>
+		<ul>
+			<li class="cur">华夏二手车 <i><img src="images/yes.png"/></i></li>
+			<li>华夏二手车<i><img src="images/yes.png"/></i></li>
+			<li><input type="password" name="" id="" placeholder="请输入密码"/></li>
+		</ul>
+		<div class="model-bottom">
+			<div class="sure">
+				确定
+			</div>
+			<div class="clos">
+				取消
+			</div>
+		</div>
+	</div>
+	<div class="model-box2 model-box ">
+		<i class="icon close"></i>
+		<div class="model-login">
+               <span >绑定已有华夏账号<i class="move"></i></span>
+               <span class="selec" >注册华夏账号<i class="move"></i></span>
+		</div>
+		<div class="model-tab-use model-tab hide">
+			<div class="account">
+                         <div class="inputbox6">
+                              <span class="account_icon"></span>
+                              <input type="text" id="login_name" name="login_name" placeholder="请输入华夏帐号"/>
+                         </div>
+                         <div class="inputbox6">
+                              <span class="account_password"></span>
+                              <input type="password" id="password_m" name="password_m" placeholder="请输入密码"/>
+                              <input id="password" name="password" type="hidden" />
+                         </div>
+                         <button type="button" class="use">提  &nbsp; 交</button>
+            </div>           
+		</div>
+		<div class="model-tab-register model-tab">
+			<div class="register-success hide">
+				<img src="images/success.png"/>
+				<h3>恭喜您，注册成功！</h3>
+				<p>登录名：<span>华夏二手车</span>，请妥善保管</p>
+				<button type="button">完善公司信息</button>
+			</div>
+			<div class="model-register-main ">
+				<div class="inputbox8">
+					<input type="text" name="" id="" value="" placeholder="请设置登录名"/>
+				</div>
+				<div class="inputbox8">
+					<input type="password" name="" id="" value="" placeholder="请设置登录密码"/>
+				</div>
+				<div class="inputbox8">
+					<input type="password" name="" id="" value="" placeholder="确认密码"/>
+				</div>
+				<div class="inputbox8">
+					<input type="text" name="" id="" value="" placeholder="公司名称"/>
+				</div>
+				<div class="model-city">
+					 <div class="inputbox2" id="inputpro"><span id="province">选择省份</span>
+                        <div class="Popup hide" id="pro">
+                         <p id="110000">北京市</p>
+                         <p id="120000">天津市</p>
+                         <p id="130000">河北省</p>
+                         <p id="140000">山西省</p>
+                         <p id="150000">内蒙古自治区</p>
+                         <p id="210000">辽宁省</p>
+                         <p id="220000">吉林省</p>
+                         <p id="230000">黑龙江省</p>
+                         <p id="310000">上海市</p>
+                         <p id="320000">江苏省</p>
+                         <p id="330000">浙江省</p>
+                         <p id="340000">安徽省</p>
+                         <p id="350000">福建省</p>
+                         <p id="360000">江西省</p>
+                         <p id="370000">山东省</p>
+                         <p id="410000">河南省</p>
+                         <p id="420000">湖北省</p>
+                         <p id="430000">湖南省</p>
+                         <p id="440000">广东省</p>
+                         <p id="450000">广西壮族自治区</p>
+                         <p id="460000">海南省</p>
+                         <p id="500000">重庆市</p>
+                         <p id="510000">四川省</p>
+                         <p id="520000">贵州省</p>
+                         <p id="530000">云南省</p>
+                         <p id="540000">西藏自治区</p>
+                         <p id="610000">陕西省</p>
+                         <p id="620000">甘肃省</p>
+                         <p id="630000">青海省</p>
+                         <p id="640000">宁夏回族自治区</p>
+                         <p id="650000">新疆维吾尔族自治区</p>
+                        </div>
+                   </div>
+                   <div class="inputbox2" id="inputcy"><span id="city">选择城市</span>
+                        <div class="Popup" style="display:none;" id="cy">
+                        </div>
+                   </div>
+                   <div class="inputbox2" id="inputarea"><span id="area">选择地区</span>
+                        <div class="Popup" style="display:none;" id="ar">
+                        </div>
+                   </div>
+				</div>
+				<div class="clear">
+					
+				</div>
+				<button type="button" class="register">立即注册</button>
+			</div>
+		</div>
+	</div>
+	<div class="model-box3 model-box hide">
+		<div class="close icon">
+			
+		</div>
+		<h3>用手机扫描左侧二维码，或选择适合你的手机系统下载。</h3>
+		<div class="app-main">
+			<img src="images/appcode.png"/>
+			<div class="app-right">
+				<div class="app-icon">
+					<i class="iphone-icon"></i><span>iPhone</span>
+				</div>
+				<div class="app-icon">
+					<i class="android-icon"></i><span>Android</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bottom_ad">
+  <p>
+  </p>
+</div>
+<div class="bottom" style = "height:100px">
+  <div class="bottom_al">
+    
+    <div class="bottom_nav">
+      <p class="net_nav">
+		<a class="gray12s6" href="/help/nabout.htm" target="_blank">关于我们</a> |
+		<a class="gray12s6" href="/help/link.htm" target="_blank">友情链接</a> |
+		<a class="gray12s6" href="/help/nad.htm" target="_blank">广告指南</a> |
+		<a class="gray12s6" href="/help/nbenefit.htm" target="_blank">服务指南</a> |
+		<a class="gray12s6" href="/help/nbenefit.htm#pro" target="_blank">帮助中心</a> |
+		<a class="gray12s6" href="/topgradecar/citynavigation.htm" target="_blank">地区导航</a> |
+		<a class="gray12s6" href="http://auto.hx2car.com/" target="_blank">资讯中心</a> | 
+		<a class="gray12s6" href="/help/npay.htm" target="_blank">联系我们</a>
+      </p>
+      <p>服务信箱：kf@hx2car.cn 联系电话：0571-88212994 QQ群：41281177</p>
+      <p>Copyright © 2003-2016 版权所有<a href="http://www.hx2car.com" target="_blank">hx2car.com</a> 浙ICP备05000595号</p>
+      <p>增值电信业务经营许可证: 浙B2-20120219</p>
+     
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var _hmt =_hmt || [];
+	
+	(function() {
+		
+		var hm = document.createElement("script");
+		
+		hm.src = "//hm.baidu.com/hm.js?5b941f460f2ec63730c9f325ba44961f";
+		
+		var s = document.getElementsByTagName("script")[0];
+		
+		s.parentNode.insertBefore(hm, s);
+		
+	})();
+</script>
+</body>
+</html>
+

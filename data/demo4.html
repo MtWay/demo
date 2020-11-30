@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="result">
+			
+		</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#result').html('waiting...');
+ 
+//var promise = wait("img/bg-car.png");
+//promise.done(result);
+wait("img/335524e01eb308622c5aae46ad645f9e.jpg").done(function(){
+	wait("img/can-bg.png")
+}).done(function(){
+	wait("img/bg-car.png")
+})
+ 
+function result() {
+ $('#result').html('done');
+}
+ 
+function wait(src) {
+	var img =new Image();
+	img.src=src;
+ var deferred = $.Deferred();
+	img.onload=function(){
+		console.log(src);
+ 	 deferred.resolve();
+	}
+ 
+// setTimeout(function() {
+//deferred.resolve();
+// }, 2000);
+// 
+ return deferred.promise();
+}  
+			})
+		</script>
+		<!--<img src="img/335524e01eb308622c5aae46ad645f9e.jpg"/>-->
+		<!--<img src="img/bg-car.png"/>-->
+		<!--<img src="img/bg-floor.png"/>-->
+		<!--<img src="img/can-bg.png"/>-->
+	</body>
+</html>

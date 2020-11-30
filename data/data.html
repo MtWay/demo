@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>data</title>
+		<script type="text/javascript">
+			var data ={
+				a:getQueryString("a"),
+				b:getQueryString("b"),
+				c:getQueryString("c")
+			};
+			console.log(data)
+			
+			document.onclick=function(){
+				data.a++;
+				go();
+			}
+			
+			function go(){
+				var lian = "?",str="";
+				for(var i in data){
+					console.log(i);
+					if(data[i]){
+						str+=lian+i+"="+data[i];
+						lian = "&"
+					}
+				}
+				location.href= location.href.split("?")[0]+str;
+			}
+			
+			//获取url参数
+function getQueryString(name) {
+     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+     var r = window.location.search.substr(1).match(reg);
+     if(r != null) return unescape(r[2]);
+     return null;
+}
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

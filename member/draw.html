@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抽奖</title>
+		<style type="text/css">
+			#wrap{width: 900px;margin: 0 auto;padding: 20px;height: auto;height: 900px;border: 1px solid #f00;display: flex;flex-direction: column;justify-content:space-between;}
+			.col{display: flex;height: 30%;justify-content:space-between;}
+			.box{border: 2px solid #000;text-align: center;float: left;width: 30%;}
+			.gree{border-color: #0f0;}
+			.kong{border-color: transparent;}
+			#go{width: 100px;height: 100px;margin: 0 auto; background: #f00;color: #fff;border-radius: 50%;display: inline-block;vertical-align: middle;cursor: pointer;-webkit-user-select:none;}
+			#go:after,span{display: inline-block;height: 100%;vertical-align: middle;content: "";}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+		$(function(){
+			var index= 1,mark=1;
+			
+			$("#go").click(function(){
+				if(mark==0){
+					return false;
+				}
+				mark=0;
+				var timeout = 20,//相当于200ms;
+				r =Math.ceil(Math.random()*10),
+				c=0;
+				clearInterval(timer),
+				msg="恭喜获得"+r+"等奖";
+				
+				if(r>7){
+					r=0;//谢谢概率为30%;
+					msg="谢谢"
+				}
+				
+				console.log(r);
+				var timer=setInterval(function(){
+					c++;
+					if(c==100){
+						timeout=5;
+					}
+					if(c==300){
+						timeout=20;
+					}
+					if(c==500){
+						timeout=30;
+					}
+					if(c%timeout==0){
+						index++;
+						
+				$(".gree").removeClass("gree");
+				$(".box"+index%8).addClass("gree");
+				if(c>300 && (index%8)==r){
+							clearInterval(timer);
+							mark=1;
+							setTimeout(function(){
+								alert(msg)
+							},10)
+						}
+					}
+				},10)
+				
+			})
+		})
+			
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="col">
+			<div class="box box1 gree">
+				1
+			</div>
+			<div class="box box2">
+				2
+			</div>
+			<div class="box box3">
+				3
+			</div>
+			</div>
+			<div class="col">
+				<div class="box box0">
+				8
+			</div>
+			<div class="box kong">
+				<div id="go">
+					开始
+				</div><span></span>
+			</div>
+			<div class="box box4">
+				4
+			</div>
+			</div>
+			<div class="col">
+				<div class="box box7">
+				7
+			</div>
+			<div class="box box6">
+				6
+			</div>
+			<div class="box box5">
+				5
+			</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

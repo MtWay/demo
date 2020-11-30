@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function bind(fn,context){
+				var args = Array.prototype.slice.call(arguments,2);
+				console.log(args);
+				return function(){
+					var innerArgs = Array.prototype.slice.call(arguments);
+					var finalArgs = args.concat(innerArgs);
+					return fn.apply(context,finalArgs)
+				}
+			}
+			
+			EventUtil.addHandler
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

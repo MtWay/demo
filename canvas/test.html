@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>红背景</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bdTouch.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+							console.log(1);
+					$("body").on({
+						"touchmove": function(e) {
+							console.log(e.originalEvent.changedTouches);
+							var touchs = e.originalEvent.changedTouches
+							for(var i = 0;i<touchs.length;i++){
+								$("body").append("<p>第"+i+"根手指的坐标"+touchs[i].clientX+","+touchs[i].clientY+"</p>")
+							}
+								$("body").append("<p>---------------</p>")
+						},
+						"click": function() {
+							console.log(1);
+						}
+					})
+					touch.on("body","pinchin",function(){
+								$("body").append("<p>执行了缩放</p>")
+					})
+//					setInterval(function(){
+//						$("body").toggleClass("red")
+//					},100)
+
+				})
+				//			for(var i = 0 ;i<10;i++){
+				//				console.log("bi"+i);
+				//				for(var j = 0;j<5;j++){
+				//					if(j==3){
+				//						break;
+				//					}
+				//				}
+				//				console.log("ai"+i);
+				//			}
+		</script>
+		<style type="text/css">
+			div {
+				/*display: none;*/
+			}
+			*{margin: 0;}
+			body {
+				/*background: #f00;*/
+				height: 100vh;
+				/*background: #00f;*/
+			}
+			/*.red{background: #f00;}*/
+			.box7{
+  text-align:center;
+  font-size:0;
+  height: 100px;
+  background: #f00;
+}
+.box7 .box{
+  vertical-align:middle;
+  display:inline-block;
+  font-size:16px;
+}
+.box p{font-size: 20px;}
+.box7:after{
+  content:'1';
+  width:10px;
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+		</style>
+	</head>
+
+	<body>
+		我是红背景
+		
+		<div class="box7">
+			<div class="box">
+				<p>1</p>
+			<p>1收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！收车快人一步
+随手翻看批发车源、新发布车源 心仪车源发布，我马上通知您！</p>
+			<p>1</p>
+			</div>
+			
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>我的伴侣</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/mFindCars.css"/>
+		<link rel="stylesheet" type="text/css" href="css/banlv.css" />
+
+	</head>
+
+	<body>
+		<div class="wrap swiper-container">
+			<div class="swiper-wrapper">
+				<div class="door swiper-slide section swiper-no-swiping" data-hash="slide1">
+					<h2>我的“伴侣”分析报告</h2>
+					<p>开始前请选择</p>
+					<div class="btnBox">
+
+						<div class="btn btn-blue " id="havecar">
+							我是有车族
+						</div>
+						<div class="btn btn-white" id="nocar">
+							我是无车族
+						</div>
+						<div class="btn hide" id="next">
+							
+						</div>
+					</div>
+				</div>
+				<div class="section swiper-slide " data-hash="slide2">
+					<div class="nocar hide">
+					<h2>我的“伴侣”分析报告</h2>
+					<p class="msg-t">到遇见您的伴侣还有3步哦~</p>
+					<h3>第一步</h3>
+					<p class="question">您买车的预算是多少呢？</p>
+
+					<label>
+						<input type="text" name="buyMoney" id="buyMoney" value=""  readonly='readonly' />
+					<span class="right-arrow"></span>
+					</label>
+					</div>
+					<div class="havecar">
+						<h2>我的“伴侣”分析报告</h2>
+					<p class="msg-t">到遇见您的伴侣还有3步哦~</p>
+					<h3>第一步</h3>
+					<p class="question">您的爱车型号是？</p>
+
+					<label><input type="text" name="choiceBrands" id="choiceBrands" value="" /><span class="right-arrow"></span></label>
+					</div>
+				</div>
+				<div class="section swiper-slide" data-hash="slide3">
+				<div class="nocar hide">
+					<h2>我的“伴侣”分析报告</h2>
+					<p class="msg-t">到遇见您的伴侣还有2步哦~</p>
+					<h3>第二步</h3>
+					<p class="question">你希望你的ta来自哪个国家？</p>
+					<label><input type="text" name="country" id="country" value="" readonly="readonly"/><span class="right-arrow"></span></label>
+				</div>
+				<div class="havecar ">
+					<h2>我的“伴侣”分析报告</h2>
+					<p class="msg-t">到遇见您的伴侣还有2步哦~</p>
+					<h3>第二步</h3>
+					<p class="question">ta陪你度过了多少时光（上牌时间）？</p>
+					<label><input type="text" name="tagTime" id="tagTime" /><span class="right-arrow"></span></label>
+				</div>
+				</div>
+				<div class="section swiper-slide" data-hash="slide4">
+				<div class="nocar hide">
+					<h2>我的“伴侣”分析报告</h2>
+					<p class="msg-t">到遇见您的伴侣还有1步哦~</p>
+					<h3>第三步</h3>
+					<p class="question">你对ta的颜值有何要求？（颜色）</p>
+					<label><input type="text" name="color" id="color" value=""  readonly='readonly'/><span class="right-arrow"></span></label>
+				</div>
+				<div class="havecar ">
+					<h2>我的“伴侣”分析报告</h2>
+					<p class="msg-t">到遇见您的伴侣还有1步哦~</p>
+					<h3>第三步</h3>
+					<p class="question">ta陪你走过了多少路？（公里数（选填））</p>
+					<label><input type="text" name="journey" id="journey" value="" /><span>万公里</span></label>
+				</div>
+				</div>
+				<div class="section swiper-slide" data-hash="slide5">
+					<div class="nocar hide">
+						
+					<h2>为你推荐ta</h2>
+					<div class="carBox">
+						这里有辆车
+					</div>
+					<div class="btnBox ">
+						<div class="btn btn-blue">
+							生成我的“伴侣”分析报告
+						</div>
+						<div class="btn btn-white">
+							看看我的“备胎”
+						</div>
+					</div>
+					</div>
+					<div class="havecar ">
+						
+					<h2>我的“伴侣”分析报告</h2>
+					<div class="assess">
+						<img src="img/335524e01eb308622c5aae46ad645f9e.jpg" class="carImg"/>
+						<div class="assList">
+							<span class="til">车型</span>
+							<span class="msg">三大gas多个</span>
+						</div>
+						<div class="assList">
+							<span class="til">上牌时间</span>
+							<span class="msg">2018.01.17</span>
+						</div>
+						<div class="assList">
+							<span class="til">里程</span>
+							<span class="msg">12万</span>
+						</div>
+						<div class="assMoney">
+							估价
+						</div>
+						
+					</div>
+					<div class="btnBox ">
+						<div class="btn btn-blue half">
+							生成我的“伴侣”分析报告
+						</div>
+						<div class="btn btn-white half right">
+							看看我的“备胎”
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="section swiper-slide">
+					<canvas id="out" width="" height="" class="hide"></canvas>
+					<img class="outImg" src="img/335524e01eb308622c5aae46ad645f9e.jpg" />
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+
+		</div>
+		<div class="model">
+			<h2>价格预期</h2>
+			<div class="content">
+				<ul>
+					<li>1w</li>
+					<li>2w</li>
+					<li>3w</li>
+					<li>4w</li>
+					<li>5w</li>
+					<li>6w</li>
+					<li>7w</li>
+					<li>8w</li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jsPlug.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/commonUse.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/banlvdata.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/banlv.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

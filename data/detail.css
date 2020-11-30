@@ -1,0 +1,9298 @@
+@charset "utf-8";
+
+/* CSS Document */
+.searchcarL,
+.Tool_list a .I_4s,
+.Tool_list a .WZ,
+.Tool_list a .PG,
+.Tool_list a .DK,
+.Tool_list a .BX,
+.Tool_list a .PK,
+.Tool_list a .PP,
+.Boutique_title span.jp_B,
+.Boutique_title span.jm_B,
+.Boutique_title span.hot_B,
+.Boutique_title span.hctj_B,
+.Boutique_title span.jp_O,
+.Boutique_title span.jm_O,
+.Boutique_title span.hot_O,
+.Boutique_title span.hctj_O,
+.information_title .esczx_O,
+.Boutique_title a.more,
+.Related_titleL,
+.Related_extra,
+.Related_extra:hover,
+.information_contR_news li,
+.bottom_nav .police_l,
+.bottom_nav .police_r,
+.bottom_cont_frame .Scan li a.iphone,
+.bottom_cont_frame .Scan li a.android,
+.bottom_cont_frame .Scan li a.wx,
+.bottom_cont_frame .Scan li a.wb,
+.bottom_cont_frame .Scan li.iphone a,
+.bottom_cont_frame .Scan li.android a,
+.bottom_cont_frame .Scan li.wx a,
+.servicelist .back,
+.service_info .own_service .QQ,
+.service_info .label {
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/index/index.png) no-repeat;
+}
+
+.orange {
+    color: #f60;
+}
+
+.credit {
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat -85px -214px;
+    display: inline-block;
+    padding-left: 20px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 5px;
+    margin-left:-4px;
+}
+
+.path {
+    width: 1345px;
+    margin: 0 auto;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 5px;
+}
+
+.path a {
+    padding: 0 6px;
+}
+
+.path a.index {
+    font-weight: bold;
+}
+
+.cardetail {
+    width: 1350px;
+    margin: 0 auto 50px auto;
+}
+
+.cardetailL {
+    float: left;
+    width: 1080px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.cardetailL .top {
+    background: #fff;
+    *padding-bottom: 1px;
+}
+
+.cardetailT .top {
+    background: #fff;
+    *padding-bottom: 1px;
+}
+
+/*手机验证*/
+.verify {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -170px;
+    display: none;
+    background: #fff;
+    z-index: 10000;
+    padding-bottom: 40px;
+}
+
+.verify .assiTextCont {
+    padding: 50px 70px;
+}
+
+.verify .assiTextCont .text {
+    text-align: center;
+    width: 331px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.verify .text .pho {
+    color: #f60;
+}
+
+.verify .btn {
+    width: 331px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.verify .btn span {
+    width: 145px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.verify .btn .open {
+    background: #f60;
+    float: left;
+}
+
+.verify .btn .re_login {
+    background: #bfbfbf;
+    float: right;
+}
+
+/*微信服务*/
+.wechat {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -178px;
+    width: 474px;
+    display: none;
+    background: #fff;
+    z-index: 1000;
+}
+
+.wechat .text {
+    text-align: center;
+    line-height: 80px;
+    font-size: 17px;
+    color: #666;
+}
+
+.wechat .weixin_codeimg {
+    width: 124px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.wechat .text2 {
+    text-align: center;
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.wechat .look {
+    margin-top: 20px;
+}
+
+/*个人会员*/
+.vip {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -290px;
+    width: 476px;
+    height: 580px;
+    display: none;
+    background: #fff;
+    z-index: 1000;
+}
+
+.vip .buy_money {
+    padding: 0 30px;
+}
+
+.vip .buy_money .num {
+    font-size: 14px;
+    color: #666;
+    line-height: 60px;
+}
+
+.vip .buy_money .months {
+    position: relative;
+    margin: 0 auto;
+    width: 126px;
+    height: 60px;
+    border: 1px solid #f60;
+    color: #444;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+}
+
+.vip .buy_money .member {
+    margin: 0 auto;
+    width: 178px;
+    padding: 20px 0;
+    color: #444;
+    font-size: 18px;
+    text-align: center;
+}
+
+.vip .buy_money .look, .wechat .look {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    color: #0072ff;
+    font-size: 14px;
+}
+
+.vip .pay_way {
+    padding: 0 30px;
+}
+
+.vip .pay_way .way {
+    font-size: 14px;
+    color: #666;
+}
+
+.vip .pay_way .pay_con {
+    text-align: center;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.vip .pay_way .pay_con li {
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 60px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #444;
+    cursor: pointer;
+}
+
+.vip .pay_way .pay_con li {
+    margin-left: 35px;
+}
+
+.vip .pay_way .pay_con li {
+    margin-left: 25px;
+}
+
+.vip .pay_way .pay_con li .text1 {
+    line-height: 60px;
+}
+
+.vip .pay_way .pay_con li.select {
+    border: 1px solid #f60;
+}
+
+.select_at {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: 19px;
+    height: 17px;
+    background: url('../../images/cardetail/at.png');
+}
+
+.vip .recharge {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -90px;
+    text-align: center;
+    width: 180px;
+    height: 45px;
+    line-height: 50px;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    background: #f60;
+}
+
+.Service {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 0px 5px #F6F6F6;
+    top: 34%;
+    left: 30%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    padding: 0 10px 10px;
+}
+
+.person_cont .title .xiugai {
+    margin-bottom: 25px;
+}
+
+.Service a {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555555;
+}
+
+.Service span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+/*新增热门城市省份*/
+.hx_hotCity {
+    min-width: 1200px;
+    width: 100%;
+    background-color: #FFF;
+    border-top: 3px solid #FF9400;
+    position: relative;
+    z-index: 99;
+    padding: 15px 0 25px 0;
+}
+
+.hx_hotCity .hx_hContent {
+    width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.hx_hotCity .hx_hContent .hx_hpro {
+    padding-top: 16px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.hx_hotCity .hx_hContent .hx_hpro a {
+    font-size: 14px;
+    color: #606977;
+    outline: none;
+    text-decoration: none;
+}
+
+.hx_hotCity .hx_hContent .hx_hpro a:hover {
+    color: #1799ec;
+}
+
+.hx_hotCity .hx_hContent .hx_hcity {
+    width: 1200px;
+    overflow: hidden;
+}
+
+.hx_hotCity .hx_hContent .hx_hcity a {
+    float: left;
+    margin-right: 20px;
+    white-space: nowrap;
+    line-height: 30px;
+    font-size: 12px;
+    outline: none;
+    text-decoration: none;
+    color: #606977;
+}
+
+.hx_hotCity .hx_hContent .hx_hcity a:hover {
+    color: #1799ec;
+}
+
+/*******公司门店**********/
+.companyStore {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.companyStore .mdTitle {
+    height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.companyStore .mdTitle .mdLine {
+    display: inline-block;
+    margin-left: 36px;
+    padding-right: 15px;
+    border-bottom: 3px solid #f60;
+    height: 48px;
+    line-height: 48px;
+}
+
+.companyStore .mdTitle .mdArrow {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-right: 8px;
+    background: url('../../images/cardetail/MDarrow.png') no-repeat;
+}
+
+.companyStore .mdTitle .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f60;
+}
+
+.companyStore .mdCont {
+    padding: 20px 36px;
+    overflow: hidden;
+}
+
+.companyStore .mdCont .mdPic {
+    float: left;
+    margin-right: 30px;
+    width: 180px;
+    height: 135px;
+    cursor: pointer;
+}
+
+.companyStore .mdCont .compayCont {
+    float: left;
+}
+
+.companyStore .mdCont .compayCont .conpayName {
+    line-height: 50px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.companyStore .mdCont .compayCont .adders {
+    line-height: 27px;
+    font-size: 14px;
+    color: #666;
+}
+
+.companyStore .mdCont .compayCont .adders label {
+    color: #969696;
+}
+
+.companyStore .mdCont .compayCont .enterMD {
+    display: block;
+    margin-top: 18px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    background: #f60;
+    color: #fff;
+    font-size: 14px;
+}
+
+.companyStore .mdContBig {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -221px;
+    margin-left: -361px;
+    width: 723px;
+    height: 443px; /*background:pink;*/
+    z-index: 1000;
+}
+
+.companyStore .mdcontBig2 {
+    position: relative;
+    width: 549px;
+    height: 416px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.companyStore .mdcontBig2 .mdPicBig {
+    position: relative;
+    width: 1000%;
+}
+
+.companyStore .mdcontBig2 .mdPicBig li {
+    float: left;
+    width: 550px;
+}
+
+.companyStore .mdcontBig2 .mdPicBig .picmd {
+    height: 416px;
+    width: 550px;
+}
+
+.companyStore .mdContBig .closeMD {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background: url('../../images/cardetail/closeImg.png') no-repeat;
+}
+
+.companyStore .mdContBig .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.companyStore .mdContBig .btn span {
+    display: inline-block;
+    width: 35px;
+    height: 59px;
+    cursor: pointer;
+}
+
+.companyStore .mdContBig .btn .arrowL {
+    float: left;
+    background: url('../../images/cardetail/arrowL.png');
+}
+
+.companyStore .mdContBig .btn .arrowR {
+    float: right;
+    background: url('../../images/cardetail/arrowR.png');
+}
+
+/*******查看个人会员详情**********/
+/*.personalNote {
+    position: fixed;
+    width: 860px;
+    height: 650px;
+    border: 1px solid #ddd;
+    left: 50%;
+    top: 50%;
+    margin-left: -430px;
+    margin-top: -325px;
+    background: #fff;
+    z-index: 1000;
+}
+
+.personalNote .pCenter {
+    padding: 0 37px 0 37px;
+}
+
+.personalNote .pCenter .assi_title {
+    margin-top: 0;
+}
+
+.personalNote .pCenter .per_cont1 {
+    height: 250px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.personalNote .pCenter .per_cont2 {
+    height: 100px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.personalNote .pCenter .assi_title {
+    width: 785px;
+}
+
+.personalNote .pCenter .pTitle {
+    margin-top: 10px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ff6600;
+    display: block;
+    color: #ff6600;
+}
+
+.personalNote .pCenter .cTitle {
+    display: inline-block;
+    margin: 20px 0 10px 0;
+    height: 20px;
+    width: 100%;
+    line-height: 20px;
+    color: #f60;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.personalNote .pCenter .pIntroduce {
+    background-color: #ff8533;
+    height: 40px;
+    width: 786px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.personalNote .pCenter .pIntroduce .iLeft {
+    float: left;
+    width: 260px;
+}
+
+.personalNote .pCenter .pIntroduce .iCenter {
+    float: left;
+    width: 140px;
+}
+
+.personalNote .pCenter .pIntroduce .iRight {
+    float: left;
+    width: 386px;
+}
+
+.personalNote .pCenter .pWhite {
+    float: left;
+    background-color: #fff;
+    height: 40px;
+    width: 786px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.personalNote .pCenter .pWhite .iLeft {
+    float: left;
+    width: 260px;
+    font-weight: bold;
+    color: #777777;
+}
+
+.personalNote .pCenter .pWhite .iCenter {
+    float: left;
+    width: 140px;
+    color: #555555;
+}
+
+.personalNote .pCenter .pWhite .iRight {
+    float: left;
+    width: 386px;
+    color: #555555;
+}
+
+.personalNote .pCenter .phui {
+    background-color: #ebeaea;
+}
+
+.personalNote .pCenter .ptop {
+    margin-top: 45px;
+}
+
+.personalNote .pCenter .pClose {
+    float: left;
+    margin: 40px 0 0 293px;
+    width: 200px;
+    height: 44px;
+    background-color: #f60;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 44px;
+    cursor: pointer;
+}*/
+
+
+
+
+
+
+.cardetailT .top_L {
+    float: left;
+    width:613px;
+    padding:18px;
+    padding-bottom:0;
+    background: #fff;
+}
+.cardetailT .top_L .datu {
+    width: 613px;
+    height: 458px;
+}
+.cardetailT .top_L .datu a{
+	display: block;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background: no-repeat center;
+	background-size: cover;
+	-moz-background-size: cover;
+}
+
+
+.cardetailT .top_L .datu img {
+	display: none;
+	display: block\9;
+	height: 100%\9;
+   width: 100%;
+   
+   position: absolute; 	
+  
+}
+
+.w1130 .cardetailT .top_L .datu img {
+   /*margin:-190px 0 0 -255px;*/
+}
+
+.cardetailT .top_L .xiaotu {
+    margin: 0 10px 10px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.cardetailT .top_L .xiaotu li {
+    float: left;
+    width: 106px;
+    height: 76px;
+    margin: 0 2px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.cardetailT .top_L .xiaotu li.select {
+    border: 2px solid #f60;
+}
+
+.cardetailT .top_L .xiaotu li img {
+    width: 106px;
+    height: 76px;
+    overflow: hidden;
+}
+
+.cardetailT .top_L .compare1 {
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.cardetailT .top_L .compare1 a {
+    width: 193px;
+    overflow: hidden;
+    display: inline-table;
+    height: 15px;
+    text-align: center;
+}
+
+.cardetailT .top_L .compare2 {
+    padding: 0 3px;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.cardetailT .top_L .compare2 a {
+    padding: 0 16px;
+}
+
+.cardetailT .top_R {
+    float: left;
+    width: 682px;
+    padding-top: 20px;
+    /*background:pink;*/
+}
+
+.cardetailT .top_R h2 {
+    height: 60px;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.cardetailT .top_R .title_info {
+    height: 35px;
+    line-height: 35px;
+    color: #969696;
+    font-family: 微软雅黑;
+    font-size:14px;
+}
+
+.cardetailT .top_R .title_infoL {
+    float: left;
+}
+
+.cardetailT .top_R .title_infoL span {
+    margin-right: 15px;
+}
+
+.cardetailT .top_R .title_infoL span i {
+    margin-right: 3px;
+}
+
+.cardetailT .top_R .title_infoR {
+    /*float: right;*/
+    /*position: relative;*/
+}
+.cardetailT .top_R .title_infoR span:hover {
+    text-decoration: underline;
+}
+
+.cardetailT .top_R .company_infoR {
+    float:right;
+    position:relative;
+    width:368px;
+}
+.w1130 .cardetailT .top_R .company_infoR {
+    width:360px;
+}
+.company_infoR .companyBoxTo {
+    overflow:hidden;
+    width:318px;
+    padding:0 25px;
+}
+.company_infoR .companyBoxTo span {
+    float:right;
+    color:#444;
+}
+.company_infoR .companyBoxTo .companyTitle {cursor:pointer;}
+.company_infoR .companyBoxTo .comOverText {overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width:212px;text-align:right;}
+.company_infoR .companyBoxTo .iconarrow, .company_infoR .companyBoxTo .iconyear{
+    background:url("https://static.hx2car.com/resource/web/dist/static/car/images/dated_icon.png ");
+}
+.company_infoR .companyBoxTo .iconarrow{
+    margin-top:14px;
+    margin-left:14px;
+    margin-right:5px;
+    width:14px;
+    height:7px;
+    background-position:22px -4px;
+}
+.company_infoR .companyBoxTo .iconyear{
+    overflow:hidden;
+    margin-top:10px;
+    margin-right:14px;
+    width:46px;
+    height:16px;
+    background-position:0px 0px;
+    text-align: center;
+
+}
+.company_infoR .companyBoxTo .iconyear .yearText {
+    display: block;
+    width:30px;
+    text-align:center;
+    height:16px;
+    line-height: 16px;
+    color:#fff;
+    font-size:12px;
+    float:left;
+}
+/*.comptitle .companyicon {*/
+/*position:relative;*/
+/*top:0;*/
+/*left:0;*/
+/*width:70px;*/
+/*height:17px;*/
+/*background-position:0px 0px;*/
+/*cursor:pointer;*/
+/*margin-left:10px;*/
+/*font-style:normal;*/
+/*text-align:left;*/
+/*}*/
+/*.comptitle .companyicon .year {*/
+/*width:25px;*/
+/*text-align:center;*/
+/*padding-left:3px;*/
+/*height:17px;*/
+/*line-height:17px;*/
+/*font-size:12px;*/
+/*color:#fff;*/
+/*}*/
+
+/*.cardetailT .top_L {
+    float: left;
+    width:510px;
+    padding:18px;
+    padding-bottom:0;
+    background: #fff;
+}
+.cardetailT .top_L .datu {
+    width: 510px;
+    height: 382px;
+}
+
+.cardetailT .top_L .datu img {
+    width: 510px;
+    height: 382px;
+    overflow: hidden;
+}
+
+.cardetailT .top_L .xiaotu {
+    margin: 0 10px 10px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.cardetailT .top_L .xiaotu li {
+    float: left;
+    width: 107px;
+    height: 76px;
+    margin: 0 3px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.cardetailT .top_L .xiaotu li.select {
+    border: 2px solid #f60;
+}
+
+.cardetailT .top_L .xiaotu li img {
+    width: 107px;
+    height: 76px;
+    overflow: hidden;
+}
+
+.cardetailT .top_L .compare1 {
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.cardetailT .top_L .compare1 a {
+    width: 193px;
+    overflow: hidden;
+    display: inline-table;
+    height: 15px;
+    text-align: center;
+}
+
+.cardetailT .top_L .compare2 {
+    padding: 0 3px;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.cardetailT .top_L .compare2 a {
+    padding: 0 16px;
+}
+
+.cardetailT .top_R {
+    float: left;
+    width: 530px;
+    padding-top: 20px;
+}
+
+.cardetailT .top_R h2 {
+    height: 60px;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.cardetailT .top_R .title_info {
+    height: 35px;
+    line-height: 35px;
+    color: #969696;
+    font-family: 微软雅黑;
+}
+
+.cardetailT .top_R .title_infoL {
+    float: left;
+}
+
+.cardetailT .top_R .title_infoL span {
+    margin-right: 15px;
+}
+
+.cardetailT .top_R .title_infoL span i {
+    margin-right: 3px;
+}
+
+.cardetailT .top_R .title_infoR {
+    float: right;
+    position: relative;
+}*/
+.title_infoR .tool_jb{
+    margin-top:8px;
+    float: right;
+    width:35px;
+    height:20px;
+    padding-left:25px;
+    line-height:20px;
+    cursor: pointer;
+    color:#444;
+}
+.title_infoR .tool_jb i {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    vertical-align: text-bottom;
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat  -200px -30px;
+}
+
+/*.cardetailT .top_R .title_infoR span:hover {
+    text-decoration: underline;
+}*/
+
+
+.cardetailT .top_R .BOX_price .price i.yishou,
+.cardetailT .top_R .BOX_price .price i.lianbao,
+.cardetailT .top_R .BOX_price .price i.danbao,
+.tool_duibi,
+.tool_note,
+.tool_depreciate,
+.tool_yuyue,
+.cardetailL_content .title span .detail,
+.cardetailL_content .title span .address,
+.cardetailL_content .title span .tend,
+.cardetailL_content .title span .newcar,
+.cardetailL_content .title span .cx_4s,
+.cheliao_mini,
+.cheliao_close,
+.cheliaoL .import_title .yuyin,
+.cheliaoL .import_title .face,
+.cheliaoL .import_title .picture,
+.aside li .shoucang,
+.aside li .liulan,
+.aside li .PK,
+.aside li .chat,
+.aside li .pinggu,
+.aside li .daikuan,
+.aside li .baoxian,
+.aside li .tousu,
+.aside li .up,
+.unfold_PK_list li .closed,
+.unfold_PK_list li:hover .add,
+.TYBOX_title .closed,
+.cardetailT .top_R .BOX_phone .num i,
+.DATU_Page_cont .title_closed,
+.cardetailL_content .Detail .zan,
+.cardetailL_content .Detail .zan_od,
+.cardetailT .top_R .detail li p a.dw,
+.goMap {
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/detail.png) no-repeat;
+}
+
+
+
+.cardetailT .top_R .title_infoR .sc {
+    /*margin-top: 8px;*/
+    float: right;
+    width: 35px;
+    height: 20px;
+    padding-left: 0px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #444;
+}
+.cardetailT .top_R .title_infoR .sc i{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    left: 0;
+    top: 0px;
+    background-image:url(../../images/cardetail/detail-icons-new1.png);
+    background-position:-249px -39px;
+    vertical-align:text-bottom;
+}
+.cardetailT .top_R .title_infoR .isCollect {
+    /*margin-top: 8px;*/
+    float: right;
+    width:45px;
+    height: 20px;
+    /*padding-left: 25px;*/
+    line-height: 20px;
+    cursor: pointer;
+    color: #444;
+}
+.cardetailT .top_R .title_infoR .isCollect i{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    left: 0;
+    top: 0px;
+    background-image:url(../../images/cardetail/detail-icons-new1.png);
+    background-position:-249px -65px;
+    vertical-align:text-bottom;
+}
+.cardetailT .top_R .title_infoR .share {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-position: -4px -8px;
+    padding-left: 25px;
+}
+
+.cardetailT .top_R .detail {
+    line-height: 22px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.cardetailT .top_R .detail ul {
+    width: 350px;
+    overflow: hidden;
+    float: left;
+}
+
+
+/*
+.cardetailT .top_R .title_infoR .sc {
+    margin-top: 8px;
+    float: right;
+    width: 35px;
+    height: 20px;
+    padding-left: 25px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #444;
+}
+.cardetailT .top_R .title_infoR .sc i{
+	position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    left: 0;
+    top: 9px;
+    background-image:url(../../images/cardetail/detail-icons-new1.png);
+	background-position:-249px -39px;
+	vertical-align:text-bottom;
+}
+.cardetailT .top_R .title_infoR .isCollect {
+    margin-top: 8px;
+    float: right;
+    width:45px;
+    height: 20px;
+    padding-left: 25px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #444;
+}
+.cardetailT .top_R .title_infoR .isCollect i{
+	position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    left: 0;
+    top: 9px;
+    background-image:url(../../images/cardetail/detail-icons-new1.png);
+	background-position:-249px -65px;
+	vertical-align:text-bottom;
+}
+.cardetailT .top_R .title_infoR .share {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-position: -4px -8px;
+    padding-left: 25px;
+}
+
+.cardetailT .top_R .detail {
+    line-height: 22px;
+    margin-top: 22px;
+    overflow: hidden;
+}
+
+.cardetailT .top_R .detail ul {
+    width: 350px;
+    overflow: hidden;
+    float: left;
+}*/
+
+#erweima {
+    float: left;
+    height:210px;
+    margin-left:30px;
+    overflow: hidden;
+}
+#erweima img {
+    width:134px;
+    height:134px;
+}
+#erweima p {
+    width:128px;
+    margin:5px 0;
+    color:#444;
+    text-align: center;
+    line-height: 22px;
+}
+#erweima p span{font-weight: bold;font-size:14px;color:#a6a6a6;}
+
+.cardetailT .top_R .detail li {
+    float: left;
+    border-left: 1px solid #e5e5e5;
+    width: 110px;
+    padding: 15px 10px;
+    padding-right: 4px;
+}
+
+.cardetailT .top_R .detail li p {
+    font-size:16px;
+    height: 25px;
+    line-height:25px;
+    overflow: hidden;
+    color:#444;
+}
+
+.cardetailT .top_R .detail li p.tint {
+    font-size:14px;
+    color: #a6a6a6;
+}
+
+.cardetailT .top_R .detail li p a {
+    color: #f60;
+}
+
+.cardetailT .top_R .detail li p a.dw {
+    float: left;
+    width: 17px;
+    height: 20px;
+    background-position: -4px -240px;
+}
+
+.cardetailT .top_R .detail li p .diqu {
+    float: left;
+    max-width: 60px;
+    height: 22px;
+    overflow: hidden;
+    margin-right: 3px;
+}
+
+/*.cardetailT .top_R .detail li {
+    float: left;
+    border-left: 1px solid #e5e5e5;
+    width: 100px;
+    padding: 10px;
+    padding-right: 4px;
+}
+
+.cardetailT .top_R .detail li p {
+    font-size:14px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.cardetailT .top_R .detail li p.tint {
+    font-size:12px;
+    color: #969696;
+}
+
+.cardetailT .top_R .detail li p a {
+    color: #f60;
+}
+
+.cardetailT .top_R .detail li p a.dw {
+    float: left;
+    width: 17px;
+    height: 20px;
+    background-position: -4px -240px;
+}
+
+.cardetailT .top_R .detail li p .diqu {
+    float: left;
+    max-width: 60px;
+    height: 22px;
+    overflow: hidden;
+    margin-right: 3px;
+}*/
+
+.cardetailT .top_R .BOX {
+    margin-top: 25px;
+    position: relative;
+}
+
+.cardetailT .top_R .BOX_price {
+    position: relative;
+    height: 138px;
+    border: 1px solid #e5e5e5;
+    background-color: #f9f9f9;
+}
+
+.cardetailT .top_R .BOX_price2 {
+    height: 114px;
+}
+
+.cardetailT .top_R .BOX_price .QR_code {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    width: 93px;
+    margin: 2px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.cardetailT .top_R .BOX_price .QR_code img {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.cardetailT .top_R .BOX_price .QR_codebg {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 138px;
+    height: 138px;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 8;
+}
+
+.cardetailT .top_R .BOX_price .QR_codebox {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 138px;
+    height: 138px;
+    color: #fff;
+    z-index: 9;
+    text-align: center;
+}
+
+.cardetailT .top_R .BOX_price .QR_codebox img {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    margin: 15px auto 5px auto;
+    display: block;
+}
+
+.cardetailT .top_R .BOX_price .price {
+    position: relative;
+    margin: 38px 0 5px 30px;
+    font-size: 20px;
+    color: #f60;
+}
+
+.cardetailT .top_R .BOX_price .price span {
+    font-size: 38px;
+    font-family: "微软雅黑";
+    margin: 0 10px;
+}
+
+.cardetailT .top_R .BOX_price .price i.yishou {
+    width: 20px;
+    height: 20px;
+    background-position: -134px 0;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cardetailT .top_R .BOX_price .price i.lianbao {
+    width: 20px;
+    height: 20px;
+    background-position: -158px 0;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cardetailT .top_R .BOX_price .price i.danbao {
+    width: 20px;
+    height: 20px;
+    background-position: -184px 0;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow {
+    font-size: 12px;
+    color: #f60;
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    z-index: 99;
+    padding-left: 20px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/giftrun.gif) 0 2px no-repeat;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList {
+    width: 387px;
+    height: 346px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #999;
+    cursor: auto;
+    right: -250px;
+    top: 30px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LTop {
+    width: 210px;
+    height: 114px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/gifttop.png) 0 0 no-repeat;
+    padding: 0 20px 0 157px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LTop .TTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    height: 30px;
+    line-height: 30px;
+    margin: 28px 0 0 0;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .GCon .LTop {
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/gifttop2.png) 0 0 no-repeat;
+    padding: 0 20px 0 157px;
+    width: 210px;
+    height: 192px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .GCon .LTop .TTitle {
+    margin: 42px 0 40px 0;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LTop .TGifts {
+    color: #9e1f1f;
+    line-height: 22px;
+    width: 270px;
+    color: #999;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .GCon .LTop .TGifts {
+    color: #9e1f1f;
+    margin: 0 0 0 -82px;
+    text-align: center;
+    width: 237px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .GCon .LTop .TGifts span {
+    height: 14px;
+    line-height: 14px;
+    display: inline-block;
+    color: #9e1f1f;
+    margin: 0 0 9px 0;
+    padding: 0 8px 0 12px;
+    position: relative;
+    font-size: 12px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .GCon .LTop .TGifts span i {
+    width: 5px;
+    height: 5px;
+    background-color: #921f1f;
+    border-radius: 50%;
+    display: block;
+    left: 3px;
+    top: 4px;
+    position: absolute;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LTop .TClose {
+    width: 12px;
+    height: 12px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/giftsclose.png) 0 0 no-repeat;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList {
+    margin: 20px 0 0 62px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p span {
+    font-size: 12px;
+    width: 75px;
+    float: left;
+    color: #333;
+    height: 26px;
+    line-height: 26px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p input {
+    width: 170px;
+    height: 24px;
+    border: 1px solid #d8d8d8;
+    padding: 0 5px;
+    float: left;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p.LPic input {
+    width: 89px;
+    margin-right: 6px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p.LTel input {
+    width: 89px;
+    margin-right: 6px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p.LTel b {
+    cursor: pointer;
+    width: 75px;
+    height: 26px;
+    text-align: center;
+    color: #fff;
+    line-height: 26px;
+    font-weight: normal;
+    float: left;
+    background-color: #50A5D4;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p.LTip {
+    width: 266px;
+    color: #bbb;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList p.LButton {
+    cursor: pointer;
+    width: 258px;
+    height: 34px;
+    background-color: #f60;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList .LNumber {
+    position: relative;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList .LNumber em {
+    position: absolute;
+    right: 50px;
+    height: 20px;
+    top: 2px;
+    padding: 0 3px;
+    line-height: 20px;
+    font-style: normal;
+    background-color: #fff2f2;
+    border: 1px solid #ff8e8e;
+    color: #f60;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList .LPic em {
+    position: absolute;
+    right: 131px;
+    height: 20px;
+    top: 172px;
+    padding: 0 3px;
+    line-height: 20px;
+    font-style: normal;
+    background-color: #fff2f2;
+    border: 1px solid #ff8e8e;
+    color: #f60;
+}
+
+.cardetailT .top_R .BOX_price .price .GShow .SList .LList .LTel em {
+    position: absolute;
+    right: 131px;
+    height: 20px;
+    top: 208px;
+    padding: 0 3px;
+    line-height: 20px;
+    font-style: normal;
+    background-color: #fff2f2;
+    border: 1px solid #ff8e8e;
+    color: #f60;
+}
+
+.cardetailT .top_R .BOX_price .explain {
+    margin-left: 30px;
+}
+
+.cardetailT .top_R .BOX_price .explain .cheliao_icon {
+    position: relative;
+    float: left;
+    width: 52px;
+    height: 22px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/lianxi.gif) no-repeat;
+    display: inline-block;
+    margin-top: -4px;
+}
+
+.cardetailT .top_R .BOX_phone {
+    font-size:16px;
+    height:54px;
+    line-height:54px;
+    text-align: center;
+    overflow: hidden;
+}
+.cardetailT .top_R .BOX_phone .num {
+    position: relative;
+    float: left;
+    width: 330px;
+    height: 52px;
+    overflow: hidden;
+    padding: 0 22px 0 58px;
+    border:1px solid #f60;
+    border-radius: 3px;
+    color:#f60;
+    font-size:18px;
+    margin-right:10px;
+    text-align: left;
+    cursor: pointer;
+}
+.cardetailT .top_R .BOX_phone_text .num {
+    line-height:35px;
+    font-weight:bold;
+}
+.w1130 .cardetailT .top_R .BOX_phone_text .num {
+    line-height:32px;
+}
+
+.cardetailT .top_R .BOX_phone_text .num .numText {
+    display:none;
+    line-height:10px;
+    font-size:12px;
+    font-weight:normal;
+}
+.cardetailT .top_R .BOX_phone2 .num {
+    float: left;
+    width: 310px;
+    height: 50px;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.cardetailT .top_R .BOX_phone .num .icon-phone {
+    position: absolute;
+    left:18px;
+    top:13px;
+    width: 28px;
+    height: 28px;
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat -225px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.goLoginBtn{
+    cursor:pointer;
+}
+.cardetailT .top_R .BOX_phone .num a {
+    margin-left: 10px;
+    color: #fff;
+}
+#lxiren{
+    float:left;
+    width:125px;
+    height:40px;
+    line-height:40px;
+    background-color:#f3f3f3;
+    border:1px solid #e2e2e2;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size:14px;
+    text-align: center;
+    color:#656565;
+    margin-top: 10px;
+}
+.cardetailT .top_R .BOX_phone .private_ass {
+    float: left;
+    width: 110px;
+    height: 50px;
+    overflow: hidden;
+    border-left: 1px solid #ff7e28;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cardetailT .top_R .BOX_phone .private_ass:hover {
+    background-color: #F76300;
+}
+
+.cardetailT .top_R .BOX_phone .button {
+    margin-right:10px;
+    float: left;
+    width: 123px;
+    height:52px;
+    text-align: center;
+    cursor: pointer;
+    background: #f60;
+    color: #fff;
+    border:1px solid #f60;
+    border-radius: 3px;
+}
+.cardetailT .top_R .BOX_phone .freeConsult1 {
+    float: left;
+    width: 123px;
+    height:52px;
+    text-align: center;
+    cursor: pointer;
+    background: #f3f3f3;
+    color: #444;
+    border:1px solid #aeaeae;
+    border-radius: 3px;
+}
+.w1130 .cardetailT .top_R .BOX_phone .freeConsult1 {
+    width:98px;
+    height:50px;
+    line-height:50px;
+}
+.cardetailT .top_R .BOX_phone .button2 {
+    float: right;
+    border-left: 0px;
+    width: 106px;
+    background-color: #f60;
+    color: #fff;
+}
+
+.tool {
+    height: 20px;
+    margin: 20px 0;
+    margin-top:32px;
+    color: #969696;
+}
+.tool li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    margin: 0 23px;
+    font-size: 14px;
+    color: #444;
+    background: #fff;
+    position: relative;
+    padding-left: 25px;
+}
+.tool li.fristLi {
+    margin-left:0;
+}
+#TDuibi{
+    margin-left: 10px;
+}
+/*.tool li.collests {
+    position:relative;
+}*/
+.collests_cont {
+    position:absolute;
+    top:30px;
+    left:-15px;
+    width:200px;
+    height:37px;
+}
+.collests_cont.hidden {
+    display:none;
+}
+.collests_cont .collests_conts {
+    position:relative;
+    /*width:100%;
+    height:100%;*/
+}
+.collests_cont .collests_conts .coll_arrow {
+    transform: rotate(180deg);
+    position:absolute;
+    top:-9px;
+    left:32px;
+    width:18px;
+    height:10px;
+    background:url("../../images/cardetail/coll_arrow_down.png") no-repeat;
+}
+.collests_cont .collests_conts .coll_colse {
+    position:absolute;
+    top:11px;
+    left:182px;
+    width:7px;
+    height:7px;
+    background:url("../../images/cardetail/coll_colse.png") no-repeat;
+}
+.collests_cont .collests_conts .collestsText {
+    margin-top:2px;
+    padding-left:8px;
+    height:25px;
+    line-height:25px;
+    border:1px solid #ffcda9;
+    background:#fff;
+    border-radius:3px;
+    color:#444;
+}
+.collests_cont .collests_conts .collestsText span {
+    color:#f60;
+}
+
+.shareModel.bdshare-button-style0-16 a,
+.shareModel.bdshare-button-style0-16 .bds_more {
+    padding: 0;
+    background: #fff;
+    line-height: 38px;
+    margin: 0;
+}
+
+.tool li i {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    background-image: url(../../images/cardetail/detail-icons-new1.png);
+    vertical-align: text-bottom;
+}
+.tool .sc i{
+    background-position: -249px -39px;
+}
+.tool .isCollect i{
+    background-position: -249px -65px;
+}
+.tool_duibi i {
+    background-position: 0px -39px;
+}
+
+.tool_noteBox i {
+    background-position: -134px -39px;
+}
+.tool_yuyue i {
+    background-position: -4px -39px;
+}
+.tool_depreciate i {
+    background-position: 0px 2px;
+}
+.tool_jb i {
+    background-position: -200px -38px;
+}
+.cardetailL .describe{
+    padding:15px 0;
+}
+.cardetailL .describe span{
+    float:right;
+    color:#f60;
+    cursor:pointer;
+    margin-right: 10px;
+}
+.cardetailL .describe,.consult {
+    line-height: 28px;
+    text-align: left;
+    overflow: hidden;
+    background-color:#fff;
+    margin:20px 0;
+}
+
+.cardetailL .consult img {
+    float: left;
+    width:128px;
+    height:96px;
+    margin-right:20px;
+}
+.cardetailL .consult .right {
+    float: left;
+    width:930px;
+    height:96px;
+}
+.consult .des_car_info{
+    float: left;
+    /*width:594px;*/
+    width:520px;
+    height:60px;
+    padding:20px 0 16px 0;
+}
+.des_car_info h4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:18px;
+    line-height:24px;
+    margin-bottom:6px;
+}
+.des_car_info p{
+    float:left;
+    padding-left:8px;
+    font-size:16px;
+}
+.des_car_info .light{
+    float:left;
+    margin-left:30px;
+    color:#f60;
+    font-size:16px;
+}
+.consult .right a {
+    float: right;
+    width: 130px;
+    height: 42px;
+    margin-top:27px;
+    margin-right:50px;
+    background: #f60;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    font-size:16px;
+    border-radius: 3px;
+}
+.right .text span {color:#f60;font-weight:bold;}
+.right .ri_right {overflow:hidden;float:right;width:410px;/*background:pink;*/}
+.right .ri_right .pri_cont {float:left;}
+.right .ri_right .text_cont {width:120px;text-align:right;}
+.right .ri_right .text_cont .text1 {margin-top:27px;font-size:14px;color:#444;line-height:normal;}
+.right .ri_right .text_cont .text2 {margin-top:7px;font-size:16px;font-weight:bold;color:#f60;line-height:normal;}
+.right .ri_right .pri_val_cont {position:relative;margin-top:30px;margin-left:10px;}
+.right .ri_right .pri_val_cont .price {padding:0 19px 0 9px;width:128px;height:40px;border:1px solid #cdcdcd;border-radius:3px;font-size:14px;}
+.right .ri_right .pri_val_cont span {position:absolute;top:9px;right:9px;color:#444;}
+.right .ri_right .price_btn {margin-left:10px;margin-top:30px;width:100px;height:42px;color:#fff;background:#f60;font-size:14px;border-radius:3px;text-align:center;cursor:pointer;line-height:42px;}
+
+.cardetailL_content {
+    margin-bottom: 10px;
+    padding: 10px 0 50px;
+}
+
+.cardetailL_content .title {
+    height: 50px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.cardetailL_content .title span {
+    float: left;
+    margin-top: 10px;
+    border-right: 1px solid #e5e5e5;
+    width: 160px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cardetailL_content .title span:last-of-type {
+    border-right: none;
+}
+
+.cardetailL_content .title span .detail {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background-position: -126px -78px;
+    display: inline-block;
+}
+
+.cardetailL_content .title span .address {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background-position: -126px -129px;
+    display: inline-block;
+}
+
+.cardetailL_content .title span .tend {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background-position: -126px -179px;
+    display: inline-block;
+}
+
+.cardetailL_content .title span .newcar {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background-position: -126px -233px;
+    display: inline-block;
+}
+
+.cardetailL_content .title span .cx_4s {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background-position: -304px -77px;
+    display: inline-block;
+}
+
+.cardetailL_content .title span a:hover {
+    color: #444;
+}
+
+.cardetailL_content .title span.on .detail {
+    background-position: -126px -52px;
+    color: #f60;
+}
+
+.cardetailL_content .title span.on .address {
+    background-position: -126px -104px;
+    color: #f60;
+}
+
+.cardetailL_content .title span.on .tend {
+    background-position: -126px -153px;
+    color: #f60;
+}
+
+.cardetailL_content .title span.on .newcar {
+    background-position: -126px -206px;
+    color: #f60;
+}
+
+.cardetailL_content .title span.on .cx_4s {
+    background-position: -304px -50px;
+    color: #f60;
+}
+
+.Float {
+    z-index: 99;
+    position: fixed;
+    bottom: 0px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Float_lianxiL {
+    float: left;
+    width: 650px;
+    line-height: 20px;
+}
+.Float_lianxiL .c_Title {
+    /*padding-left:10px;*/
+    font-weight: bold;
+    margin-bottom:10px;
+}
+.Float_lianxiL .nocollepic {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../images/cardetail/detail-icons-new1.png);
+    vertical-align: text-bottom;
+    background-position: -249px -39px;
+    cursor: pointer;
+}
+.Float_lianxiL .iscollepic {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../images/cardetail/detail-icons-new1.png);
+    vertical-align: text-bottom;
+    background-position: -249px -65px;
+}
+.Float_lianxiL p {
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Float_lianxiL p.tel {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left:10px;
+}
+
+.Float_lianxiL p .name {
+    max-width: 60px;
+    height: 20px;
+    overflow: hidden;
+    margin-right: 35px;
+}
+.zixun{
+    display: inline-block;
+    zoom: 1;
+    width:78px;
+    height:23px;
+    border:1px solid #f60;
+    text-align: center;
+    line-height:23px;
+    color:#f60;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-left:10px;
+}
+.Float_lianxiR {
+    float: left;
+    width: 126px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #f60;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 2px solid #f60;
+    margin-top:5px;
+}
+
+.Float .Float_lianxiRs {
+    float: left;
+    width: 130px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #f60;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 2px solid #f60;
+    background: #fff;
+    margin: 0;
+    margin-left: 10px;
+    margin-top:5px;
+    padding: 0;
+}
+
+.cardetailL_content .Detail {
+    width: 965px;
+    padding:0 60px;
+    overflow: hidden;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    background-color:#fff;
+}
+
+.cardetailL_content .Detail .deploy {
+    overflow: hidden;
+}
+
+.cardetailL_content .Detail_title {
+    height:30px;
+    margin-top: 30px;
+    margin-bottom:25px;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 30px;
+}
+.cardetailL_content .Detail .deploy li {
+    float: left;
+    width: 220px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.cardetailL_content .Detail .deploy li label {
+    color: #969696;
+}
+
+.cardetailL_content .Detail .deploy2 {
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #969696;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.cardetailL_content .Detail .deploy2 li {
+    float: left;
+    width: 867px;
+}
+
+.cardetailL_content .Detail .deploy2 li em {
+    color: #bd6b22;
+    margin: 0 20px 0 5px;
+}
+
+.cardetailL_content .Detail .deploy2_title {
+    float: left;
+    font-weight: bold;
+}
+
+.cardetailL_content .Detail .deploy2R {
+    float: left;
+    margin-left: 10px;
+    width: 787px;
+}
+
+.cardetailL_content .Detail p {
+    width: 965px;
+    margin: 20px auto;
+}
+
+.cardetailL_content .Detail p img {
+    width: 100%;
+}
+
+.cardetailL_content .Detail .zan {
+    width: 100px;
+    height: 120px;
+    background-position: -205px -300px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    line-height: 200px;
+    font-size: 16px;
+    color: #f60;
+}
+
+.cardetailL_content .Detail .zan_od {
+    width: 100px;
+    height: 120px;
+    background-position: -302px -300px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 200px;
+    font-size: 16px;
+}
+
+.cardetailL_content .comment {
+    width: 965px;
+    padding:0 60px;
+    margin:20px 0;
+    overflow: hidden;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    background-color:#fff;
+}
+.comment .commentbox{
+    border:1px solid #f3f3f3;
+    margin-bottom: 20px;
+    padding:30px;
+}
+.comment .commentbox .commentinfo{
+    height:45px;
+    line-height: 45px;
+    width: 100%;
+}
+.comment .commentbox .headimg{
+    height:44px;
+    width: 44px;
+    float:left;
+    border-radius: 50%;
+}
+.comment .commentbox .commentcompany{
+    margin-left: 10px;
+    font-size: 16px;
+}
+.comment .commentbox .commenttime{
+    float: right;
+    color: #a6a6a6;
+    font-size:11px;
+}
+.comment .commentbox .commentgrade{
+    margin-left: 55px;
+    overflow: hidden;
+}
+.comment .commentbox .commentgrade span{
+    height: 18px;
+    line-height:18px;
+    width:18px;
+    float: left;
+}
+.comment .commentbox .commentgrade .mostar{
+    margin-right: 8px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/mostar.png) no-repeat center center;
+    background-size: 100%;
+}
+.comment .commentbox .commentgrade .showstar{
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/sestar.png) no-repeat center center;
+}
+.comment .commentbox .commentgrade .gradenum{
+    width: auto;
+    margin-left: 10px;
+    color:#f60;
+}
+.comment .commentbox .commentdes{
+    margin-left: 55px;
+    font-size:12px;
+    margin-top: 15px;
+    line-height:24px;
+}
+.comment .nocomment{
+
+}
+.comment .nocomment img{
+    margin:0 auto;
+    display: block;
+}
+.comment .nocomment .nocommenttext{
+    font-size: 16px;
+    color: #868686;
+    text-align: center;
+    margin:20px 0 25px 0;
+}
+.comment .nocomment .commentbtn{
+    width:144px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 2px;
+    border:1px solid #a6a6a6;
+    color: #666666;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.showmore{
+    margin: 0 auto;
+    width:145px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #a6a6a6;
+    color: #666666;
+    border-radius:3px;
+    text-align: center;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.cardetailL_content .Map {
+    margin: 30px auto;
+    width: 867px;
+}
+
+.cardetailL_content .Tend {
+    margin: 30px auto;
+    width: 867px;
+}
+
+.cardetailL_content .Tend .TCharts {
+    width: 867px;
+    height: 352px;
+    border: 1px solid #d9d8db;
+    margin: 0 auto;
+}
+
+.Newcar {
+    margin: 30px auto;
+    width: 867px;
+    font-size: 14px;
+}
+
+.Newcar .what_car {
+    margin-bottom: 15px;
+}
+
+.Newcar .what_car span {
+    font-weight: bold;
+    color: #bd6b22;
+    margin: 0 20px 0 5px;
+}
+
+.Newcar .sizes {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.Newcar .sizes_title {
+    height: 32px;
+    line-height: 32px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/size_all.png) no-repeat;
+    padding-left: 36px;
+    color: #da9252;
+    background-color: #fbf1e8;
+    font-weight: bold;
+}
+
+.Newcar .s1 .sizes_title {
+    background-position: -11px -3px;
+}
+
+.Newcar .s2 .sizes_title {
+    background-position: -9px -52px;
+}
+
+.Newcar .s3 .sizes_title {
+    background-position: -2px -104px;
+    padding-left: 55px;
+}
+
+.Newcar .s4 .sizes_title {
+    background-position: -11px -204px;
+    padding-left: 32px;
+}
+
+.Newcar .s5 .sizes_title {
+    background-position: -11px -155px;
+    padding-left: 34px;
+}
+
+.Newcar .s6 .sizes_title {
+    background-position: -11px -255px;
+    padding-left: 35px;
+}
+
+.Newcar .s7 .sizes_title {
+    background-position: -6px -296px;
+    padding-left: 44px;
+}
+
+.Newcar .s8 .sizes_title {
+    background-position: -11px -342px;
+    padding-left: 35px;
+}
+
+.Newcar .s9 .sizes_title {
+    background-position: -5px -393px;
+    padding-left: 46px;
+}
+
+.Newcar .s10 .sizes_title {
+    background-position: -11px -435px;
+    padding-left: 33px;
+}
+
+.Newcar .s11 .sizes_title {
+    background-position: -11px -483px;
+}
+
+.Newcar .s12 .sizes_title {
+    background-position: -10px -527px;
+    padding-left: 38px;
+}
+
+.Newcar .s13 .sizes_title {
+    background-position: -9px -570px;
+    padding-left: 43px;
+}
+
+.Newcar .s14 .sizes_title {
+    background-position: -11px -631px;
+    padding-left: 40px;
+}
+
+.Newcar .sizes ul {
+    width: 880px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.Newcar .sizes li {
+    float: left;
+    width: 433px;
+    height: 34px;
+    line-height: 34px;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    color: #bd6b22;
+}
+
+.Newcar .sizes li b {
+    float: left;
+    width: 188px;
+    padding-right: 15px;
+    color: #969696;
+    text-align: right;
+    border-right: 1px solid #e5e5e5;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.cardetailL .tj_cars {
+    width: 1080px;
+    display: none;
+}
+
+.cardetailL .tj_cars_title {
+    height: 50px;
+    line-height: 50px;
+    border-top: 2px solid #f60;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.cardetailL .tj_cars_title a {
+    float: right;
+}
+
+.cardetailL .tj_cars ul {
+    width: 1096px;
+}
+
+.cardetailL .tj_cars li {
+    float: left;
+    width: 256px;
+    overflow: hidden;
+    background: #fff;
+    margin: 11px 18px 0 0;
+}
+
+.cardetailL .tj_cars li:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cardetailL .tj_cars li img {
+    width: 100%;
+    height: 192px;
+    overflow: hidden;
+}
+
+.cardetailL .tj_cars li .title {
+    height: 40px;
+    *height: 30px;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 15px;
+
+
+}
+
+.cardetailL .tj_cars li .title a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.cardetailL .tj_cars li p {
+    padding: 0 15px 20px;
+    overflow: hidden;
+}
+
+.cardetailL .tj_cars li .diqu {
+    float: left;
+    width: 120px;
+    height: 25px;
+    line-height: 25px;
+    color: #a6a6a6;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.cardetailL .tj_cars li .jiage {
+    float: right;
+    height: 25px;
+    line-height: 25px;
+    color: #f60;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+    width: 90px;
+    overflow: hidden;
+}
+
+.cardetailL .tj_cars li .jiage .bigFont {
+    font-size: 20px;
+}
+
+.cardetailR {
+    float: left;
+    width: 255px;
+    margin-left: 15px;
+    background: #fff;
+}
+
+.abs {
+    position: absolute;
+}
+
+.cardetailR .vipYear {
+    width: 255px;
+    height: 27px;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    line-height: 54px;
+    color: #fff;
+}
+
+.cardetailR .vipYear_1 span {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.cardetailR .vipYear_1 {
+    width: 255px;
+    height: 27px;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    line-height: 54px;
+    color: #fff;
+    text-align: center;
+}
+
+.cardetailR .vipYear span {
+    margin-left: 106px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.cardetailR_Host {
+    position:absolute;
+    top:0;
+    right:0;
+    padding-top: 0px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px 3px #c8c7c7;
+    z-index:2;
+}
+.w1130 .cardetailR_Host {right:-8px;}
+.relative {
+    background: url(../../images/cardetail/vipYear.png) no-repeat center top;
+    background-size: 100%;
+}
+
+.relative_1 {
+    background: url(../../images/cardetail/tuzhongvip.png) no-repeat center top;
+    background-size: 100%;
+}
+
+.cardetailR_Host .pic {
+    box-shadow: 0 2px 5px #ccc;
+    width: 122px;
+    height: 122px;
+    margin: 20px auto 5px auto;
+    display: block;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cardetailR_Host .pic img {
+    width: 122px;
+    height: 122px;
+    overflow: hidden;
+}
+
+.cardetailR_Host .hrefPic {
+    border-radius:50%;
+}
+
+.cardetailR_Host .ona img, .cardetailR_Host .ona {
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+/*.cardetailR_Host .name{ width:185px; height:30px; line-height:30px; display:block; margin:0 auto; text-align:center; font-weight:bold; font-size:14px;}
+*/
+
+.cardetailR_Host .info_per {
+    width: 185px;
+    line-height: 30px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cardetailR_Host .info_per .name {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.cardetailR_Host .info_per .honor {
+}
+
+.cardetailR_Host .info_per .fvip {
+    display: inline-block;
+}
+
+.cardetailR_Host .info_per .verify {
+    float: none;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+    background: url(../../images/cardetail/detail.png) no-repeat -64px -384px;
+}
+
+.cardetailR_Host .intro {
+    padding: 27px 25px;
+    overflow: hidden;
+    position: relative;
+    width:318px;
+}
+
+.cardetailR_Host .intro div {
+    line-height: 36px;
+    overflow: hidden;
+}
+
+.cardetailR_Host .intro .info_title {
+    float: left;
+    color: #a6a6a6;
+    font-size: 12px;
+}
+
+.cardetailR_Host .intro .info_content {
+    float: left;
+    margin-left: 4px;
+    width: 165px;
+    height:36px;
+    text-overflow: ellipsis;
+}
+.cardetailR_Host .intro .info_content .star{
+    width:18px;
+    height: 18px;
+    display: inline-block;
+    margin-top: 7px;
+    margin-right: 3px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/mostar.png) no-repeat center center;
+    background-size: 100%;
+}
+.cardetailR_Host .intro .info_content .sestar{
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/sestar.png) no-repeat center center;
+}
+.cardetailR_Host .intro .info_content .halfstar{
+    background:url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/halfstar.png) no-repeat center center;
+}
+.cardetailR_Host .intro span .userlink{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+    max-width: 90px;
+    height:36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cardetailR_Host .intro span a:hover {
+    text-decoration: underline;
+}
+
+.cardetailR_Host .intro_shop {
+    width: 130px;
+    height: 28px;
+    line-height: 28px;
+    margin: 20px auto 0;
+    border: 1px solid #f60;
+    text-align: center;
+    display: block;
+    color: #f60;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.cardetailR_Host .intro_comment {
+    /*float: left;*/
+    display:inline-block;
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    margin: 20px 10px 0;
+    border: 1px solid #f60;
+    text-align: center;
+    color: #f60;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.cardetailR_Host .only{
+    width:200px;
+}
+.cardetailR_Host .intro_shops {
+    /*float: left;*/
+    display:inline-block;
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    margin: 20px 5px 0;
+    border: 1px solid #f60;
+    text-align: center;
+    color: #f60;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.w1130 .cardetailR_Host .intro_comment {
+    /*float: left;*/
+    width: 75px;
+    height: 28px;
+    line-height: 28px;
+    margin: 20px 5px 0;
+    border: 1px solid #f60;
+    text-align: center;
+    color: #f60;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.w1130 .cardetailR_Host .only{
+    width:171px;
+}
+.w1130 .cardetailR_Host .intro_shops {
+    /*float: left;*/
+    width: 75px;
+    height: 28px;
+    line-height: 28px;
+    margin: 20px 5px 0;
+    border: 1px solid #f60;
+    text-align: center;
+    color: #f60;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.commentsbox{
+    display: none;
+}
+.comments{
+    position: absolute;
+    bottom:72px;
+    left: 50px;
+    height: 20px;
+    width: 65%;
+    border: 1px solid #d7d7d7;
+    border-radius:10px;
+    line-height: 20px!important;
+    font-size: 14px;
+    background-color: #fff;
+    z-index: 200;
+    text-align: center;
+}
+.icon-comments{
+    position: absolute;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/ctdown.png) no-repeat center center;
+    background-size: 100%;
+    width: 10px;
+    height: 10px;
+    bottom: 64px;
+    left: 100px;
+    z-index: 201;
+}
+.cardetailR_Host .evaluate {
+    background-color: #f9f9f9;
+    margin: 20px auto 0px auto;
+    border-top: 1px dashed #e5e5e5;
+    padding: 20px;
+}
+
+.cardetailR_Host .evaluate p {
+    text-align: center;
+    overflow: hidden;
+}
+
+.cardetailR_Host .evaluate p.score {
+    width: 153px;
+    border-left: 1px solid #e5e5e5;
+    line-height: 18px;
+    margin: 20px auto;
+}
+
+.cardetailR_Host .evaluate p.score span {
+    float: left;
+    width: 50px;
+    border-right: 1px solid #e5e5e5;
+    padding: 5px 0;
+}
+
+.cardetailR_Host .evaluate p em {
+    color: #f60;
+    font-weight: bold;
+}
+
+.cardetailR_Host .evaluate p.want span {
+    float: left;
+}
+
+.cardetailR_Host .evaluate p.want a {
+    float: right;
+    color: #f60;
+}
+
+.cardetailR_Hostcars {
+    background: #f3f3f3;
+    padding-top:10px;
+}
+
+.cardetailR_Hostcars .TAtitle {
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 2px solid #e5e5e5;
+    font-size: 14px;
+}
+
+.cardetailR_Hostcars .tj_cars li {
+    width: 255px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 12px;
+}
+
+.cardetailR_Hostcars .tj_cars li:hover {
+    box-shadow: 0 0 15px #ddd;
+}
+
+.cardetailR_Hostcars .tj_cars li img {
+    width: 255px;
+    height: 190px;
+    overflow: hidden;
+}
+
+.cardetailR_Hostcars .tj_cars li .title {
+    height: 44px;
+    line-height: 22px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.cardetailR_Hostcars .tj_cars li p {
+    padding: 0 15px 15px;
+    overflow: hidden;
+}
+
+.cardetailR_Hostcars .tj_cars li .diqu {
+    float: right;
+    width: 120px;
+    height: 25px;
+    line-height: 25px;
+    color: #a6a6a6;
+    overflow: hidden;
+    margin-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.cardetailR_Hostcars .tj_cars li .jiage {
+    float: left;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    color: #f60;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cardetailR_Hostcars .tj_cars li .jiage .bigFont {
+    font-size: 20px;
+}
+
+.cheliao {
+    position: fixed;
+    bottom: 0;
+    right: 45px;
+    width: 500px;
+    height: 460px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 99;
+}
+.movetop{
+    bottom:86px;
+}
+.cheliao_title {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+}
+
+.cheliao_titleL {
+    float: left;
+    width: 400px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.cheliao_titleL .on_line {
+    float: left;
+    background-color: #f60;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    margin-top: 5px;
+}
+
+.cheliao_titleL .no_on_line {
+    float: left;
+    background-color: #ccc;
+    color: #000;
+    margin-right: 5px;
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    margin-top: 5px;
+}
+
+.cheliao_titleR {
+    float: right;
+    width: 13px;
+}
+
+.cheliao_mini {
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-position: -224px -9px;
+    margin-top: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cheliao_close {
+    float: left;
+    width: 13px;
+    height: 13px;
+    background-position: -248px -5px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.cheliaoL {
+    float: left;
+    width: 345px;
+    height: 430px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.cheliaoL .car {
+    padding: 10px;
+    border-bottom: 1px solid #ECECEC;
+    overflow: hidden;
+    background-color: #EBF7FF;
+}
+
+.cheliaoL .car a {
+    color: #595959;
+}
+
+.cheliaoL .car_L {
+    float: left;
+    margin-right: 8px;
+    padding: 2px;
+    border: 1px solid #d2d2d2;
+}
+
+.cheliaoL .car_L img {
+    width: 70px;
+    height: 47px;
+    overflow: hidden;
+}
+
+.cheliaoL .car_R {
+    position: relative;
+    float: left;
+    width: 241px;
+    height: 53px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.cheliaoL .car_R_title {
+    width: 232px;
+    height: 18px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.cheliao_collect.collect {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-image: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/common/collect_icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cheliao_collect.collected {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-image: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/common/collect_icon.png);
+    background-repeat: no-repeat;
+    background-position: -19px 0px;
+    cursor: pointer;
+}
+
+.cheliao_discount {
+    float: left;
+    width: 72px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #8a8a8a;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cheliao_line {
+    float: left;
+    margin: 0 5px;
+    color: #8a8a8a;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.cheliaoL .car_R_price {
+    position: absolute;
+    right: 0px;
+    bottom: -2px;
+    color: #f60;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cheliaoL .message {
+    height: 285px;
+    position: relative;
+}
+
+.cheliaoL .message_time {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    clear: both;
+    text-align: center;
+    width: 327px;
+    padding: 10px 0;
+}
+
+.cheliaoL .chatcont {
+    overflow-y: auto;
+    position: absolute;
+    bottom: 0px;
+    width: 345px;
+    height: 211px;
+}
+
+.cheliaoL .chat_oneself {
+    float: right;
+    position: relative;
+    max-width: 70%;
+    margin: 5px 20px 5px;
+    border: 2px solid #CEEBFF;
+    padding: 2px 8px;
+    line-height: 21px;
+    display: block;
+    clear: both;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #CEEBFF;
+    color: #333;
+}
+
+.cheliaoL .chat_oneself .label {
+    position: absolute;
+    right: -10px;
+    top: -4px;
+}
+
+.cheliaoL .chat_oneself .label img {
+    width: 10px;
+    height: 42px;
+    overflow: hidden;
+}
+
+.cheliaoL .chat_oneself .photo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 5px auto;
+    display: block;
+}
+
+.cheliaoL .chat_opposite {
+    float: left;
+    position: relative;
+    max-width: 70%;
+    border: 2px solid #D7D7D7;
+    padding: 2px 8px;
+    line-height: 21px;
+    margin: 5px 20px 5px 18px;
+    display: block;
+    clear: both;
+    border-radius: 5px;
+    background-color: #D7D7D7;
+    color: #333;
+}
+
+.cheliaoL .chat_opposite .label {
+    position: absolute;
+    left: -10px;
+    top: -8px;
+}
+
+.cheliaoL .chat_opposite .label img {
+    width: 12px;
+    height: 42px;
+    overflow: hidden;
+}
+
+.cheliaoL .chat_opposite .photo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 5px auto;
+    display: block;
+}
+
+.cheliaoL .import {
+    position:relative;
+    height: 112px;
+}
+
+.cheliaoL .import_title {
+    height: 15px;
+    line-height: 15px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #333;
+}
+.cheliaoL .import_title .ssendBtn:hover {
+    color:#f60;
+}
+.cheliaoL .ssendBtn.showClick {
+    color:#f60;
+    font-weight:bold;
+}
+.cheliaoL .import_title span {
+    float: right;
+}
+
+.cheliaoL .import_title .yuyin {
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-position: -278px -3px;
+    margin-right: 15px;
+}
+
+.cheliaoL .import_title .face {
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-position: -304px -3px;
+    margin-right: 15px;
+}
+
+.cheliaoL .import_title .picture {
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-position: -332px -3px;
+    margin-right: 15px;
+}
+.cheliaoL .import_cont {
+    height: 85px;
+    overflow-y: auto;
+}
+
+.cheliaoL .import_cont textarea {
+    width: 307px;
+    height: 85px;
+    line-height: 22px;
+    border: 0px;
+    padding: 5px;
+}
+
+.cheliaoL .dowload {
+    overflow:hidden;
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid #e5e5e5;
+    padding: 0 10px;
+}
+
+.cheliaoL .dowloadL {
+    float: left;
+    width: 265px;
+}
+.cheliaoL .dowloadL span {
+    display:inline;
+}
+.cheliaoL .dowloadL .elehetong:hover {
+    color:#f60;
+    cursor:pointer;
+}
+/*.cheliaoL .dowloadL .downappURL {
+    display: none;
+}*/
+
+/*.cheliaoL .dowloadL a {
+    color: #f60;
+}*/
+
+.cheliaoL .dowloadR {
+    float: right;
+}
+
+.cheliaoL .dowloadR_icon {
+    width: 50px;
+    height: 23px;
+    background-color: #f60;
+    text-align: center;
+    line-height: 23px;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 4px;
+    display: block;
+}
+
+.cheliaoL .dowloadR_icon a {
+    color: #fff;
+}
+
+.cheliaoR {
+    float: left;
+    position: relative;
+    height: 430px;
+}
+
+.cheliaoR_top {
+    width: 124px;
+    height: 115px;
+    padding: 35px 15px 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.cheliaoR_logo {
+    position: relative;
+    display: block;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto;
+    border: 1px solid #d2d2d2;
+    overflow: hidden;
+}
+
+.cheliaoR_logo img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 78px;
+    height: 78px;
+    overflow: hidden;
+}
+
+.cheliaoR_title {
+    float: left;
+    width: 124px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 20px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.cheliaoR_cont {
+    position: absolute;
+    bottom: 0px;
+    /*width: 124px;*/
+    /*padding: 20px 10px;*/
+    line-height: 25px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.cheliaoR_cont_list {
+    width: 134px;
+    height: 201px;
+    line-height: 25px;
+    padding: 10px;
+}
+
+.cheliaoR_cont_list_dian {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #f60;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cheliaoR_cont_list_dian:hover {
+    color: #fff;
+}
+
+.cheliaoR_cont .star {
+    padding-bottom: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cheliaoR_cont .star span {
+    display: block;
+}
+
+.cheliaoR_cont .star img {
+    display: inline;
+    width: 12px;
+    height: 12px;
+    Soverflow: hidden;
+    margin-right: 4px;
+}
+
+.cheliaoR_cont .dsc {
+    padding: 10px 0;
+    border-top: 1px solid #d2d2d2;
+}
+
+.cheliaoR_cont .dsc span {
+    float: left;
+    width: 43px;
+    border-right: 1px dashed #d2d2d2;
+    text-align: center;
+    line-height: 18px;
+}
+
+.zidongInfo {width:100%;position:absolute;top:27PX;overflow-y:scroll;height:85px;background:#fff;}
+.zidongInfo.hidden{display:none;}
+.zidongInfo p {padding-left:10px;font-size:12px;line-height:32px;color:#333;border-bottom:1px solid #ccc;cursor:pointer;}
+.zidongInfo p:hover {color:#f60;}
+
+/*.cheliaoL .chat_opposite span:hover !*,.cheliaoL .chat_oneself span:hover*!{color:#0c80d3;border-bottom:1px solid #0c80d3;}*/
+.goApp:hover {color:#0c80d3;border-bottom:1px solid #0c80d3;}
+.hidden {display:none;}
+
+.phone_verify {
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    width: 480px;
+    background-color: #fff;
+    z-index: 99999999999999;
+    box-shadow: 0 1px 4px #999;
+}
+
+.phone_verify_title {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    background-color: #f7f7f7;
+}
+
+.phone_verify_title .close {
+    float: right;
+    margin-top: 10px;
+    width: 14px;
+    height: 14px;
+    background: url(images/close.jpg) no-repeat;
+    cursor: pointer;
+}
+
+.phone_verify_cont {
+    padding: 30px;
+}
+
+.phone_verify_cont .tishi {
+    color: #00afb1;
+}
+
+.phone_verify_cont .tishi_vip {
+    color: #FF6600;
+}
+
+.phone_verify_cont .box {
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.phone_verify_cont .box input {
+    float: left;
+    width: 140px;
+    height: 25px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 0 5px;
+    line-height: 25px;
+    color: #666;
+}
+
+.phone_verify_cont .box_num {
+    float: left;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #00afb1;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #00afb1;
+}
+
+.phone_verify_cont .box_icon {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.phone_verify_cont .box_icon .button {
+    float: left;
+    width: 100px;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #00afb1;
+    color: #fff;
+}
+
+.phone_verify_cont .box_icon .member {
+    position: absolute;
+    right: -55px;
+    top: 7px;
+    color: #00afb1;
+    text-decoration: underline;
+}
+
+.TYBOX {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 100000;
+    margin-left: -280px;
+    width: 560px;
+    background-color: #fff;
+    border: 1px solid #f60;
+}
+
+.TYBOX_title {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 20px;
+    color: #f60;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.TYBOX_title .closed {
+    float: right;
+    width: 15px;
+    height: 15px;
+    background-position: -364px -4px;
+    margin: 11px 0;
+    cursor: pointer;
+}
+
+.TYBOX_cont {
+    width: 490px;
+    margin: 35px auto;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.TYBOX_cont p {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.TYBOX_cont span.L {
+    float: left;
+    margin-right: 10px;
+    width: 70px;
+}
+
+.TYBOX_cont span.R {
+    float: left;
+    width: 400px;
+}
+
+.TYBOX_cont .button {
+    float: left;
+    width: 105px;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #d4d4d5;
+    margin-left: 10px;
+    text-align: center;
+    background-color: #EFEFEF;
+    cursor: pointer;
+}
+
+.TYBOX_cont .input1 {
+    width: 95%;
+    height: 25px;
+    border: 1px solid #e5e5e5;
+    padding: 0 10px;
+    margin: 8px 0 0;
+}
+
+.TYBOX_cont .input2 {
+    width: 200px;
+    height: 25px;
+    border: 1px solid #e5e5e5;
+    padding: 0 10px;
+}
+
+.TYBOX_cont .input3 {
+    float: left;
+    margin: 6px 3px;
+}
+
+.TYBOX_cont .input4 {
+    float: left;
+    width: 83px;
+    height: 25px;
+    border: 1px solid #e5e5e5;
+    padding: 0 10px;
+}
+
+.TYBOX_cont label {
+    float: left;
+    margin-right: 15px;
+}
+
+.TYBOX_cont p.icon {
+    display: block;
+    text-align: center;
+    margin: 25px auto 10px auto;
+}
+
+.TYBOX_cont span.ok {
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f60;
+    margin-right: 10px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.TYBOX_cont span.closed {
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #848484;
+    margin-right: 10px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.yz {
+    width: 450px;
+    margin-left: -225px;
+}
+
+.yz .TYBOX_cont {
+    width: 400px;
+    margin: 40px auto;
+}
+
+.yz .TYBOX_cont span.R {
+    float: left;
+    width: 200px;
+}
+
+.DATU_Page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    background-color: #fff;
+}
+
+.DATU_Page_cont {
+    width: 900px;
+    margin: 10px auto;
+    padding: 0 50px;
+}
+
+.DATU_Page_cont .title {
+    position: relative;
+    height: 50px;
+    line-height: 25px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    font-size: 18px;
+}
+
+.DATU_Page_cont .title_closed {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    background-position: -357px 3px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #f60;
+}
+
+.DATU_Page_cont .DATU {
+    position: relative;
+    width: 900px;
+    height: 480px;
+    overflow: hidden;
+}
+
+.DATU_Page_cont .DATU_pic {
+    height: 480px;
+    overflow: hidden;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    display: block;
+}
+
+.DATU_Page_cont .DATU_pic img {
+    display: block;
+    width: 720px;
+    height: 480px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.DATU_Page_cont .DATUL,
+.DATU_Page_cont .DATUL:hover,
+.DATU_Page_cont .DATUR,
+.DATU_Page_cont .DATUR:hover {
+    width: 40px;
+    height: 70px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/detail.png) no-repeat;
+    top: 205px;
+}
+
+.DATU_Page_cont .DATUL {
+    position: absolute;
+    left: 20px;
+    background-position: -300px -176px;
+}
+
+.DATU_Page_cont .DATUL:hover {
+    position: absolute;
+    left: 20px;
+    background-position: -352px -176px;
+    background-color: #D3D3D3;
+}
+
+.DATU_Page_cont .DATUR {
+    position: absolute;
+    right: 20px;
+    background-position: -300px -108px;
+}
+
+.DATU_Page_cont .DATUR:hover {
+    position: absolute;
+    right: 20px;
+    background-position: -352px -108px;
+    background-color: #D3D3D3;
+}
+
+.DATU_Page_cont .num {
+    position: absolute;
+    width: 900px;
+    margin: 0 auto;
+    font-size: 22px;
+    text-align: center;
+    bottom: 20px;
+    color: #ccc;
+}
+
+.DATU_Page_cont .num em {
+    color: #f60;
+}
+
+.DATU_Page_cont .pic {
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    width: 868px;
+    height: 66px;
+    padding: 12px 6px 12px 24px;
+    overflow: hidden;
+}
+
+.DATU_Page_cont .pic ul {
+    width: 2000px;
+    height: 66px;
+    overflow: hidden;
+}
+
+.DATU_Page_cont .pic li {
+    float: left;
+    margin-right: 15px;
+    width: 90px;
+    height: 60px;
+    border: 2px solid #fff;
+}
+
+.DATU_Page_cont .pic li.select {
+    border: 2px solid #f60;
+}
+
+.DATU_Page_cont .pic li img {
+    width: 90px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.bottom {
+    border-top: 2px solid #fff;
+}
+
+.bottom_nav {
+    width: 1200px;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.bottom_nav a {
+    color: #6c6c6c;
+    width: 78px;
+    display: inline-block;
+}
+
+.bottom_nav a:hover {
+    text-decoration: underline;
+}
+
+.bottom_nav .net_nav {
+    margin-bottom: 15px;
+}
+
+.bottom_nav p {
+    line-height: 20px;
+    color: #a1a1a1;
+}
+
+.bottom_nav .police_l {
+    width: 88px;
+    height: 84px;
+    background-position: -2px -485px;
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 300px;
+    _left: 75px;
+}
+
+.bottom_nav .police_r {
+    width: 88px;
+    height: 84px;
+    background-position: -92px -485px;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 305px;
+}
+
+.Map {
+    width: 900px;
+    height: 500px;
+    display: inline-block;
+}
+
+.inquire_detail {
+    display: none;
+    width: 880px;
+    max-height: 400px;
+    *height: 400px;
+    margin: 20px auto;
+    overflow-y: scroll;
+    border: 1px solid #e5e5e5;
+}
+
+.inquire_detail .bt {
+    height: 78px;
+    line-height: 78px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.inquire_detail .list {
+    display: none;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.inquire_detail .list .cont3 {
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    display: block;
+    padding: 20px;
+    line-height: 25px;
+    margin: 3px;
+}
+
+.inquire_detail .list_title {
+    line-height: 40px;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.inquire_detail .list_title a {
+    float: right;
+    font-size: 14px;
+}
+
+.inquire_detail .list_detail {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    border-top: 0px;
+}
+
+.inquire_detail .list ul.cont1 {
+    border-left: 1px solid #e5e5e5;
+    overflow: hidden;
+    width: 855px;
+    margin: 0 auto;
+}
+
+.inquire_detail .list ul.cont1 li {
+    float: left;
+    width: 284px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.inquire_detail .list ul.cont1 li .L {
+    float: left;
+    width: 120px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e5e5e5;
+}
+
+.inquire_detail .list ul.cont1 li span a,
+.inquire_detail .list ul.cont1 li span a:hover {
+    text-decoration: underline;
+    color: #F00;
+}
+
+.inquire_detail .list ul.cont1 li span {
+    float: left;
+    width: 160px;
+    text-align: center;
+}
+
+.inquire_detail .list ul.cont1 li .VIN {
+    line-height: 25px;
+}
+
+.inquire_detail .list ul.cont2 {
+    width: 800px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.inquire_detail .list ul.cont2 li {
+    cursor: pointer;
+}
+
+.inquire_detail .list ul.cont2 li img {
+    width: 100%;
+}
+
+.inquire_detail .list .headline {
+    background-color: #f9f9f9;
+}
+
+.inquire_detail .list .headline span {
+    float: left;
+    width: 150px;
+    border-right: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.inquire_detail .list .headline span.matter {
+    width: 745px;
+    text-align: center;
+    padding: 15px 0;
+    border: 0px;
+}
+
+.inquire_detail .list p {
+    border-left: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.inquire_detail .list p span {
+    float: left;
+    width: 150px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.inquire_detail .list p span.matter {
+    width: 705px;
+    text-align: left;
+    padding: 0 10px;
+    padding: 15px 20px;
+}
+
+.inquire_detail .list p:hover {
+    background-color: #F3F7FF;
+}
+
+.inquire_detail .list .mp {
+    position: absolute;
+    top: 85px;
+    left: 300px;
+    z-index: 9;
+}
+
+.inquire_detail .list .mp img {
+    width: 310px;
+}
+
+.bg_box {
+    z-index: 99;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    width: 500px;
+    margin-left: -300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.bg_box_title {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.bg_box_title .clos {
+    float: right;
+    width: 16px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #f60;
+}
+
+.bg_box .cont1 {
+    width: 400px;
+    margin: 100px auto 120px auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.bg_box .cont2 {
+    width: 300px;
+    margin: 50px auto;
+    font-size: 20px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.bg_box .cont2_title {
+    color: #f60;
+    margin-bottom: 10px;
+}
+
+.bg_box .cont2_icon {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+.bg_box .cont2_icon .return {
+    padding: 0 10px;
+    background-color: #f60;
+    padding: 8px 30px;
+}
+
+.bg_box .cont2_icon .cancel {
+    background-color: #737373;
+    border-radius: 5px;
+    padding: 8px 30px;
+}
+
+.bg_box .cont2_icon a {
+    margin: 0 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "微软雅黑";
+}
+
+.bg_box .cont3 {
+    width: 440px;
+    margin: 50px auto 50px auto;
+    font-size: 14px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.bg_box .cont3 p {
+    margin: 8px 0;
+    display: inline-block;
+}
+
+.bg_box .cont3 p .L {
+    float: left;
+    text-align: right;
+    width: 120px;
+    line-height: 32px;
+    margin-right: 10px;
+    height: 32px;
+}
+
+.bg_box .cont3 p img {
+    height: 32px;
+    margin: 0 10px;
+    float: left;
+}
+
+.bg_box .cont3 p .tishi {
+    font-style: normal;
+    text-decoration: none;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #0CF;
+    cursor: pointer;
+    float: left;
+    margin-left: 5px;
+}
+
+.bg_box .cont3 p .tishi img {
+    margin: 8px 0 0 0;
+}
+
+.bg_box .cont3 input {
+    height: 28px;
+    padding: 0 10px;
+    width: 80px;
+    float: left;
+}
+
+.bg_box .cont3 input.tel {
+    width: 150px;
+}
+
+.bg_box .cont3 p .icon {
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    display: inline-block;
+    background-color: #EFEFEF;
+    height: 32px;
+    margin: 0 10px;
+    line-height: 32px;
+}
+
+.bg_box .cont4 {
+    width: 500px;
+    height: 200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.bg_box .cont4L {
+    float: left;
+}
+
+.bg_box .cont4L .pc_icon {
+    width: 180px;
+    height: 140px;
+    background-position: 22px -183px;
+}
+
+.bg_box .cont4L a {
+    border: 1px solid #a2a2a2;
+    padding: 10px;
+    color: #a2a2a2;
+    font-size: 14px;
+}
+
+.bg_box .cont4M {
+    float: left;
+    font-size: 56px;
+    color: #a2a2a2;
+    line-height: 56px;
+    font-family: "宋体";
+}
+
+.bg_box .cont4R {
+    float: left;
+    position: relative;
+}
+
+.bg_box .cont4R .tel_icon {
+    width: 113px;
+    height: 140px;
+    background-position: -170px -185px;
+}
+
+.bg_box .cont4R a {
+    border: 1px solid #a2a2a2;
+    padding: 10px;
+    color: #a2a2a2;
+    font-size: 14px;
+}
+
+.bg_box .cont4R .ewm {
+    position: absolute;
+    top: 0px;
+    border: 1px solid #a2a2a2;
+    height: 147px;
+    z-index: 10;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 10px 5px;
+}
+
+.light_icon {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+}
+
+.light_icon a {
+    width: 55px;
+    height: 55px;
+    display: block;
+    float: left;
+    margin: 0 12px 5px 0;
+    border: 1px solid #d9d8db;
+}
+
+.light_icon span {
+    width: 20px;
+    height: 57px;
+    float: left;
+    margin-right: 11px;
+    padding: 0 4px;
+    background-color: #ff9400;
+    color: #fff;
+    text-align: center;
+    line-height: 14px;
+}
+
+.light_icon .all_icon {
+    float: left;
+    width: 1173px;
+    margin-right: -12px;
+}
+
+pre {
+    text-align: left;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+}
+
+.cardetailL_content .title .dTest {
+    float: right;
+    width: 97px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    background-color: #005aa0;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 15px 0 0;
+    cursor: pointer;
+}
+/*********fw 服务***********/
+.fwbox {
+    width: 1076px;
+    height: 73px;
+    padding: 28px 0;
+    background: #fff;
+    border: 2px solid #cdc0b8;
+    margin-bottom: 12px;
+}
+
+.fwbox .fwcont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fwbox .fwcont li {
+    width: 268px;
+    height: 100%;
+    border-right: 1px solid #e5e5e5;
+    float: left;
+}
+
+.fwbox .fwcont .lastlist {
+    border-right: none;
+}
+
+.fwbox .fwcont li .fwlist {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.fwbox .fwcont li .box4s {
+    width: 210px;
+}
+
+.fwbox .fwcont li .boxjc {
+    width: 236px;
+}
+
+.fwbox .fwcont li .boxht {
+    width: 233px;
+}
+
+.fwbox .fwcont li .boxty {
+    width: 244px;
+}
+
+.fwbox .fwcont li .fwlist i {
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat;
+    float: left;
+    height: 100%;
+}
+
+.fwbox .fwcont li .fwlist .fwpic1 {
+    width: 48px;
+    height: 49px;
+    background-position: -79px -149px;
+    margin-top: 13px;
+}
+
+.fwbox .fwcont li .fwlist .fwpic2 {
+    width: 42px;
+    height: 43px;
+    background-position: 0px -149px;
+    margin-top: 13px;
+}
+
+.fwbox .fwcont li .fwlist .fwpic3 {
+    width: 38px;
+    background: url(../../images/cardetail/contract.png) center no-repeat;
+}
+
+.fwbox .fwcont li .fwlist .fwpic4 {
+    width: 50px;
+    background: url(../../images/cardetail/typic.png) center center no-repeat;
+}
+
+.fwbox .fwcont li .fwlist .fwtext {
+    margin-left: 18px;
+    float: left;
+}
+
+.fwbox .fwcont li .fwlist .fwtext p {
+    font-size: 16px;
+    color: #444;
+    height: 40px;
+    line-height: 40px;
+}
+
+.fwbox .fwcont li .fwlist .fwtext a {
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 2px;
+    border: 1px solid #f60;
+    font-size: 12px;
+    color: #f60;
+    text-align: center;
+    margin-left: 2px;
+}
+
+.fwbox2 .fwcont li {
+    padding: 0 45px;
+}
+
+/*********fw 服务 ***********/
+
+/*添加跳转检测提示*/
+
+.model {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #666;
+    background-color: rgba(0, 0, 0, .3);
+    *background: #666;
+    filter: Alpha(opacity=50);
+    /*z-index: 199;*/
+    z-index: 200;
+}
+
+.infoBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    margin-top: -220px;
+    left: 40%;
+    width: 440px;
+    height: 478px;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.infoBox h3 {
+    width: 100%;
+    height: 65px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    line-height: 65px;
+    background-color: #f60;
+    font-family: '微软雅黑';
+}
+
+.closeIndfoBox {
+    position: absolute;
+    top: 0;
+    right: 23px;
+    width: 29px;
+    height: 36px;
+    background: url(../../images/cardetail/closeImg.jpg) no-repeat;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.infoTxt {
+    width: 320px;
+    height: 285px;
+    padding: 25px 60px;
+}
+
+.infoTxt h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.infoTxt p {
+    line-height: 1.8rem;
+    text-align: justify;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+.infoTxt .text1, .infoTxt .text2 {
+    color: #a6a6a6;
+}
+
+.infoTxt .text2 {
+    margin-top: 10px;
+}
+
+.infoTxt .jcPrice {
+    padding: 10px 0;
+}
+
+.infoTxt .jcPrice span {
+    color: #f60;
+    font-size: 24px;
+}
+
+.infobtn {
+    width: 335px;
+    height: 80px;
+    padding-left: 60px;
+}
+
+.infobtn input {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.infobtn label {
+    color: #2684e2;
+    font-size: 16px;
+    font-family: '微软雅黑';
+    vertical-align: middle;
+}
+
+.confirmBtn {
+    float: right;
+    width: 155px;
+    height: 40px;
+    background-color: #f60;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-family: '微软雅黑';
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*3.4*/
+.cardetailR_Host .info_per .verify_person {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 71px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 12px;
+    *background:#f60;
+    background:#f60\0;
+    background: -weikit-linear-gradient(90deg, #ffb847, #ff9947);
+    background: linear-gradient(90deg, #ffb847, #ff9947);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/*添加个人会员的样式 star*/
+
+.cardetailR_Host .info_per .cpic {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/*添加个人会员的样式 end*/
+
+.shangbox {
+    position: relative;
+    display: inline-block;
+}
+
+.shang {
+    display: inline-block;
+    zoom: 1;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 21px;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 71px;
+    height: 21px;
+    *background:#f60;
+    background:#f60\0;
+    background: -weikit-linear-gradient(90deg, #ff8f00, #ff6700);
+    background: linear-gradient(90deg, #ff8f00, #ff6700);
+    border-radius: 2px;
+
+}
+
+.shangs {
+    display: inline-block;
+    zoom:1;
+    color: #fff;
+    background: #027CFF;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    vertical-align: middle;
+    padding: 0 3px;
+    font-size: 12px;
+
+}
+
+.shangbox .shangPanel {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 128px;
+    height: 68px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+}
+
+.shangbox .shangPanel h3 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.shangbox .shangPanel div {
+    margin: 5px 0;
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    font-size: 12px;
+}
+
+.shangbox .shangPanel i {
+    display: inline-block;
+    zoom: 1;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../../images/cardetail/detail.png) no-repeat -91px -382px;
+    vertical-align: middle;
+}
+
+.fvip {
+    display: inline-block;
+    zoom: 1;
+    width: 21px;
+    height: 18px;
+    line-height: 28px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url(../../images/cardetail/new_vip.png) no-repeat;
+    margin-left: 5px;
+}
+
+.fvip.fvip2 {
+    background-position: 0 -23px;
+}
+
+.fvip.fvip3 {
+    background-position: 0 -45px;
+}
+
+.fvip.fvip4 {
+    background-position: 0 -68px;
+}
+
+.fvip.fvip5 {
+    background-position: 0 -90px;
+}
+
+.fvip.fvip6 {
+    background-position: 0 -113px;
+}
+
+.fvip.fvip7 {
+    background-position: 0 -135px;
+}
+
+.fvip.fvip8 {
+    background-position: 0 -158px;
+}
+
+.fvip.fvip9 {
+    background-position: 0 -180px;
+}
+
+/*私人助理弹框*/
+.assi_box {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 340px;
+    margin-left: -200px;
+    margin-top: -295px;
+    padding: 30px;
+    background: #fff;
+    z-index: 1000;
+}
+
+.assi_title {
+    position: relative;
+    width: 340px;
+    height: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+}
+
+.assi_title h2 {
+    position: relative;
+    margin-left: 20px;
+    float: left;
+    padding: 0 13px;
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+    line-height: 49px;
+    height: 49px;
+    text-align: center;
+    border-bottom: 2px solid #f60;
+}
+
+.assi_title .close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    cursor: pointer;
+    background: url('https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png') no-repeat center center;
+}
+
+.assi_box ul {
+    margin-top: 20px;
+}
+
+.assi_box ul li {
+    position: relative;
+    width: 340px;
+    height: 42px;
+    line-height: 42px;
+    padding-top: 15px;
+}
+
+.assi_box ul li .wan {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.assi_box ul li input {
+    width: 308px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e5e5e5;
+    color: #666;
+    padding: 0 15px;
+}
+
+.assi_box ul li .pic_code {
+    float: right;
+    width: 98px;
+    height: 40px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.assi_box ul li input.inp_code {
+    width: 198px;
+    float: left;
+}
+
+.assi_box ul li .button {
+    margin-right:0;
+    float: right;
+    width: 98px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background: #f60;
+    cursor: pointer;
+}
+
+.assi_box ul li.apply {
+    padding-top: 5px;
+}
+
+.assi_box ul li.apply .btn {
+    display: block;
+    width: 340px;
+    height: 40px;
+    line-height: 40px;
+    background: #f60;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.assi_box ul li.radio_li {
+    padding-top: 0;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.assi_box ul li.warnBox {
+    height: 24px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.assi_box ul li.warnBox .warn {
+    display: none;
+    padding-left: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 24px;
+    background: #ffebeb url(https://static.hx2car.com/resource/web/dist/static/common/images/loginnotice.png) 6px 4px no-repeat;
+    border: 1px solid #f00;
+    color: #666;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.assi_box .text {
+    margin-top: 5px;
+    text-align: center;
+    color: #666;
+}
+
+.assi_box ul li input[placeholder],
+[placeholder],
+*[placeholder] {
+    color: #666 !important;
+}
+
+.icon {
+    background: url('../../images/cardetail/assi_icon.png') no-repeat;
+}
+
+.assi_box ul li input.radio {
+    width: 0;
+    display: none;
+}
+
+.assi_box ul li input[type="radio"] {
+    margin: 3px 3px 0 5px;
+    display: none;
+}
+
+.assi_box ul li label {
+    background: url('../../images/cardetail/assi_icon.png') no-repeat;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.assi_box ul li label.checked {
+    background: url('../../images/cardetail/assi_icon.png') no-repeat 0 -30px;
+}
+
+/*手机验证*/
+
+.verify {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -170px;
+    display: none;
+    background: #fff;
+    z-index: 10000;
+    padding-bottom: 40px;
+}
+
+.verify .assiTextCont {
+    padding: 50px 70px;
+}
+
+.verify .assiTextCont .text {
+    text-align: center;
+    width: 331px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.verify .text .pho {
+    color: #f60;
+}
+
+.verify .btn {
+    width: 331px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.verify .btn span {
+    width: 145px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.verify .btn .open {
+    background: #f60;
+    float: left;
+}
+
+.verify .btn .re_login {
+    background: #bfbfbf;
+    float: right;
+}
+
+/*微信服务*/
+
+.wechat {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -178px;
+    width: 474px;
+    display: none;
+    background: #fff;
+    z-index: 1000;
+}
+
+.wechat .text {
+    text-align: center;
+    line-height: 80px;
+    font-size: 17px;
+    color: #666;
+}
+
+.wechat .weixin_codeimg {
+    width: 124px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.wechat .text2 {
+    text-align: center;
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 40px;
+    margin-top:20px;
+}
+
+.wechat .look {
+    margin-top: 20px;
+}
+
+/*个人会员*/
+
+.vip {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -290px;
+    width: 476px;
+    height: 580px;
+    display: none;
+    background: #fff;
+    z-index: 1000;
+}
+
+.vip .buy_money {
+    padding: 0 30px;
+}
+
+.vip .buy_money .num {
+    font-size: 14px;
+    color: #666;
+    line-height: 60px;
+}
+
+.vip .buy_money .months {
+    position: relative;
+    margin: 0 auto;
+    width: 126px;
+    height: 60px;
+    border: 1px solid #f60;
+    color: #444;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+}
+
+.vip .buy_money .member {
+    margin: 0 auto;
+    width: 178px;
+    padding: 20px 0;
+    color: #444;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*.vip .buy_money .money span {color:#f60;font-size:32px;}*/
+
+.vip .buy_money .look,
+.wechat .look {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    color: #0072ff;
+    font-size: 14px;
+}
+
+.vip .pay_way {
+    padding: 0 30px;
+}
+
+.vip .pay_way .way {
+    font-size: 14px;
+    color: #666;
+}
+
+.vip .pay_way .pay_con {
+    text-align: center;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.vip .pay_way .pay_con li {
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 60px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #444;
+    cursor: pointer;
+}
+
+.vip .pay_way .pay_con li {
+    margin-left: 35px;
+}
+
+.vip .pay_way .pay_con li {
+    margin-left: 25px;
+}
+
+.vip .pay_way .pay_con li .text1 {
+    line-height: 60px;
+}
+
+/*.vip .pay_way .pay_con li .text2{margin-top:7px;}*/
+
+.vip .pay_way .pay_con li.select {
+    border: 1px solid #f60;
+}
+
+.select_at {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: 19px;
+    height: 17px;
+    background: url('../../images/cardetail/at.png');
+}
+
+.vip .recharge {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -90px;
+    text-align: center;
+    width: 180px;
+    height: 45px;
+    line-height: 50px;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    background: #f60;
+}
+
+.Service {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 0px 5px #F6F6F6;
+    top: 34%;
+    left: 30%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    padding: 0 10px 10px;
+}
+
+.person_cont .title .xiugai {
+    margin-bottom: 25px;
+}
+
+.Service a {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555555;
+}
+
+.Service span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+/*新增热门城市省份*/
+
+.hx_hotCity {
+    min-width: 1200px;
+    width: 100%;
+    background-color: #FFF;
+    border-top: 3px solid #FF9400;
+    position: relative;
+    z-index: 99;
+    padding: 15px 0 25px 0;
+}
+
+.hx_hotCity .hx_hContent {
+    width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.hx_hotCity .hx_hContent .hx_hpro {
+    padding-top: 16px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.hx_hotCity .hx_hContent .hx_hpro a {
+    font-size: 14px;
+    color: #606977;
+    outline: none;
+    text-decoration: none;
+}
+
+.hx_hotCity .hx_hContent .hx_hpro a:hover {
+    color: #1799ec;
+}
+
+.hx_hotCity .hx_hContent .hx_hcity {
+    width: 1200px;
+    overflow: hidden;
+}
+
+.hx_hotCity .hx_hContent .hx_hcity a {
+    float: left;
+    margin-right: 20px;
+    white-space: nowrap;
+    line-height: 30px;
+    font-size: 12px;
+    outline: none;
+    text-decoration: none;
+    color: #606977;
+}
+
+.hx_hotCity .hx_hContent .hx_hcity a:hover {
+    color: #1799ec;
+}
+
+/*******公司门店 暂放**********/
+
+.companyStore {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.companyStore .mdTitle {
+    height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.companyStore .mdTitle .mdLine {
+    display: inline-block;
+    margin-left: 36px;
+    padding-right: 15px;
+    border-bottom: 3px solid #f60;
+    height: 48px;
+    line-height: 48px;
+}
+
+.companyStore .mdTitle .mdArrow {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-right: 8px;
+    background: url('../../images/cardetail/MDarrow.png') no-repeat;
+}
+
+.companyStore .mdTitle .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f60;
+}
+
+.companyStore .mdCont {
+    padding: 20px 36px;
+    overflow: hidden;
+}
+
+.companyStore .mdCont .mdPic {
+    float: left;
+    margin-right: 30px;
+    width: 180px;
+    height: 135px;
+    cursor: pointer;
+}
+
+.companyStore .mdCont .compayCont {
+    float: left;
+}
+
+.companyStore .mdCont .compayCont .conpayName {
+    line-height: 50px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.companyStore .mdCont .compayCont .adders {
+    line-height: 27px;
+    font-size: 14px;
+    color: #666;
+}
+
+.companyStore .mdCont .compayCont .adders label {
+    color: #969696;
+}
+
+.companyStore .mdCont .compayCont .enterMD {
+    display: block;
+    margin-top: 18px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    background: #f60;
+    color: #fff;
+    font-size: 14px;
+}
+
+.companyStore .mdContBig {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -221px;
+    margin-left: -361px;
+    width: 723px;
+    height: 443px;
+    /*background:pink;*/
+    z-index: 1000;
+}
+
+.companyStore .mdcontBig2 {
+    position: relative;
+    width: 549px;
+    height: 416px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.companyStore .mdcontBig2 .mdPicBig {
+    position: relative;
+    width: 1000%;
+}
+
+.companyStore .mdcontBig2 .mdPicBig li {
+    float: left;
+    width: 550px;
+}
+
+.companyStore .mdcontBig2 .mdPicBig .picmd {
+    height: 416px;
+    width: 550px;
+}
+
+.companyStore .mdContBig .closeMD {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background: url('../../images/cardetail/closeImg.png') no-repeat;
+}
+
+.companyStore .mdContBig .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.companyStore .mdContBig .btn span {
+    display: inline-block;
+    width: 35px;
+    height: 59px;
+    cursor: pointer;
+}
+
+.companyStore .mdContBig .btn .arrowL {
+    float: left;
+    background: url('../../images/cardetail/arrowL.png');
+}
+
+.companyStore .mdContBig .btn .arrowR {
+    float: right;
+    background: url('../../images/cardetail/arrowR.png');
+}
+
+/*******查看个人会员详情**********/
+
+.personalNote {
+    position: fixed;
+    width: 860px;
+    height: 750px;
+    border: 1px solid #ddd;
+    left: 50%;
+    top: 50%;
+    margin-left: -430px;
+    margin-top: -375px;
+    background: #fff;
+    z-index: 1000;
+}
+
+.personalNote .pCenter {
+    padding: 0 37px 0 37px;
+}
+
+.personalNote .pCenter .assi_title {
+    width: 785px;
+}
+
+.personalNote .pCenter .pTitle {
+    margin-top: 10px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ff6600;
+    display: block;
+    color: #ff6600;
+}
+
+.personalNote .pCenter .cTitle {
+    display: inline-block;
+    /*float: left;*/
+    margin: 20px 0 10px 0;
+    height: 20px;
+    width: 100%;
+    line-height: 20px;
+    color: #f60;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.personalNote .pCenter .pIntroduce {
+    /*float: left;*/
+    background-color: #ff8533;
+    height: 40px;
+    width: 786px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.personalNote .pCenter .pIntroduce .iLeft {
+    float: left;
+    width: 260px;
+}
+
+.personalNote .pCenter .pIntroduce .iCenter {
+    float: left;
+    width: 140px;
+}
+
+.personalNote .pCenter .pIntroduce .iRight {
+    float: left;
+    width: 386px;
+}
+
+.personalNote .pCenter .pWhite {
+    float: left;
+    background-color: #fff;
+    height: 40px;
+    width: 786px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.personalNote .pCenter .pWhite .iLeft {
+    float: left;
+    width: 260px;
+    font-weight: bold;
+    color: #777777;
+}
+
+.personalNote .pCenter .pWhite .iCenter {
+    float: left;
+    width: 140px;
+    color: #555555;
+}
+
+.personalNote .pCenter .pWhite .iRight {
+    float: left;
+    width: 386px;
+    color: #555555;
+}
+
+.personalNote .pCenter .phui {
+    background-color: #ebeaea;
+}
+
+.personalNote .pCenter .ptop {
+    margin-top: 45px;
+}
+
+.personalNote .pCenter .pClose {
+    float: left;
+    margin: 40px 0 0 293px;
+    width: 200px;
+    height: 44px;
+    background-color: #f60;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 44px;
+    cursor: pointer;
+}
+
+/*20170628*/
+
+/*增加小图左右切换*/
+
+.xtWarp {
+    position: relative;
+    width: 575px;
+    overflow: hidden;
+    height: 80px;
+    margin: 0 auto;
+    padding: 8px 20px 18px 20px;
+}
+
+.xtbox {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 570px;
+    /*margin: 0 auto;*/
+
+}
+.w1130 .xtbox {
+   margin-left: 8px;
+}
+
+.xtWarp > i {
+    position: absolute;
+    top: 8px;
+    width: 20px;
+    height: 78px;
+    background: #f9f9f9;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+}
+
+.xtWarp .xtHover {
+    background: #666;
+}
+
+.xtWarp .xtHover.leftBtn span {
+    background-position: -68px -201px;
+}
+
+.xtWarp .xtHover.rightBtn span {
+    background-position: -40px -201px;
+}
+
+.xtWarp i span {
+    background: url(https://static.hx2car.com/resource/web/dist/static/car/images/slider.png) no-repeat;
+    display: block;
+    height: 30px;
+    margin-top: 24px;
+}
+
+.xtWarp .leftBtn {
+    left: 0;
+}
+
+.xtWarp .leftBtn span {
+    background-position: -22px -201px;
+}
+
+.xtWarp .rightBtn {
+    right: 0;
+}
+
+.xtWarp .rightBtn span {
+    background-position: 6px -201px;
+}
+
+.cardetailT .top_L .xiaotu {
+    width: 2000px;
+    margin: 0;
+    position: absolute;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.car_info {
+    float: left;
+    width: 500px;
+    height: 223px;
+    padding-top:5px;
+    /*background:yellow;*/
+}
+.manyBox {
+    height:70px;
+    background: #f3f3f3;
+    width:467px;
+    padding: 20px 12px 20px 20px;
+}
+
+.manyNum {
+    margin-bottom:4px;
+    overflow: hidden;
+}
+.manyNum .pf_check {display: inline-block;margin-left: 15px;margin-top: 19px;font-size: 12px;}
+.w1130 .manyNum {margin-top:8px;}
+.w1130m.manyNum .pf_check {margin-left: 15px;margin-top: 8px;}
+.cardetailT .top_R .manyNum .tool_yuyue {
+    background:transparent;
+    font-size: 12px;
+}
+
+.cardetailT .top_R .manyNum .tool_yuyue i {
+    display: inline-block;
+    zoom: 1;
+    width: 30px;
+    height: 16px;
+    background: url(../../images/cardetail/detail-icons-new1.png) -63px -40px;
+    vertical-align: text-bottom;
+}
+
+.cf60 {
+    color: #f60;
+    font-size: 18px;
+    line-height: 1;
+    float: left;
+}
+.w1130 .lookWholesale{margin-top:0;}
+.w1130 .lookWhoface{margin-top:8px;}
+.lookWhoface{
+    display:inline-block;
+    margin-top:18px;
+    margin-left:15px;
+}
+.lookWholesale{
+    display: inline-block;
+    border: 1px solid #f60;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    margin-top: 12px;
+    margin-left: 15px;
+    color: #f60;
+    cursor: pointer;
+    width: 76px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.bigFont {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.cblue {
+    color: #0072ff;
+}
+.moneyOver {
+    font-size:14px;
+    overflow:hidden;
+    line-height:30px;
+}
+.car_check {
+    float:left;
+    /*margin-left: 3px;*/
+    /*margin-bottom:5px;*/
+    margin-right:3px;
+}
+.assessData{
+    float:left;
+    padding-left:3px;
+    color:#999;
+}
+.assessData .assessData_num{
+    color:#f60;
+}
+
+.username {
+    position: relative;
+    padding-top: 15px;
+}
+
+.username span {
+    float: left;
+    margin-right: 10px;
+}
+
+.icon-talk {
+    /*background: url(../../images/cardetail/detail-icons-new1.png) no-repeat -56px 0;*/
+    width: 28px;
+    height: 28px;
+    background: url(../../images/cardetail/cheliao.gif) no-repeat;
+    position: relative;
+    float: left;
+    margin-top: -15px;
+}
+
+#allren {
+    position: absolute;
+    top: 35px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 5px 10px;
+    line-height: 22px;
+    left: -50px;
+}
+
+#allren li {
+    width: 130px;
+    height: 22px;
+    overflow: hidden;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.top .dTest,.top .ioans_ass {
+    position: relative;
+    height: 53px;
+    margin-right:10px;
+    margin-top:25px;
+    line-height: 53px;
+    font-size: 14px;
+    padding: 0 27px 0 77px;
+    color: #f60;
+    border: 1px solid #ffcda9;
+    background: #fff8f3;
+    border-radius:3px;
+    float: left;
+    width: 576px;
+    display: inline;
+}
+.diakuan {
+    cursor:pointer;
+}
+.w1130 .top .dTest,.w1130 .top .ioans_ass{
+    width: 478px;
+    height:43px;
+    line-height:43px;
+    padding-left: 55px;
+    padding-right: 5px;
+}
+.ioans_ass .goIoans,.ioans_ass .goAssistant{
+    color: #f60;
+    float:right;
+    cursor: pointer;
+}
+.lt{
+    float:left;
+}
+.ilogo {
+    position: relative;
+    margin-left: 20px;
+}
+.Detail_title .ilogo::before{
+    display: block;
+    position: absolute;
+    height: 100%;
+    left: -20px;
+    content: "";
+    background-size: 100%;
+    top: 18%;
+    background: #f60;
+    width: 4px;
+    height: 65%;
+    border-radius: 2px;
+}
+.top .ioans_ass .ioans_ass_icon{
+    position: absolute;
+    bottom:0;
+    left:5px;
+    width:50px;
+    height:62px;
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat -353px 0;
+}
+.dTest span {
+    color:#444;
+    float: left;
+    font-size:12px;
+}
+
+.dTest .right {
+    color:#f60;
+    float: right;
+    font-size:14px;
+}
+.carState {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.carState li {
+    width: 145px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.carState li i {
+    width: 30px;
+    display: inline-block;
+    height: 30px;
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.carState li .sj {
+    background-position: 0px -89px;
+}
+
+.carState li .zxc {
+    background-position: -79px -89px;
+}
+
+.carState li .ys {
+    background-position: -158px -89px;
+}
+
+.jf {
+    margin-top: 12px;
+    padding: 10px 15px;
+    border: 1px solid #cdc0b8;
+    background: #fff;
+    overflow: hidden;
+}
+
+.jf .text1 {
+    float: left;
+}
+
+.jf .text2 {
+    float: right;
+    color: #f60;
+    cursor: pointer;
+}
+
+.hxfw {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    color: #5f493c;
+}
+
+.hxfw .text1 {
+    font-size: 20px;
+}
+
+.hxfw .text2 {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+/*.vehicle {
+	width: 1076px;
+	height: 120px;
+	border: 2px solid #cdc0b8;
+	overflow: hidden;
+	margin-bottom: 12px;
+	background: #fff;
+}
+
+.vehicle .vtitle {
+	width: 175px;
+	background: #CDC0B8;
+	text-align: center;
+	color: #5f493c;
+	font-size: 12px;
+	float: left;
+	padding: 38px 0;
+	height: 44px;
+	line-height: 44px;
+}
+
+.vehicle .bigFont {
+	font-size: 24px;
+}*/
+
+/*.vehicle .vlist {
+	float: left;
+	height: 54px;
+	margin: 35px 0;
+	width: 268px;
+	border-right: #e5e5e5 1px solid;
+}
+.vehicle2 .vlist {
+	padding:0 40px;
+}
+.vehicle .box-4s{width: 260px;}
+
+.vehicle .vlist i {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	float: left;
+	margin-left: 20px;
+	background: url(../../images/cardetail/detail-icons-new1.png) no-repeat;
+}
+
+.vehicle .vlist .jc {
+	background-position: 0px -145px;
+}
+
+.vehicle .vlist .ss {
+	margin-left:30px;
+	amrgin-right:15px;
+	background-position: -78px -148px;
+}
+.vehicle .vlist .ht {
+	background:url("../../images/cardetail/contract.png") no-repeat;
+}
+.vehicle .vlist .sr {
+	margin-right:20px;
+	background-position: -153px -145px;
+
+}
+.vehicle .vlist .ty {
+	background:url("../../images/cardetail/typic.png") center center no-repeat;
+	margin-right:15px;
+}
+
+.vehicle .vlist .right {
+	float: left;
+}
+
+.vehicle .vlist .right p {
+	font-size: 16px;
+}
+
+.vehicle .vlist .right a {
+	font-size: 12px;
+	display: block;
+	height: 22px;
+	width: 94px;
+	text-align: center;
+	color: #f60;
+	border: 1px solid #f60;
+	border-radius: 3px;
+	line-height: 22px;
+	margin-top: 10px;
+	background: #fff;
+	padding: 0;
+}*/
+
+.Boutique {
+    margin: 0 auto 20px;
+    width: 1350px;
+    font-size: 14px;
+}
+
+.Boutique_title {
+    height: 60px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.Boutique_title span {
+    width: 134px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 60px;
+    display: block;
+    float: left;
+    border-bottom:2px solid transparent;
+}
+
+.Boutique_title span a {
+    float: left;
+    background: transparent;
+    width: 110px;
+    height: 28px;
+    overflow: hidden;
+    margin: 15px 13px;
+}
+
+.information_title span.on b {
+    display: block;
+    width: 165px;
+    height: 55px;
+    background-image: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/index/orange.png);
+    border-bottom: 2px solid #f60;
+}
+
+.Boutique_title span.on {
+    border-bottom: 2px solid #f60;
+    color: #f60;
+}
+
+.Boutique_title span i {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    border: 6px solid transparent;
+    border-bottom-color: #f60;
+    margin-left: -6px;
+    display: none;
+}
+
+.information_title span i {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    border: 6px solid transparent;
+    border-bottom-color: #f60;
+    margin-left: -6px;
+}
+
+.Boutique_title span.on i {
+    display: block;
+}
+
+.information_title span.esczx {
+    width: 166px;
+    height: 55px;
+    position: relative;
+    cursor: pointer;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 55px;
+    display: block;
+    float: left;
+}
+
+.tj_cars_b {
+    display: block;
+    width: 150px;
+    margin: 24px auto;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    background: #f60;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tj_cars_b:hover {
+    color: #fff;
+}
+
+.showStateBox,.show_cheliao{
+    float:right;
+    width: 102px;
+    height: 30px;
+    /*margin-top:9px;*/
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #f60;
+    color: #f60;
+    font-size: 14px;
+    background-color:#fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.cheliaogif {
+    display: inline-block;
+    zoom: 1;
+    margin-left:5px;
+    width: 28px;
+    height: 28px;
+    background: url("../../images/cardetail/cheliao.gif") no-repeat;
+    cursor: pointer;
+}
+.sellState {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+}
+.sellState div{
+    float:left;
+    width:49%;
+}
+.sellState .list {
+    width: 109px;
+    height: 32px;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #e5e5e5;
+}
+.cardetailR_Host .intro .sellState .cf00 {
+    float:left;
+    width:auto;
+    color: #d71e06;
+    margin-left:4px;
+}
+.cardetailR_Host .intro .company_btns {
+    text-align:center;
+}
+.stafk {
+    display: inline-block;
+    width: 24px;
+    height: 21px;
+    margin-left:5px;
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat 0px -217px;
+    vertical-align: middle;
+}
+
+/*吸顶*/
+
+.topContent {
+    width: 1350px;
+    height:50px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.moneyBox {
+    width: 170px;
+    float: left;
+    margin-right:10px;
+    text-align: right;
+}
+.moneyBox p{
+    height:18px;
+    line-height:18px;
+    font-size:16px;
+}
+.moneyBox .cf60 {
+    float: right;
+}
+
+/*新车配置弹框*/
+
+.NewcarModel {
+    position: fixed;
+    top: 50%;
+    z-index: 200;
+    background: #fff;
+    width: 1000px;
+    padding: 20px;
+    left: 50%;
+    margin-top: -294.5px;
+    margin-left: -500px;
+    text-align: center;
+    font-size: 12px;
+    /*display: none;*/
+}
+
+.myModel .title {
+    width: auto;
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 32px;
+    float: none;
+}
+
+.myModel .title span {
+    display: block;
+    width: 135px;
+    border-bottom: 1px solid #f60;
+    margin: 0;
+    height: 55px;
+    font-weight: normal;
+    text-align: center;
+    position: absolute;
+}
+
+.myModel .title i {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png) center center no-repeat;
+    right: 50px;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+.NewcarModel.hide{
+    /*display:none!important;*/
+}
+.NewcarModel .Newcar {
+    border: 1px solid #aaa;
+    height: 482px;
+    width: 1000px;
+}
+
+.NewcarNav {
+    width: 148px;
+    float: left;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+}
+
+.NewcarNav li {
+    height: 47px;
+    line-height: 47px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.NewcarNav span {
+    float:left;
+    width:81px;
+    height:48px;
+    line-height:48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.NewcarModel .Newcar .sizes li b {
+    width: 200px;
+}
+
+.NewcarModel .Newcar .sizes {
+    margin: 0;
+}
+
+.NewcarModel .Newcar .sizes li {
+    width: 416px;
+    overflow: hidden;
+}
+
+.NewcarModel .Newcar li i {
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/size_all.png) no-repeat;
+    float:left;
+    width: 40px;
+    height: 40px;
+    margin:4px 10px;
+}
+
+.NewcarModel .NewcarNav li:hover {
+    background: #f60;
+    color: #fff;
+}
+
+.NewcarModel .NewcarNav li.hover {
+    background: #f60;
+    color: #fff;
+}
+
+.NewcarBox {
+    height:480px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.NewcarModel .Newcar .s1 i {
+    background-position: -11px -3px;
+}
+
+.NewcarModel .Newcar .s2 i {
+    background-position: -11px -52px;
+}
+
+.NewcarModel .Newcar .s3 i {
+    background-position: -11px -104px;
+}
+
+.NewcarModel .Newcar .s4 i {
+    background-position: -11px -204px;
+}
+
+.NewcarModel .Newcar .s5 i {
+    background-position: -11px -155px;
+}
+
+.NewcarModel .Newcar .s6 i {
+    background-position: -11px -255px;
+}
+
+.NewcarModel .Newcar .s7 i {
+    background-position: -11px -296px;
+}
+
+.NewcarModel .Newcar .s8 i {
+    background-position: -11px -342px;
+}
+
+.NewcarModel .Newcar .s9 i {
+    background-position: -11px -388px;
+}
+
+.NewcarModel .Newcar .s10 i {
+    background-position: -11px -430px;
+}
+
+.NewcarModel .Newcar .s11 i {
+    background-position: -11px -483px;
+}
+
+.NewcarModel .Newcar .s12 i {
+    background-position: -11px -527px;
+}
+
+.NewcarModel .Newcar .s13 i {
+    background-position: -11px -570px;
+}
+
+.NewcarModel .Newcar .s14 i {
+    background-position: -11px -631px;
+}
+
+.SMessage p.username em {
+    top: 25px;
+}
+
+/*高度小于800*/
+
+.h800 .NewcarModel .title {
+    height: 42px;
+    line-height: 42px;
+}
+
+.h800 .NewcarModel .title span {
+    height: 41px;
+}
+
+.h800 .NewcarModel .Newcar {
+    height: 415px;
+}
+
+.h800 .NewcarNav li {
+    height: 40px;
+    line-height: 40px;
+}
+
+.h800 .NewcarBox {
+    height: 415px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+/*各种弹框*/
+.phonecode{
+    height: auto;
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+}
+.phonecode span{
+    display: block;
+}
+.phonecode span input:first-child{
+    vertical-align: middle;
+    margin-right:10px;
+}
+.phonecode span:last-child{
+    margin-top: 15px;
+}
+.phonecode .getcode{
+    color: #017cfe;
+    cursor:pointer;
+}
+.MContent span.MContentclass b.tsCarprice i {
+    color: #f60;
+    font-weight: bold;
+}
+
+.warn_box1 .loginbox p.username input {
+    padding-left: 15px;
+}
+
+.warn_box1 .loginbox p.username i {
+    display: none;
+}
+
+.warn_box1 {
+    width: 454px;
+    margin-left: -227px;
+    padding-bottom: 40px;
+}
+
+.warn_box1 .loginbox p.username input {
+    width: 276px;
+    border-color: #e5e5e5;
+    padding-left: 20px;
+    line-height: 38px;
+    height:38px;
+    font-size:14px;
+}
+
+.warn_box1 .loginbox p.verifyBox input {
+    width: 155px;
+    float: left;
+}
+
+.warn_box1 .loginbox p {
+    width: 310px;
+}
+
+.warn_box1 .loginbox .loginbtn {
+    margin-bottom:30px;
+    padding-top:30px;
+}
+
+.MContent span.MContentclass b.tsTip {
+    padding-left: 10px;
+}
+
+.MContent span.MContentclass b.yourPrice input {
+    border-color: #e5e5e5;
+    width: 120px;
+    font-size: 14px;
+    position: relative;
+    *top: 10px;
+    line-height: 34px;
+}
+
+.warn_box1 .loginbox p.loginbtn input,.warn_box1 .loginbox p.loginbtn_B input{
+    width: 308px;
+    border-radius: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.verify .verifyBox span.GCode,
+.getPhoneCode {
+    border-color: #e5e5e5;
+    background: #fff;
+}
+
+.warn_box1 .logintop a {
+    height: 55px;
+    line-height: 65px;
+    margin-top: 0px;
+    padding: 0 30px;
+}
+
+.warn_box1 > span {
+    margin: 17px 30px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.daikuanfa{
+    margin-top: -40px!important;
+    text-align: center;
+    font-size:14px;
+    color:#444444;
+}
+.MContent {
+    /*width: 312px;*/
+    margin-bottom: 15px;
+    width:380px;
+    text-align: center;
+}
+.baocuo{
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.MContent span.MContentclass b.tsCarprice {
+    margin: 20px 0 10px 48px;
+    height: 24px;
+}
+.bg{background:#f2f2f2;}
+.shareModel {
+    top: 20px;
+    position: absolute;
+    width: 153px;
+    height: 208px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    right: -30px;
+    overflow: hidden;
+    z-index:9;
+}
+
+.shareModel ul {
+    padding: 8px 0 15px 60px;
+    overflow: hidden;
+    background: url(../../images/cardetail/detail-icons-new1.png) no-repeat -280px 13px;
+}
+
+.shareModel li {
+    height: 38px;
+    *height: 35px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0;
+    float: none;
+    display: block;
+}
+
+/*价格趋势*/
+
+.costModel {
+    position: fixed;
+    width: 867px;
+    overflow: hidden;
+    top: 50%;
+    background: #fff;
+    left: 50%;
+    margin-top: -310px;
+    margin-left: -453.5px;
+    padding: 20px;
+    z-index: 1000;
+}
+.costModel .addTextShow {
+    margin-top:5px;
+}
+.costModel .addTextShow span {
+    font-weight: bold;
+    color:#000;
+}
+
+/*4s报告*/
+
+.model-4s {
+    position: fixed;
+    width: 880px;
+    overflow: hidden;
+    top: 50%;
+    margin-top: -250px;
+    background: #fff;
+    left: 50%;
+    margin-left: -460px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/***4s查询登录*****/
+.query_4s {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -220px;
+    margin-top: -240px;
+    width: 440px;
+    height: 480px;
+    background: #fff;
+    z-index: 1000;
+}
+
+.qur2 {
+    height: 530px;
+    margin-top: -265px;
+}
+
+.qur3 {
+    height: 480px;
+    margin-top: -240px;
+}
+
+.content_4s {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.content_4s .text {
+    margin-top: 30px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.content_4s .pxcartitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.content_4s .login_4s {
+}
+
+.content_4s .login_4s li {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content_4s .login_4s li input {
+
+    padding-left: 20px;
+    border: 1px solid #e3e3e3;
+    height: 38px;
+    line-height: 38px;
+}
+
+.content_4s .login_4s li .phoneNum {
+    width: 298px;
+}
+
+.content_4s .login_4s li .inp_code {
+    width: 178px;
+    float: left;
+}
+
+.content_4s .login_4s li .imgcode {
+    float: right;
+    width: 100px;
+    height: 40px;
+}
+
+.content_4s .login_4s li .button {
+    width: 98px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e3e3e3;
+    color: #fff;
+    background: #f60;
+}
+
+.content_4s .login_4s .warn_li {
+    margin-top: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-indent: 20px;
+}
+
+.content_4s .login_4s li .warn2, .content_4s .login_4s li .warn3 {
+    display: none;
+    color: #f00;
+    text-align: left;
+    font-size: 12px;
+}
+
+.content_4s .login_4s .next_li {
+    margin-top: 15px;
+}
+
+.content_4s .login_4s li .next {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background: #f60;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pay_query {
+    width: 100%;
+}
+
+.pay_query li {
+    overflow: hidden; /*clear:both;*/
+    margin-top: 30px;
+}
+
+.pay_query li .mch {
+    float: left;
+    font-size: 14px;
+    color: #444;
+    height: 40px;
+    line-height: 40px;
+}
+
+.pay_query li .zf {
+    text-align: auto;
+}
+
+.pay_query li .mcont {
+    float: right;
+    width: 240px;
+}
+
+.pay_query li .money {
+    line-height: 40px;
+    font-size: 24px;
+    color: #f60;
+}
+
+.pay_query .pay_way {
+    height: 78px;
+}
+
+.pay_query .pay_way .pay_con {
+}
+
+.pay_query li .payCont {
+    height: 48px;
+}
+
+.pay_query li .payCont .pay_con {
+    height: 50px;
+    overflow: hidden;
+}
+
+.pay_query li .payCont .pay_con li {
+    width: 108px;
+    height: 45px;
+    margin-top: 0px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.pay_query li .payCont .pay_con li.weixin {
+    float: left;
+    background: url("../../images/cardetail/weixinPic.jpg") no-repeat center center;
+}
+
+.pay_query li .payCont .pay_con li.zhifubao {
+    float: right;
+    background: url("../../images/cardetail/zhifubaoPic.jpg") no-repeat center center;
+}
+
+.pay_query li .payCont .pay_con li.selectOn {
+    position: relative;
+    border: 1px solid #f60;
+}
+
+.pay_query li .payCont .pay_con li.one {
+    position: relative;
+    border: 1px solid #f60;
+    float: none;
+}
+
+.pay_query li .payCont .pay_con li.one .tstex {
+    color: #f60;
+    font-size: 14px;
+    text-align: center;
+}
+
+.pay_query li .payCont .pay_con li.one .tstex2 {
+    margin-top: 4px;
+}
+
+/*.pay_query li .payCont .pay_con li.paytype {
+	width:;
+	height:30px;
+	float:none;
+	line-height:30px;
+	border:0;
+}
+.pay_query li .payCont .pay_con li.paytype:hover {
+	color:#f60;
+}*/
+.pay_query li .payCont .paytype {
+    display: block;
+    margin-top: 4px;
+    position: relative;
+    cursor: pointer;
+    /*width:115px;*/
+    color: #444;
+    font-size: 14px;
+}
+
+.pay_query li .payCont .paytype:hover {
+    color: #f60;
+}
+
+.pay_query .ph {
+    width: 100%;
+    height: 40px;
+    margin-top: 0px;
+}
+
+.pay_query li .phN {
+    border: 1px solid #e3e3e3;
+    height: 38px;
+    line-height: 40px;
+    color: #444;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+.pay_query .sumBtnQuery {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background: #f60;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pay_query li .zhu {
+    color: #f60;
+    height: 25px;
+    line-height: 25px;
+}
+
+.pay_query li .zhuCont {
+    width: 260px;
+    line-height: 25px;
+    color: #a6a6a6;
+}
+
+.pay_query li.jilu {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.pay_query li.jilu a {
+    color: #f60;
+    text-decoration: underline;
+}
+
+.pay_query .zhifut {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.content_4s .reSuce {
+    padding: 50px 0 25px 0;
+    width: 100%;
+    height: 90px;
+    display: block;
+    background: url("../../images/cardetail/reSuce.jpg") no-repeat center;
+}
+
+.content_4s .tex {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.content_4s .btnCont {
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.content_4s .btnCont a {
+    width: 148px;
+    height: 48px;
+    border: 1px solid #f60;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.content_4s .btnCont .queryHist {
+    float: left;
+    background: #f60;
+    color: #fff;
+}
+
+.content_4s .btnCont .closeCheck {
+    float: right;
+    background: #fff;
+    color: #f60;
+}
+
+/***4s查询登录 end*****/
+
+/*
+*content_4s 降价通知
+*/
+#jiangjia {
+    height: 520px;
+    margin-top: -260px;
+    z-index: 1000;
+}
+
+.content_4s .carTC {
+    text-align: center;
+    margin-top: 30px;
+    overflow: hidden;
+    width: 320px;
+    height: 35px;
+    line-height: 35px;
+    background: #f2f2f2;
+    font-size: 12px;
+}
+
+.content_4s .carTC .cartile {
+    width: 210px;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content_4s .carTC .carmoney {
+    color: #f60;
+}
+
+.jjprice {
+    width: 308px;
+}
+
+.jjprice .jjpriceCont {
+    width: 100%;
+    color: #999;
+}
+
+.jjprice input {
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #e3e3e3;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.jjprice .jjpriceCont input.money {
+    width: 200px;
+
+}
+
+.MContent span.MContentclass .jjprice .jjpriceCont input.chb {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    vertical-align: middle;
+    float:none;
+}
+
+.jjprice .jjpricephone input.phone {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*降价通知 end*/
+
+/*工商认证*/
+
+.model-icbc {
+    position: fixed;
+    width: 780px;
+    overflow: hidden;
+    top: 150px;
+    background: #fff;
+    left: 50%;
+    margin-left: -390px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.icbcBox {
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    width: 750px;
+    margin: 60px auto 20px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.icbc-list {
+    width: 314px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 30px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.icbcBox .row1 {
+    width: auto;
+    float: none;
+}
+
+.icbc-remark {
+    padding: 15px 30px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 20px;
+    min-height: 40px;
+}
+
+.model-wx {
+    position: fixed;
+    width: 416px;
+    overflow: hidden;
+    top: 100px;
+    background: #fff;
+    left: 50%;
+    margin-left: -228px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.codeBox {
+    width: 270px;
+    margin: 65px auto;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.codeBox img {
+    width: 185px;
+    margin: 0px auto 30px;
+    display: block;
+}
+
+/*已过期*/
+
+.cardetailT .top_R .gray .num {
+    color: #444;
+}
+
+.cardetailT .top_R .gray {
+    border-color: #ccc;
+}
+
+.cardetailT .top_R .gray .num .icon-phone {
+    background: url(../../images/cardetail/phone-icon.png) no-repeat center;
+}
+
+.gray li {
+    color: #c7c7c7;
+}
+
+.gray li.tool_jb {
+    color: #444;
+}
+
+.tool_duibis i {
+    background-position: -20px -257px;
+}
+
+.tool_yuyues i {
+    background-position: -148px -257px;
+}
+
+.tool_noteBoxs i {
+    background-position: -263px -257px;
+}
+
+/*电子合同*/
+.elecontract {
+    padding: 30px 40px;
+    width: 620px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -321px;
+    margin-top: -265px;
+    display: none;
+    background: #fff;
+    z-index: 10000;
+}
+
+.elecontract .title i {
+    top: 50px;
+}
+
+.elecontract .elecontractBox .elecontText {
+    font-size: 14px;
+    color: #444;
+    margin-top: 28px;
+    text-align: center;
+}
+
+.elecontract .elecontractBox .elecontractCont {
+    margin-top: 27px;
+    overflow: hidden;
+}
+
+.elecontract .elecontractBox .elecontractCont .djhtpic {
+    float: left;
+    width: 275px;
+    height: 301px;
+    margin-left: 15px;
+}
+
+.codeConts,.myModel .codeCont {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.codeConts img,.myModel .codeCont img {
+    width: 190px;
+    height: 190px;
+}
+
+.elecontract .elecontractBox .elecontractCont .codeConts .djhtpic2 {
+
+}
+
+.codeimg {
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.elecontractCont2 .codeimg{margin-left: 15px;}
+
+.codeimg .codeleft {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    background: url("../../images/cardetail/codeimg.png") no-repeat;
+}
+
+.codeimg .coderight {
+    float: left;
+    margin-left: 12px;
+}
+
+.codeConts .codetext {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+.elecontractBox .codetext {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.codeConts .codetext2,.myModel .codeCont .codetext2 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.elecontractBox .codeleft {
+    margin-top: 35px;
+}
+
+.elecontract .chjbtn {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 320px;
+    height: 36px;
+    line-height: 36px;
+    background: #f60;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.elecontract #appbtn {
+    display: none;
+}
+
+.elecontract .elecontractCont2 {
+    margin: 49px 0;
+    overflow: hidden;
+}
+
+.elecontract .elecontractCont2 .djhtpic {
+    float: left;
+    margin-left: 40px;
+}
+
+.elecontract .elecontractCont2 .codeCont {
+    float: right;
+    margin: -2px 27px 0 0;
+}
+
+.elecontract .elecontractCont2 .codeCont img {
+    width: 240px;
+    height: 240px;
+}
+
+.elecontract .elecontractCont2 .codeCont .djhtpic {
+    width: 185px;
+    hegith: 185px;
+}
+
+.elecontract .elecontractCont2 .codeCont .codetext {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.elecontract .elecontractCont2 .codeCont .codetext2 {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*电子合同 end*/
+
+/*交易仲裁*/
+.arbitra {
+    padding: 30px 40px;
+    width: 620px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -321px;
+    margin-top: -265px;
+    display: none;
+    background: #fff;
+    z-index: 10000;
+}
+
+.arbitra .title i {
+    top: 50px;
+}
+
+.arbitrabox {
+    margin: 50px 0 50px 0;
+    overflow: hidden;
+}
+
+.arbitrabox .arbitraApp img {
+    width: 240px;
+    height: 240px;
+}
+
+.arbitrabox .zhcpic {
+    margin-left: 35px;
+    float: left;
+}
+
+.arbitrabox .arbitraApp {
+    margin-right: 23px;
+    margin-top: 0px;
+    float: right;
+}
+
+.arbitrabox .arbitraApp .codetext {
+    text-align: center;
+    margin-top: 10px;
+    color: #444;
+    font-size: 14px;
+}
+
+.arbitrabox .arbitraApp .codetext2 {
+    margin-top: 10px;
+}
+
+.arbitraApp .codeimg {
+    margin-left: 45px;
+}
+
+/*交易仲裁 end*/
+
+/*底部样式*/
+
+.bottom {
+    border-top: 2px solid #f60;
+    width: 100%;
+    min-width: 1200px;
+    background: #fff;
+}
+
+.bottom_cont {
+    width: 1350px;
+    margin: 24px auto;
+    *padding-top: 15px;
+    overflow: hidden;
+}
+
+.bottom_cont_frame1 {
+    width: 45%;
+    float: left;
+}
+
+.bottom_cont_frame2 {
+    width: 50%;
+    float: left;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 4%;
+}
+
+.bottom_cont_frame {
+    overflow: hidden;
+    margin: -1px 0;
+}
+
+.bottom_cont_frame span {
+    float: left;
+    line-height: 28px;
+}
+
+.bottom_cont_frame span.L {
+    height: 38px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    width: 100%;
+}
+
+.bottom_cont_frame span.R {
+}
+
+.bottom_cont_frame span.R a {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.bottom_cont_frame .Scan {
+    float: left;
+    height: 109px;
+    padding: 0 0 0 27px;
+}
+
+.bottom_cont_frame .Scan li {
+    float: left;
+    width: 213px;
+    cursor: pointer;
+}
+
+.bottom_cont_frame .Scan li a {
+    float: left;
+    width: 85px;
+    height: 85px;
+}
+
+.bottom_cont_frame .Scan li a img {
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+}
+
+.bottom_cont_frame .Scan li a.wb {
+    background-position: -307px -298px;
+}
+
+.bottom_cont_frame .Scan li .wbBox {
+    width: 85px;
+    height: 85px;
+    display: block;
+    float: left;
+    background: #fff;
+    padding: 0;
+}
+
+.bottom_code .bottom_cont_frame .Scan .iphone a {
+    background-position: -14px -385px;
+    z-index: 9999;
+}
+
+.bottom_code .bottom_cont_frame .Scan .android a {
+    background-position: -201px -385px;
+}
+
+.bottom_code .bottom_cont_frame .Scan .wx a {
+    background-position: -417px -384px;
+}
+
+.bottom_cont_frame .Scan li span {
+    float: left;
+    padding: 0 15px;
+    line-height: 20px;
+}
+
+.bottom_cont_frame .Scan li span.gz a {
+    width: 57px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #9d9d9d;
+    margin: 8px 10px 0 0;
+}
+
+.bottom_cont_frame span.L1 {
+    width: 25px;
+    height: 84px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 12px 10px;
+    line-height: 20px;
+}
+
+.bottom_cont_frame .hzsj {
+    float: left;
+    padding: 36px 0 0 20px;
+}
+
+.bottom_cont_frame .hzsj p {
+    float: left;
+    margin-right: 10px;
+}
+
+.bottom_nav_box {
+    overflow: hidden;
+    background: #282828;
+}
+
+.bottom_nav {
+    width: 1200px;
+    text-align: center;
+    position: relative;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.bottom_nav a {
+    color: #6c6c6c;
+    width: 78px;
+    display: inline-block;
+}
+
+.bottom_nav a:hover {
+    text-decoration: underline;
+}
+
+.bottom_nav .net_nav {
+    margin-bottom: 15px;
+}
+
+.bottom_nav p {
+    line-height: 20px;
+    color: #a1a1a1;
+}
+
+.bottom_nav a.policeLink {
+    width: auto;
+    margin-top: 5px;
+}
+
+.bottom_nav a.policeLink i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../../../car/images/ghs.png) 0 0 no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.bottom_nav .police_l {
+    width: 88px;
+    height: 84px;
+    background-position: -2px -485px;
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 300px;
+    _left: 75px;
+}
+
+.bottom_nav .police_r {
+    width: 88px;
+    height: 84px;
+    background-position: -92px -485px;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 305px;
+}
+
+.bottom_code {
+    background: #f60;
+    height: 85px;
+    padding: 19px 0;
+}
+
+.bottom_code .bottom_cont_frame {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.bottom_code .hxlogo {
+    width: 210px;
+    height: 54px;
+    display: block;
+    float: left;
+    margin-top: 15px;
+    background: url(../../images/common/index-icons.png) no-repeat left bottom;
+    padding: 0;
+}
+
+.bottom_cont_frame .Scan li span {
+    color: #fff;
+}
+
+.bottom_cont_frame .Scan li span.gz a {
+    color: #fff;
+    border-color: #fff;
+}
+
+/*********私人助理*/
+.assistC {
+    margin: 20px 0;
+    position: relative;
+    width: 972px;
+    height:68px;
+    padding: 9px 50px 9px 56px;
+    background: #fff;
+    border:1px solid #e5e5e5;
+}
+
+.assistC .assistpic {
+    position: absolute;
+    left: 56px;
+    top: -14px;
+    width: 85px;
+    height: 100px;
+}
+.assistC .assistpic1 {
+    background: url("../../images/cardetail/4spic.png") no-repeat;
+}
+.assistC .assistpic2 {
+    background: url("../../images/cardetail/assistpic.png") no-repeat;
+}
+.assistC .assitext {
+    float: left;
+    margin-left: 136px;
+}
+
+.assistC .assitext p {
+    color: #444;
+    font-size: 18px;
+    line-height: 34px;
+}
+.assistC .assitext .aText1 {
+    color: #444;
+    font-size: 18px;
+    line-height: 38px;
+}
+.assistC .assitext .aText2 {
+    color: #444;
+    font-size: 14px;
+    line-height: 26px;
+}
+.assistC .assitext .checkModel {
+    color:#5372ff;
+}
+.assistC .openassi {
+    float: right;
+    width: 130px;
+    height: 42px;
+    line-height: 42px;
+    background: #f60;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top:13px;
+}
+
+.bottom {
+    margin-bottom: 100px;
+}
+
+/*窄屏*/
+
+.w1130 .path {
+    width: 1125px;
+}
+
+.w1130 .cardetail {
+    width: 1130px;
+}
+
+.w1130 .cardetailL {
+    width: 900px;
+}
+
+/*.w1130 .vehicle {
+	width: 894px;
+}*/
+.w1130 .cardetailT .top_L{
+    width: 509px;
+}
+.w1130 .cardetailT .top_L .datu {
+    width: 509px;
+    height: 380px;
+    line-height: 380px;
+}
+
+.w1130 .cardetailT .top_L .datu img {
+    /*width: 509px;*/
+    /*height: 380px;*/
+}
+
+.w1130 .xtWarp {
+    width: 470px;
+    height:64px;
+}
+
+.w1130 .xtWarp i {
+    width: 16px;
+    height: 62px;
+}
+
+.w1130 .xtbox {
+    width: 460px;
+}
+
+.w1130 .cardetailT .top_L .xiaotu li {
+    width: 80px;
+    height: 60px;
+    margin: 0 8px 0 0;
+}
+
+.w1130 .cardetailT .top_L .xiaotu li img {
+    width: 80px;
+    height: 60px;
+}
+
+.w1130 .xtWarp .leftBtn span {
+    background-position: -23px -208px;
+}
+
+.w1130 .xtWarp .rightBtn span {
+    background-position: 4px -208px;
+}
+
+.w1130 .xtWarp .xtHover.leftBtn span {
+    background-position: -69px -208px;
+}
+
+.w1130 .xtWarp .xtHover.rightBtn span {
+    background-position: -42px -208px;
+}
+
+.w1130 .tool li {
+    margin: 0 20px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    user-select:none;
+}
+
+.w1130 .tool {
+    margin: 15px 0;
+}
+
+.w1130 .dTest {
+    height: 22px;
+    line-height: 22px;
+}
+
+.w1130 .cardetailT .top_R {
+    width: 566px;
+}
+
+.w1130 .cardetailT .top_R h2 {
+    height: 50px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.w1130 .cardetailT .top_R .title_info {
+    height: 35px;
+    line-height: 35px;
+}
+
+.w1130 .manyBox {
+    width: 387px;
+    padding: 12px 12px 12px 20px;
+}
+
+.w1130 .bigFont {
+    font-size: 24px;
+}
+.w1130 .cardetailT .top_R .detail{
+    margin-top:7px;
+}
+.w1130 .cardetailT .top_R .detail ul {
+    width: 330px;
+}
+
+.w1130 .cardetailT .top_R .detail li {
+    width: 91px;
+    padding: 8px;
+    padding-right: 3px;
+}
+.w1130 #erweima{
+    height:174px;
+}
+.w1130 #erweima img,.w1130 #erweima p {
+    width: 111px;
+    height:111px;
+}
+
+.w1130 .cardetailT .top_R .BOX {
+    margin-top: 20px;
+}
+
+.w1130 .cardetailT .top_R .BOX_phone .num {
+    height: 50px;
+    width: 239px;
+}
+.w1130 .cardetailT .top_R .BOX_phone .num .icon-phone{
+    top:10px;
+}
+.w1130 .cardetailT .top_R .BOX_phone .button {
+    width: 98px;
+    line-height:50px;
+}
+.w1130 #lxiren{
+    width:100px;
+}
+.w1130 .cardetailT .top_R .BOX_phone {
+    /*height: 42px;
+    line-height: 42px;*/
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+}
+
+/*.w1130 .vehicle .vtitle {
+	width: 140px;
+}
+.w1130  .vehicle .box-jc {
+	width:220px;
+}
+.w1130 .vehicle .vlist {
+	!*width: 255px;*!
+	width: 230px;
+}
+.w1130 .vehicle2 .vlist {
+	padding:0 30px;
+}
+.w1130 .vehicle .vlist i {
+	margin: 0 10px 0 25px;
+	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+}
+.w1130 .vehicle .vlist .sr {
+	margin: 0 15px 0 8px;
+}
+.w1130 .vehicle .vlist .ty {
+	margin: 0 10px 0 8px;
+}
+.w1130 .vehicle .vlist .jc {
+	margin: 0 5px 0 10px;
+}
+.w1130 .vehicle .vlist .ht {
+	margin: 0 3px 0 10px;
+}
+.w1130 .vehicle .vlist .ss {
+	margin: 0 15px 0 10px;
+}
+.w1130 .vehicle .vlist .right p {
+	font-size: 14px;
+}*/
+
+.w1130 .cardetailL_content .Detail {
+    width: 800px;
+    padding:0 50px;
+}
+.w1130 .cardetailL_content .comment {
+    width: 800px;
+    padding:0 50px;
+}
+.w1130 .cardetailL_content .Detail .deploy li {
+    width: 183.5px;
+    margin-bottom: 6px;
+}
+
+.w1130 .cardetailL .tj_cars {
+    width: 900px;
+}
+
+.w1130 .cardetailL .tj_cars li img {
+    height: 160px;
+}
+
+.w1130 .cardetailL .tj_cars ul {
+    width: 910px;
+}
+
+.w1130 .cardetailL .tj_cars li {
+    width: 217px;
+    margin-right: 10px;
+}
+
+.w1130 .cardetailL .tj_cars li .title {
+    padding: 12px;
+}
+
+.w1130 .cardetailL .tj_cars li .diqu {
+    width: 96px;
+}
+
+.w1130 .cardetailR {
+    width: 214px;
+}
+
+.w1130 .cardetailR .vipYear {
+    width: 210px;
+    background-size: 100%;
+    line-height: 40px;
+}
+
+.w1130 .cardetailR .vipYear span {
+    margin-left: 90px;
+}
+
+.w1130 .cardetailR_Host .pic {
+    width: 97px;
+    height: 97px;
+    margin-top: 15px;
+}
+
+.w1130 .cardetailR_Host .pic img {
+    width: 97px;
+    height: 97px;
+}
+
+.w1130 .cardetailR_Hostcars .tj_cars li {
+    width: 214px;
+}
+
+.w1130 .cardetailR_Hostcars .tj_cars li img {
+    width: 214px;
+    height: 160px;
+}
+
+.w1130 .cardetailR_Hostcars .tj_cars li .jiage {
+    width: 90px;
+}
+
+.w1130 .cardetailR_Hostcars .tj_cars li .diqu {
+    width: 99px;
+}
+
+.w1130 .cardetailR_Hostcars .tj_cars li .title {
+    padding: 10px;
+}
+
+.w1130 .cardetailR_Hostcars .tj_cars li p {
+    padding: 0 10px 15px;
+}
+
+.w1130 .cardetailL .tj_cars li p {
+    padding: 0 10px 15px;
+}
+
+.w1130 .cardetailR_Host .intro .info_content {
+    width: 123px;
+}
+
+.w1130 .cardetailL_content .Detail p {
+    width: 800px;
+}
+
+.w1130 .topContent {
+    width: 1130px;
+    padding: 15px 0;
+}
+
+.w1130 .Float_lianxiL {
+    width: 590px;
+}
+
+.w1130 .moneyBox {
+    width: 140px;
+}
+
+.w1130 .Float_lianxiR {
+    width: 96px;
+    font-size:16px;
+}
+
+.w1130 .Float .Float_lianxiRs {
+    width: 96px;
+    font-size:16px;
+}
+
+.w1130 .assistC {
+    width: 792px;
+}
+
+.w1130 .bottom {
+    margin-bottom: 80px;
+}
+
+.w1130 .shangbox .shang {
+    width: 66px;
+    font-size: 12px;
+}
+
+.w1130 .cardetailR_Host .info_per .verify_person {
+    width: 66px;
+    font-size: 12px;
+}
+
+.w1130 .shareModel ul {
+    padding-left: 50px;
+}
+
+.w1130 .bottom_cont {
+    width: 1130px;
+}
+
+.w1130 .cardetailR_Host .info_per {
+    width: 182px;
+}
+
+.w1130 .cardetailR_Host .info_per .name {
+    height: 40px;
+    line-height: 40px;
+}
+
+
+.w1130 .sellState {
+    width: 100%;
+}
+
+.w1130 .sellState .list {
+    width: 98px;
+}
+.w1130 .Float_lianxi_price input{
+    width:118px;
+    font-size:14px;
+}
+/*
+.w1130 	.vehicle{height: 96px;}
+.w1130 		.vehicle .vlist{margin: 21px 0 ;}
+.w1130 		.vehicle .vtitle{padding: 26px 0;font-size: 22px; width: 140px;}
+.w1130 		.vehicle .box-4s{!*width: 220px;*!width: 200px;}
+*/
+
+.w1130 .fwbox {
+    width: 895px;
+    padding: 12px 0;
+}
+
+.w1130 .fwbox .fwcont li {
+    width: 222px;
+}
+
+.w1130 .fwbox .fwcont li .boxjc {
+    width: 207px;
+}
+
+.w1130 .fwbox .fwcont li .boxht {
+    width: 203px;
+}
+
+.w1130 .fwbox .fwcont li .boxty {
+    width: 214px;
+}
+
+.w1130 .fwbox .fwcont li .fwlist i {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+}
+
+.w1130 .fwbox .fwcont li .fwlist .fwtext {
+    margin-left: 10px;
+}
+
+.w1130 .fwbox .fwcont li .fwlist .fwtext p {
+    font-size: 14px;
+}
+
+.w1130 .fwbox2 .fwcont li {
+    padding: 0 37px;
+}
+.w1130 .car_info{
+    width:415px;
+    height:170px;
+}
+.w1130 .assistC .openassi,.consult .right a{
+    width:100px;
+    font-size:16px;
+}
+@media only screen and (max-width: 1500px) {
+    .top .dTest,.top .ioans_ass{
+        width: 478px;
+        height:43px;
+        line-height:43px;
+        padding-left: 55px;
+        padding-right: 5px;
+    }
+    .top .dTest {
+        margin-top: 8px;
+        height: 22px;
+        line-height: 22px;
+    }
+
+    .bottom_cont {
+        width: 1130px;
+    }
+
+    .shareModel ul {
+        padding-left: 50px;
+    }
+
+    .Float_lianxiR {
+        width: 96px;
+        font-size:16px;
+    }
+
+    .Float .Float_lianxiRs {
+        width: 96px;
+        font-size:16px;
+    }
+
+    .moneyBox {
+        width: 140px;
+    }
+
+    .moneyBox .bigFont {
+        font-size: 30px;
+    }
+
+    .Float_lianxiL {
+        width: 590px;
+    }
+
+    .topContent {
+        width: 1130px;
+    }
+
+    /*窄屏*/
+    .cardetailL_content .Detail p {
+        width: 800px;
+    }
+
+    .path {
+        width: 1125px;
+    }
+
+    .cardetail {
+        width: 1130px;
+    }
+
+    /*.vehicle {
+		width: 894px;
+	}*/
+    .cardetailT .top_L {
+        width: 509px;
+    }
+    .cardetailT .top_L .datu {
+        width: 509px;
+        height: 380px;
+    }
+
+    .cardetailT .top_L .datu img {
+        /*width: 509px;*/
+        /*height: 380px;*/
+    }
+
+    .xtWarp {
+        width: 470px;
+        height:64px;
+    }
+
+    .xtWarp i {
+        width: 16px;
+        height: 62px;
+    }
+
+    .xtbox {
+        width: 460px;
+    }
+
+    .cardetailT .top_L .xiaotu li {
+        width: 80px;
+        height: 60px;
+        margin: 0 4px;
+    }
+
+    .cardetailT .top_L .xiaotu li img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .cardetailL {
+        width: 900px;
+    }
+
+    .xtWarp .leftBtn span {
+        background-position: -23px -208px;
+    }
+
+    .xtWarp .rightBtn span {
+        background-position: 4px -208px;
+    }
+
+    .xtWarp .xtHover.leftBtn span {
+        background-position: -69px -208px;
+    }
+
+    .xtWarp .xtHover.rightBtn span {
+        background-position: -42px -208px;
+    }
+
+    .tool li {
+        margin: 0 14px;
+    }
+
+    .tool {
+        margin: 15px 0;
+    }
+
+    .cardetailT .top_R {
+        width: 566px;
+    }
+
+    .cardetailT .top_R h2 {
+        height: 50px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+
+    .cardetailT .top_R .title_info {
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .manyBox {
+        width: 387px;
+        padding: 12px 12px 12px 20px;
+    }
+
+    .bigFont {
+        font-size: 24px;
+    }
+    .cardetailT .top_R .detail{
+        margin-top:7px;
+    }
+    .cardetailT .top_R .detail ul {
+        width: 330px;
+    }
+
+    .cardetailT .top_R .detail li {
+        width: 91px;
+        padding: 8px;
+        padding-right: 3px;
+    }
+    #erweima img,#erweima p{
+        width: 111px;
+        height:111px;
+    }
+    #erweima{
+        height:174px;
+    }
+    .cardetailT .top_R .BOX {
+        margin-top: 20px;
+    }
+
+    .cardetailT .top_R .BOX_phone .num {
+        height: 50px;
+        width: 239px;
+    }
+    .cardetailT .top_R .BOX_phone .num .icon-phone{
+        top:10px;
+    }
+    .cardetailT .top_R .BOX_phone .button {
+        width: 98px;
+        height:50px;
+    }
+    #lxiren{
+        width:100px;
+    }
+    .cardetailT .top_R .BOX_phone {
+        height: 42px;
+        line-height: 42px;
+        font-size: 16px;
+    }
+
+    /*.vehicle .vlist {
+		width: 230px;
+	}
+	.vehicle2 .vlist {
+		padding:0 30px;
+	}
+	.vehicle .vlist i {
+		margin: 0 10px 0 25px;
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+	}
+	.vehicle .vlist .right p {
+		font-size: 14px;
+	}*/
+    .cardetailL_content .Detail {
+        width: 800px;
+        padding:0 50px;
+    }
+    .cardetailL_content .comment {
+        width: 800px;
+        padding:0 50px;
+    }
+    .cardetailL_content .Detail .deploy li {
+        width: 183.5px;
+    }
+
+    .cardetailL .tj_cars {
+        width: 900px;
+    }
+
+    .cardetailL .tj_cars li img {
+        height: 160px;
+    }
+
+    .cardetailL .tj_cars ul {
+        width: 910px;
+    }
+
+    .cardetailL .tj_cars li {
+        width: 214px;
+        margin-right: 10px;
+    }
+
+    .cardetailL .tj_cars li .title {
+        padding: 12px;
+    }
+
+    .cardetailL .tj_cars li .diqu {
+        width: 96px;
+    }
+
+    .cardetailR {
+        width: 214px;
+    }
+
+    .cardetailR .vipYear {
+        width: 210px;
+        background-size: 100%;
+        line-height: 40px;
+    }
+
+    .cardetailR .vipYear span {
+        margin-left: 90px;
+    }
+
+    .cardetailR .vipYear_1 {
+        width: 210px;
+        background-size: 100%;
+        line-height: 40px;
+    }
+
+    .cardetailR_Host .pic {
+        width: 97px;
+        height: 97px;
+        margin-top: 15px;
+    }
+
+    .cardetailR_Host .pic img {
+        width: 97px;
+        height: 97px;
+    }
+
+    .cardetailR_Hostcars .tj_cars li {
+        width: 214px;
+    }
+
+    .cardetailR_Hostcars .tj_cars li img {
+        width: 214px;
+        height: 160px;
+    }
+
+    .cardetailR_Hostcars .tj_cars li .jiage {
+        width: 90px;
+    }
+
+    .cardetailR_Hostcars .tj_cars li .diqu {
+        width: 99px;
+    }
+
+    .cardetailR_Hostcars .tj_cars li .title {
+        padding: 10px;
+    }
+
+    .cardetailR_Hostcars .tj_cars li p {
+        padding: 0 10px 15px;
+    }
+
+    .cardetailL .tj_cars li p {
+        padding: 0 10px 15px;
+    }
+
+    .cardetailR_Host .intro .info_content {
+        width: 123px;
+    }
+
+    /*.vehicle{height: 96px;}
+	.vehicle .vlist{margin: 21px 0 ;}
+	.vehicle .vtitle{padding: 26px 0;font-size: 22px; width: 140px;}
+	.vehicle .box-4s{width: 200px;}
+	.vehicle .vlist .sr {
+		margin: 0 15px 0 8px;
+	}
+	.vehicle .vlist .jc {
+		margin: 0 5px 0 10px;
+	}
+	 .vehicle .vlist .ht {
+		margin: 0 3px 0 10px;
+	}
+	.vehicle .vlist .ss {
+		margin: 0 15px 0 10px;
+	}
+	.vehicle .vlist .ty {
+		margin: 0 10px 0 8px;
+	}*/
+    .assistC {
+        width: 792px;
+    }
+    .assistC .openassi,.consult .right a{
+        width:100px;
+        font-size:16px;
+    }
+    .bottom{
+        margin-bottom: 80px;
+    }
+
+    .shangbox .shang {
+        width: 66px;
+        font-size: 12px;
+    }
+
+    .cardetailR_Host .info_per .verify_person {
+        width: 66px;
+        font-size: 12px;
+    }
+
+    .fwbox {
+        width: 895px;
+        padding: 12px 0;
+    }
+
+    .fwbox .fwcont li {
+        width: 222px;
+    }
+
+    .fwbox .fwcont li .boxjc {
+        width: 207px;
+    }
+
+    .fwbox .fwcont li .boxht {
+        width: 203px;
+    }
+
+    .fwbox .fwcont li .boxty {
+        width: 214px;
+    }
+
+    .fwbox .fwcont li .fwlist i {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+    }
+
+    .fwbox .fwcont li .fwlist .fwtext {
+        margin-left: 10px;
+    }
+
+    .fwbox .fwcont li .fwlist .fwtext p {
+        font-size: 14px;
+    }
+
+    .fwbox2 .fwcont li {
+        padding: 0 37px;
+    }
+    .car_info{
+        width:415px;
+        height:170px;
+    }
+    .cardetailL .consult .right{
+        width:750px;
+    }
+    .consult .des_car_info{
+        /*width:550px;*/
+        width:400px;
+    }
+    .Float_lianxi_price input{
+        width:118px;
+        font-size:14px;
+    }
+    .right .ri_right {
+        width:338px;
+    }
+    .right .ri_right .text_cont {
+        width:80px;
+    }
+    .right .ri_right .pri_val_cont .price {
+        padding: 0 19px 0 9px;
+        width: 120px;
+    }
+    .right .ri_right .price_btn {
+        width:80px;
+    }
+    .manyNum {margin-top:8px;}
+    .manyNum .pf_check {margin-left: 15px;margin-top: 8px;}
+    .cardetailR_Host {right:-8px;}
+    .cardetailT .top_R .BOX_phone_text .num {
+        line-height:25px;
+    }
+    .cardetailT .top_R .BOX_phone .freeConsult1 {
+        width:98px;
+        height:50px;
+        line-height:50px;
+    }
+    .cardetailT .top_R .company_infoR {
+        width:360px;
+    }
+
+}
+
+/*4s*/
+
+.fourList {
+    padding: 20px 0;
+}
+
+.fourList h4 {
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+    font-weight: normal;
+}
+
+.fourList h5 {
+    height: 35px;
+    line-height: 35px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.fourList h4 span {
+    float: left;
+    width: 33%;
+}
+
+.fourList h4 .klm {
+    text-align: center;
+}
+
+.fourList h4 .remark {
+    float: right;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.warn_box1 .loginbox p.password i {
+    display: none;
+}
+
+.SMessage .successClose {
+    margin-bottom: 20px;
+}
+
+.sp{
+    margin-left: 200px;
+}
+
+/*公司信息弹框*/
+
+.renz_title {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 407px;
+    height: 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.renz_title h2 {
+    position: relative;
+    margin-left: 20px;
+    float: left;
+    padding: 0 13px;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.renz_title h2 .line {
+    width: 100%;
+    height: 1px;
+    background-color: #ff6600;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 9;
+}
+
+.renz_title .close {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    background-color: #555;
+    cursor: pointer;
+    background: url('https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png') no-repeat center center;
+}
+
+.renz_box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -238px;
+    margin-top: -266px;
+    width: 476px; /*height:532px;*/
+    display: none;
+    background: #fff;
+    z-index: 1000;
+}
+
+.renz_box form {
+    padding: 20px 30px 42px 30px;
+}
+
+.renz_box form ul li {
+    width: 416px;
+    height: 44px;
+    line-height: 44px;
+    padding-top: 15px;
+}
+
+.renz_box form ul li p {
+    text-align: center;
+}
+
+.renz_box form ul li input {
+    width: 386px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #e5e5e5;
+    color: #666;
+    padding: 0 15px;
+}
+
+.renz_box form ul li .pic_code {
+    float: right;
+    width: 97px;
+    height: 44px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.renz_box form ul li input.inp_code {
+    width: 273px;
+    float: left;
+}
+
+.renz_box form ul li.apply .btn {
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    background: #f60;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.renz_box form ul li .button {
+    float: right;
+    width: 97px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    background: #f60;
+    cursor: pointer;
+}
+
+.renz_box form ul li.apply {
+    text-align: center;
+    padding-top: 0;
+}
+
+.renz_box form ul li input.money {
+    width: 100px;
+    border: none;
+    border: 1px solid #ececec;
+    height: 42px;
+    padding: 0 10px;
+    text-align: center;
+    color: #666;
+}
+
+.renz_box form ul li.mo {
+    color: #666;
+    height: 30px;
+    line-height: 31px;
+    padding-bottom: 15px;
+}
+
+.renz_box form ul li.warnBox {
+    height: 24px;
+    width: 100%;
+}
+
+.renz_box form ul li.warnBox .warn {
+    display: none;
+    padding-left: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 24px;
+    background: #ffebeb url(https://static.hx2car.com/resource/web/dist/static/common/images/loginnotice.png) 6px 4px no-repeat;
+    border: 1px solid #f00;
+    color: #666;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.renz_box form ul li input[placeholder], [placeholder], *[placeholder] {
+    color: #666 !important;
+}
+
+.icon {
+    background: url('../../images/cardetail/assi_icon.png') no-repeat;
+}
+
+/*降价通知下载app弹框*/
+.app4s {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -190px;
+    margin-top: -160px;
+    width: 320px; /*height:532px;*/
+    background: #fff;
+    z-index: 1000;
+}
+
+.app4s .title {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 55px;
+    border-bottom: 1px solid #eee;
+    padding: 0
+}
+
+.app4s .title p {
+    text-indent: 10px;
+}
+
+.app4s .title .close {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    background-color: #555;
+    cursor: pointer;
+    background: url('https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png') no-repeat center center;
+}
+
+.app4s .content_4sapp {
+    margin: 0 auto;
+    width: 150px;
+    padding: 15px 0;
+}
+
+.app4s .tit {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.app4s .content_4sapp p {
+    font-size: 16px;
+    color: #ff6600;
+    text-align: center;
+}
+/*收藏成功*/
+.hidden{
+    display: none;
+}
+.model_collect_succ{
+    position: fixed;
+    top:50%;
+    left:50%;
+    width:744px;
+    height:530px;
+    padding:0 10px;
+    margin-left:-372px;
+    margin-top:-265px;
+    background-color:#fff;
+    z-index: 10000;
+}
+.myModel .model_title {
+    position: relative;
+    width: 100%;
+    height:67px;
+    padding:0 25px;
+    border-bottom: 1px solid #eee;
+    box-sizing:border-box;
+}
+.myModel .model_title .text{
+    width:133px;
+    height:67px;
+    border-bottom:1px solid #f60;
+    font-size:16px;
+    text-align: center;
+    line-height:67px;
+}
+.myModel .model_title .close_btn{
+    position: absolute;
+    right:5px;
+    top:25px;
+    z-index: 9;
+    width: 19px;
+    height: 19px;
+    padding: 7px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png) center center no-repeat;
+    cursor: pointer;
+}
+
+.myModel .model_codeCont {overflow:hidden;width:260px;height:106px;margin:0 auto;padding-top:35px;padding-bottom:22px;}
+.myModel .model_codeCont .app_img {float:left;width:106px;height:106px;}
+.myModel .model_codeCont .gzhText {float:right;}
+.myModel .model_codeCont .gzhText h6 {font-size:20px;color:#f60;margin-top:8px;}
+.myModel .model_codeCont .gzhText p {font-size:14px;color:#444;}
+.myModel .model_codeCont .gzhText .text1 {margin-top:20px;}
+.myModel .model_codeCont .gzhText .text2 {margin-top:10px;}
+
+.model_banner {
+    width:700px;
+    margin:0 auto;
+}
+.model_banner h3 {
+    padding-left:7.5px;
+}
+.model_banner .banner_cont {
+    position:relative;
+    margin-top:10px;
+    overflow:hidden;
+    width:700px;
+    height:182px;
+}
+.model_banner .banner {
+    width:1400px;
+}
+.model_banner .banner li {
+    box-sizing:border-box;
+    width:160px;
+    height:182px;
+    margin:0 7.5px;
+    float:left;
+}
+/*.model_banner .banner li a {display:block;width:160px;height:120px;}*/
+.model_banner .banner li img {
+    width:100%;
+    height:120px;
+}
+.model_banner .banner li .car_title {
+    padding:7px 0;
+    height:30px;
+}
+.model_banner .banner li .car_title a {
+    font-size:12px;
+    line-height:15px;
+    color:#444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+.model_banner .banner li .car_addr {
+    overflow:hidden;
+}
+.model_banner .banner li .car_addr .comp_address {
+    float:left;
+    width:55%;
+    color:#a6a6a6;
+    font-size:12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.model_banner .banner li .car_addr .car_money {
+    float:right;
+    width:43%;
+    text-align:right;
+    color:#f60;
+    font-size:14px;
+    font-weight:bold;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.model_banner .btnright , .btnleft {
+    position:absolute;
+    width:24px;
+    height:60px;
+    top:30px;
+    opacity:.3;
+    font-size:30px;
+    cursor:pointer;
+}
+.model_banner .btnright {
+    right:7.5px;
+    background:#000 url("../../images/cardetail/arrowR.png") no-repeat center center;
+    background-size:50%;
+}
+.model_banner .btnleft {
+    left:7.5px;
+    background:#000 url("../../images/cardetail/arrowL.png") no-repeat center center;
+    background-size:50%;
+}
+
+
+
+/*.myModel .model_content .app_img{
+    width:185px;
+    height:185px;
+    margin:45px auto 0;
+}
+.myModel .model_content h6{
+    text-align: center;
+    font-size:20px;
+    color:#f60;
+    margin-top:20px;
+}
+.myModel .model_content p{
+    text-align: center;
+    font-size:14px;
+    margin-top:20px;
+}*/
+.myModel .model_content .btns{
+    width: 321px;
+    height:40px;
+    margin:26px auto 0;
+}
+.myModel .model_content button{
+    width:148px;
+    height:38px;
+    text-align: center;
+    line-height: 38px;
+    font-size:14px;
+    border:1px solid #f60;
+    cursor: pointer;
+}
+.look_collect{
+    background-color:#f60;
+    color:#fff;
+}
+.cancel{
+    margin-left:20px;
+    background-color:#fff;
+    color:#f60;
+}
+.look_num{
+    cursor: pointer;
+    color:#f60;
+    font-weight:bold;
+}
+.tel .num,.tel .look_num,.tel .numText {
+    color:#f60;
+    font-weight:bold;
+    font-size:18px;
+}
+.tel .numText {display:none;font-size:14px;}
+.Float_lianxi_price{
+    position: relative;
+    float:left;
+    margin-right:10px;
+    margin-top:5px;
+}
+.Float_lianxi_price input{
+    display: block;
+    width:178px;
+    height:40px;
+    line-height:40px;
+    padding:0 25px 0 15px;
+    border:1px solid #e5e5e5;
+    border-radius: 5px;
+    font-size:16px;
+}
+.Float_lianxi_price .wan{
+    position: absolute;
+    top:10px;
+    right:10px;
+    color:#444;
+    font-size:16px;
+}
+.goMap{
+    display: inline-block;
+    zoom: 1;
+    width: 17px;
+    height: 20px;
+    background-position: -4px -242px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.w{width:85%!important;font-size:12px!important;text-align: left;padding-left:30px!important;}
+.tDuibi{color:#f60!important;}
+#info .qsinfo{margin: 20px;}
+#info .qstitle{font-size:18px!important;margin-bottom: 15px;}
+#info .qsprice{color: #f60;font-size:14px!important;margin-left:2px}
+#info .qsmoney{font-size:26px!important;margin:0 5px!important;}
+#info .qsinfo .qsspan{font-size:12px;margin-right:25px;}
+#info .qsmore{color:#0072ff;}
+.qspinggu{width:130px;height:35px;margin:0 auto;color:#f60;border:1px solid #f60;border-radius:5px;font-size:16px;text-align: center;line-height: 35px;margin-top: 15px;margin-bottom: 25px;cursor: pointer;}
+.pzbq{color:#969696;height:28px;line-height: 28px;}
+.w1130 .pzbq{}
+.pzbq span{height:20px;color:#444;background-color:#dadada;border-radius:25px;padding:0 15px;margin:0 5px}
+.pzbq .subscription{color:#f00;margin-left:20px;cursor: pointer;}
+.pztitle{font-size:18px;margin: 15px 0 -10px 15px;text-align: left;}
+.pztitle span{float:right;width:130px;height:30px;line-height:30px;text-align:center;}
+.pztitle span em{font-size:18px;font-weight: bold;}
+.pztitle .qsdb{color:#444;font-size: 14px;border:1px solid #e6e6e6;cursor: pointer;}
+.pztitle .qszx{color:#fff;font-size: 14px;background-color:#f60;margin-right:10px;width:auto;padding: 0 38px;}
+.desshow1,.desshow2{display: none}
+.db{margin-top:5px;}
+.bright > div{
+    display: inline-block;
+    float:right;
+    width:91%;
+}
+.bright span{
+    display:inline-block;
+    margin:0 10px 0 12px;
+    height:30px;
+    color:#444;
+}
+.bright span:before{
+    content: '';
+    display:inline-block;
+    padding:3px;
+    border-radius: 50%;
+    background-color: #f60;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.bright i{
+    display:inline-block;
+    float:left;
+    width:9%;
+}
+.bright{
+    color: #969696;
+    overflow: hidden;
+}
+/********砍价弹框-推荐同价位的车的弹框*********/
+.kjCarInfo {margin:0 auto;margin-top:30px;width:370px;border-top:1px solid #fff;padding:0 20px;}
+.kjCarInfo p {font-size:14px;}
+.kjCarInfo .text {margin:17px 0;font-size:16px;color:#444;text-align:left;}
+.kjCarCont {overflow:hidden;margin-bottom:10px;}
+.kjCarCont .kjC {width:15px;height:15px;float:left;margin-right:15px;}
+.kjCarCont .kjcarR {float:left;overflow:hidden;}
+.kjcarR .carImg {position:relative;width:107px;height:80px;float:left;}
+.kjcarR .carImg2 {    min-width: 100%;width: auto;height: 100%;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+.kjcarR .rightInfo {width:;float:left;margin-left:13px;}
+.kjcarR .rightInfo .kcaritle {width:220px;margin-top:1px;height:38px;overflow: hidden;display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+.kjcarR .rightInfo .addr {margin-top:1px;color:#999;}
+.kjcarR .rightInfo span.address {width:110px;}
+.kjcarR .rightInfo span {display:inline-block;width:60px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;vertical-align:middle;font-size:12px;}
+.kjcarR .rightInfo .carMoney {color:#f60;margin-top:2px;}
+.kjCarInfo .subBaojia {margin:0 auto;margin-top:23px;width:200px;height:40px;line-height:40px;text-align:center;background:#f60;color:#fff;cursor:pointer;}
+/********砍价弹框-推荐同价位的车的弹框 end*********/
+
+/********pc-详情页面，推广包，本地推广。支付等*********/
+.tgTopCont {position:relative;}
+.tgcontModel {position:fixed;left:0;bottom:0;width:100%;z-index: 1;}
+.tgcontModel .tgmodel {position: absolute;top: 0;left: 0;width:100%;height:100%;background: #000;opacity: 0.8;filter: alpha(opacity=50);z-index:200;}
+.tgcontModel .tgBox {position: relative;top:0;z-index:201;width:1350px;height:100px;padding:25px 0;margin:0 auto;color:#fff;font-size:14px;overflow:hidden;/*background:#000;opacity: 0.8;*/}
+.tgCont {position:relative;width:1200px;}
+.tgCont .fcolor {color:#f60;}
+.tgCont .tgC {position:absolute;top:0;left:0;overflow:hidden;width:100%;}
+.tgCont .tgC .tgTitle {width:100px;line-height:40px;padding:10px 0;border-radius:10px;background:#f65e00;text-align: center;font-size:30px;}
+.tgCont .tgC .tgOptionCont {margin-left:20px;width:690px;}
+.tgOptionCont .tgText1 {color:#999;line-height:33px;}
+.tgOptionCont .tgOptions {overflow:hidden;}
+.tgOptionCont .tgOptions li {width:98px;height:58px;float:left;margin-right:15px;border:1px solid #fff;text-align:center;background:#fff;cursor:pointer;}
+.tgOptionCont .tgOptions li.select {border:1px solid #f60; background: #fff url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/at.png") right -1px bottom -1px no-repeat; }
+.tgOptionCont .tgOptions li .pText1{margin-top:8px;color:#444;}
+.tgOptionCont .tgOptions li .pText2{margin-top:4px;color:#999;}
+.payMoney .pText1 {margin-top:40px;}
+.payMoney .pText2 {margin-top:6px;margin-left:-6px;}
+.payMoney .pText1 .moneyTotal {font-size:18px;}
+.payMoney .pText1 .pText3 {font-size:12px;}
+.tgC .btns {width:175px;height:50px;line-height:50px;text-align:center;background:#f60;border-radius:3px;margin-top:40px;cursor:pointer;}
+/*.tgBox .nextBtn {position:relative;width:50px;padding:0 15px;cursor:pointer;}
+.tgBox .nextBtn .checkText {position:absolute;top:0;left:0;width:15px;height:100px;float:left;line-height:17px;color:#999;}
+.tgBox .nextBtn .nextArrow {width:20px;height:40px;margin-top:34px;margin-left:15px;float:left;background: url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/tgarrow.png") center;}*/
+.tgC2 .tgOptions li {width:155px;}
+.pageBtnBox {position:absolute;top:25px;right:340px;}
+.pageBtnBox .pageBtn {text-align:right;}
+.pageBtnBox .pageBtn em {display:inline-block;width:15px;height:15px;border:1px solid #ccc;background:#fff;margin:5px;border-radius:50%;cursor:pointer;}
+.pageBtnBox .pageBtn em:hover {background:#f60;}
+.pageBtnBox .pageBtn em.on {border:1px solid #f60;background:#f60;}
+.colseBox {position:absolute;top:25px;right:0px;}
+.colseBox i {font-size:18px;cursor:pointer;}
+
+.myModel .title span.hide{display:none;}
+.tgPayModel {position:relative;left:0;bottom:0;width:100%;height:100px;}
+.tgPayModel .modelss{position: fixed;top: 0;left: 0;width:100%;height:100%;background: #000;opacity: 0.5;filter: alpha(opacity=50);z-index:200;}
+.tgPayCont {position:fixed;width:480px;padding:0 20px;/*height:584px;*/background:pink;top: 50%;left: 50%;margin-left: -260px; margin-top: -261px;background: #fff;z-index:201;}
+.tgPayCont .payBox {padding:10px 45px;color:#999;font-size:14px;}
+.tgPayCont .over {color:#444;overflow:hidden;margin-top:15px;}
+.tgPayCont .stitle {line-height:40px;}
+.tgPayCont .sfr {margin-left:5px;}
+.tgPayCont .fcolor {color:#f60;}
+.payBox .money {font-size:36px;line-height:27px;}
+.payBox .tgText {margin-left:-4px;}
+.payBox .sfr .optionWay {overflow:hidden;}
+.payBox .sfr .optionWay span {position:relative;float:left;width:133px;height:38px;border:1px solid #c7c7c7;margin-right:13px;cursor:pointer;}
+.payBox .sfr .optionWay span.select {border:1px solid #f60;}
+.payBox .sfr .optionWay span.select i {position:absolute;bottom:0;right:0;width:18px;height:16px;background:url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/at.png") right -1px bottom -1px no-repeat;}
+.payBox .sfr .optionWay .wixin {background:url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/weixinPic.jpg") center center no-repeat;}
+.payBox .sfr .optionWay .ali {background:url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/zhifubaoPic.jpg") center center no-repeat;}
+.payBox .boxss {width:306px;margin:0 auto;padding:24px 0;}
+.payBox .wxpay_sub #codeImg2 {width:200px;height:200px;overflow:hidden;margin:0 auto;}
+.payBox .wxpay_sub #codeImg2 img {width:100%;height:100%;}
+.payBox .wxpay_sub .textBox {overflow:hidden;margin:20px auto;width:154px;}
+.payBox .textBox i {width:30px;height:28px;background:url("https://static.hx2car.com/resource/web/dist/static/member_new/images/sao.png")}
+.payBox .textBox p {margin-left:10px;margin-top:-4px;}
+.payBox .alipay_submit {width:307px;height:40px;line-height:40px;background:#f60;border-radius:3px;text-align:center;color:#fff;cursor:pointer;}
+.tgPayCont .title i.closePayBox {top:20px;}
+/********pc-详情页面，推广包，本地推广。支付 end*********/
+/*************pc-详情页面，推广包，本地推广 榨 屏*************/
+/*.w1130 .tgcontModel .tgBox {width:1200px;background:pink;}*/
+/*.w1130 .tgCont {width:1110px;background:#636338;height:100%;}*/
+/*.w1130 .tgCont .tgC .tgTitle {width:70px;font-size:28px;}*/
+/*.w1130 .tgC .btns {width:100px;}*/
+/*.w1130 .payMoney .pText2 {font-size:12px;}*/
+/*@media only screen and (max-width: 1500px) {*/
+
+/*}*/
+
+.w1130 .tgcontModel .tgBox {width:1200px;height:90px;/*background:pink*/;padding:12px 0;}
+.w1130 .tgCont {width:1105px;/*background:#636338;*/height:100%;}
+.w1130 .tgCont .tgC .tgTitle {width:90px;padding:5px 0;font-size:28px;}
+.w1130 .tgC .btns {width:112px;margin-top:27px;}
+/*.w1130 .tgBox .nextBtn {width:25px;}
+.w1130 .tgBox .nextBtn .nextArrow {margin-left:9px;}*/
+.w1130 .tgOptionCont .tgOptions li {height:48px;}
+.w1130 .tgOptionCont .tgOptions li .pText1 {margin-top:4px;font-weight:bold;}
+.w1130 .tgOptionCont .tgOptions li .pText2 {margin-top:2px;}
+.w1130 .payMoney .pageBtn em {width:13px;height:13px;}
+.w1130 .payMoney .pText1 {margin-top:27px;}
+.w1130 .payMoney .pText2 {font-size:12px;}
+/*.w1130 .tgBox .nextBtn .checkText {line-height:14px;}
+.w1130 .tgBox .nextBtn .nextArrow {margin-top:20px;}*/
+.w1130 .pageBtnBox {top:16px;right:220px;}
+@media only screen and (max-width: 1500px) {
+    .tgcontModel .tgBox {width:1200px;height:90px;/*background:pink*/;padding:12px 0;}
+    .tgCont {width:1105px;/*background:#636338;*/height:100%;}
+    .tgCont .tgC .tgTitle {width:90px;padding:5px 0;font-size:28px;}
+    .tgC .btns {width:112px;margin-top:27px;}
+    /*.tgBox .nextBtn {width:25px;}
+    .tgBox .nextBtn .nextArrow {margin-left:9px;}*/
+    .tgOptionCont .tgOptions li {height:48px;}
+    .tgOptionCont .tgOptions li .pText1 {margin-top:4px;}
+    .tgOptionCont .tgOptions li .pText2 {margin-top:2px;}
+    .payMoney .pageBtn em {width:13px;height:13px;}
+    .payMoney .pText1 {margin-top:27px;}
+    .payMoney .pText2 {font-size:12px;}
+    /*.tgBox .nextBtn .checkText {line-height:14px;}
+    .tgBox .nextBtn .nextArrow {margin-top:20px;}*/
+}
+/*************pc-详情页面，推广包，本地推广 榨 屏 end*************/
+.warn_shadow{
+    background: #000;
+}
+/*免费咨询弹框*/
+.freebackbox{
+    position: fixed;
+    width: 865px;
+    height:600px;
+    top:50%;
+    margin-top:-300px;
+    left: 50%;
+    margin-left: -432.5px;
+    background-color: #fff;
+    z-index: 10000;
+    display: none;
+}
+.freebackbox .title{
+    height:56px;
+    margin:0 33px;
+    border-bottom:1px solid #eeeeee;
+}
+.freebackbox .title span{
+    display: inline-block;
+    margin-left: 15px;
+    height:55px;
+    border-bottom:1px solid #ff6600;
+    font-size: 16px;
+    width: 124px;
+    text-align: center;
+    line-height: 55px;
+}
+.freebackbox .title i{
+    width: 15px;
+    height: 15px;
+    padding: 7px;
+    margin-top: 22px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png) center center no-repeat;
+    float: right;
+    cursor: pointer;
+}
+.freebackbox .freetext{
+    width:310px;
+    height:38px;
+    margin:60px auto 36px;
+    overflow: hidden;
+}
+.freetext .text-icon{
+    float: left;
+    height: 38px;
+    width: 38px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/freeback-icon.jpg) no-repeat center center;
+    background-size: 100%;
+    margin-right: 15px;
+}
+.freetext .text-txt{
+    float: left;
+    line-height: 38px;
+    font-size: 16px;
+}
+.recommendcarbox{
+    padding:0 15px;
+}
+.recommendcarbox .rctitle{
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 18px;
+}
+.recommendcarbox .rmcarbox{
+    height: 260px;
+    background-color: #f3f3f3;
+    padding:0 5px;
+    position: relative;
+}
+.recommendcarbox .rmcarbox ul{
+    overflow: hidden;
+}
+.recommendcarbox .rmcarbox ul>li{
+    margin: 10px 5px;
+    float: left;
+    width: 195px;
+    height: 240px;
+    background-color: #fff;
+}
+.recommendcarbox .rmcarbox ul>li img{
+    height:145px;
+    width:195px;
+}
+.recommendcarbox .rmcarbox ul>li .title{
+    padding:10px 15px 15px;
+    line-height: 21px;
+    font-size: 14px;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    color: #686868;
+    margin: 0;
+    border: none;
+    height: auto;
+}
+.recommendcarbox .rmcarbox ul>li .diqu{
+    float: left;
+    width: 85px;
+    height: 15px;
+    line-height: 15px;
+    color: #686868;
+    overflow: hidden;
+    margin-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+.recommendcarbox .rmcarbox ul>li .jiage{
+    float: right;
+    height: 15px;
+    line-height: 15px;
+    color: rgb(255, 102, 0);
+    font-size: 11px;
+    margin-right: 15px;
+}
+.recommendcarbox .rmcarbox ul>li .jiage .bigFont{
+    font-size: 14px;
+}
+.recommendcarbox .rmcarbox .goleft,.recommendcarbox .rmcarbox .goright{
+    width: 22px;
+    height: 44px;
+    position: absolute;
+    top: 108px;
+    z-index: 200;
+    cursor: pointer;
+}
+.recommendcarbox .rmcarbox .goleft{
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/goleft.png) no-repeat;
+    left:0;
+}
+.recommendcarbox .rmcarbox .goright{
+    background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/goright.png) no-repeat;
+    right: 0;
+}
+.rmcarcomfire{
+    width: 202px;
+    height:40px;
+    line-height:40px;
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: #ff6600;
+    color:#fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/********一元购买 电话号码 弹框***********/
+.lookPhoneModel {font-size:14px;padding: 0px 15px;width: 620px; position: fixed;top: 50%;left: 50%;margin-left: -321px; margin-top: -195px;display: none;background: #fff;z-index: 202;}
+.lookPhoneModel .close_btn {top:20px}
+.lookPhoneCont {padding:37px 40px;width:;height:;}
+.lookPhoneCont .lookText1 {padding:0px 10px;width:100%;box-sizing:border-box;height:35px;line-height:35px;background:#f2f2f2;color:#444;font-size:14px;}
+.lookPhoneCont .lookpayBox {overflow:hidden;height:50px;}
+.lookPhoneCont .lookTitle {color:#a2a1a1;}
+.lookPhoneCont .lookpayBox .lookTitle {color:#a2a1a1;line-height:75px;}
+.lookPhoneCont .lookpayBox .onceMoney {display:inline-block;font-size:36px;padding:6px 1px;}
+.lookPhoneCont .payTypeBox {margin-top:20px;}
+.payTypeBox .payBox {overflow:hidden;padding-top:20px;padding-bottom:23px;}
+.payTypeBox .payBox span {float:left;width:133px;height:38px;position:relative;border:1px solid #c7c7c7;cursor:pointer;}
+.payTypeBox .payBox span.select {border:1px solid #f60;}
+.payTypeBox .payBox span.select i {position: absolute;bottom: 0;right: 0;width: 18px; height: 16px;background: url(https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/at.png) right -1px bottom -1px no-repeat;}
+.payTypeBox .payBox .wixinimg {float:left;background:url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/weixinPic.jpg") center center no-repeat;}
+.payTypeBox .payBox .aliimg {float:left;margin-left:13px;background:url("https://static.hx2car.com/resource/web/dist/static/gbpage/images/cardetail/zhifubaoPic.jpg") center center no-repeat;}
+.lookPhoneModel .goBuyOnce {width:200px;height:40px;line-height:40px;background:#f60;color:#fff;text-align:center;border-radius:3px;cursor:pointer;}
+/********一元购买 电话号码 弹框 ***********/
+
+/*新增条件订阅*/
+.subscriber {
+    position: fixed;
+    top: 100px;
+    z-index: 9999;
+    width: 855px;
+    background: #fff;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -385px;
+    text-align: center;
+    font-size: 12px;
+    display: none;
+    overflow: hidden;
+}
+.titlebox {
+    height: 55px;
+    margin: 0 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+.titlebox .title {
+    display: inline-block;
+    width: auto;
+    height: 55px!important;
+    text-align: center;
+    border-bottom: 1px solid #ff6600 !important;
+    padding: 0!important;
+    margin-left: 15px;
+    float: none;
+    line-height: 55px;
+    font-size: 16px;
+}
+.titlebox .closed {
+    width: 20px;
+    height: 20px;
+    padding: 7px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png) center center no-repeat;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.custommcarbox {
+    overflow: hidden;
+    padding: 30px 25px;
+}
+.custommcarbox .left_nav {
+    float: left;
+    padding: 0 35px;
+    width: 490px;
+    border-right: 1px solid #e3e3e3;
+}
+.custommcarbox .left_nav .haschoose {
+    font-size: 12px;
+    color: #a9a8a8;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.choosebox {
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+.choosebox span {
+    float: left;
+    height: 33px;
+    border: 1px solid #e2e2e2;
+    padding: 0 24px;
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 33px;
+    margin-right: 10px;
+}
+.custommcarbox .left_nav .haschoose {
+    font-size: 12px;
+    color: #a9a8a8;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.telp {
+    color: #3a3a3a;
+}
+.textnotice {
+    height: 35px;
+    background-color: #f2f2f2;
+    color: #3a3a3a;
+    text-align: center;
+    line-height: 35px;
+}
+.btnbox {
+    margin: 25px 0;
+    overflow: hidden;
+}
+.btnbox .confirmbtn {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: #f60;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+.btnbox .modifybtn {
+    float: left;
+    width: 198px;
+    height: 38px;
+    color: #f60;
+    border: 1px solid #f60;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+}
+.right_nav {
+    float: right;
+}
+.right_nav img {
+    width: 180px;
+    margin: 25px 35px 15px 0;
+}
+.right_nav p {
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.BOX_small{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background: #fff;
+	top: 100px;
+	display: none;
+}
+
+.BOX_small.BOX_small_show{
+	display: block;
+}
+
+.BOX_small h3{
+	text-align: center;
+}
+
+.BOX_small img{
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.BOX_small_msg{
+	text-align: center;
+	color: #666;
+	padding: 0 20px;
+	font-size: 14px;	
+	display: block;
+}

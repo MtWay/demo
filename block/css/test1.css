@@ -1,0 +1,125 @@
+.icon-bargain {
+	background: url(sprite.png) no-repeat -355px -149px;
+	background-size: 410px 311px;
+	width: 45px;
+	height: 47px
+}
+
+.icon-icon1 {
+	background: url(sprite.png) no-repeat -99px 0;
+	background-size: 410px 311px;
+	width: 77px;
+	height: 64px
+}
+
+.icon-icon2 {
+	background: url(sprite.png) no-repeat 0 0;
+	background-size: 410px 311px;
+	width: 79px;
+	height: 71px
+}
+
+.icon-icon3 {
+	background: url(sprite.png) no-repeat 0 -91px;
+	background-size: 410px 311px;
+	width: 58px;
+	height: 76px
+}
+
+.icon-icon4 {
+	background: url(sprite.png) no-repeat -196px -84px;
+	background-size: 410px 311px;
+	width: 62px;
+	height: 60px
+}
+
+.icon-icon5 {
+	background: url(sprite.png) no-repeat -196px 0;
+	background-size: 410px 311px;
+	width: 63px;
+	height: 64px
+}
+
+.icon-icon_wx {
+	background: url(sprite.png) no-repeat -355px 0;
+	background-size: 410px 311px;
+	width: 55px;
+	height: 55px
+}
+
+.icon-liu1 {
+	background: url(sprite.png) no-repeat -279px 0;
+	background-size: 410px 311px;
+	width: 56px;
+	height: 61px
+}
+
+.icon-liu2 {
+	background: url(sprite.png) no-repeat -78px -257px;
+	background-size: 410px 311px;
+	width: 57px;
+	height: 54px
+}
+
+.icon-liu3 {
+	background: url(sprite.png) no-repeat -155px -257px;
+	background-size: 410px 311px;
+	width: 56px;
+	height: 54px
+}
+
+.icon-liu4 {
+	background: url(sprite.png) no-repeat -279px -165px;
+	background-size: 410px 311px;
+	width: 56px;
+	height: 58px
+}
+
+.icon-liu5 {
+	background: url(sprite.png) no-repeat -355px -75px;
+	background-size: 410px 311px;
+	width: 52px;
+	height: 54px
+}
+
+.icon-liu6 {
+	background: url(sprite.png) no-repeat 0 -187px;
+	background-size: 410px 311px;
+	width: 70px;
+	height: 50px
+}
+
+.icon-liu7 {
+	background: url(sprite.png) no-repeat 0 -257px;
+	background-size: 410px 311px;
+	width: 58px;
+	height: 54px
+}
+
+.icon-phone {
+	background: url(sprite.png) no-repeat -279px -81px;
+	background-size: 410px 311px;
+	width: 53px;
+	height: 64px
+}
+
+.icon-phone_f60 {
+	background: url(sprite.png) no-repeat -90px -187px;
+	background-size: 410px 311px;
+	width: 58px;
+	height: 48px
+}
+
+.icon-sever {
+	background: url(sprite.png) no-repeat -78px -91px;
+	background-size: 410px 311px;
+	width: 63px;
+	height: 69px
+}
+
+.icon-star {
+	background: url(sprite.png) no-repeat -355px -216px;
+	background-size: 410px 311px;
+	width: 47px;
+	height: 45px
+}

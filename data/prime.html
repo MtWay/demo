@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				vertical-align: bottom;
+			}
+			.box div{display: inline-block;width: 2px;background: #f00;}
+		</style>
+		
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+		<script type="text/javascript">
+			
+			function prime(num){
+				var num = num || 1000
+				var a = [];
+			for(var i =1;i<num;i++){
+//				console.log(i)
+				var mark = 1;
+				var len = a.length;
+				for(var j = 1;j<len;j++){
+					if(i%a[j]==0){
+					mark =0;
+				}
+				}
+				if(mark)
+				a.push(i);
+			}
+			console.log(a)
+			return a;
+			}
+			
+			
+			var arr = prime(100);
+			var len  = arr.length;
+			var str = ""
+//			for(var i=0;i<len;i++){
+//				str+="<div style='height:"+arr[i]+"px'></div>"
+//			}
+			var box = document.querySelector(".box");
+			console.log(box)
+//			document.querySelector(".box").innerHTML=str
+		</script>
+	</body>
+</html>

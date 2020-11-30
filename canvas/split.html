@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>截图</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jcanvas.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/html2canvas.js" type="text/javascript" charset="utf-8"></script>		
+		<script type="text/javascript">
+		
+		screenShot([16, 65], 27)
+		
+			function screenShot(quickStartKey, EndKey) {
+  //兼容性考虑不使用...扩展字符串
+  var keyLength = quickStartKey.length
+  var isKeyTrigger = {}
+  var cantStartShot = false
+  quickStartKey.forEach(function(item) { //遍历参数数组
+    isKeyTrigger[item] = false //默认数组中所有键都没有触发
+  })
+  $('html').on('keyup', function(e) {
+    var keyCode = e.which
+    	console.log(keyCode)
+    if(keyCode === EndKey) {
+    } else if(!cantStartShot) {
+      isKeyTrigger[keyCode] = true
+      var notTrigger = Object.keys(isKeyTrigger).filter(function(item) {
+        return isKeyTrigger[item] === false //查看有没有需要触发的快捷键
+      })
+      if(notTrigger.length === 0) { //没有需要触发的快捷键即可以开始截图
+        cantStartShot = true
+        beginShot(cantStartShot)
+      }
+    }
+  })
+  }
+	
+	var canvasId ="can"
+	$('#' + canvasId).mousedown(function(e) {
+    $("#"+canvasId).removeLayer(layerName) //删除上一图层
+    layerName += 1
+    startX = that._calculateXY(e).x //计算鼠标位置
+    startY = that._calculateXY(e).y
+    isShot = true
+    $("#"+canvasId).addLayer({
+        type: 'rectangle', //矩形
+        name:layerName, //图层名称
+        x: startX,
+        y: startY,
+        width: 1,
+        height: 1
+    })
+}).mousemove(function(e) {
+    if(isShot) {
+        $("#"+canvasId).removeLayer(layerName)
+        var moveX = that._calculateXY(e).x
+        var moveY = that._calculateXY(e).y
+        var width = moveX - startX
+        var height = moveY - startY
+        $("#"+canvasId).addLayer({
+            type: 'rectangle',
+            name:layerName,
+            fromCenter: false,
+            x: startX,
+            y: startY,
+            width: width,
+            height: height
+        })
+        $("#"+canvasId).drawLayers(); //绘制
+    }
+    })
+
+function downloadFile(el, fileName, href){
+      el.attr({
+        'download':fileName,
+        'href': href
+      })
+  }
+  ...
+downloadFile($('.ok'), 'screenShot' + Math.random().toString().split('.')[1] || Math.random()  + '.png', dataURL)
+// 传入按键对象、图像保存随机名、base64编码的图像
+		</script>
+	</head>
+	<body>
+		<canvas id="can" width="" height=""></canvas>
+	</body>
+</html>

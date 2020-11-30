@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>a ==1 && a== 2 && a==3 </title>
+		<script type="text/javascript">
+//			var a = {
+//				i: 1,
+//				toString: function() {
+//					console.log("12456")
+//					return a.i++;
+//				}
+//			}
+//			console.log(a == 1 && a == 2 && a == 3);
+//			var a = [1, 2, 3];
+//			a.join = a.shift;
+//			console.log(a == 1 && a == 2 && a == 3);
+			var val = 0;
+//			
+Object.defineProperty(window, 'a', {
+  get: function() {
+    return ++val;
+  }
+});
+console.log(a == 1 && a == 2 && a == 3);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

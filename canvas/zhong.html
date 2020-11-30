@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>酷炫的钟表</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html {
+				font-size: 62.5%;
+			}
+			div{display: none;}
+			.wrap {
+				width: 350px;
+				margin: 20px auto;
+				padding: 10px;
+				display: block;
+			}
+			
+			.num {
+				position: relative;
+				height: 100px;
+				float: left;
+				width: 50px;
+				display: block;
+			}
+			
+			li {
+				list-style: none;
+				width: 5px;
+				height: 20px;
+				background: #000;
+				transition: all 0.5s;
+				position: absolute;
+			}
+			
+			li:after {
+				position: absolute;
+				border: 2.5px solid transparent;
+				border-top-color: #000;
+				display: block;
+				content: "";
+				bottom: -5px;
+			}
+			
+			li:before {
+				position: absolute;
+				border: 2.5px solid transparent;
+				border-bottom-color: #000;
+				display: block;
+				content: "";
+				top: -5px;
+			}
+			
+			.leftTop {
+				left: 0;
+				top: 5px;
+			}
+			
+			.num5 .rightTop,
+			.num6 .rightTop,
+			.top {
+				left: 16px;
+				top: -8px;
+				transform: rotate(-90deg);
+			}
+			
+			.leftBot {
+				left: 0;
+				top: 32px;
+			}
+			
+			.bot {
+				left: 16px;
+				top: 46px;
+				transform: rotate(-90deg);
+			}
+			
+			.num9 .leftBot,
+			.mid {
+				left: 16px;
+				top: 19px;
+				transform: rotate(-90deg);
+			}
+			
+			.rightTop {
+				left: 31px;
+				top: 5px;
+			}
+			
+			.rightBot {
+				left: 31px;
+				top: 32px;
+			}
+			/*规划动画*/
+			
+			.num1 .leftTop,
+			.num1 .top,
+			.num1 .rightTop,
+			.num1 .mid,
+			.num7 .leftTop,
+			.num7 .rightTop,
+			.num7 .mid
+			{
+				transform: rotate(180deg);
+				left: 31px;
+				top: 5px;
+			}
+			.num1 .leftBot,
+			.num1 .bot,
+			.num1 .rightBot,
+			.num7 .leftBot,
+			.num7 .bot,
+			.num7 .rightBot,
+			.num3 .leftBot,
+			.num3 .rightBot,
+			.num4 .leftBot,
+			.num5 .leftBot,
+			.num5 .rightBot,
+			.num6 .rightBot,
+			.num4 .bot,
+			.num4 .rightBot
+			{
+				transform: rotate(180deg);
+				left: 31px;
+				top: 32px;
+			}
+			.num2 .leftTop,
+			.num2 .rightTop,
+			.num3 .leftTop,
+			.num3 .rightTop,
+			.num4 .top,
+			.num4 .rightTop
+			{
+				transform: rotate(180deg);
+				left: 31px;
+				top: 5px;
+			}
+			.num2 .rightBot{
+				left: 0;
+				top: 32px;
+			}
+			.num0 .mid{
+				left: 0;
+				top: 32px;
+				transform: rotate(0);
+			}
+			.dian{position: relative;height: 20px;width: 15px;float: left;margin-top: 20px;display: block;}
+			.dian:after,.dian:before{display: block;content: "";width: 5px;height: 5px;background: #000;border-radius:50% ;left: 0;position: absolute;}
+			.dian:after{bottom: 0;}
+
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+//				var index = 0;
+//				$(document).click(function(){
+//					add($li,index);
+//					index++;
+//					
+//					if(index>9)index=0;
+//				})
+				loop();
+				setInterval(loop,1000);
+				function loop(){
+					var a = new Date();
+						var h = a.getHours();
+						var m = a.getMinutes();
+						var s = a.getSeconds();
+						add($(".box1"),Math.floor(h/10));
+						add($(".box2"),h%10);
+						add($(".box3"),Math.floor(m/10));
+						add($(".box4"),m%10);
+						add($(".box5"),Math.floor(s/10));
+						add($(".box6"),s%10);
+				}
+				function add($li,index){
+					$li.removeClass("num0");
+					$li.removeClass("num1");
+					$li.removeClass("num2");
+					$li.removeClass("num3");
+					$li.removeClass("num4");
+					$li.removeClass("num5");
+					$li.removeClass("num6");
+					$li.removeClass("num7");
+					$li.removeClass("num8");
+					$li.removeClass("num9");
+					$li.addClass("num"+index);
+				}
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="num box1">
+				<ul>
+					<li class="leftTop"></li>
+					<li class="top"></li>
+					<li class="leftBot"></li>
+					<li class="bot"></li>
+					<li class="rightTop"></li>
+					<li class="mid"></li>
+					<li class="rightBot"></li>
+				</ul>
+			</div>
+			<div class="num box2">
+				<ul>
+					<li class="leftTop"></li>
+					<li class="top"></li>
+					<li class="leftBot"></li>
+					<li class="bot"></li>
+					<li class="rightTop"></li>
+					<li class="mid"></li>
+					<li class="rightBot"></li>
+				</ul>
+			</div>
+			<div class="dian">
+				
+			</div>
+			<div class="num box3">
+				<ul>
+					<li class="leftTop"></li>
+					<li class="top"></li>
+					<li class="leftBot"></li>
+					<li class="bot"></li>
+					<li class="rightTop"></li>
+					<li class="mid"></li>
+					<li class="rightBot"></li>
+				</ul>
+			</div>
+			<div class="num box4">
+				<ul>
+					<li class="leftTop"></li>
+					<li class="top"></li>
+					<li class="leftBot"></li>
+					<li class="bot"></li>
+					<li class="rightTop"></li>
+					<li class="mid"></li>
+					<li class="rightBot"></li>
+				</ul>
+			</div>
+			<div class="dian">
+				
+			</div>
+			<div class="num box5">
+				<ul>
+					<li class="leftTop"></li>
+					<li class="top"></li>
+					<li class="leftBot"></li>
+					<li class="bot"></li>
+					<li class="rightTop"></li>
+					<li class="mid"></li>
+					<li class="rightBot"></li>
+				</ul>
+			</div>
+			<div class="num box6">
+				<ul>
+					<li class="leftTop"></li>
+					<li class="top"></li>
+					<li class="leftBot"></li>
+					<li class="bot"></li>
+					<li class="rightTop"></li>
+					<li class="mid"></li>
+					<li class="rightBot"></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

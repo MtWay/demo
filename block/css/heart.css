@@ -1,0 +1,130 @@
+body{overflow: hidden;}
+.lit {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	background: url(../img/heart.png) no-repeat;
+	background-size: 100%;
+	z-index: 1;
+}
+
+.lit0 {
+	animation: name 1s linear;
+}
+
+.lit1 {
+	animation: name1 1s linear;
+}
+
+.lit2 {
+	animation: name2 1s linear;
+}
+
+.lit3 {
+	animation: name3 1s linear;
+}
+
+.lit4 {
+	animation: name4 1s linear;
+}
+
+.lit5 {
+	animation: name5 1s linear;
+}
+
+.lit6 {
+	animation: name6 1s linear;
+}
+
+.lit7 {
+	animation: name7 1s linear;
+}
+
+@keyframes name {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(100px, 100px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name1 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(0px, 100px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name2 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(100px, 0px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name3 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(-100px, 100px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name4 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(100px, -100px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name5 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(-100px, -100px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name6 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(-100px, 0px);
+		width: 0;
+		height: 0;
+	}
+}
+
+@keyframes name7 {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(0px, -100px);
+		width: 0;
+		height: 0;
+	}
+}

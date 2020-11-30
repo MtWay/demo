@@ -1,0 +1,20 @@
+$(function() {
+		MobileIndexAds.MobileIndexTop( 
+	[
+	 {bussinessman : '',id : '0',name : '拜年', href : 'http://auto.hx2car.com/article/529396', url : 'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180214110459.jpg',smallUrl:'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180214110459_0.jpg'}
+	 ,
+	 {bussinessman : '',id : '',name : '年货节', href : 'http://m.hx2car.com/personcarwap/index.htm', url : 'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180111162641.jpg',smallUrl:'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180111162641_0.jpg'}
+	 ,
+	 {bussinessman : '',id : '',name : '个人会员', href : 'http://m.hx2car.com/mobile/weppersonalvipbuy.htm', url : 'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180111113702.jpg',smallUrl:'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180111113702_0.jpg'}
+	 ,
+	 {bussinessman : '',id : '0',name : '4S', href : 'http://m.hx2car.com/4s', url : 'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180206094337.jpg',smallUrl:'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndexTop/2018/20180206094337_0.jpg'}
+	 
+	] 
+	);
+	MobileIndexAds.MobileIndxFloat( 
+	[
+	 {bussinessman : '',id : '0',name : '', href : 'http://www.hx2car.com/help/appdown.htm', url : 'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndxFloat/2017/20170414172650.jpg',smallUrl:'http://img.hx2car.com/upload/ads/normal/MobileIndexAds/MobileIndxFloat/2017/20170414172650_0.jpg'}
+	 
+	] 
+	);
+});

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			class PriorityQueue {
+				constructor() {
+					this.arr = [];
+				}
+				add(num) {
+					console.log(this)
+					this.arr.push(num);
+					/* TODO */
+				}
+
+				remove() {
+					var index = 0;
+					var maxnum =0;
+					this.arr.map(function(n,i){
+						if(n>maxnum){
+							maxnum=n;
+							index= i;
+						}
+					})
+					console.log(index,maxnum)
+					this.arr.splice(index,1)
+					return maxnum;
+					/* TODO */
+				}
+			}
+
+			var pq = new PriorityQueue();
+			pq.add(2);
+			pq.add(1);
+			pq.add(3);
+			pq.add(0);
+			console.log(pq.remove())
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

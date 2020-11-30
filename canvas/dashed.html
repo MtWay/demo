@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点阵</title>
+		<style type="text/css">
+			body{background: #000;margin: 0;padding: 0;}
+			canvas{margin: 100px auto;border:1px solid #f00;width: 1000px;display: block;}
+			
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var canvas = $("#can")[0];
+				var context= canvas.getContext("2d");
+				context.fillStyle="#fff";
+				var arr = [],x0=0,y0=0;
+				//实例化30000个点
+				for(var i =0;i<30000;i++){
+					var dat = {
+						cx:x0,
+						cy:y0,
+						sx:x0,
+						sy:y0,
+						vx:0,
+						vy:0
+					}
+					arr.push(dat);
+					x0+=3;
+					if(x0%750==0){
+						x0=0;
+						y0+=3;
+					}
+					
+				}
+				function loop(){
+					var l = arr.length;
+//					resize()
+					context.clearRect(0,0,$("canvas").width(),$("canvas").height())
+					for(var i = 0;i<l;i++){
+						if(mobj!=undefined){
+							var x = mobj.x,
+								y = mobj.y;
+								var dl =Math.pow( (x-arr[i].sx),2)+Math.pow( (y-arr[i].sy),2);
+							if(dl<3600){
+								var  pyx = x-arr[i].cx;
+								if(pyx>=0){
+									arr[i].sx+= Math.sqrt(600-pyx);
+								}else{
+									arr[i].sx+= -Math.sqrt(600+pyx);
+								}
+								var  pyy = y-arr[i].cy;
+								if(pyy>=0){
+									arr[i].sy+= Math.sqrt(600-pyy);
+								}else{
+									arr[i].sy+= -Math.sqrt(600+pyy);
+								}
+							}
+						}
+						
+						
+						context.beginPath()
+						context.fillRect(arr[i].sx+150,arr[i].sy+150, 1, 1);
+//						context.arc(arr[i].sx+150,arr[i].sy+150,1,0,Math.PI*2,true)
+//						context.fill();
+						var px = arr[i].cx-arr[i].sx;
+						var py = arr[i].cy-arr[i].sy;
+						arr[i].vx= px/10;
+						arr[i].vy= py/10;
+//						if(Math.abs(px)<50){
+//							arr[i].vx==0;
+//						}
+//						if(Math.abs(py)<50){
+//							arr[i].vy==0;
+//						}
+						arr[i].sx+=arr[i].vx;
+						arr[i].sy+=arr[i].vy;
+						
+					}
+				}
+				loop();
+				var timer = setInterval(loop,1000/60);
+				var mobj;
+				$(document).mousemove(function(e){
+//					console.log(e.clientX);
+					
+					var cpx = $("canvas").offset().left+150;
+					var cpy = $("canvas").offset().top+150;
+					mobj = {
+						x:e.clientX-cpx,	
+						y:e.clientY-cpy
+					}
+//					console.log(cpx)
+//					var x = e.clientX-cpx,
+//						y = e.clientY-cpy,
+//						l = arr.length;
+//						for(var i = 0;i<l;i++){
+//							var dl =Math.pow( (x-arr[i].sx),2)+Math.pow( (y-arr[i].sy),2);
+//							if(dl<1000){
+//								var  pyx = x-arr[i].sx;
+//								if(pyx>=0){
+//									arr[i].sx=(100-pyx)+150;
+//								}else{
+//									arr[i].sx=-(100+pyx)+150;
+//								}
+//								var  pyy = y-arr[i].sy;
+//								if(pyy>=0){
+//									arr[i].sy=(100-pyy)+150;
+//								}else{
+//									arr[i].sy=-(100+pyy)+150;
+//								}
+//							}
+//						}
+					
+				})
+				
+				//调整画布尺寸
+				function resize() {
+					w = $("canvas").width();
+					h = $("canvas").height();
+					$("canvas").attr({
+						width: w,
+						height: h
+					});
+				}
+			})
+		</script>
+		
+	</head>
+	<body>
+		<canvas id="can" width="1000" height="600"></canvas>
+	</body>
+</html>

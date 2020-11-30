@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>双线圈</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				height: 100%;
+				background: #0f0;
+			}
+			.box{width: 150px;margin:20px auto;}
+			input{width: 100px;margin-right: 10px;}
+			canvas{width: 800px;height: 600px;margin: 0 auto;display: block;border: 1px solid #f00;}
+			/*canvas{background: #0f0 ;}*/
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload=function() {
+				//				var ctx =  $("#can")[0].getctx('2d');
+//				$(".img")[0].onload=function(){
+					
+
+				canvas = document.getElementById("can");
+				
+				ctx = canvas.getContext('2d');
+//				ctx.drawImage($(".img")[0],0,0,500,500)
+				ctx.save();
+              ctx.strokeStyle = 'red';
+              ctx.lineWidth = 10;
+              ctx.lineCap = "round";
+              ctx.beginPath();
+              ctx.moveTo(200,100);  //起始点
+              ctx.lineTo(400,100);
+              ctx.quadraticCurveTo(500,100,500,200);   
+              ctx.lineTo(500,400);
+              ctx.quadraticCurveTo(500,500,400,500);   
+              ctx.lineTo(200,500);
+              ctx.quadraticCurveTo(100,500,100,400);   
+              ctx.lineTo(100,200);
+              ctx.quadraticCurveTo(100,100,200,100);   
+              ctx.stroke();
+
+				ctx.drawImage($(".img")[0],0,0,500,500)
+              
+              ctx.globalCompositeOperation = 'destination-out';
+              ctx.lineWidth = 4;
+              ctx.stroke();
+              ctx.closePath()
+              ctx.restore();
+				
+				}
+				//调整画布尺寸
+				function resize() {
+					w = $("canvas").width();
+					h = $("canvas").height();
+					$("canvas").attr({
+						width: w,
+						height: h
+					});
+				}
+				$('button').click(function(){
+					var txt = $("#txt").val();
+					show(txt);
+				})
+
+//			}
+		</script>
+	</head>
+
+	<body>
+		<canvas id="can" width="800" height="600"></canvas>
+		<div class="box">
+		</div>
+		<img src="chapter6/textures/2.jpg" class="img"/>
+	</body>
+
+</html>

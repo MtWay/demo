@@ -1,0 +1,568 @@
+<#macro newIndexTop2017 label="">
+        <script type="text/javascript" src="${staticServer}/web/member_new/js/vip_top.js?t=20170413"></script>
+        <div id="ietishi" style="display:none;"><p> 为了更好的访问网站，建议把ie6升级到ie9</p></div>
+        <div class="BG" id="Bg" style="display:none;"></div>
+        <div class="header">
+            <div class="header_top">
+                <#if webutil.getAppUserMobileName()?? && webutil.getAppUserMobileName()?length&gt;0 >
+                    <ul class="header_topL">
+                        <li>您好，<a ref="nofollow" class="orange12" href="${contextPath}/vip/index.htm">
+                            <#if webutil.getAppUserMobileName()?length gt 15>
+                                ${webutil.getAppUserMobileName()[0..15]!""}...
+                                <#else>${webutil.getAppUserMobileName()}
+                            </#if>
+                        </a>！
+                        </li>
+                        <#--<li>[ <a href="${contextPath}/comments/getcomments.htm" target="_blank" class="orange12">消息管理</a> ]</li>-->
+                        <li>[ <a href="${contextPath}/toolbox/collection.htm" target="_blank" class="orange12">我的收藏</a> ]</li>
+                        <li>[ <a href="${contextPath}/vip/index.htm" target="_blank" class="orange12">会员中心</a> ]</li>
+                        <#if redirect??>
+                        <li>[ <a href="${contextPath}/personcar/getcarlist.htm" target="_blank" class="orange12">我卖的车</a> ]</li>
+                        <#else>
+                        <li>[ <a href="${contextPath}/vip/manageronsell.htm" target="_blank" class="orange12">我卖的车</a> ]</li>
+                        </#if>
+                 
+                        <li>[ <a href="javascript:userLogout();" rel="nofollow" target="_self" class="orange12">退出</a> ]</li>
+                    </ul>
+				<#else>
+					<ul class="header_topL">
+						<li>欢迎来到华夏二手车网！<a ref="nofollow" class="orange12"></a></li>
+						<li>[ <a href="${contextPath}/sys/login.htm" rel="nofollow" target="_blank" class="orange12">登录</a> ]</li>
+						<li>[ <a href="${contextPath}/user/register.htm" rel="nofollow" target="_blank" class="orange12">注册</a> ]</li>
+					</ul>
+                </#if>
+                <ul class="header_topR">
+                    <#if webutil.getquanxian()=='3'>
+                        <li><a href="/vip/uesrmsg.htm?redirect=vip/publishcar.htm&type=1" target="_blank" class="black12" rel="nofollow">我要卖</a> |</li>
+                    <#else>
+                        <li><a href="/vip/publishcar.htm" target="_blank" class="black12">我要卖</a> |</li>
+                    </#if>
+                        <li><a href="/car/search.htm" target="_blank" class="black12">我要买</a> |</li>
+                        <li><a href="http://auto.hx2car.com" target="_blank" class="black12">资讯中心</a> |</li>
+                    <#--
+                    <li><a href="/help/nbenefit.htm" target="_blank" class="black12">推荐宝</a> |</li>
+                    <li><a href="/help/nbenefit.htm#product1" target="_blank" class="black12">网上门店</a> |</li>
+                    -->
+                    <li><a href="/help/nbenefit.htm" rel="nofollow" target="_blank" class="black12">产品推荐</a> |</li>
+                    <li class="APP">
+                        <a href="http://www.hx2car.com/ads/hxapp.htm" class="black12" target="_blank">APP下载</a>
+                        <span class="APP_ewm" style="display:none;">
+                            <img src="${staticServer}/web/gbpage/images/common/hx2carAppCodeNew.png" width="170" height="200"/>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="HX_search">
+            <div class="HX_search_cont">
+                <div class="HX_search_contL">
+                    <a class="LOGO" title="华夏二手车网" style="color:transparent" href="http://www.hx2car.com/quanguo">华夏二手车网</a>
+                    <div class="Fenzhan" id="FenZhan">
+                        <span class="Fenzhan_DW">${webutil.getStationName()}</span>
+                        <span class="change"><i class="showBot"></i></span>
+                        <#assign allsf = webutil.getAllSf()/>
+                        <#assign allcity = webutil.getAllCity()/>
+                        <div class="newFenzhan_city" id="newFenzhan_city" style="display: none;">
+                            <#if tbflag??>
+                            <div class="newFenzhan_city_title">
+                                <div class="topLine"></div>
+                                <ul class="title_hot">
+                                    <li><strong>热门：</strong></li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/beijing${webutil.getUrl2Jmulu()}">北京</a></li>
+                                    <li><a href="${contextPath}/shanghai${webutil.getUrl2Jmulu()}">上海</a></li>
+                                    <li><a href="${contextPath}/hangzhou${webutil.getUrl2Jmulu()}">杭州</a></li>
+                                    <li><a href="${contextPath}/shenzhen${webutil.getUrl2Jmulu()}">深圳</a></li>
+                                </ul>
+                                <ul class="title_area">
+                                    <li>地区：</li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/nf${webutil.getUrl2Jmulu()}">南方</a></li>
+                                    <li><a href="${contextPath}/xb${webutil.getUrl2Jmulu()}">西部</a></li>
+                                    <li><a href="${contextPath}/hd${webutil.getUrl2Jmulu()}">华东</a></li>
+                                    <li><a href="${contextPath}/hz${webutil.getUrl2Jmulu()}">华中</a></li>
+                                    <li><a href="${contextPath}/hn${webutil.getUrl2Jmulu()}">华南</a></li>
+                                    <li><a href="${contextPath}/hb${webutil.getUrl2Jmulu()}">华北</a></li>
+                                </ul>
+                                <ul class="title_tab">
+                                    <li>省份首字母：</li>
+									<#list allsf as letter>
+									<#list letter?keys as key>
+                                    <li><button>${key}</button></li>
+                                    </#list>
+									</#list>
+                                </ul>
+                            </div>
+                            <div class="newFenzhan_city_cont">
+                                <#list allsf as letter>
+                                <#list letter?keys as key>
+                                <div class="letter_class" id="${key}">
+                                    <#list letter[key] as province>
+                                    <div class="city_box">
+                                        <#list province?keys as pkey>
+                                        <div class="letter"><#if pkey_index =='0'>${key}</#if></div>
+                                        <a class="capital" href="${contextPath}/${province[pkey]}${webutil.getUrl2Jmulu()}">${pkey}</a>
+                                        <div class="city">
+                                            <#list allcity[pkey]?keys as ckey>
+                                            <a href="${contextPath}/${allcity[pkey][ckey]}${webutil.getUrl2Jmulu()}">${ckey}</a>
+                                            </#list>
+                                        </div>
+                                        </#list>
+                                    </div>
+                                    </#list>
+                                </div>
+                                </#list>
+                                </#list>
+                            </div>
+                            <#else>
+                            <div class="newFenzhan_city_title">
+                                <div class="topLine"></div>
+                                <ul class="title_hot">
+                                    <li><strong>热门：</strong></li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/beijing${webutil.getUrl2Jmulu()}">北京</a></li>
+                                    <li><a href="${contextPath}/shanghai${webutil.getUrl2Jmulu()}">上海</a></li>
+                                    <li><a href="${contextPath}/hangzhou${webutil.getUrl2Jmulu()}">杭州</a></li>
+                                    <li><a href="${contextPath}/shenzhen${webutil.getUrl2Jmulu()}">深圳</a></li>
+                                </ul>
+                                <ul class="title_area">
+                                    <li>地区：</li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/nf${webutil.getUrl2Jmulu()}">南方</a></li>
+                                    <li><a href="${contextPath}/xb${webutil.getUrl2Jmulu()}">西部</a></li>
+                                    <li><a href="${contextPath}/hd${webutil.getUrl2Jmulu()}">华东</a></li>
+                                    <li><a href="${contextPath}/hz${webutil.getUrl2Jmulu()}">华中</a></li>
+                                    <li><a href="${contextPath}/hn${webutil.getUrl2Jmulu()}">华南</a></li>
+                                    <li><a href="${contextPath}/hb${webutil.getUrl2Jmulu()}">华北</a></li>
+                                </ul>
+                                <ul class="title_tab">
+                                    <li>省份首字母：</li>
+									<#list allsf as letter>
+									<#list letter?keys as key>
+                                    <li><button>${key}</button></li>
+                                    </#list>
+									</#list>
+                                </ul>
+                            </div>
+                            <div class="newFenzhan_city_cont">
+                                <#list allsf as letter>
+                                <#list letter?keys as key>
+                                <div class="letter_class" id="${key}">
+                                    <#list letter[key] as province>
+                                    <div class="city_box">
+                                        <#list province?keys as pkey>
+                                        <div class="letter"><#if pkey_index =='0'>${key}</#if></div>
+                                        <a class="capital" href="${contextPath}/${province[pkey]}${webutil.getUrl2Jmulu()}">${pkey}</a>
+                                        <div class="city">
+                                            <#list allcity[pkey]?keys as ckey>
+                                            <a href="${contextPath}/${allcity[pkey][ckey]}${webutil.getUrl2Jmulu()}">${ckey}</a>
+                                            </#list>
+                                        </div>
+                                        </#list>
+                                    </div>
+                                    </#list>
+                                </div>
+                                </#list>
+                                </#list>
+                            </div>
+                            </#if>
+                        </div>
+                    </div>
+                </div>
+                <div class="HX_search_contR">
+                    <div class="HX_search_contR_L">
+                        <div class="SEARCH" style="z-index:12;">
+                            <input placeholder="搜”${webutil.getStationName()?replace('站','')?replace('总','浙江')} suv“试试，您可能喜欢"
+                                   name="search" id="SearchInput" value="<#if searchResultVo??>${searchResultVo.keyword!''}</#if>">
+                            <a class="SEARCH_button" id="SearchButton">搜 索</a>
+                            <a id="newwindow_2015"></a>
+
+                            <div class="SEARCH_hide" style="display:none;" id="SearchHide">
+                                <div class="SEARCH_hideL">
+                                    <h3 id="SearchH3"><span class="historys">历史记录</span><span class="empty">清空</span>
+                                    </h3>
+                                    <ul id="ResultHistory">
+                                    </ul>
+                                </div>
+                                <div class="SEARCH_hideR">
+                                    <h3>热门搜素</h3>
+                                    <ul>
+                                        <li><a href="${contextPath}/quanguo/soa1y0-3">准新车</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e9%80%9f%e8%85%be" target="_blank">速腾</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e9%9b%85%e9%98%81" target="_blank">雅阁</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%ae%9d%e9%a9%ac" target="_blank">宝马</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%a5%94%e9%a9%b0" target="_blank">奔驰</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%a5%a5%e8%bf%aa" target="_blank">奥迪</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e9%80%94%e8%a7%82" target="_blank">途观</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%88%ab%e5%85%8b" target="_blank">别克</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e7%a6%8f%e5%85%8b%e6%96%af" target="_blank">福克斯</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e8%bf%88%e8%85%be" target="_blank">迈腾</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%90%9b%e5%a8%81" target="_blank">君威</a></li>
+                                        <li><a href="/search/index.htm?keyword=%E6%B5%99%E6%B1%9F" target="_blank">浙江</a></li>
+                                        <li><a href="/search/index.htm?keyword=%E6%9D%AD%E5%B7%9E" target="_blank">杭州</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="HOT_search">
+                            <#if carserial_2015??>
+                                <#list carserial_2015?sort_by("sort")as data>
+                                    <#if data.keyword != "IS">
+                                        <a href="/search/index.htm?keyword=${common_func.encoder(data.keyword!'')}" target="_blank">${data.keyword!""}</a>
+                                    </#if>
+                                </#list>
+                            </#if>
+                        </div>
+                    </div>
+                    <#--<a class="BUY" href="/car/findcar.htm" target="_self"></a>-->
+                </div>
+                <div class="nav">
+                	<div class="navCont">
+                		<ul class="navlist">
+                    <li><a href="${contextPath}/${webutil.getPinyin()}" title="华夏二手车网" <#if label=="首页"> class="on"</#if>>首 页</a></li>
+                    <li><a href="${contextPath}/${webutil.getPinyin()}/soa1" title="二手车信息"<#if label=="二手车信息"> class="on"</#if>>买 车</a></li>
+                    <li><a href="${contextPath}/personcar/index.htm" title="个人卖车"<#if label=="个人卖车"> class="on"</#if>>卖 车</a></li>
+                    <li><a href="${contextPath}/trade/tradeallcar.htm" title="二手车批发"<#if label=="二手车批发"> class="on"</#if>>批 发</a></li>
+                    <li><a href="${contextPath}/${webutil.getPinyin()}/union/index.htm" title="峰会专区二手车"<#if label=="峰会专区"> class="on"</#if>>峰 会</a></li>
+                    <li class="serve">
+                    	<span class="showBtn">服 务</span>
+                    	<i class="showBot"></i>
+                    	<div class="moreBox">
+	                    	<ul>
+			                    <li><a href="${contextPath}/examine/index.htm" title="华夏检测"<#if label=="华夏检测"> class="on"</#if>>华夏检测</a></li>
+			                    <li><a href="${contextPath}/tools/tycar.htm" title="华夏托运"<#if label=="华夏托运"> class="on"</#if>>华夏托运</a></li>
+			                    <li><a href="${contextPath}/car/findcar.htm" title="找车服务"<#if label=="找车服务"> class="on"</#if>>找车服务</a></li>
+	                    	</ul>	
+                    	</div>
+                    	
+                    </li>
+                    
+                   </ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="NAV">
+            <#assign pinyin = webutil.getPinyinByAreaCode()!'quanguo'>
+            <div class="NAVcont">
+                <a class="NAVcontL" href="${contextPath}/${webutil.getPinyin()}/car/daquan.htm">二手车大全</a>
+                <ul class="NAVcontR">
+                    <li><a href="${contextPath}/${webutil.getPinyin()}" title="华夏二手车网" <#if label=="首页"> class="on"</#if>>首页</a></li>
+                    <li><a href="${contextPath}/${webutil.getPinyin()}/soa1" title="二手车信息"<#if label=="二手车信息"> class="on"</#if>>二手车信息</a></li>
+                    <li><a href="${contextPath}/trade/tradeallcar.htm" title="二手车批发"<#if label=="二手车批发"> class="on"</#if>>二手车批发</a></li>
+                    <li><a href="${contextPath}/${webutil.getPinyin()}/union/index.htm" title="峰会专区二手车"<#if label=="峰会专区"> class="on"</#if>>峰会专区</a></li>
+                    <li><a href="${contextPath}/car/findcar.htm" title="找车服务"<#if label=="找车服务"> class="on"</#if>>找车服务</a><#--<i>NEW</i>--></li>
+                <#--
+                    <li><a href="/car/transaction.htm"<#if label=="信誉好车"> class="on"</#if>>信誉好车</a></li>
+					<li><a href="/car/luxury.htm" title="豪华二手车"<#if label=="豪华车"> class="on"</#if>>豪华车</a></li>
+                    <li><a href="/car/sportscar.htm" title="跑车二手车"<#if label=="跑车"> class="on"</#if>>跑车</a></li>
+                -->
+                    <li><a href="${contextPath}/examine/index.htm" title="华夏检测"<#if label=="华夏检测"> class="on"</#if>>华夏检测</a><#--<i>NEW</i>--></li>
+                    <li><a href="${contextPath}/tools/tycar.htm" title="华夏托运"<#if label=="华夏托运"> class="on"</#if>>华夏托运</a><#--<i>NEW</i>--></li>
+                    <li><a href="${contextPath}/personcar/index.htm" title="个人卖车"<#if label=="个人卖车"> class="on"</#if>>个人卖车</a><i>NEW</i></li>
+                    <li><a href="${contextPath}/car/suv.htm" title="SUV二手车"<#if label=="SUV"> class="on"</#if>>SUV</a></li>
+                <#--
+                    <li><a href="/car/truck.htm" title="二手货车"<#if label=="货车"> class="on"</#if>>货车</a></li>
+                    <li><a href="/careye/index.htm"<#if label=="主题"> class="on"</#if>>主题</a></li>
+                    <li><a href="/careye/index.htm" title="华夏车眼二手车" target="_blank"<#if label=="主题车"></#if>><img style="width:80px;" src="${staticServer}/web/car/images/indexcareye.png"></a></li>
+                -->
+                </ul>
+            </div>
+        </div>-->
+        <script>
+            $(function () {
+                $("#FenZhan").boxShowHide(["#newFenzhan_city"], 0);
+                $("#Closed").closeBox(["#Bg", "#Serve"]);
+                $(".Servebox_cont .Servelist .Servelist_style").autoList(".Servelist", ".style", "a", "div");
+                $(".Servebox_cont .Servelist ul.color li").ShowTabChange("click", "color_on");
+                $("#SearchInput").searchBox("#SearchHide", "checked", "#ResultHistory", "#SearchH3", "#SearchButton", 0);
+                //修改 二维 码显示 停留 2秒
+                $(".APP a").hover(function () {
+                    $('.APP_ewm').show();
+                }, function () {
+                    $('.APP_ewm').delay(2000).fadeOut();
+                });
+                $('.title_tab').on('click','button',function(){
+                    var letter = $(this).html(),
+                        height = 0;
+                    $('.current').removeClass('current');
+                    $(this).addClass('current');
+                    $('.letter_class[id='+letter+']').prevAll().each(function(i,n){
+                        height += $(n).height();
+                    });
+                    $('.newFenzhan_city_cont').animate({ scrollTop: height }, 300)
+                })
+            });
+        </script>
+</#macro>
+
+
+
+
+<#macro newIndexTop2017 label="">
+        <script type="text/javascript" src="${staticServer}/web/member_new/js/vip_top.js?t=20170413"></script>
+        <div id="ietishi" style="display:none;"><p> 为了更好的访问网站，建议把ie6升级到ie9</p></div>
+        <div class="BG" id="Bg" style="display:none;"></div>
+        <div class="header">
+            <div class="header_top">
+                <#if webutil.getAppUserMobileName()?? && webutil.getAppUserMobileName()?length&gt;0 >
+                    <ul class="header_topL">
+                        <li>您好，<a ref="nofollow" class="orange12" href="${contextPath}/vip/index.htm">
+                            <#if webutil.getAppUserMobileName()?length gt 15>
+                                ${webutil.getAppUserMobileName()[0..15]!""}...
+                                <#else>${webutil.getAppUserMobileName()}
+                            </#if>
+                        </a>！
+                        </li>
+                        <#--<li>[ <a href="${contextPath}/comments/getcomments.htm" target="_blank" class="orange12">消息管理</a> ]</li>-->
+                        <li>[ <a href="${contextPath}/toolbox/collection.htm" target="_blank" class="orange12">我的收藏</a> ]</li>
+                        <li>[ <a href="${contextPath}/vip/index.htm" target="_blank" class="orange12">会员中心</a> ]</li>
+                        <li>[ <a href="javascript:userLogout();" rel="nofollow" target="_self" class="orange12">退出</a> ]</li>
+                    </ul>
+				<#else>
+					<ul class="header_topL">
+						<li>欢迎来到华夏二手车网！<a ref="nofollow" class="orange12"></a></li>
+						<li>[ <a href="${contextPath}/sys/login.htm" rel="nofollow" target="_blank" class="orange12">登录</a> ]</li>
+						<li>[ <a href="${contextPath}/user/register.htm" rel="nofollow" target="_blank" class="orange12">注册</a> ]</li>
+					</ul>
+                </#if>
+                <ul class="header_topR">
+                    <#if webutil.getquanxian()=='3'>
+                        <li><a href="/vip/uesrmsg.htm?redirect=vip/publishcar.htm&type=1" target="_blank" class="black12" rel="nofollow">我要卖</a> |</li>
+                    <#else>
+                        <li><a href="/vip/publishcar.htm" target="_blank" class="black12">我要卖</a> |</li>
+                    </#if>
+                        <li><a href="/${webutil.getPinyin()}/soa1" target="_blank" class="black12">我要买</a> |</li>
+                        <li><a href="http://auto.hx2car.com" target="_blank" class="black12">资讯中心</a> |</li>
+                    <#--
+                    <li><a href="/help/nbenefit.htm" target="_blank" class="black12">推荐宝</a> |</li>
+                    <li><a href="/help/nbenefit.htm#product1" target="_blank" class="black12">网上门店</a> |</li>
+                    -->
+                    <li><a href="/help/nbenefit.htm" rel="nofollow" target="_blank" class="black12">产品推荐</a> |</li>
+                    <li class="APP">
+                        <a href="http://www.hx2car.com/ads/hxapp.htm" class="black12" target="_blank">APP下载</a>
+                        <span class="APP_ewm" style="display:none;">
+                            <img src="${staticServer}/web/gbpage/images/common/hx2carAppCodeNew.png" width="170" height="200"/>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="HX_search">
+            <div class="HX_search_cont">
+                <div class="HX_search_contL">
+                    <a class="LOGO" title="华夏二手车网" style="color:transparent" href="http://www.hx2car.com/quanguo">华夏二手车网</a>
+                    <div class="Fenzhan" id="FenZhan">
+                        <span class="Fenzhan_DW">${webutil.getStationName()}</span>
+                        <span class="change">[切换城市]</span>
+                        <#assign allsf = webutil.getAllSf()/>
+                        <#assign allcity = webutil.getAllCity()/>
+                        <div class="newFenzhan_city" id="newFenzhan_city" style="display: none;">
+                            <#if tbflag??>
+                            <div class="newFenzhan_city_title">
+                                <div class="topLine"></div>
+                                <ul class="title_hot">
+                                    <li><strong>热门：</strong></li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/beijing${webutil.getUrl2Jmulu()}">北京</a></li>
+                                    <li><a href="${contextPath}/shanghai${webutil.getUrl2Jmulu()}">上海</a></li>
+                                    <li><a href="${contextPath}/hangzhou${webutil.getUrl2Jmulu()}">杭州</a></li>
+                                    <li><a href="${contextPath}/shenzhen${webutil.getUrl2Jmulu()}">深圳</a></li>
+                                </ul>
+                                <ul class="title_area">
+                                    <li>地区：</li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/nf${webutil.getUrl2Jmulu()}">南方</a></li>
+                                    <li><a href="${contextPath}/xb${webutil.getUrl2Jmulu()}">西部</a></li>
+                                    <li><a href="${contextPath}/hd${webutil.getUrl2Jmulu()}">华东</a></li>
+                                    <li><a href="${contextPath}/hz${webutil.getUrl2Jmulu()}">华中</a></li>
+                                    <li><a href="${contextPath}/hn${webutil.getUrl2Jmulu()}">华南</a></li>
+                                    <li><a href="${contextPath}/hb${webutil.getUrl2Jmulu()}">华北</a></li>
+                                </ul>
+                                <ul class="title_tab">
+                                    <li>省份首字母：</li>
+									<#list allsf as letter>
+									<#list letter?keys as key>
+                                    <li><button>${key}</button></li>
+                                    </#list>
+									</#list>
+                                </ul>
+                            </div>
+                            <div class="newFenzhan_city_cont">
+                                <#list allsf as letter>
+                                <#list letter?keys as key>
+                                <div class="letter_class" id="${key}">
+                                    <#list letter[key] as province>
+                                    <div class="city_box">
+                                        <#list province?keys as pkey>
+                                        <div class="letter"><#if pkey_index =='0'>${key}</#if></div>
+                                        <a class="capital" href="${contextPath}/${province[pkey]}${webutil.getUrl2Jmulu()}">${pkey}</a>
+                                        <div class="city">
+                                            <#list allcity[pkey]?keys as ckey>
+                                            <a href="${contextPath}/${allcity[pkey][ckey]}${webutil.getUrl2Jmulu()}">${ckey}</a>
+                                            </#list>
+                                        </div>
+                                        </#list>
+                                    </div>
+                                    </#list>
+                                </div>
+                                </#list>
+                                </#list>
+                            </div>
+                            <#else>
+                            <div class="newFenzhan_city_title">
+                                <div class="topLine"></div>
+                                <ul class="title_hot">
+                                    <li><strong>热门：</strong></li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/beijing${webutil.getUrl2Jmulu()}">北京</a></li>
+                                    <li><a href="${contextPath}/shanghai${webutil.getUrl2Jmulu()}">上海</a></li>
+                                    <li><a href="${contextPath}/hangzhou${webutil.getUrl2Jmulu()}">杭州</a></li>
+                                    <li><a href="${contextPath}/shenzhen${webutil.getUrl2Jmulu()}">深圳</a></li>
+                                </ul>
+                                <ul class="title_area">
+                                    <li>地区：</li>
+                                    <li><a href="${contextPath}/quanguo${webutil.getUrl2Jmulu()}">全国</a></li>
+                                    <li><a href="${contextPath}/nf${webutil.getUrl2Jmulu()}">南方</a></li>
+                                    <li><a href="${contextPath}/xb${webutil.getUrl2Jmulu()}">西部</a></li>
+                                    <li><a href="${contextPath}/hd${webutil.getUrl2Jmulu()}">华东</a></li>
+                                    <li><a href="${contextPath}/hz${webutil.getUrl2Jmulu()}">华中</a></li>
+                                    <li><a href="${contextPath}/hn${webutil.getUrl2Jmulu()}">华南</a></li>
+                                    <li><a href="${contextPath}/hb${webutil.getUrl2Jmulu()}">华北</a></li>
+                                </ul>
+                                <ul class="title_tab">
+                                    <li>省份首字母：</li>
+									<#list allsf as letter>
+									<#list letter?keys as key>
+                                    <li><button>${key}</button></li>
+                                    </#list>
+									</#list>
+                                </ul>
+                            </div>
+                            <div class="newFenzhan_city_cont">
+                                <#list allsf as letter>
+                                <#list letter?keys as key>
+                                <div class="letter_class" id="${key}">
+                                    <#list letter[key] as province>
+                                    <div class="city_box">
+                                        <#list province?keys as pkey>
+                                        <div class="letter"><#if pkey_index =='0'>${key}</#if></div>
+                                        <a class="capital" href="${contextPath}/${province[pkey]}${webutil.getUrl2Jmulu()}">${pkey}</a>
+                                        <div class="city">
+                                            <#list allcity[pkey]?keys as ckey>
+                                            <a href="${contextPath}/${allcity[pkey][ckey]}${webutil.getUrl2Jmulu()}">${ckey}</a>
+                                            </#list>
+                                        </div>
+                                        </#list>
+                                    </div>
+                                    </#list>
+                                </div>
+                                </#list>
+                                </#list>
+                            </div>
+                            </#if>
+                        </div>
+                    </div>
+                </div>
+                <div class="HX_search_contR">
+                    <div class="HX_search_contR_L">
+                        <div class="SEARCH" style="z-index:12;">
+                            <input placeholder="搜”${webutil.getStationName()?replace('站','')?replace('总','浙江')} suv“试试，您可能喜欢"
+                                   name="search" id="SearchInput" value="<#if searchResultVo??>${searchResultVo.keyword!''}</#if>">
+                            <a class="SEARCH_button" id="SearchButton">搜 索</a>
+                            <a id="newwindow_2015"></a>
+
+                            <div class="SEARCH_hide" style="display:none;" id="SearchHide">
+                                <div class="SEARCH_hideL">
+                                    <h3 id="SearchH3"><span class="historys">历史记录</span><span class="empty">清空</span>
+                                    </h3>
+                                    <ul id="ResultHistory">
+                                    </ul>
+                                </div>
+                                <div class="SEARCH_hideR">
+                                    <h3>热门搜素</h3>
+                                    <ul>
+                                        <li><a href="${contextPath}/quanguo/soa1y0-3">准新车</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e9%80%9f%e8%85%be" target="_blank">速腾</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e9%9b%85%e9%98%81" target="_blank">雅阁</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%ae%9d%e9%a9%ac" target="_blank">宝马</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%a5%94%e9%a9%b0" target="_blank">奔驰</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%a5%a5%e8%bf%aa" target="_blank">奥迪</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e9%80%94%e8%a7%82" target="_blank">途观</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%88%ab%e5%85%8b" target="_blank">别克</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e7%a6%8f%e5%85%8b%e6%96%af" target="_blank">福克斯</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e8%bf%88%e8%85%be" target="_blank">迈腾</a></li>
+                                        <li><a href="/search/index.htm?keyword=%e5%90%9b%e5%a8%81" target="_blank">君威</a></li>
+                                        <li><a href="/search/index.htm?keyword=%E6%B5%99%E6%B1%9F" target="_blank">浙江</a></li>
+                                        <li><a href="/search/index.htm?keyword=%E6%9D%AD%E5%B7%9E" target="_blank">杭州</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="HOT_search">
+                            <#if carserial_2015??>
+                                <#list carserial_2015?sort_by("sort")as data>
+                                    <#if data.keyword != "IS">
+                                        <a href="/search/index.htm?keyword=${common_func.encoder(data.keyword!'')}" target="_blank">${data.keyword!""}</a>
+                                    </#if>
+                                </#list>
+                            </#if>
+                        </div>
+                    </div>
+                    <a class="BUY" <#--id="Buy"--> href="/car/findcar.htm" target="_self"></a>
+                </div>
+            </div>
+        </div>
+        <div class="NAV">
+            <#assign pinyin = webutil.getPinyinByAreaCode()!'quanguo'>
+            <div class="NAVcont">
+                <a class="NAVcontL" href="${contextPath}/${webutil.getPinyin()}/car/daquan.htm">二手车大全</a>
+                <ul class="NAVcontR">
+                    <li><a href="${contextPath}/${webutil.getPinyin()}" title="华夏二手车网" <#if label=="首页"> class="on"</#if>>首页</a></li>
+                    <li><a href="${contextPath}/${webutil.getPinyin()}/soa1" title="二手车信息"<#if label=="二手车信息"> class="on"</#if>>二手车信息</a></li>
+                    <li><a href="${contextPath}/trade/tradeallcar.htm" title="二手车批发"<#if label=="二手车批发"> class="on"</#if>>二手车批发</a></li>
+                    <li><a href="${contextPath}/${webutil.getPinyin()}/union/index.htm" title="峰会专区二手车"<#if label=="峰会专区"> class="on"</#if>>峰会专区</a></li>
+                    <li><a href="${contextPath}/car/findcar.htm" title="找车服务"<#if label=="找车服务"> class="on"</#if>>找车服务</a><#--<i>NEW</i>--></li>
+                <#--
+                    <li><a href="/car/transaction.htm"<#if label=="信誉好车"> class="on"</#if>>信誉好车</a></li>
+					<li><a href="/car/luxury.htm" title="豪华二手车"<#if label=="豪华车"> class="on"</#if>>豪华车</a></li>
+                    <li><a href="/car/sportscar.htm" title="跑车二手车"<#if label=="跑车"> class="on"</#if>>跑车</a></li>
+                -->
+                    <li><a href="${contextPath}/examine/index.htm" title="华夏检测"<#if label=="华夏检测"> class="on"</#if>>华夏检测</a><#--<i>NEW</i>--></li>
+                    <li><a href="${contextPath}/tools/tycar.htm" title="华夏托运"<#if label=="华夏托运"> class="on"</#if>>华夏托运</a><#--<i>NEW</i>--></li>
+                    <li><a href="${contextPath}/personcar/index.htm" title="个人卖车"<#if label=="个人卖车"> class="on"</#if>>个人卖车</a><i>NEW</i></li>
+                    <li><a href="${contextPath}/car/suv.htm" title="SUV二手车"<#if label=="SUV"> class="on"</#if>>SUV</a></li>
+                <#--
+                    <li><a href="/car/truck.htm" title="二手货车"<#if label=="货车"> class="on"</#if>>货车</a></li>
+                    <li><a href="/careye/index.htm"<#if label=="主题"> class="on"</#if>>主题</a></li>
+                    <li><a href="/careye/index.htm" title="华夏车眼二手车" target="_blank"<#if label=="主题车"></#if>><img style="width:80px;" src="${staticServer}/web/car/images/indexcareye.png"></a></li>
+                -->
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $("#FenZhan").boxShowHide(["#newFenzhan_city"], 0);
+                $("#Closed").closeBox(["#Bg", "#Serve"]);
+                $(".Servebox_cont .Servelist .Servelist_style").autoList(".Servelist", ".style", "a", "div");
+                $(".Servebox_cont .Servelist ul.color li").ShowTabChange("click", "color_on");
+                $("#SearchInput").searchBox("#SearchHide", "checked", "#ResultHistory", "#SearchH3", "#SearchButton", 0);
+                //修改 二维 码显示 停留 2秒
+                $(".APP a").hover(function () {
+                    $('.APP_ewm').show();
+                }, function () {
+                    $('.APP_ewm').delay(2000).fadeOut();
+                });
+                $('.title_tab').on('click','button',function(){
+                    var letter = $(this).html(),
+                        height = 0;
+                    $('.current').removeClass('current');
+                    $(this).addClass('current');
+                    $('.letter_class[id='+letter+']').prevAll().each(function(i,n){
+                        height += $(n).height();
+                    });
+                    $('.newFenzhan_city_cont').animate({ scrollTop: height }, 300)
+                })
+            });
+        </script>
+</#macro>

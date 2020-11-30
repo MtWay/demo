@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".0").click(function(){
+					console.log(1)
+				})
+				$("#total").change(function(){
+					var a = $(this).prop("checked");
+					if(a){
+						$(".check").prop("checked",true);
+					}else{
+						$(".check").prop("checked",false);
+						
+					}
+				})
+				$(".check").change(function(){
+					console.log($(".check:checked").length)
+					if($(".check:checked").length==6){
+						$("#total").prop("checked",true);
+					}
+					else{
+						$("#total").prop("checked",false);
+					}
+				})
+				$("button").click(function(){
+					if($("#total").prop("checked")==false && $(".check:checked").length>0){
+						var stateList = ["4","1,3","5","6","2","7"],state=[];
+						$(".check:checked").each(function(i,n){
+							var ind = $(n).index(".check");
+							state.push(stateList[ind]);
+					})
+						console.log(state.join())
+					}
+					
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<label><input type="checkbox" name="fllo" id="total" value="" checked />全部</label>
+		<label><input type="checkbox" name="fllo" id="" value="" checked class="check"/>未联系</label>
+		<label><input type="checkbox" name="fllo" id="" value="" checked class="check"/>意向了解</label>
+		<label><input type="checkbox" name="fllo" id="" value="" checked class="check"/>已到店</label>
+		<label><input type="checkbox" name="fllo" id="" value="" checked class="check"/>战败</label>
+		<label><input type="checkbox" name="fllo" id="" value="" checked class="check"/>无效</label>
+		<label><input type="checkbox" name="fllo" id="" value="" checked class="check"/>已成交</label>
+		<button class="0"> 提交</button>
+	</body>
+</html>

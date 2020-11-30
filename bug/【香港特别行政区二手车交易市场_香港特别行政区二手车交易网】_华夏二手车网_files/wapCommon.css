@@ -1,0 +1,784 @@
+/*************头部******************/
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    font-size: 62.5%;
+}
+
+/*新添加的body类*/
+
+body.fixed {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.mlTop, .mlTop .mltSearch, .mlTop .mltSearch span, .msTop .mstInput, .msTop .mstInput span, .msCon a span, .msTop .mstInput span input, .msCon a, .msCon, .introduce, .mobcheck, .mobcheck .mBox input, .mNav, .mlTop .mltTitle {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.msTop:after, .msCon a:after, .mobcheck .mBox .mbCode:after, .mmTop:after, .mlTop:after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+
+/*顶部*/
+
+.mlTop {
+    width: 100%;
+    height: 4.6rem;
+    z-index: 9;
+    background-color: #fff;
+    padding: 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mlTop:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    bottom: 0;
+    left: 0;
+}
+
+.mlTop .mltSearch {
+    width: 100%;
+    height: 3rem;
+    margin: 0.8rem 0 0 0;
+    background-color: #f7f7f7;
+    border-radius: 0.4rem;
+    border: 1px solid #eaeaea;
+}
+
+.mlTop .mltSearch span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 0 0 4.4rem;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    color: #999;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/topsearch.png) 1.5rem center no-repeat;
+    background-size: 1.4rem auto;
+}
+
+.mlTop .mltTitle {
+    font-size: 1.8rem;
+    color: #333;
+    padding: 0 4.2rem 0 2.7rem;
+    text-align: center;
+    height: 4.6rem;
+    line-height: 4.6rem;
+}
+
+.mlTop .mltLogo {
+    width: 5rem;
+    height: 100%;
+    display: block;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/toplogo.png) center center no-repeat;
+    background-size: 2.84rem auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mlTop .mltRight {
+    width: 5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mlTop .mltRight .mltrUser {
+    width: 50%;
+    height: 100%;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/topuser2.png) center center no-repeat;
+    background-size: 2.3rem auto;
+    float: left;
+}
+
+.mlTop .mltRight .mltrNav {
+    width: 100%;
+    height: 100%;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/topnav2.png) center center no-repeat;
+    background-size: 2.3rem auto;
+    float: left;
+}
+
+.mlTop .mltRight .login {
+    font-size: 1.4rem;
+    color: #ccc;
+    display: block;
+    width: 100%;
+    height: 4.6rem;
+    line-height: 4.6rem;
+    text-align: center;
+}
+
+/*搜索框*/
+
+section.mSearch {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    background-color: #fff;
+}
+
+.msTop {
+    width: 100%;
+    height: 4.6rem;
+    position: fixed;
+    overflow: hidden;
+    z-index: 20;
+    background-color: #fff;
+}
+
+.msTop .mstBack {
+    width: 4.1rem;
+    height: 4.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/leftarrow.png) center center no-repeat;
+    background-size: 1.2rem auto;
+    display: block;
+}
+
+.msTop:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    bottom: 0;
+    left: 0;
+}
+
+.msTop .mstInput {
+    width: 100%;
+    height: 100%;
+    padding: 0 5rem 0 4.1rem;
+    overflow: hidden;
+}
+
+.msTop .mstInput span {
+    width: 100%;
+    height: 3rem;
+    padding: 0 0 0 4.4rem;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/topsearch.png) 1.5rem center no-repeat;
+    background-size: 1.4rem auto;
+    display: block;
+    margin: 0.8rem 0 0 0;
+    border-radius: 0.4rem;
+    background-color: #f7f7f7;
+    border: 1px solid #eaeaea;
+}
+
+.msTop .mstInput span input {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem 0 0;
+    line-height: 120%;
+    font-size: 1.3rem;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+
+.msCon {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 4.6rem 0 0 0;
+}
+
+.msCon a {
+    width: 100%;
+    padding: 0 1.1rem 0 1.6rem;
+    height: 4.5rem;
+    color: #333;
+    line-height: 4.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: block;
+}
+
+.msCon a span {
+    padding: 0 1.1rem;
+    height: 2.7rem;
+    line-height: 2.5rem;
+    margin: 0.9rem 0.5rem 0 0.5rem;
+    border: 1px solid #eee;
+    color: #999;
+    font-size: 1.3rem;
+    border-radius: 0.4rem;
+    float: right;
+}
+
+.msCon a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    bottom: 0;
+    left: 0;
+}
+
+.msHishot {
+    padding: 4.6rem 0 0 0;
+    margin: 0.3rem 0 0 0;
+}
+
+.msHishot .mshhTitle {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    text-align: left;
+    color: #333;
+    padding: 0 1.5rem;
+}
+
+.msHishot .mshhList {
+    overflow: hidden;
+    padding: 0 1rem;
+    margin: 0 0 0.7rem 0;
+}
+
+.msHishot .mshhList a {
+    padding: 0 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    color: #999;
+    font-size: 1.4rem;
+    float: left;
+    border: 1px solid #eee;
+    border-radius: .4rem;
+    text-align: center;
+    margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.msHishot .mshhList .noHis {
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    color: #999;
+    text-align: center;
+}
+
+/*下载APP and 退出帐号*/
+
+section.mDownload {
+    width: 100%;
+    background-color: #f6f6f6;
+    position: fixed;
+    left: 0;
+    height: 40%;
+}
+
+.mdLogo {
+    width: 100%;
+    height: 55%;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/downloadlogo.png) center bottom no-repeat;
+    background-size: 8.4rem auto;
+}
+
+@media only screen and (max-width: 320px) {
+    .mdLogo {
+        background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/downloadlogo.png) center bottom no-repeat;
+        background-size: 6.4rem auto;
+    }
+}
+
+.moBtn {
+    width: 100%;
+    height: 45%;
+    position: relative;
+    text-align: center;
+}
+
+.moBtn .moBox {
+    width: 100%;
+    height: 3.2rem;
+    position: absolute;
+    top: 50%;
+    margin: -1.6rem 0 0 0;
+}
+
+.moBtn a {
+    display: inline-block;
+}
+
+.moBtn a span {
+    height: 3.2rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0 0 0 2.6rem;
+    margin: 0 2.6rem;
+    color: #f60;
+    line-height: 3.2rem;
+}
+
+.moBtn a.mdAppdown span {
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/openapp.png) left center no-repeat;
+    background-size: 1.5rem auto;
+}
+
+.moBtn a.mdExit span {
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/exit.png) left center no-repeat;
+    background-size: 1.5rem auto;
+}
+
+/*菜单*/
+
+section.mNav {
+    width: 100%;
+    height: 60%;
+    position: fixed;
+    display: none;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    padding: 5% 0;
+}
+
+.mnList {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.mnList a {
+    width: 100%;
+    height: 22%;
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.mnClose {
+    width: 100%;
+    height: 20%;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/closenav.png) center center no-repeat;
+    background-size: 1.9rem auto;
+}
+
+.mnList a span {
+    -webkit-transform: translate(-50%, 1600%);
+    -webkit-transition: all .3s ease;
+    transform: translate(-50%, 1600%);
+    transition: all .3s ease;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+}
+
+.mNavon .mnList a span {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mNavon .mnList a:nth-child(1) span {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.mNavon .mnList a:nth-child(2) span {
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.mNavon .mnList a:nth-child(3) span {
+    -webkit-transition-duration: 0.9s;
+    transition-duration: 0.9s;
+}
+
+.mNavon .mnList a:nth-child(4) span {
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+}
+
+.mNavon .mnList a:nth-child(5) span {
+    -webkit-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+}
+
+/*背景*/
+
+.mShadow {
+    margin-top: 4.2rem;
+    display: none;
+    opacity: 0;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/blurbg.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    z-index: 70;
+}
+
+.mShadow.msOn {
+    opacity: 1;
+}
+
+/*手机号码验证*/
+._login_box{
+    z-index: 999;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+}
+._login_box_Top {
+    width: 100%;
+    height: 4.6rem;
+    position: relative;
+    background-color: #fff;
+    font-size: 1.8rem;
+    line-height: 4.6rem;
+    color: #333;
+    text-align: center;
+}
+._login_box_Top ._backArrow{
+    width: 4.1rem;
+    height: 4.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/leftarrow.png) center center no-repeat;
+    background-size: 1.2rem auto;
+    display: block;
+}
+._login_box_Top:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    bottom: 0;
+    left: 0;
+}
+
+._login_box_logo {
+    width: 100%;
+}
+._login_box_logo img{
+    width: 100%;
+    margin-bottom:2rem;
+}
+._login_box_logo ._login_logo {
+    width: 100%;
+    background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/checkmobile.png) center center no-repeat;
+    height: 8.3rem;
+    background-size: auto 8.3rem;
+    margin: 3rem 0 2rem 0;
+}
+
+._login_box_form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 1.7rem;
+}
+
+._login_box_form ._login_box_input {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    margin: 0 0 4rem 0;
+}
+
+ ._login_box_input li {
+    width: 100%;
+    height: 4.5rem;
+    position: relative;
+}
+._login_box_input input{
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    width: 100%;
+    height: 4.5rem;
+    border: none;
+    -webkit-appearance: none;
+    padding: 0 0 0 1.6rem;
+}
+._login_box_input ._login_box_code:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #e1e1e1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleY(0.5);
+}
+._login_box_change_picCode,._login_box_get_picCode{
+    color: #fff;
+    font-size: 1.1rem;
+    top: 0.8rem;
+    right: 1.6rem;
+    text-align: center;
+    line-height: 2.9rem;
+    width: 9.5rem;
+    height: 2.9rem;
+    border-radius: 0.4rem;
+    background-color: #f60;
+    display: block;
+    position: absolute;
+    border:none;
+}
+
+._login_box_code ._login_box_change_picCode{
+    background-color: #fff;
+}
+
+._login_box_form ._login_box_submit{
+    display: block;
+    width: 100%;
+    height: 4.5rem;
+    background-color: #f60;
+    border-radius: 0.4rem;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 4.5rem;
+    color: #fff;
+    border:none;
+}
+
+._login_box ._third_party{
+    width: 100%;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+}
+
+._login_box ._third_party a{
+    margin-left: 3rem;
+    color: #666;
+    display: inline-block;
+}
+
+._login_box ._third_party ._third_party_qq{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url('http://static.hx2cars.com/resource/web/dist/static/mobpages/images/third_party_qq.png') no-repeat center;
+    background-size: 2rem;
+    vertical-align: bottom;
+    margin-right: .5rem;
+}
+
+/***************头部****************/
+
+.modeling {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 7;
+}
+
+.modeling2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 6;
+}
+
+/*新增导航*/
+
+.guide_con {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 4.2rem;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+.guide_con.back {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.guide_con .banner_guide {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.banner2 {
+    width: 200%;
+    height: 20rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.banner2 li {
+    float: left;
+    width: 50%;
+    height: 19.8rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.banner2 li a {
+    width: 25%;
+    height: 8.4rem;
+    float: left;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.banner2 li a img {
+    width: 3.9rem;
+    height: 3.9rem;
+    background-size: 3.9rem 3.9rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.center_page_btn {
+    width: 100%;
+    background: #fff;
+    padding-top: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.center_page_btn a {
+    display: block;
+    width: 16.8rem;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    background: #f60;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2.2rem;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/*修改轮播插件的样式*/
+
+.guide_con .banner_guide .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.guide_con .banner_guide .swiper-pagination-bullet {
+    width: 0.48rem;
+    height: 0.48rem;
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid #f60;
+    background-color: #fff;
+}
+
+.guide_con .banner_guide .swiper-pagination-bullet-active {
+    background-color: #f60;
+}
+
+/**************************/
+
+.deleteHistory {
+    display: block;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem;
+    background: url(../../images/deleteHistory.png) no-repeat center center;
+    background-size: 1.5rem auto;
+}
+
+.searchBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5rem;
+    height: 4.6rem;
+    color: #f60;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    line-height: 4.6rem;
+}
+
+/*seo新增列表页+详情页底部*/
+
+.footer {
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.footer ul {
+    width: 30rem;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 1rem auto;
+}
+
+.footer li {
+    float: left;
+    padding: 0 1rem;
+    border-right: 1px solid #ccc;
+}
+
+.footer li:last-child {
+    border-right: none;
+}
+
+.footer li a {
+    color: #666;
+}

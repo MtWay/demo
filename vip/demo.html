@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			.box{
+				float: left;
+				width: 100px;
+				height: 100px;
+				background: #ccc;
+				margin: 100px;
+				position: relative;
+			}
+			.box:after{
+				content: "";
+				position: absolute;
+				height: 2px;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				background: #dc0000;
+				transform-origin: right;
+				transform: scaleX(0);
+				transition: transform 0.1s linear 0.1s;
+			}
+			.box:hover:after{
+				transform: scaleX(1);
+				transform-origin: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+		<div class="box">
+			
+		</div>
+		<div class="box">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,234 @@
+body,p,img,ul,li,ol,dl,dd,dt,h1,h2,h3,a,input{margin:0;padding:0;font-family:"黑体",arial;text-shadow:none;font-weight:normal;font-size:14px; font-size:1.4rem;}
+body{line-height:inherit;background-color:#ecedf1;}
+ul,ol{list-style:none;}
+a{color:#000;text-decoration:none;}
+img{border:none;}
+*:focus{outline:0;}
+.clear{clear:both;}
+
+html,body{font-size: 62.5%;}
+
+/*box-sizing*/
+
+.inqlist,
+.mobcheck,
+.mobcheck .mBox div,
+.mobcheck .mBox input,
+.mobcheck .mBox,
+.obutton,
+.introduce,
+.order,
+.order .oBox .obLogo,
+.order .oBox,
+.sTop,
+.historyList .hList a,
+.historyList .sList a,
+.historyList .hTitle,
+.sTop input,
+.allsearch .aSearch p input,
+.allsearch .aBrand .abSingle .absFirstbrand .absfSecondbrand,
+.allsearch .aBrand .abSingle .absFirstbrand a,
+.allsearch .aBrand .abSingle .absLetter,
+.inqlist .iBg,
+.inqlist .iAll .iaEngine .iavValue input,
+.inqlist .iAll .iaVin .iavValue input,
+.inqlist .iAll,
+.allsearch .aSearch,
+.inqlist .iAll .iaVin .iavValue,
+.inqlist .iAll .iaEngine .iavValue,
+.vFail,
+.vFail .vfBox .vfbBtn,
+.vFail .vfBox .vfbTip {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+
+/*X轴横线*/
+
+.top:after,
+.historyList .sList a:after,
+.mobcheck .mBox .mbCode:after,
+.order .oBox .obBrand:after,
+.historyList .hList a:after,
+.historyList .hEmpty:after,
+.historyList .hTitle:after,
+.sTop:after,
+.allsearch .aBrand .abSingle .absFirstbrand .absfSecondbrand a:after,
+.allsearch .aBrand .abSingle .absFirstbrand a:after,
+.allsearch .aHot .ahTitle:before,
+.allsearch .aHot .ahTitle:after,
+.allsearch .aHot .ahTitle:before,
+.inqlist .iAll .iaEngine:after,
+.inqlist .iAll .iaVin:after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+    -moz-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+}
+
+
+/*去除点击效果*/
+
+.inqlist .iAll .iaBrand,
+.inqlist .iAll .iaEngine .iavValue input,
+.inqlist .iAll .iaVin .iavValue input,
+.mobcheck .mBox .mbCode span,
+.mobcheck .mBox input,
+.order .oBox .obTel input,
+.sTop .sCancel,
+.allsearch .aSearch,
+.allsearch .aSearch p,
+.allsearch .aBrand .abSingle .absFirstbrand a,
+.top .leftArrow {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/***************************foursinquire**************************/
+
+body{background-color:#f6f6f6;width: 100%;}
+
+.top{width: 100%;height: 4.6rem;position:relative;line-height: 4.6rem;font-size: 1.8rem;text-align: center;background-color: #fff;}
+.top a{height: 4.6rem;display: inline-block;color:#f60;padding-left: 2rem;font-size: 1.8rem;background:url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/fourrequirelogo.png) left center no-repeat;background-size:1.6rem 1.6rem;}
+.top:after{content:'';width: 100%;height: 1px;background-color:#e1e1e1;position:absolute;bottom:0;left:0;}
+.top .leftArrow{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/leftarrow.png) center center no-repeat;background-size:1.2rem auto;width:5rem;height: 100%;position:absolute;top:0;left:0;}
+
+.title{width: 100%;text-align: center;color:#f60;margin: 2rem 0 1rem 0;}
+.title .tTop{font-size: 2.7rem;line-height: 4rem;}
+.title .tBottom{font-size:2rem;line-height:3rem;margin:0.3rem 0 2.3rem 0;}
+
+.inqlist{width: 100%;padding:0 2.7rem;margin-bottom:6rem;}
+@media only screen and(max-width: 320px){
+	.inqlist{width: 100%;padding:0 1.5rem;margin-bottom:6rem;}
+}
+.inqlist .iAll{width: 100%;border:1px solid #eaeaea;border-radius: 0.4rem;margin-bottom:2.6rem;overflow:hidden;background-color:#fff;}
+.inqlist .iAll .iaBrand{width: 100%;height: 4.5rem;position:relative;line-height: 4.5rem;}
+.inqlist .iAll .iaBrand .iabName{float:left;font-size: 1.5rem;color:#666;padding: 0 0 0 1.5rem;width: 6.2rem;}
+.inqlist .iAll .iaBrand .iabValue{float:left;font-size: 1.5rem;color:#999;padding:0 0 0 2rem;}
+.inqlist .iAll .iaBrand .iabArrow{width:0.8rem;height:1.5rem;background:url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/rightarrow.png) center center no-repeat;background-size:0.8rem 1.5rem;position:absolute;right:1.5rem;top:1.5rem;}
+.inqlist .iAll .iaVin{width: 100%;height: 4.5rem;position:relative;line-height: 4.5rem;}
+.inqlist .iAll .iaVin .iavName{position:absolute;left:0;top:0;font-size: 1.5rem;color:#666;padding: 0 0 0 1.5rem;width: 6.2rem;}
+.inqlist .iAll .iaVin .iavValue{height:100%;width:100%;color:#999;padding:0 0 0 9.5rem;display: block;}
+.inqlist .iAll .iaVin .iavValue input{height: 4.3rem;width: 100%;margin:0;padding:0 2rem 0 0;font-size: 1.5rem;border:none;display:block;}
+.inqlist .iAll .iaVin:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;top:0;left:0;}
+.inqlist .iAll .iaEngine{width: 100%;height: 4.5rem;position:relative;line-height: 4.5rem;}
+.inqlist .iAll .iaEngine .iavName{position:absolute;left:0;top:0;font-size: 1.5rem;color:#666;padding: 0 0 0 1.5rem;width: 6.2rem;}
+.inqlist .iAll .iaEngine .iavValue{height:100%;width:100%;color:#999;padding:0 0 0 9.5rem;display: block;}
+.inqlist .iAll .iaEngine .iavValue input{height: 4.3rem;width: 100%;margin:0;padding:0 2rem 0 0;font-size: 1.5rem;border:none;display:block;}
+.inqlist .iAll .iaEngine:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;top:0;left:0;}
+.inqlist .iButton{width: 100%;border-radius:0.4rem;background-color:#f60;text-align: center;display: inline-block;line-height: 4.5rem;height: 4.5rem;font-size: 1.8rem;color:#fff;margin-bottom: 1rem;}
+.inqlist .igo_vip{display:inline-block;margin-top:.5rem;width:100%;overflow:hidden;}
+.inqlist .igo_vip span {font-size:1.2rem;font-family: "微软雅黑";}
+.inqlist .igo_vip .fl {float:left;color:#999;}
+.inqlist .igo_vip .fr {float:right;color:#f60;}
+
+section.spage{position:fixed;overflow-y:scroll;width: 100%;height: 100%;background-color:#fff;top:0;}
+.allsearch .aSearch{width: 100%;padding:0 1.6rem;margin:1rem 0 2.3rem 0;}
+.allsearch .aSearch p{position:relative;width: 100%;height: 3.2rem;border:1px solid #eaeaea;background-color:#f6f6f6;border-radius:0.4rem;text-align: center;}
+.allsearch .aSearch p input{padding-left:1.2rem;height:2.6rem;z-index:9;border:none;font-size:1.5rem;background-color:transparent;-webkit-appearance:none;width: 100%;position:absolute;top:0.3rem;right:0.3rem;}
+.allsearch .aSearch p span{position:relative;z-index:10;line-height: 3.2rem;font-size: 1.5rem;color:#999;padding:0 0 0 2rem;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/search.png) left center no-repeat;background-size:1.4rem auto;display: inline-block;height: 100%;}
+.allsearch .aHot{width: 100%;margin:0 0 1rem 0;}
+.allsearch .aHot .ahTitle{font-size: 1.5rem;width: 100%;text-align: center;height: 3rem;line-height: 3rem;position:relative;margin-bottom:0.9rem;}
+.allsearch .aHot .ahTitle:before{content: '';width: 4.8rem;height: 1px;position:absolute;background-color:#e1e1e1;top:1.5rem;left:50%;margin-left: -8.4rem;}
+.allsearch .aHot .ahTitle:after{content: '';width: 4.8rem;height: 1px;position:absolute;background-color:#e1e1e1;top:1.5rem;right:50%;margin-right: -8.4rem;}
+.allsearch .aHot .ahList{width: 100%;overflow: hidden;}
+.allsearch .aHot .ahList a{width: 25%;float: left;margin:0 0 1rem 0;}
+.allsearch .aHot .ahList a .ahlLogo{width: 100%;width: 100%;text-align: center;}
+.allsearch .aHot .ahList a .ahlLogo img{width: 3.6rem;height: 3.6rem;display: inline-block;}
+.allsearch .aHot .ahList a .ahlBrand{width: 100%;font-size: 1.5rem;text-align: center;color:#333;}
+.allsearch .aBrand{width: 100%;margin-bottom:6rem;}
+.allsearch .aBrand .abSingle{width: 100%;}
+.allsearch .aBrand .abSingle .absLetter{width: 100%;padding-left:1.9rem;height: 3.7rem;line-height:3.7rem;background-color:#f6f6f6;font-size:1.5rem;color:#9b9b9b;}
+.allsearch .aBrand .abSingle .absFirstbrand a{position:relative;width: 100%;height: 4.5rem;display:block;padding-left:1.9rem;background-color:#fff;color:#333;font-size: 1.5rem;line-height: 4.5rem;}
+.allsearch .aBrand .abSingle .absFirstbrand>a:after{content:'';width: 100%;height: 1px;background-color:#e1e1e1;position:absolute;bottom:0;right: 0;}
+.allsearch .aBrand .abSingle .absFirstbrand>a i{width: 0.8rem;height: 1.5rem;transition:all .3s;background:url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/nextbrandarrow.png) 0 0 no-repeat;background-size:0.8rem auto;position:absolute;right:1.4rem;top:1.5rem;}
+.allsearch .aBrand .abSingle .absFirstbrand .absfSecondbrand{width: 100%;padding-left:4.2rem;-webkit-transition:all .3s;-webkit-transform:scaleY(0);-webkit-transform-origin:50% 0;transition:all .3s;transform:scaleY(0);transform-origin:50% 0;height: 0;}
+.allsearch .aBrand .abSingle .absFirstbrand .absfSecondbrand a{width: 100%;position:relative;padding:0;}
+.allsearch .aBrand .abSingle .absFirstbrand .absfSecondbrand a:after{content:'';width: 100%;height: 1px;background-color:#e1e1e1;position:absolute;bottom:0;right: 0;}
+
+aside.tpage{position:fixed;overflow-y:scroll;width: 100%;height: 100%;background-color:#fff;top:0;}
+.sTop{width: 100%;padding:0 5.7rem 0 1.6rem;height: 4.6rem;position:fixed;left:0;top:0;line-height: 4.6rem;background-color: #fff;}
+.sTop:after{content:'';width: 100%;height: 1px;background-color:#e1e1e1;position:absolute;bottom:0;left:0;}
+.sTop input{line-height:120%;vertical-align:middle;-webkit-appearance:none;padding:0 0 0 0.6rem;width:100%;height: 3rem;background-color:#f6f6f6;border:1px solid #eaeaea;border-radius:0.4rem;}
+.sTop .sCancel{height: 4.6rem;width: 5.7rem;font-size:1.5rem;color:#666;line-height: 4.6rem;position:absolute;right:0;top:0;text-align: center;}
+.historyList .sList a{display:block;position:relative;width:100%;font-size: 1.5rem;height: 4.5rem;color:#333;line-height: 4.5rem;padding-left: 1.6rem;}
+.historyList .sList a:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+
+.historyList{padding-top:4.6rem;width: 100%;}
+.historyList .hTitle{position:relative;width:100%;font-size: 1.5rem;height: 4.5rem;color:#999;line-height: 4.5rem;padding-left: 1.6rem;}
+.historyList .hTitle:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.historyList .hList a{display:block;position:relative;width:100%;font-size: 1.5rem;height: 4.5rem;color:#333;line-height: 4.5rem;padding-left: 1.6rem;}
+.historyList .hList a:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.historyList .hEmpty{display:block;position:relative;text-align:center;width:100%;font-size: 1.5rem;height: 4.5rem;color:#333;line-height: 4.5rem;}
+.historyList .hEmpty:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+/***************************foursinquire**************************/
+
+
+/***************************orderdetail**************************/
+.order{width: 100%;padding:0 2.7rem;margin-bottom:4rem;}
+@media only screen and(max-width: 320px){
+	.order{width: 100%;padding:0 1.5rem;margin-bottom:6rem;}
+}
+.order .oBox{padding:3.9rem 0 0 0;width: 100%;border:1px solid #eaeaea;border-radius:0.4rem;position:relative;background-color:#fff;margin:6rem 0 0 0;}
+.order .oBox .obLogo{width: 8.2rem;height:8.2rem;border:1px solid #eaeaea;border-right-color:transparent;transform:rotate(45deg);-webkit-transform:rotate(45deg);position:relative;border-bottom-color:transparent;background-color:#fff;position:absolute;top:-4.1rem;left:50%;margin: 0 0 0 -4.1rem;border-radius:50%;}
+.order .oBox .obLogo .oblBox{width: 7rem;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);height: 7rem;position:absolute;top:0.6rem;left:0.6rem;display: inline-block;overflow: hidden;border-radius:50%;}
+.order .oBox .obLogo .oblBox img{width: 100%;}
+.order .oBox .obBrand{width: 100%;height: 6.7rem;position:relative;text-align: center;line-height: 6.7rem;font-size:1.5rem;color:#333;}
+.order .oBox .obBrand:first-of-type{font-size: 1.8rem;}
+.order .oBox .obBrand:after{content:'';width: 100%;height: 0;border-bottom:1px dashed #e1e1e1;position:absolute;left:0;bottom:0;}
+.order .oBox .obBrand span a{color:#333;}
+.order .oBox .obTel{text-align:center;width: 100%;height: 6.7rem;position:relative;text-align: center;line-height: 6.7rem;font-size:1.5rem;color:#333;}
+.order .oBox .obTel input{height:6.7rem;display:inline-block;line-height:120%;width:6.5em;border:none;-webkit-appearance:none;font-size:1.5rem;}
+.order .oBox .obTel span{display: inline-block;}
+.order .oBox .obTel .obtLine{display: inline-block;}
+.order .oBox .cartype {padding:0 1rem;box-sizing:border-box;width:100%;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.obutton{width: 100%;padding:0 2.7rem;}
+.obutton a{width: 100%;height: 4.5rem;background-color:#f60;border-radius:0.4rem;display: block;color:#fff;font-size: 1.8rem;line-height: 4.5rem;text-align: center;}
+/***************************orderdetail**************************/
+
+
+/***************************telcheck**************************/
+section.cpage2{position:fixed;overflow-y:scroll;width: 100%;height: 100%;background-color:#fff;left:0;top:0;}
+.introduce{width: 100%;padding:0 1.7rem;}
+.introduce .iPic{width: 100%;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/checkmobile.png) center center no-repeat;height: 8.3rem;background-size:auto 8.3rem;margin:3rem 0 2rem 0;}
+.introduce .iTip{width: 100%;text-align: center;font-size:1.5rem;color:#999;line-height: 1.8rem;margin:0 0 3.2rem 0;}
+.mobcheck{width: 100%;padding:0 1.7rem;}
+.mobcheck .mBox{width: 100%;border:1px solid #eaeaea;border-radius:0.4rem;background-color:#fff;margin:0 0 4rem 0;}
+.mobcheck .mBox div{width: 100%;height: 4.5rem;position:relative;}
+.mobcheck .mBox input{border-radius:0.4rem;width: 100%;height: 4.5rem;border:none;-webkit-appearance:none;line-height: 120%;padding:0 0 0 1.6rem;}
+.mobcheck .mBox .mbCode:after{content:'';position:absolute;height: 1px;background-color:#e1e1e1;width: 100%;top:0;left:0;}
+.mobcheck .mBox .mbCode{position:relative;}
+.mobcheck .mBox .mbCode span{color:#fff;font-size:1.1rem;top:0.8rem;right:1.6rem;text-align:center;line-height:2.9rem; width: 9.5rem;height: 2.9rem;border-radius:0.4rem;background-color:#f60;display: block;position:absolute;}
+.mobcheck .mBox .mbCode span.mbcPiccode{background-color:#fff;}
+.mobcheck .mBox .mbCode span img{width: 100%;height: 100%;border-radius:0.4rem;}
+.mobcheck .mBtn a{display:block;width: 100%;height: 4.5rem;background-color:#f60;border-radius:0.4rem;margin:0 0 6rem 0;font-size: 1.8rem;text-align: center;line-height: 4.5rem;color:#fff;}
+/***************************telcheck**************************/
+
+.vFail{width: 100%;padding: 0 10%;position:fixed;top:50%;transform: translate(0,-50%);-moz-transform: translate(0,-50%);-webkit-transform: translate(0,-50%);z-index:102;}
+.vFail .vfTitle{width: 100%;font-size: 2.3rem;color:#f60;position: absolute;text-align: center;top:0;left: 0;line-height: 4rem;margin:1.6rem 0 0 0;}
+.vFail .vfBox{overflow:hidden;width: 100%;border-radius:0.4rem;background-color:#fff;padding: 5.6rem 0 0 0;}
+.vFail .vfBox .vfbTip{height: 7rem;position:relative;width: 100%;padding: 0 0 0 9.5rem;margin: 0 0 3rem 0;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/app/xiaoqi.png) 2rem center no-repeat;background-size: 6.5rem auto;}
+.vFail .vfBox .vfbTip span{line-height: 2rem;font-size: 1.5rem;color:#333;position:absolute;top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);padding:0 2rem 0 0;}
+.vFail .vfBox .vfbBtn{width: 100%;padding: 0 1.4rem;margin: 0 0 2rem 0; }
+.vFail .vfBox .vfbBtn p{width: 100%;height: 4.4rem;background-color:#f60;border-radius:0.4rem;color:#fff;font-size: 1.5rem;text-align: center;line-height: 4.4rem;}
+.vFail .noPay{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/alertclose.png) 0 0 no-repeat;background-size:2.8rem auto;width: 2.8rem;height: 2.8rem;display: block;position: absolute;top:0;left: 100%;margin: -1.4rem 0 0 -1.4rem;}
+
+.vShadow{width: 100%;height: 100%;position:fixed;top:0;left: 0;background: rgba(0,0,0,.5);z-index:9;}
+/****************微信二维码******************/
+.qrCode{position: relative;position: fixed; bottom: 0;height: 220px;border-top: 1px solid #b7b7b7; background-color: #fff;width: 100%; z-index: 99;}
+.qrCode .wx{float: left;width:100%;height: 190px; background-color: #fff;    text-align: center;}
+.qrCode .wx .wxzf_title {display:block; height: 35px;  line-height: 35px;text-align: center;font-size: 1.2rem;}
+.qrCode .wx .wxzf_title span{margin-left:30px;}
+.qrCode .wx .wxzf_title i {float: right;width: 15px;height: 15px;line-height: 15px;cursor: pointer;text-align: center;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/closenav.png) center center no-repeat;background-size: 1.9rem auto;  margin: 10px 25px 0 0px;}
+.qrCode .wx img {    display: inline-block; width: 150px; height:150px; overflow: hidden;}
+.qrCode .wxtext{height: 20px;line-height: 20px; margin: 0 10% 0 10%;   text-align: center;color: #f60; font-size: 1.4rem;}
+
+
+.zhu {width:100%;text-align:center;color:#999;margin-bottom: 6rem;margin-top:2rem;}
+.link4s {width:100%;padding: 0 2.7rem;box-sizing:border-box;margin-top:1.5rem;}
+.link4s a {width:100%;height:4.5rem;line-height:4.5rem;display:inline-block;color:#f60;box-sizing:border-box;border:1px solid #f60;text-align:center;border-radius: 0.4rem;font-size: 1.8rem;}
+.fpage .text {margin-top:1rem;width:100%;text-align:center;font-size:1.5rem;color:#666;height:3rem;line-height:3rem;}

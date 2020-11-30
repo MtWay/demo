@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ padding:0px; font-size: 14px; font-family: "微软雅黑",Arial;color: #666; margin:0; width:100%; background-color:#fff; border:none;}
+p,div,strong,dl,dd,dt,h1,h2,h3,h4,ul,strong,ul,li{ padding: 0; margin: 0;}
+ul,li{list-style:none;}
+img{ border:none;list-style:none;}
+.clear{ clear:both; float:none;}
+a{ text-decoration: none;}
+a:hover{ text-decoration: none;}
+table{ border:none;}
+.cf60{color: #f60 !important;}
+.hide{display: none;}
+
+
+.banner{overflow: hidden;min-height: 800px;background: url(../images/banner-bg-brief.png) no-repeat center top;padding-top: 60px;}
+.banner_head{width:66.7%;margin: 0 auto;overflow: hidden;height: 35px;}
+.left{float: left;}
+.right{float: right;}
+.banner_head_logo{width: 260px;background: url(../images/hxLogo-white.png) no-repeat left;height: 100%;}
+.banner_head_nav{overflow: hidden;}
+.banner_head_nav li{float: left;color:#fff;font-size: 16px;padding: 0 12px;border-right: 1px solid #fff;line-height: 1;margin-top: 8px;cursor: pointer;}
+.banner_head_nav .cur{border: none;}
+.banner_content{width: 66.7%;margin: 74px auto 0;overflow: hidden;}
+.banner_content .phone{float: left;margin: ;width:25%;margin: 0 6% 28px;}
+.user_num{margin: 130px 0 100px;line-height: 1;color: #fff;}
+.user_num h4{font-size: 47px;font-weight: bold;margin-bottom: 32px;}
+.user_num div{font-size: 34.5px;overflow: hidden;}
+#appNum{display: inline-block;height: 43px;line-height: 43px;overflow: hidden;position: relative;}
+#appNum span{float: left;}
+.num{position: relative;width: 20px;float: left;}
+.code_box img{margin-right: 50px;}
+.code_right{padding-top: 55px;line-height: 1;}
+.code_right .title{font-size: 70px;margin-bottom: 20px;}
+.code_right p{color: #fff;font-size: 34px;}
+
+.main1{height: 800px;background: #fff;width:  66.7%;margin: 0 auto;overflow: hidden;}
+.main2{height: 800px;background: #f5f5f5;}
+.main2 .m2{width:  66.7%;margin: 0 auto;}
+.m1,.m2{height: 100%;}
+
+.m1_left,.m2_right{
+width: 510px;
+display:inline-block;
+*display:inline;
+vertical-align:middle;
+}
+
+/*图片容器100%使文字容器一起居中*/
+.m1_right,.m2_left{
+width: 760px;
+display:inline-block;
+*display:inline;
+vertical-align:middle;
+height: 100%;
+text-align: right;
+}
+.m2_left{text-align: left;}
+
+.m1_title,.m2_title{color: #333;font-size: 60px;text-align: center;line-height: 100px;}
+.m1_js,.m2_js{color: #666;font-size: 36px;line-height: 50px;text-align: center;}
+.w530{width: 530px;text-align: left;}
+.vhBox img{display:inline-block;
+*display:inline;
+*float: left;
+vertical-align:middle;}
+.vhBox:after{
+  content:'';
+  width:0px;
+  height:100%;
+  display:inline-block;
+  *display:inline;
+  vertical-align:middle;
+  background: #f00;
+}
+.footer{height: 300px;background: #161616;color: #fff;font-size: 40px;line-height: 300px;text-align: center;}
+.footer img{width: 206px;display: inline-block;*display:inline;margin-right: 50px;vertical-align: middle;}
+.section{position: relative;}
+
+.fixed_box{position: fixed;top: 0;background:#000 ;background:rgba(0,0,0,0.7);width: 100%;z-index: 2;padding: 5px 0;}
+.right_fix{display: none;}
+.scroll .right_fix{display:block;position: fixed;left: 50%;margin-left: 600px;width: 42px;height: 85px;top: 50%;margin-top: -42px;}
+.right_fix .btn{height: 42px;cursor: pointer;}
+.right_fix .show_code{background: url(../images/show-code.png) no-repeat center ;position: relative;margin-bottom: 5px;}
+.show_code .code_boxs{position: absolute;width: 140px;height: 165px;left: -140px;background: #fff;}
+.code_boxs img{width: 120px;margin: 10px auto;display: block;}
+.code_boxs p{text-align: center;color: #000;font-size: 14px;}
+.right_fix .to_top{background: url(../images/top.png) no-repeat center ;}
+
+/*.w1130 .banner_head{width: 1130px;}
+.w1130 .banner_head_nav li{font-size: 14px;}
+.w1130 .banner_content .phone{width: 276px;}
+.w1130 .banner_content {width: 1130px;}
+.user_num h4{font-size: 41px;}
+.code_right .title{font-size: 55px;}
+.code_box img{width: 188px;}
+.m1_title, .m2_title{font-size: 52px;}
+.m1_js, .m2_js{font-size: 30px;}
+.main1{width: 1130px;}
+.m1_left, .m2_right{width: 450px;}
+.m1_right, .m2_left{width:670px ;}
+.vhBox img{transform: scale(0.88);transform-origin: right;}*/

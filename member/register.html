@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>华夏二手车网-会员注册</title>
+		<script type="text/javascript">
+			var STATICSERVER = "http://static.hx2cars.com/resource";
+			var CONTEXTPATH = "";
+			var CODE = "330100";
+		</script>
+		<link href="http://static.hx2cars.com/resource/web/page/common.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/registers.css" />
+		<script type="text/javascript" src="http://static.hx2cars.com/resource/web/common/js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="http://static.hx2cars.com/resource/web/common/js/md5.js"></script>
+		<!--<script type="text/javascript" src="http://static.hx2cars.com/resource/web/common/js/register.js"></script>-->
+		<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#register").click(function(){
+					$("#flow1").addClass("hide");
+					$("#flow2").removeClass("hide");
+					$("#a2,#sp2").addClass("select");
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="register_top">
+			<div class="content">
+				<div class="content_L">
+					<a href="http://www.hx2car.com"><span class="logoReg"></span></a><span class="logo_title">欢迎注册</span></div>
+				<div class="content_R">
+					<p class="login_icon">已有账号了？
+						<a href="/sys/login.htm">立即登录</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="register_flow">
+			<ul class="register_flow_top">
+				<li class="register_flow_label">
+					<a class="select" id="a1"><span class="select" id="sp1">1</span>验证手机号</a>
+				</li>
+				<li class="register_flow_label">
+					<a id="a2"><span id="sp2">2</span>填写公司信息</a>
+				</li>
+				<li class="register_flow_label1 register_flow_label">
+					<a id="a3"><span id="sp3">3</span>完成</a>
+				</li>
+			</ul>
+			<div class="register_flow1 " id="flow1">
+				<div class="register_flow1_L">
+					<p>* 手机号</p><input type="hidden" id="mobile1" name="mobile1" value="" />
+					<p>* 图片验证码</p>
+					<p>* 验证码</p>
+					<p>* 联系人</p>
+				</div>
+				<ul class="register_flow1_R ">
+					<li>
+						<div> <input class="inputbox1" type="text" id="mobile" name="mobile" placeholder="请输入手机号码" /></div>
+
+						<div class="tishi1" id="phoneMsg" style="display:none">电话是客户和您联系的重要方式</div>
+					</li>
+
+					<li>
+						<div> <input class="inputbox3" type="text" id="verifyCode" name="verifyCode" placeholder="请输入验证码" /></div>
+						<div class="Button2" style="display:block;"><img title="点击刷新" src="http://www.hx2car.com/servlet/yzCode.jpg" onclick='javascript:this.src="http://www.hx2car.com/servlet/yzCode.jpg?rnd="+Math.random();'></div>
+						<div class="tishi1" id="verifyMsg" style="display:none">请填写图片验证码</div>
+					</li>
+
+					<li>
+						<div> <input class="inputbox3" type="text" id="mobilecode" name="mobilecode" placeholder="请输入验证码" /></div>
+						<div class="Button2" id="btn" style="display:block;">获取验证码</div>
+						<div class="Button2" id="showBtn" style="display:none;">0秒后再发</div>
+						<div class="tishi1" id="codeMsg" style="display:none">请填写验证码</div>
+					</li>
+					<li>
+						<div> <input class="inputbox1" id="username" name="username" placeholder="请输入联系人姓名" /></div>
+						<div class="tishi1" id="userMsg" style="display:none">建议使用真实姓名，方便联系</div>
+					</li>
+				</ul>
+				<div class="register_flow1_Bot">
+					<div class="Button1" id="register" >下一步</div>
+					<div class="Button11" id="register1" style="display:none;">下一步</div>
+					<div style="font-size: 16px;">
+
+					</div>
+				</div>
+			</div>
+			<div class="register_flow2 hide"  id="flow2">
+				<!--<p class="register_Orange">本页为选填项，可以直接点完成，以后在会员中心修改完善资料。</p>-->
+				<div class="register_flow2_L">
+					<p>* 设置华夏账号</p>
+					<p>* 登录密码</p>
+					<p>* 确认密码</p>
+					<p>* 公司名称</p>
+					<p>* 所选地区</p>
+				</div>
+				<ul class="register_flow2_R">
+					<li>
+						<div><input class="inputbox1" type="text" name="login_name" id="login_name" placeholder="请输入华夏账号"/></div>
+						<div class="tishi1" style="display:none;" id="loginnameMsg">4-20个字母或数字，一旦注册，登录名不可修改</div>
+					</li>
+					<li>
+						<div> <input class="inputbox1" type="password" id="password1" name="password1" placeholder="请输入密码"/></div>
+						<div class="tishi1" style="display:none;" id="passwordMsg">密码由6-20个英文字母（区分大小写）或数字组成</div>
+					</li>
+					<li>
+						<div> <input class="inputbox1" type="password" id="password2" name="password2" placeholder="请输入密码"/></div>
+						<div class="tishi1" style="display:none;" id="passwordMsg2">记得再输一次密码</div>
+					</li>
+					<li><input type="text" id="company" name="company" class="inputbox1" placeholder="请输入公司名称" />
+						<div class="tishi1" style="display:none;" id="companyMsg">请填写公司名称</div>
+					</li>
+					<li>
+						<div class="inputbox2" id="inputpro"><span id="province">选择省份</span>
+							<div class="Popup" id="pro" style="display:none;">
+								<p id="110000">北京市</p>
+								<p id="120000">天津市</p>
+								<p id="130000">河北省</p>
+								<p id="140000">山西省</p>
+								<p id="150000">内蒙古自治区</p>
+								<p id="210000">辽宁省</p>
+								<p id="220000">吉林省</p>
+								<p id="230000">黑龙江省</p>
+								<p id="310000">上海市</p>
+								<p id="320000">江苏省</p>
+								<p id="330000">浙江省</p>
+								<p id="340000">安徽省</p>
+								<p id="350000">福建省</p>
+								<p id="360000">江西省</p>
+								<p id="370000">山东省</p>
+								<p id="410000">河南省</p>
+								<p id="420000">湖北省</p>
+								<p id="430000">湖南省</p>
+								<p id="440000">广东省</p>
+								<p id="450000">广西壮族自治区</p>
+								<p id="460000">海南省</p>
+								<p id="500000">重庆市</p>
+								<p id="510000">四川省</p>
+								<p id="520000">贵州省</p>
+								<p id="530000">云南省</p>
+								<p id="540000">西藏自治区</p>
+								<p id="610000">陕西省</p>
+								<p id="620000">甘肃省</p>
+								<p id="630000">青海省</p>
+								<p id="640000">宁夏回族自治区</p>
+								<p id="650000">新疆维吾尔族自治区</p>
+							</div>
+						</div>
+						<div class="inputbox2" id="inputcy"><span id="city">选择城市</span>
+							<div class="Popup" style="display:none;" id="cy">
+							</div>
+						</div>
+						<div class="inputbox2" id="inputarea"><span id="area">选择地区</span>
+							<div class="Popup" style="display:none;" id="ar">
+							</div>
+						</div>
+						<div class="tishi1" id="areaMsg" style="display:none"></div>
+					</li>
+					<!--<li><input type="text" id="address" name="address" class="inputbox1" placeholder="请输入公司地址（选填）"/></li>
+               <li><input type="text" id="phone" name="phone" class="inputbox1" placeholder="请输入电话号码（选填）"/></li>
+               <li><textarea class="inputbox4" name="shotintroduction" id="introduction"></textarea></li>-->
+				</ul>
+				<div class="clear">
+					
+				</div>
+				<p class="deal"><input type="checkbox" name="checkbox" id="checkbox1" checked="checked"/><label for="checkbox1">同意《华夏二手车网服务协议》</label></p>
+				
+				<div class="Button1" id="btn2">立即注册</div>
+			</div>
+			<div class="register_flow3 "  id="flow3">
+				<div class="register-success ">
+				<img src="images/success.png"/>
+				<h3>恭喜您，注册成功！</h3>
+				<p>登录名：<span class="logName">华夏二手车</span>，请妥善保管</p>
+			</div>
+				<div class="Button3" id="btn3" onclick="javascript:location.href='/sys/login.htm'">登录会员中心</div>
+			</div>
+		</div>
+		<div class="bottom_ad">
+			<p>
+			</p>
+		</div>
+		<div class="bottom" style="height:100px">
+			<div class="bottom_al">
+
+				<div class="bottom_nav">
+					<p class="net_nav">
+						<a class="gray12s6" href="/help/nabout.htm" target="_blank">关于我们</a> |
+						<a class="gray12s6" href="/help/link.htm" target="_blank">友情链接</a> |
+						<a class="gray12s6" href="/help/nad.htm" target="_blank">广告指南</a> |
+						<a class="gray12s6" href="/help/nbenefit.htm" target="_blank">服务指南</a> |
+						<a class="gray12s6" href="/help/nbenefit.htm#pro" target="_blank">帮助中心</a> |
+						<a class="gray12s6" href="/topgradecar/citynavigation.htm" target="_blank">地区导航</a> |
+						<a class="gray12s6" href="http://auto.hx2car.com/" target="_blank">资讯中心</a> |
+						<a class="gray12s6" href="/help/npay.htm" target="_blank">联系我们</a>
+					</p>
+					<p>服务信箱：kf@hx2car.cn 联系电话：0571-88212994 QQ群：41281177</p>
+					<p>Copyright © 2003-2016 版权所有
+						<a href="http://www.hx2car.com" target="_blank">hx2car.com</a> 浙ICP备05000595号</p>
+					<p>增值电信业务经营许可证: 浙B2-20120219</p>
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var _hmt = _hmt || [];
+
+			(function() {
+
+				var hm = document.createElement("script");
+
+				hm.src = "//hm.baidu.com/hm.js?5b941f460f2ec63730c9f325ba44961f";
+
+				var s = document.getElementsByTagName("script")[0];
+
+				s.parentNode.insertBefore(hm, s);
+
+			})();
+		</script>
+	</body>
+
+</html>

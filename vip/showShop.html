@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网上门店预览</title>
+		<link rel="stylesheet" type="text/css" href="css/showShop.css" />
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var cw = document.documentElement.clientWidth;
+			var ch = document.documentElement.clientHeight;
+			if(cw > 1242) {
+				cw = 1242;
+			}
+			document.getElementsByTagName("html")[0].style.fontSize = 20 * (cw / 621) + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<span class="dot">网上门店预览</span>
+		</div>
+		<section>
+			<div class="box halfBorder">
+				<h3 class="title">
+				<span class="center">APP门店</span>
+			</h3>
+			<div class="imgBox halfBorder">
+				<img src="img/shop1.jpg"/>
+			</div>
+			</div>
+		</section>
+		<section>
+			<div class="box halfBorder">
+				<h3 class="title">
+				<span class="center">WAP门店</span>
+			</h3>
+			<div class="imgBox halfBorder">
+				<img src="img/shop2.jpg"/>
+			</div>
+			</div>
+		</section>
+		<section>
+			<div class="box halfBorder">
+				<h3 class="title">
+				<span class="center">PC门店</span>
+			</h3>
+			<div class="imgBox halfBorder">
+				<img src="img/shop3.jpg"/>
+			</div>
+			</div>
+		</section>
+	</body>
+</html>

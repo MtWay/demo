@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>黏黏球</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{
+				/*background: #ccc;*/
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				padding: 100px;
+				  -webkit-filter:contrast(10);
+				  background: #fff;
+			}
+			.box div{
+				/*-webkit-filter:blur(5px);*/
+				/*padding:10px;*/
+			}
+			.black{
+				width: 100px;
+				height: 100px;
+				background: #000000;
+				border-radius:50% ;
+				-webkit-filter:blur(5px);
+			}
+			.red{
+				width: 50px;
+				height: 50px;
+				background: #f00;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -25px;
+				animation: name 5s infinite ;
+				-webkit-filter:blur(5px);
+			}
+			@keyframes name{
+				50%{left: 250px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="black"></div>
+			<div class="red"></div>
+		</div>
+	</body>
+</html>

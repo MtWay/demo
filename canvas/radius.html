@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>压缩宽度，不影响radius角度</title>
+		<style type="text/css">
+			.square {
+    position: relative;
+    height: 100px;
+}
+
+.left,
+.center,
+.right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.left { background: red }
+.center { background: blue }
+.right { background: green }
+
+
+/* we need room for a 20 pixel border radius (on one side) */
+.left,
+.right { width: 20px }
+
+.left { border-radius: 20px 0 0 20px }
+.right { border-radius: 0 20px 20px 0 }
+
+
+/* child layout definitions */
+.center {
+    /* center needs to be 20 pixels from the left, 
+    so it doesn't overlap with the .left element */
+    left: 20px;
+    /* needs a width of 1 pixel, this causes 
+    scaleX(60) is equal to 60 pixels */
+    width: 1px;
+    /*transform: scaleX(60);*/
+
+    /* we need to scale the texture from the left side 
+    for it to align correctly, default is center */
+    transform-origin: left;
+}
+
+.right {
+    /* we need to move the right element to align with
+    the right side of the .center element 
+    20px + 60px = 80px */
+    transform: translateX(80px);
+}
+.center {
+    animation: center-animate 1s ease infinite alternate;
+}
+
+.right {
+    animation: right-animate 1s ease infinite alternate;
+}
+
+@keyframes right-animate {
+    0% { transform: translateX(140px) }
+    100% { transform: translateX(20px) }
+}
+
+@keyframes center-animate {
+    0% { transform: scaleX(120) }
+    100% { transform: scaleX(1) } 
+    /*不设置1px会有一条细线在右侧飘*/
+}
+.box{
+	width: 100px;
+	height: 100px;
+	border-radius:20px;
+    animation: box-animate 1s ease infinite alternate;
+    background: #f60;
+    transform-origin: left;
+    position: relative;
+}
+@keyframes box-animate {
+    0% { transform: scaleX(1.6) }
+    100% { transform: scaleX(0.4) } 
+    /*不设置1px会有一条细线在右侧飘*/
+}
+		</style>
+	</head>
+	<body>
+		<div class="square">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+</div>
+    <div class="box">
+    	
+    </div>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@import url("https://fonts.googleapis.com/css?family=Lobster");
+body {
+  background: #111;
+  text-align: center;
+}
+
+p {
+  display: inline;
+  font-family: "Lobster";
+  text-align: center;
+  font-size: 20vmin;
+  line-height: 40vmin;
+  color: #fff;
+  cursor: pointer;
+}
+p:hover {
+  color: #fff;
+}
+
+.pink {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e91e63, 0 0 35px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63, 0 0 75px #e91e63;
+  -webkit-animation: pink 1.5s ease-in-out infinite alternate;
+          animation: pink 1.5s ease-in-out infinite alternate;
+}
+
+.orange {
+  color: #ff5722;
+}
+
+.orange:hover {
+  -webkit-animation: orange 1.5s ease-in-out infinite alternate;
+          animation: orange 1.5s ease-in-out infinite alternate;
+}
+
+.yellow {
+  color: #ffeb3b;
+}
+
+.yellow:hover {
+  -webkit-animation: yellow 1.5s ease-in-out infinite alternate;
+          animation: yellow 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes pink {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #e91e63, 0 0 70px #e91e63, 0 0 80px #e91e63, 0 0 100px #e91e63, 0 0 150px #e91e63;
+  }
+}
+
+@keyframes pink {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #e91e63, 0 0 70px #e91e63, 0 0 80px #e91e63, 0 0 100px #e91e63, 0 0 150px #e91e63;
+  }
+}
+@-webkit-keyframes orange {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff5722, 0 0 70px #ff5722, 0 0 80px #ff5722, 0 0 100px #ff5722, 0 0 150px #ff5722;
+  }
+  from {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  }
+}
+@keyframes orange {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff5722, 0 0 70px #ff5722, 0 0 80px #ff5722, 0 0 100px #ff5722, 0 0 150px #ff5722;
+  }
+  from {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  }
+}
+@-webkit-keyframes yellow {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffeb3b, 0 0 70px #ffeb3b, 0 0 80px #ffeb3b, 0 0 100px #ffeb3b, 0 0 150px #ffeb3b;
+  }
+  from {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffeb3b, 0 0 35px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 75px #ffeb3b;
+  }
+}
+@keyframes yellow {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffeb3b, 0 0 70px #ffeb3b, 0 0 80px #ffeb3b, 0 0 100px #ffeb3b, 0 0 150px #ffeb3b;
+  }
+  from {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffeb3b, 0 0 35px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 75px #ffeb3b;
+  }
+}
+		</style>
+	</head>
+	<body>
+	<div>
+    <p class="pink">PINK</p>
+</div>
+<div>
+    <p class="orange">Box-Shadow</p>
+</div>
+<div>
+    <p class="yellow">YELLOW</p>
+</div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input type="text" name="num" id="num" value="" />
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+//				$("#num").keyup(function() {
+//					if("-".indexOf($(this).val())>=0)
+//					$(this).val($(this).val().replace("-", ""));
+//				})
+$("#num").change(function(){
+	console.log($(this).val())
+})
+$("body").click(function(){
+	console.log(1)
+	$("#num").val(123)
+})
+			})
+		</script>
+	</body>
+
+</html>

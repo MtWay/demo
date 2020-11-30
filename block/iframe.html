@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>  
+    #ifr { border-width: 0;opacity: 0; transition: .5s;};  
+  </style>  
+	</head>
+	<body>
+		<iframe src="http://www.hx2car.com/"></iframe>
+		<iframe src="http://m.hx2car.com/"></iframe>
+		  <div>   
+    <button id="google">Google</button>  
+    <button id="yahoo">Yahoo</button>  
+    <button id="jcluo">Jcluo</button>  
+  </div>  
+  <iframe id="ifr" ></iframe>  
+		<script type="text/javascript">
+			var ifr = document.querySelector('#ifr');  
+  
+ifr.onload = function () {  
+  if (this.getAttribute('is-reset') == '1') {  
+    this.style.opacity = 0;  
+    this.style.display = 'block';  
+    this.contentDocument.write("Can't not load Web");  
+    var url = this.getAttribute('src-url');  
+    this.setAttribute('src', url);  
+    this.setAttribute('is-reset',0);  
+  } else {  
+    this.style.opacity = '1';    
+  }  
+    
+};  
+  
+function changeUrl(url) {  
+  ifr.style.display = 'none';  
+  ifr.setAttribute('is-reset',1);  
+  ifr.setAttribute('src', 'about:blank');  
+    
+  ifr.setAttribute('src-url', url);  
+    
+}  
+  
+document.querySelector('#google').onclick = function () {  
+  changeUrl('http://www.google.com');  
+}  
+  
+document.querySelector('#yahoo').onclick = function () {  
+  changeUrl('http://www.yahoo.com');  
+}  
+  
+document.querySelector('#jcluo').onclick = function () {  
+  changeUrl('http://m.hx2car.com');  
+}  
+		</script>
+	</body>
+</html>

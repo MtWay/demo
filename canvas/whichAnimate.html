@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>监听动画结束动画</title>
+		<style type="text/css">
+			div{width: 100px;height: 100px;background: #f00;transition:all 2s linear;}
+			.gray{background: #ccc;}
+			.blue{background: #0f0;}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="fakeelement">
+			
+		</div>
+		<div class="fakeelementa">
+			
+		</div>
+		<script type="text/javascript">
+		$(function(){
+			$(document).click(function(){
+				$(".fakeelement").addClass("gray")
+			})
+			$("div").click(function(){
+				$(this).addClass("blue")
+			})
+			$(".fakeelement").on('transitionend',function(){
+				console.log(1)
+			})
+						$(".fakeelementa").on(whichTransitionEvent(),function(){
+				console.log(2)
+			})
+		})
+			/* 探测浏览器种类 */
+function whichTransitionEvent(){
+    var t;
+    var el = document.createElement('fakeelements');
+    console.log(el)
+    var transitions = {
+      'transition':'transitionend',//动画结束事件
+      'OTransition':'oTransitionEnd',
+      'MozTransition':'transitionend',
+      'WebkitTransition':'webkitTransitionEnd'
+    }
+
+    for(t in transitions){
+    	console.log(el.style[t])
+        if( el.style[t] !== undefined ){
+            return transitions[t];
+        }
+    }
+}
+
+///* 监听变换事件! */
+var e = $(".fakeelement")[0]
+//var transitionEvent = whichTransitionEvent();
+//transitionEvent && e.addEventListener(transitionEvent, function() {
+//	console.log('Transition complete!  This is the callback, no library needed!');
+//});
+		</script>
+	</body>
+</html>

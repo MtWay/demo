@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>三体</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+			
+			canvas {
+				background: #033;
+				display: block;
+				margin: 0 auto;
+				height: 100%;
+				width: 100%;
+			}
+			/*div{display: none;}*/
+		</style>
+	</head>
+
+	<body>
+		<canvas id="can"></canvas>
+
+		<script type="text/javascript">
+			stats = new Stats();
+
+			stats.setMode(0);
+
+			stats.domElement.style.position = 'absolute';
+
+			stats.domElement.style.right = '0px';
+
+			stats.domElement.style.top = '0px';
+
+			document.body.appendChild(stats.domElement);
+			$(function() {
+				var len = 100;
+				var canvas = document.getElementById('can');
+				var context = canvas.getContext('2d'),
+					r = 2,
+					map = [],
+					deg = 1,
+					degx = 1,
+					degy = 1;
+				context.fillStyle = "#fff";
+				$(canvas).height($(window).height())
+				canvas.width = $(canvas).width();
+				canvas.height = $(canvas).height();
+
+				//			dot()
+				//点实例
+				function dot(obj) {
+					var w = $(canvas).width();
+					var h = $(canvas).height();
+					var v = 5;
+					console.log(w);
+					var x = Math.random() * w;
+					var y = Math.random() * h;
+					var vx = ''; //x轴运动方向；
+					var vy = ""; // y轴运动方向
+					if(Math.random() < 0.5) {
+						vx = "-";
+					}
+					if(Math.random() < 0.5) {
+						vx = "-";
+					}
+
+					var defaults = {
+						x: x,
+						y: y,
+						w: 15,
+						h: 15,
+						vx: Number(vx + Math.random() * v),
+						vy: Number(vy + Math.random() * v),
+						r: 2,
+						track: [],//轨迹数组
+						tracklen: 2 //轨迹长度
+					}
+
+					var opt = $.extend(defaults, obj);
+					return opt;
+
+				}
+
+				var dots = [];
+				var black = [];
+				for(var i = 0; i < len; i++) {
+					dots.push(dot());
+				}
+				//			var  kk = 1;
+				var kx = canvas.width;
+				var ky = canvas.height;
+				var air = 0.01;
+
+				loop();
+
+				function loop() {
+					resize()
+					//画黑洞
+					var blacklen = black.length || 0;
+					for(var k = 0; k < blacklen; k++) {
+						context.beginPath();
+						context.fillStyle = "#000";
+//						context.shadowOffsetX = 10;
+//						context.shadowOffsetY = 10;
+						context.shadowColor = 'rgb(255,255,255)';
+						context.shadowBlur = '8';
+						context.arc(black[k].x, black[k].y, black[k].r, 0, Math.PI * 2, true);
+						context.fill();
+						context.closePath()
+					}
+					for(var i = 0; i < len; i++) {
+
+						//				context.fillRect(dots[i].x,dots[i].y,dots[i].w,dots[i].h);
+						//被吸引
+						for(var k = 0; k < blacklen; k++) {
+							//					console.log(black[k].x-dots[i].x)
+							//					if(black[k].x-dots[i].x>0){ 
+							//						dots[i].vx+=kk;
+							//					}else{
+							//						dots[i].vx-=kk;
+							//					}
+							//					
+							//					if(black[k].y-dots[i].y>0){
+							//						dots[i].vy+=kk;
+							//					}else{
+							//						dots[i].vy-=kk;
+							//					}
+							var dx = black[k].x - dots[i].x;
+							var dy = black[k].y - dots[i].y;
+							var ck = Math.sqrt(dx*dx+dy*dy)//距离
+							var dv = 50/ck;
+							if(dv>black[k].g)dv=black[k].g;
+							if(dv<black[k].g)dv=black[k].g;
+							
+//							dots[i].vx += ((black[k].x - dots[i].x) / kx);
+//							dots[i].vy += ((black[k].y - dots[i].y) / ky);
+if(dx>0){
+	dots[i].vx += dv;
+}else{
+	dots[i].vx -= dv;
+}
+if(dy>0){
+	dots[i].vy += dv;
+}else{
+	dots[i].vy -= dv;
+}
+//							dots[i].vy += ;
+
+							//				context.beginPath();
+							//				context.fillStyle="#000";
+							//					context.arc(black[k].x,black[k].y,black[k].r,0,Math.PI*2,true);
+							//				context.fill();
+						}
+
+						//画轨迹
+						var trackLen = dots[i].track.length;
+						for(var j = 0; j < trackLen; j++) {
+							context.beginPath();
+							context.fillStyle = "#fff";
+							context.arc(dots[i].track[j].x, dots[i].track[j].y, dots[i].r * j / trackLen, 0, Math.PI * 2, true);
+							context.fill();
+						}
+
+						//画点
+						context.beginPath();
+						context.arc(dots[i].x, dots[i].y, dots[i].r, 0, Math.PI * 2, true);
+						context.fill();
+						dots[i].track.push({
+							x: dots[i].x,
+							y: dots[i].y
+						}) //增加轨迹动画
+						if(dots[i].track.length > dots[i].tracklen) {
+							dots[i].track.shift();
+						}
+
+						//				x轴变化
+
+						dots[i].x += Number(dots[i].vx);
+						if(blacklen > 0) {
+							//					debugger
+						}
+						if(dots[i].x > canvas.width || dots[i].x < 0) {
+							dots[i].vx = -dots[i].vx;
+						}
+
+						//				y轴变化
+						dots[i].y += Number(dots[i].vy);
+						if(dots[i].y > canvas.height || dots[i].y < 0) {
+							dots[i].vy = -dots[i].vy;
+						}
+
+						//速度缩减
+						if(Math.abs(dots[i].vx) > 10) {
+							dots[i].vx *= 0.99;
+						}
+						if(Math.abs(dots[i].vy) > 10) {
+							dots[i].vy *= 0.99;
+						}
+
+						//			dots[i].vx*=0.99;
+						//			dots[i].vy*=0.99;
+						//			if(dots[i].vx>0){
+						//				dots[i].vx-=air;
+						//				if(dots[i].vx<1){
+						//					dots[i].vx=1;
+						//				}
+						//			}else{
+						//				dots[i].vx+=air;
+						//				if(dots[i].vx>-1){
+						//					dots[i].vx=-1;
+						//				}
+						//			}
+
+						//						if(dots[i].vy>0){
+						//				dots[i].vy-=air;
+						//				if(dots[i].vx<1){
+						//					dots[i].vx=1;
+						//				}
+						//			}else{
+						//				dots[i].vy+=air;
+						//				if(dots[i].vx>-1){
+						//					dots[i].vx=-1;
+						//				}
+						//			}
+					}
+
+					stats.update();
+					requestAnimationFrame(loop);
+
+				}
+
+				//			document.onmouseup=function(oEvent) {
+				window.oncontextmenu = function(oEvent) {
+					oEvent.preventDefault()
+					black.shift()
+				}
+
+				//调整画布尺寸
+				function resize() {
+					w = $("canvas").width();
+					h = $("canvas").height();
+					$("canvas").attr({
+						width: w,
+						height: h
+					});
+				}
+
+				//增加黑洞
+				$("#can").click(function(e) {
+					var x = e.clientX;
+					var y = e.clientY;
+					if(!flag)
+					black.push({
+						x: x,
+						y: y,
+						r: 20,
+						g: 1
+					})
+					
+					console.log(black)
+				})
+					var flag= false,bindex=-1;
+				$("#can").on("mousedown",function(e){
+					var x = e.clientX;
+					var y = e.clientY;
+					black.map(function(i,n){
+						var dx = i.x-x;
+						var dy = i.y-y;
+						console.log(dx,dy)
+						if(dx*dx+dy*dy<i.r*i.r){//点到某个球上
+							flag=true;
+							bindex=n;//当前点到那个球
+						}
+					})
+				})
+				$("#can").on("mousemove",function(e){
+					var x = e.clientX;
+					var y = e.clientY;
+					if(flag && bindex>=0){
+						black[bindex].x=x
+						black[bindex].y=y
+					}
+				})
+				
+				$("#can").on("mouseup",function(e){
+					setTimeout(function(){
+						flag=false;
+					})
+					bindex=-1;
+				})
+				
+
+			})
+		</script>
+	</body>
+
+</html>

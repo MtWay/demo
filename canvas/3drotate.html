@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>3d旋转</title>
+		<style type="text/css">
+		body{
+			overflow: hidden;
+		}
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			canvas {
+				width: 100%;
+				height: 100vh;
+				background: #000;
+			}
+			
+			div {
+				display: none;
+			}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<canvas id="can" width="" height=""></canvas>
+		<script type="text/javascript">
+			$(function() {
+				var canvas = document.getElementById("can");
+				var ctx = canvas.getContext("2d");
+				var w = $("#can").width();
+				resize();
+
+
+
+				function resize() {
+					$("#can").attr({
+						"width": $("#can").width(),
+						"height": $("#can").height(),
+					})
+				}
+
+				ctx.strokeStyle = "#fff";
+				ctx.moveTo(100, 100);
+				ctx.lineTo(1000, 100);
+				ctx.stroke();
+
+				var flag = 0; //是否开始绘制
+				var start = [];
+				var first = 1;
+				var arr = [];
+				var ry = 0;
+				init();
+				function init() {
+//					for(var i = -Math.floor(w / 4); i++; i < w / 4) {
+//						var k = (1/i)*(1/i);
+//						var a = 1;
+//						var b = -Math.pow(k,1/3)*2;
+//						var c = k+Math.pow(k,1/3)*Math.pow(k,1/3)-1;
+//						var y=(-b-Math.pow(b*b-4*a*c,0.5))/(2*a);
+////						var y = 
+//						
+//						
+//						start.push({
+//							x: i,
+//							y:y ,
+//							z: 0,
+//
+//						})
+//					}
+					//心形曲线
+					for(var i =0.1;i<10;i+=0.1){
+						var a = 10;
+						start.push({
+							x: a*(2*Math.cos(i)-Math.cos(2*i))*5,
+							y: a*(2*Math.sin(i)-Math.sin(2*i))*5 ,
+							z: 0,
+						})
+					}
+					
+					for(var i =0;i<100;i++){
+						var a = -Math.PI/2;//逆时针转90度
+//						start.push({
+//							x: a*(2*Math.cos(i)-Math.cos(2*i))*5,
+//							y:400+a*(2*Math.sin(i)-Math.sin(2*i))*5 ,
+//							z: 0,
+//						})
+						var x = start[i].x;
+						var y = start[i].y;
+						start[i].x=Math.cos(a)*x-Math.sin(a)*y;
+						start[i].y=400+Math.cos(a)*y+Math.sin(a)*x;
+					}
+					console.log(start)
+					arr=start;
+
+				}
+
+				$("#can").on({
+					"mousemove": function(e) {
+						if(flag) {
+							arr.push({
+								x: e.clientX - w / 2,
+								y: e.clientY,
+								z: 0,
+
+							})
+						}
+
+					},
+					"mousedown": function(e) {
+						if(first) {
+							arr = [];
+						}
+						first = 0;
+						flag = 1;
+						arr.push({
+							x: e.clientX - w / 2,
+							y: e.clientY,
+							z: 0,
+							flag: 1,
+
+						})
+					},
+					"touchmove": function(e) {
+						if(flag) {
+							arr.push({
+								x: e.originalEvent.changedTouches[0].clientX - w / 2,
+								y: e.originalEvent.changedTouches[0].clientY,
+								z: 0,
+
+							})
+						}
+
+					},
+					"touchstart": function(e) {
+												if(first) {
+							arr = [];
+						}
+						first = 0;
+						flag = 1;
+						arr.push({
+							x: e.originalEvent.changedTouches[0].clientX - w / 2,
+							y: e.originalEvent.changedTouches[0].clientY,
+							z: 0,
+							flag: 1,
+
+						})
+					}
+				})
+
+				$(document).mouseup(function() {
+					console.log(1)
+					flag = 0;
+				})
+
+				loop();
+
+				function loop() {
+					resize();
+					var len = arr.length;
+					//					ry+=Math.PI/1800;
+//					console.log(ry)
+//					console.log(len)
+					for(var i = 0; i < len; i++) {
+
+						var x = arr[i].x;
+						var z = arr[i].z;
+						if(i == 2)
+						//						console.log(z)
+							var deg = Math.PI / 180;
+						arr[i].x = z * Math.sin(deg) + x * Math.cos(deg);
+						arr[i].z = z * Math.cos(deg) - x * Math.sin(deg);
+
+						if(i == 0) {
+							continue;
+						}
+						if(arr[i].flag) {
+							continue;
+						}
+						ctx.beginPath();
+						ctx.strokeStyle = "rgba(255,0,0," + Math.abs(arr[i].z) + ")";
+						ctx.fillStyle = "#fff";
+						ctx.lineWidth = 3;
+						ctx.moveTo(arr[i - 1].x + w / 2, arr[i - 1].y);
+						ctx.lineTo(arr[i].x + w / 2, arr[i].y);
+						//						ctx.arc(arr[i].x, arr[i].y,5,Math.PI*2,0,true)
+						ctx.stroke();
+						//						ctx.fill()
+
+					}
+
+					requestAnimationFrame(loop);
+				}
+			})
+		</script>
+	</body>
+
+</html>

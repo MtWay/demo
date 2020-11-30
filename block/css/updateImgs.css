@@ -1,0 +1,482 @@
+.model {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999999;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#showImg {
+	width: 300px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.editBox {
+	width: 800px;
+	position: fixed;
+	background: #fff;
+	left: 50%;
+	margin-left: -400px;
+	z-index: 1;
+	border-radius: 5px;
+	top: 50%;
+	margin-top: -320px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.canvasBox {
+	height: 450px;
+	background: #f3f3f3;
+	position: relative;
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #f3f3f3;
+}
+
+.editBox canvas {
+	display: block;
+	background: #e1e1e1;
+	position: absolute;
+}
+
+.editBox h3 {
+	line-height: 50px;
+	height: 50px;
+	font-size: 18px;
+	padding: 0 20px;
+	position: relative;
+	color: #333;
+}
+
+.model .close {
+	width: 20px;
+	position: absolute;
+	right: 25px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.model .close:after,
+.model .close:before {
+	width: 2px;
+	height: 20px;
+	transform: rotate(45deg);
+	display: block;
+	content: "";
+	background: #666;
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+
+.model .close:after {
+	transform: rotate(-45deg);
+	position: relative;
+}
+
+.editList {
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	border-top: none;
+	box-sizing: border-box;
+	padding: 0 97px 0 0;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+
+.editBtn {
+	width: 100px;
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	padding: 6px 0;
+	position: relative;
+	z-index: 1;
+	background: #fff;
+}
+
+.editBtn:hover {
+	background: #f3f3f3;
+	color: #555;
+}
+
+.editBtn i {
+	display: block;
+	margin: 5px auto;
+	font-size: 20px;
+}
+
+.save_btn {
+	background: #f60;
+	color: #fff;
+	border-radius: 3px;
+	margin: 0 auto;
+	width: 100px;
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+	margin: 20px auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.editList .edit_select {
+	background: #333;
+	color: #fff;
+}
+
+.editList .msk_size {
+	height: 60px;
+	width: 100px;
+	right: 100px;
+	position: absolute;
+	background: #fff;
+	bottom: 1px;
+	color: #555;
+}
+
+.editList .msk_size .size {
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.editList .msk_size .size:hover {
+	background: #eee;
+}
+
+.editList .msk_size .size_select {
+	background: #eee;
+}
+
+.size:after {
+	display: block;
+	content: "";
+	width: 5px;
+	height: 5px;
+	background: #555;
+	position: absolute;
+	left: 15px;
+	top: 7px;
+	border-radius: 50%;
+}
+
+.size2:after {
+	width: 8px;
+	height: 8px;
+	top: 6px;
+	left: 13px;
+}
+
+.size3:after {
+	width: 10px;
+	height: 10px;
+	top: 5px;
+	left: 12px;
+}
+
+.pbrflrbUpload label {
+	display: block;
+	background: #fff;
+	cursor: pointer;
+}
+
+.pbrflrbUpload .icon-add {
+	background: url(../images/icon-add.png) no-repeat center;
+	display: block;
+	width: 80px;
+	height: 60px;
+	margin: 20px auto;
+}
+
+#skew {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 2px dashed #f00;
+	cursor: move;
+}
+
+#radius {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 1px solid #f00;
+	position: absolute;
+	cursor: inherit;
+}
+
+.gray {
+	background: #ccc;
+}
+
+#upBtn {
+	position: absolute;
+}
+
+.hide {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.viewbox {
+	overflow: hidden;
+	text-align: left;
+	position: relative;
+}
+
+.viewli {
+	float: left;
+	margin-right: 14px;
+	position: relative;
+	width: 160px;
+	height: 166px;
+	border: 2px dashed transparent;
+	list-style: none;
+}
+
+.viewli p {
+	height: 48px;
+	line-height: 48px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.viewli p.pFont {
+	padding: 12px 11px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+}
+
+.viewli p em {
+	margin: 0 3px;
+	cursor: pointer;
+}
+
+.viewli .pPhoto {
+	width: 160px;
+	height: 120px;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 0px;
+	border: 1px solid #ccc;
+}
+
+.viewli .pPhoto img {
+	width: 160px;
+	height: 120px;
+	cursor: move;
+}
+
+.viewli .pPhoto .closed {
+	cursor: pointer;
+	position: absolute;
+	right: 3px;
+	top: 5px;
+	background: url(http://static.hx2cars.com/resource/web/member_new/images/closed.png) no-repeat;
+	width: 15px;
+	height: 15px;
+	background-size: 15px;
+}
+
+.viewli .pPhoto .cover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	;
+	width: 19px;
+	height: 19px;
+	line-height: 19px;
+	background-color: #FF6600;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+.viewli p.bg {
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 160px;
+	margin-bottom: 0;
+	height: 120px;
+	background-color: #000;
+	opacity: 0.5;
+}
+
+.viewli p.bg img {
+	width: 30px;
+	margin: 45px auto 0 auto;
+}
+
+.viewli .pPhoto .hidebg {
+	position: absolute;
+	bottom: -30px;
+	left: 0px;
+	width: 91px;
+	height: 24px;
+	background-color: #000;
+	opacity: 0.4;
+}
+
+.viewli .pPhoto .hide {
+	position: absolute;
+	bottom: -30px;
+	left: 0px;
+	width: 91px;
+	height: 24px;
+	line-height: 24px;
+	color: #fff;
+	z-index: 1;
+}
+
+.viewli .pPhoto .hide a {
+	color: #fff;
+}
+
+.viewli .pPhoto .hide a:hover {
+	text-decoration: underline;
+}
+
+.viewli .pPhoto .pDelete {
+	cursor: pointer;
+	position: absolute;
+	right: 3px;
+	top: 5px;
+	background: url(http://static.hx2cars.com/resource/web/member_new/images/closed.png) no-repeat;
+	width: 15px;
+	height: 15px;
+	background-size: 15px;
+}
+
+.viewli .pPhoto .pCover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	;
+	width: 33px;
+	height: 33px;
+	line-height: 19px;
+	background-color: #FF6600;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	background: url(http://static.hx2cars.com/resource/web/member_new/images/index_pic.png) no-repeat;
+}
+
+.viewli .pPhoto .pGotop {
+	width: 100%;
+	height: 24px;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, .6);
+	line-height: 24px;
+	font-size: 12px;
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.viewli .pFont span {
+	float: left;
+	width: 53px;
+	height: 21px;
+	margin-top: 12px;
+	border: 1px solid #a6a6a6;
+	margin: 0 7px;
+	cursor: pointer;
+	line-height: 20px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.viewli .pFont span:hover {
+	background-color: #f60;
+	color: #fff;
+	border: 1px solid #f60;
+}
+.viewli .pFont .percentage{display: inline;float: none;border: none;background: transparent;position: relative;color: #fff;}
+.viewli .pFont .percentage:hover{background-color:transparent;border: none;color: #555;}
+
+
+.pFont .jd-bg {
+	position: absolute;
+	z-index: 0;
+	background: #f60;
+	width: 0;
+	height: 40%;
+	left: 0;
+	top: 25%;
+	/*border: 1px solid #f60;*/
+	border-radius: 15px;
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+	animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+
+@-webkit-keyframes animate-positive {
+	0% {
+		width: 0;
+	}
+}
+
+@keyframes animate-positive {
+	0% {
+		width: 0;
+	}
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0
+	}
+	to {
+		background-position: 0 0
+	}
+}
+
+@-o-keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0
+	}
+	to {
+		background-position: 0 0
+	}
+}
+
+@keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0
+	}
+	to {
+		background-position: 0 0
+	}
+}

@@ -1,0 +1,354 @@
+@charset "utf-8";
+body,
+button,
+input,
+select,
+textarea {
+	font-size: 12px;
+	font-family: "微软雅黑", Verdana;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+iframe,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset,
+img,
+iframe,
+button {
+	border: 0;
+	text-decoration: none;
+}
+
+*:focus {
+	outline: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+header,
+footer,
+article,
+section,
+nav {
+	display: block;
+}
+
+a {
+	outline: none;
+	/* for Forefox */
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a {
+	star: expression(this.onFocus=this.blur());
+	/* for Ie*/
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+img {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+body {
+	color: #444;
+}
+
+a {
+	color: #444;
+}
+
+/*.wrap {
+	width: 1350px;
+	margin: 0 auto;
+}*/
+
+.banner img {
+	width: 100%;
+}
+
+.content {
+	border: 1px solid #ccc;
+}
+
+.tabBox li {
+	width: 33.33333%;
+	float: left;
+	border-bottom: 1px solid #ccc;
+	height: 80px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 80px;
+	cursor: pointer;
+}
+
+.right_border:after {
+	content: "";
+	display: block;
+	height: 100%;
+	float: right;
+	border-right: 1px solid #ccc;
+}
+
+.tabBox .cur,
+.tabBox li:hover {
+	border-bottom: none;
+	background: #f6f6f6;
+	height: 81px;
+}
+
+.voteBox,
+.tabBox {
+	overflow: hidden;
+}
+
+.voteList {
+	width: 33.33%;
+	float: left;
+	text-align: center;
+}
+
+.voteWrap {
+	width:6rem;
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+
+.head_box {
+	width: 6rem;
+	height: 6rem;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.head_box img {
+	width: 100%;
+	height: 100%;
+}
+
+.voteList p {
+	font-size: 1.2rem;
+	margin: 20px 0;
+	    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.vote_btn {
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	line-height: 2.4rem;
+	height: 2.4rem;
+	cursor: pointer;
+}
+
+.bototm {
+	margin: 20px 0;
+	overflow: hidden;
+}
+
+.bototm .left {
+	width: 45%;
+	border: 1px solid #ccc;
+	text-align: center;
+	float: left;
+	height: 139px;
+}
+
+.bototm .left p {
+	height: 80px;
+	line-height: 80px;
+	font-size: 18px;
+}
+
+.apply_btn {
+	width: 200px;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	line-height: 35px;
+	height: 35px;
+}
+
+.bototm .right {
+	width: 45%;
+	border: 1px solid #ccc;
+	float: right;
+	height: 139px;
+}
+
+.bototm .msg {
+	float: left;
+	font-size: 20px;
+	line-height: 139px;
+	margin-left: 50px;
+}
+
+.bototm .right img {
+	float: right;
+	width: 100px;
+	margin: 20px;
+}
+
+.bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 200;
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+.code_model{
+	position: fixed;
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -250px;
+	z-index: 201;
+	background: #fff;
+	
+}
+
+.code_model .title {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 32px;
+}
+
+.code_model .title span {
+    display: block;
+    width: 135px;
+    border-bottom: 1px solid #f60;
+    margin: 0;
+    height: 55px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.code_model .title i {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url(https://static.hx2car.com/resource/web/dist/static/common/images/loginclose.png) center center no-repeat;
+    right: 50px;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+}
+.code_model .afterAdd{
+    height:75px;
+    line-height: 75px;
+    text-align: center;
+    font-size:14px;
+}
+
+.code_left{
+	float: left;
+	width: 250px;
+	text-align: center;
+}
+.code_left p{
+		line-height: 80px;
+		font-size: 14px;
+}
+.code_left input{
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #f60;
+	font-size: 12px;
+	width: 200px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+.cf60{
+	color: #f60;
+}
+.apply_sub{
+	width: 150px;
+	margin: 0 auto;
+	height: 30px;
+	background: #f60;
+	color: #fff;
+	line-height: 30px;
+	margin-bottom: 30px;
+} 
+
+.code_right{
+	float: right;
+	width: 150px;
+	text-align: center;
+}
+.code_right img{
+	width: 100px;
+	margin: 20px auto;
+}
+
+.hide{
+	display: none;
+}
+
+.tabBox{
+	position: fixed;
+	bottom: 0;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>像素级旋转</title>
+		<style type: "text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			canvas {
+				border: 1px solid #f00;
+			}
+		</style>
+		<script src= "js/jquery-2.1.0.js" type= "text/javascript" charset= "utf-8"></script>
+		<script type= "text/javascript">
+			$(function() {
+				$.ajax({
+					type: "get",
+					url: "https://down.qiyu3.com/HttpService/rec2/",
+					data: {
+						name: '推荐',
+						app_id: 'huaxiaH5',
+						user_id: 1564991999524108496,
+						size: 10,
+						log_id: 'CPATRC',
+						res_type: 'news',
+						loc_province: '浙江省',
+						loc_city: '杭州市'
+					},
+					async: true,
+					success: function(data) {
+						data=JSON.parse(data)
+						console.log(data)
+						console.log(data.data.data[1].list_images[0])
+					}
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

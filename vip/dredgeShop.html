@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>开通网上门店</title>
+		<link rel="stylesheet" type="text/css" href="css/shop.css" />
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var cw = document.documentElement.clientWidth;
+			var ch = document.documentElement.clientHeight;
+			if(cw > 1242) {
+				cw = 1242;
+			}
+			document.getElementsByTagName("html")[0].style.fontSize = 20 * (cw / 621) + 'px';
+		</script>
+	</head>
+
+	<body>
+		<div class="msg-top">
+			目前状态：已过期，2019年1月1日到期
+		</div>
+		<section>
+			<img src="img/icon-yw.png" class="left" />
+			<div class="right">
+				<h3>什么是网上门店？</h3>
+				<p>是客户在华夏二手车网的网上店铺，客户可以通过网 上门店来展示、管理车辆，网上门店为广大客户提供 简单、高效、快捷的一站式服务。</p>
+				<div class="showShop showShopd">
+					<img src="img/icon-yl.png" />
+					<span class="msg-yl"><a href="/mobile/shopWep.htm">点击预览门店样式</a></span>
+					<span class="rightArrow"></span>
+				</div>
+			</div>
+		</section>
+		<section class="company">
+			<div class="list">
+				<div class="companyLeft">公司名称</div>
+				<label>
+					<input type="" name="" id="company" value="华夏二手车" class="msg-conpany" />
+				</label>
+				<span class="rightArrow"></span>
+			</div>
+			<!--<div class="list">
+				<div class="companyLeft">公司logo</div>
+					<img src="img/banner.jpg"class="msg-conpany"/>
+					<span class="rightArrow"></span>
+			</div>
+			<div class="list">
+				<div class="companyLeft">门面照片</div>
+					<span class="msg-conpany">已上传5张</span>
+					<span class="rightArrow"></span>
+			</div>-->
+			<div class="list last">
+				<div class="companyLeft">
+					<div class="haostBox">
+						<span>门店域名</span>
+						<span class="cf65f55">http://vip.hx2car.com/</span>
+						<label>
+					<input type="text" name="haost" id="haost" value="" />
+					</label>
+					</div>
+					<div class="msg-haost">
+						只能输入英文字母,字数限制15个英文字母以内
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section>
+
+			<div class="submit">
+				立即激活
+			</div>
+		</section>
+		<script type="text/javascript">
+			$(function(){
+				$(".submit").click(function(){
+					var company = $("#company").val();
+					var haost = $("#haost").val();
+					if(company==""){
+						 $("#company").focus().parent().addClass("error");
+						 $.alertMessage.call($(this), '请输入公司名称')
+						 return false;
+					}
+					if(haost==""){
+						 $("#haost").focus().parent().addClass("error");
+						 $.alertMessage.call($(this), '请输入门店域名')
+						 return false;
+					}
+				})
+				$("input").keydown(function(){
+					$(this).parent().removeClass("error")
+				})
+				
+				
+				   //手机错误信息弹出框
+    $.alertMessage = function (msg) {
+        var defaults = {
+                outBox: 'outBox',
+                messageId: 'messageBox'
+            },
+            opt,
+            $msg = msg;
+
+        var init = function (msg) {
+            opt = $.extend({}, defaults);
+            var str = '<div style="width:100%;text-align:center;z-index:999;opacity:1;top:50%;bottom:50%;position:fixed;margin:auto 0;height:2.5rem;" class="' + opt.outBox + '"><div class="' + opt.messageId + '" style="max-width:90%;-webkit-transition:all .3s;margin-top:-15%;box-sizing:border-box;-webkit-transform:scale(1.5);display:none;background:rgba(0,0,0,0);color:#fff;font-size:1rem;padding:0.5rem 1.5rem;height:auto;border-radius:0.4rem;line-height:1.5rem;">' + msg + '</div></div>';
+            $('.' + opt.outBox).remove();
+            $('body').append(str);
+            showMessage.call($('.' + opt.messageId), opt, $msg);
+        };
+
+        var showMessage = function (ops, msg) {
+            var $ts = $(this);
+            $(this).show().css({
+                'display': 'inline-block'
+            });
+            setTimeout(function () {
+                $ts.css({
+                    '-webkit-transform': 'scale(1)',
+                    'background': 'rgba(0,0,0,0.6)'
+                });
+            }, 0);
+            setTimeout(function () {
+                $ts.css({
+                    'opacity': '0'
+                });
+            }, 2000);
+            setTimeout(function () {
+                $ts.parent('.' + ops.outBox).remove();
+            }, 2300);
+        };
+
+        return this.each(function () {
+            init($msg);
+        });
+
+    };
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function show(str){
+				if(str)
+				document.writeln(str+"的时间是"+new Date(str).getTime()+"</br>")
+				else
+				document.writeln("现在的时间是"+new Date().getTime()+"</br>")
+				
+			}
+			
+			show("2018.11.12:08:00")
+			show("")
+			show()
+			show("1541045280000")
+			show(1541045280000)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>rrweb</title>
+		<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"
+/>
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var YOUR_EVENTS = {};
+	rrweb.record({
+  emit(event) {
+    // 用任意方式存储 event
+//  console.log(event)
+    YOUR_EVENTS = event;
+  },
+  
+});
+
+$("#start").click(function(){
+	const events = YOUR_EVENTS;
+const replayer = new rrweb.Replayer(events);
+console.log(replayer)
+replayer.play();
+
+//new rrwebPlayer({
+//target: , // 可以自定义 DOM 元素
+//data: {
+//  events,
+//},
+//});
+})
+	})
+	
+</script>
+	</head>
+	<body>
+		<button>123456</button>
+		<button>123456</button>
+		<button>123456</button>
+		<button>123456</button>
+		<button id="start">123456</button>
+	</body>
+</html>

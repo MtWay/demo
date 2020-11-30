@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>收益中心</title>
+		<link rel="stylesheet" type="text/css" href="css/earnings.css" />
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var cw = document.documentElement.clientWidth;
+			var ch = document.documentElement.clientHeight;
+			if(cw > 1242) {
+				cw = 1242;
+			}
+			document.getElementsByTagName("html")[0].style.fontSize = 20 * (cw / 621) + 'px';
+			$(function(){
+				$(".tab").click(function(){
+					var index = $(this).index();
+					$(this).addClass("select").siblings().removeClass("select");
+					$("section").addClass("hide").eq(index).removeClass('hide');
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="tabBox">
+			<span class="tab select">我的收益</span>
+			<span class="tab">消费记录</span>
+		</div>
+		<section>
+			<div class="banner">
+				<img src="img/icon-earnings.png"/>
+				<p class="money">3850.00</p>
+				<p class="date">您的现金红包将于19年6月1日到期</p>
+			</div>
+			<div class="listBox">
+				<div class="list">
+					<div class="left">
+						<div class="title">
+							 个人会员邀请收入
+						</div>
+						<div class="time">
+							2017-07-08 17:00:00
+						</div>
+					</div>
+					<div class="cost cf60">
+						+3元
+					</div>
+				</div>
+				<div class="list">
+					<div class="left">
+						<div class="title">
+							 个人会员邀请收入
+						</div>
+						<div class="time">
+							2017-07-08 17:00:00
+						</div>
+					</div>
+					<div class="cost cf60">
+						+3元
+					</div>
+				</div>
+				<div class="list">
+					<div class="left">
+						<div class="title">
+							 个人会员邀请收入
+						</div>
+						<div class="time">
+							2017-07-08 17:00:00
+						</div>
+					</div>
+					<div class="cost cf60">
+						+3元
+					</div>
+				</div>
+			</div>
+			
+			<div class="invite hide">
+				邀请好友得现金
+			</div>
+		</section>
+		<section class="expenditure hide">
+			<div class="listBox">
+				<div class="list">
+					<div class="left">
+						<div class="title">
+							 个人会员邀请收入
+						</div>
+						<div class="time">
+							2017-07-08 17:00:00
+						</div>
+					</div>
+					<div class="cost">
+						+3元
+					</div>
+				</div>
+				<div class="list">
+					<div class="left">
+						<div class="title">
+							 个人会员邀请收入
+						</div>
+						<div class="time">
+							2017-07-08 17:00:00
+						</div>
+					</div>
+					<div class="cost">
+						+3元
+					</div>
+				</div>
+				<div class="list">
+					<div class="left">
+						<div class="title">
+							 个人会员邀请收入
+						</div>
+						<div class="time">
+							2017-07-08 17:00:00
+						</div>
+					</div>
+					<div class="cost">
+						+3元
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

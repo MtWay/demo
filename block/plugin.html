@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>插件开发</title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/updateImg.css"/>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/editImgs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="file" name="file2" class="pbrflrbFile" id="file2" accept="image/gif, image/png, image/jpg, image/jpeg" multiple="multiple">
+		<div class="viewbox" id="view">
+			
+		</div>
+		<div class="model hide">
+		<div class="block">
+			
+		</div>
+		<div class="editBox" id="editBox">
+		<h3>编辑图片 <i class="close"></i></h3>
+		<div class="canvasBox" id="canbox">
+			<canvas id="editCanvas" width="600" height="450"></canvas>
+			<div class="hide" id="skew">
+				
+			</div>
+			<div class="hide" id="radius">
+				
+			</div>
+		</div>
+		<div class="editList">
+			<div class="editBtn clickOne" id="revocation">
+				<i class="icon icon-cancel iconfont "></i>
+				<span>撤销</span>
+			</div>
+			<div class="editBtn clickOne" id="turnleft">
+				<i class="icon iconfont  icon-xuanzhuan"></i>
+				<span>逆时针90°</span>
+			</div>
+			<div class="editBtn clickOne" id="turnright">
+				<i class="icon icon-xuanzhuan1 iconfont "></i>
+				<span>顺时针90°</span>
+			</div>
+			<div class="editBtn " id="showSkew">
+				<i class="icon icon-jianqie iconfont "></i>
+				<span>裁剪</span>
+			</div>
+			<div class="editBtn change" id="edit_msk">
+				<i class="icon icon-shuidi iconfont "></i>
+				<span>模糊</span>
+				
+			</div>
+			<div class="msk_size">
+					<div class="size size1" >小范围</div>
+					<div class="size size2 size_select">中范围</div>
+					<div class="size size3">大范围</div>
+				</div>
+			
+		</div>
+		<div class="save_btn gray" id="save_btn">
+			确定
+		</div>
+		</div>
+	</div>
+	</body>
+</html>

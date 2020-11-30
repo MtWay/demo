@@ -1,0 +1,569 @@
+.container{
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
+    position: relative
+}
+
+.topSelectStyle{
+    display: flex;
+    background-color: white;
+    height: 80rpx;
+    align-items: center;
+    justify-content: center;
+        border-bottom: 1rpx solid #e1e1e1;
+}
+.carinfoStyle{
+    color: #ff6600;
+    margin-right: 10px;
+    font-size: 14px;
+    height: 80rpx;
+     align-items: center;
+    justify-content: center;
+    border-bottom: 2rpx solid #ff6600;
+      display: flex;
+}
+.carinfoStyle1{
+   color: #666666;
+     margin-right: 10px;
+    font-size: 14px;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sellinfoStyle{
+    color: #666666;
+    margin-left: 10px;
+    font-size: 14px;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sellinfoStyle1{
+  color: #ff6600;
+    margin-left: 10px;
+    font-size: 14px;
+    height: 80rpx;
+     align-items: center;
+    justify-content: center;
+    border-bottom: 2rpx solid #ff6600;
+      display: flex;
+}
+
+
+.imgnumber{
+    width: 43px;
+    height: 25px;
+    position: absolute;
+    right:10px;
+    top: 50px
+}
+
+.numbercar{
+    color: #ff6600;
+    font-size: 9px;
+      position: absolute;
+    right:12px;
+    top: 56px;
+    width: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+
+/*车辆信息描述*/
+.carinfo{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+
+}
+
+
+/*车辆详细信息*/
+.cardetailinfoStyle{
+     font-size: 16px;
+     margin-left: 15px;
+     margin-right: 15px;
+      font-weight: bold;
+    color: #444444;
+    margin-top: 18px;
+   display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    line-height: 18px  ;
+    max-height: 36px;
+}
+/*车辆价格*/
+.priceStyle{
+    margin-top: 13px;
+    display: flex;
+    margin-left: 15px;
+   
+}
+/*售价*/
+.sellprice{
+    color: #ff6600;
+    font-size: 18px
+}
+/*新车指导价*/
+.guideprice{
+    color: #999999;
+    font-size: 12px;
+    margin-top: 7px;
+    margin-left: 10px;
+    text-decoration:line-through ;
+}
+
+/*发布日期*/
+.timeStyle{
+     font-size: 11px;
+    color: #999999;
+    right: 15px;
+    position: absolute;
+    bottom: 22px;
+}
+
+/*浏览量和信誉值*/
+.countAndCredit{
+    margin-top: 20px;
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.privewStyle{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: -25px;
+    height: 20px;
+    align-items: center
+}
+
+.imgstyle{
+    width: 15px;
+    height: 15px;
+   margin-left: 15px;
+   margin-right: 5px;
+}
+
+.clickcountstyle{
+  color: #ff6600;
+    font-size: 11px;
+}
+
+.creditStyle{
+       display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: -25px;
+    height: 20px;
+    right: 15px;
+    align-items: center
+}
+
+/*空实现*/
+.blank{
+    margin-top: 18px
+}
+
+
+
+/*车辆基本信息*/
+.basicInfoStyle{
+    margin-top: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.troduce{
+    font-size: 13px;
+    color: #444444;
+    margin-top: 15px
+}
+
+
+
+.neirongStyle{
+    margin-top: 17px;
+    font-size: 15px;
+    color: #333333;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-items: center
+}
+
+.neirongStyle1{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999999;
+    display: flex;
+    width: 100%;
+       margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-between;
+    align-items: center
+}
+
+.leftStyle{
+    display: flex;
+    flex: 1;
+          align-items: center;
+            justify-content: center
+
+}
+
+.middlestyle{
+        flex: 1;
+    display: flex;
+      align-items: center;
+        justify-content: center
+}
+
+.rightStyle{
+        flex: 1;
+    display: flex;
+     align-items: center;
+     justify-content: center
+}
+
+/*车辆描述*/
+.describeStyle{
+    margin-top: 8px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.describeText{
+    color: #999999;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 18px
+}
+
+/*相似车*/
+.sameStyle{
+    margin-top: 8px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.commonStyle{
+      display: flex;
+      margin-top: 12px;
+      background-color: #ffffff;
+      height: 48px;
+       flex-direction: row;
+       width: 100%
+}
+
+.item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+       color: #999999;
+    font-size: 12px;
+    align-items: center;
+ 
+}
+.similarImg{
+    width: 28px;
+    height: 28px;
+    padding-bottom: 7px
+}
+.carimg{
+    width: 100%;
+    height:350rpx;
+}
+
+/*推荐车源*/
+.tuijianStyle{
+     margin-top: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; 
+}
+.tuijiantext{
+    height: 28px;
+     font-size: 13px;
+    color: #444444;
+    margin-top: 15px;
+    padding-left: 15px;
+   border-bottom: 1rpx solid #e1e1e1;
+}
+
+/*车辆列表页*/
+.itemcontainer {
+  background-color: #f6f6f6;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+       box-sizing: border-box
+} 
+
+.itemtuijianleft{
+ float: left;
+   width: 50%;
+   margin-top: 15px;
+      padding-right: 7px;
+      box-sizing: border-box
+}
+
+.itemtuijianright{
+
+   float: right;
+   width: 50%;
+      margin-top: 15px;
+      padding-left: 7px;
+      box-sizing: border-box
+}
+
+.insideitem{
+ background-color: #ffffff;
+ display: flex;
+flex-direction: column;
+position: relative
+}
+
+/*图片style*/
+.itemImageStyle{
+
+}
+
+/*已过期*/
+.guoqi{
+  width:248rpx;
+  height:220rpx;
+  position: absolute;
+  left: 15px;
+
+}
+.guoqitext{
+     position: absolute;
+    font-size: 10px;
+    color: white;
+    left:40rpx;
+    top:28rpx
+}
+
+/*右边的样式*/
+.itemRightStyle{
+    flex-direction: column;
+     margin-left: 10px;
+     margin-right: 10px;
+     height:160rpx;
+     margin-top: 18rpx;
+       flex: 1;
+      display: flex;
+   
+}
+
+
+/*品牌的样式*/
+.itemBrandTitle{
+ color: #555555;
+ font-size: 12px;
+ font-weight: bold;
+ min-height: 60rpx;
+     line-height: 30rpx;
+   display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+
+/*右边地区和里程*/
+.areaAndMileage{
+    position: absolute;
+    color: #999999;
+    font-size: 10px;
+   right: 10px;
+   bottom: 18rpx;
+  max-width: 140rpx;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+/*右边的发布时间*/
+.publishdata{
+  color: #999999;
+    font-size: 10px;
+    margin-top: 5rpx
+}
+
+/*右边的价格*/
+.pricestyle{
+     color: #ff6600;
+    margin-top: 13rpx;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 13rpx;
+}
+/*商家信息*/
+.sellbasicinfo{
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    flex-direction: column
+}
+.companyhead{
+    width: 50px;
+  height: 50px;
+  border-radius: 50%;
+    margin-top: 15px;
+}
+
+/*公司名称*/
+.companyname{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666666
+}
+/*个性签名*/
+
+.signature{
+    display: flex;
+       margin-top: 15px;
+    font-size: 11px;
+    color: #999999;
+    width: 100%;
+}
+.signtext{
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 15px
+}
+.contract{
+    margin-top: 8px;
+    height: 38px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+       border-bottom: 1rpx solid #e1e1e1;
+}
+.linkman{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px
+}
+/*联系人*/
+.manname{
+    font-size: 12px;
+    color: #999999;
+    margin-left: 10px
+}
+
+.contract1{
+    height: 38px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+       border-bottom: 1rpx solid #e1e1e1;
+}
+.lianxi{
+    font-size: 12px;
+    color: #ff6600;
+    margin-left: 10px
+}
+
+/*库存*/
+.kucun{
+    font-size: 14px;
+    color: #333333;
+    margin-left: 15px
+}
+.kuncunstyle{
+    margin-top: 8px;
+      height: 38px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+       border-bottom: 1rpx solid #e1e1e1;
+}
+
+/*底部的加载更多动画*/
+.tips {
+    height:40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+}
+.tips image {
+    width: 25px;
+    height: 25px;
+}
+
+.loadmoreText{
+  font-size: 11px;
+  color: #333333;
+  margin-left: 10px
+}
+
+.scrollview{
+    margin-bottom: 35px;
+}
+
+/*底部按钮*/
+.bottombutton{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.callphone{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff6600;
+    font-size: 12px;
+    color: white;
+}
+
+.chujia{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff3300;
+        font-size: 12px;
+    color: white;
+}
+

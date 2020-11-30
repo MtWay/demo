@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>旋转吧</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				height: 100%;
+			}
+			
+			div {
+				/*display: none;*/
+			}
+			
+			.box {
+				width: 600px;
+				margin: 20px auto;
+				display: block !important;
+			}
+			
+			input {
+				width: 100px;
+				margin-right: 10px;
+			}
+			
+			canvas {
+				/*width: 600px;*/
+				/*height: 600px;*/
+				margin: 0 auto;
+				display: block;
+				border: 1px solid #f00;
+			}
+			
+			.hide {
+				display: none;
+			}
+			input{
+				width: 500px;
+			}
+			/*canvas{background: #0f0 ;}*/
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<!--<div class="box">
+			<span>0</span><input type="range" name="" id="r1" value="10" step="10" max="1000" />内圈<br />
+			<span>0</span><input type="range" name="" id="r2" value="10" step="10" max="1000" />圈宽
+		</div>-->
+		<canvas id="can" width="600" height="600"></canvas>
+		<script type="text/javascript">
+				stats = new Stats();
+
+  stats.setMode(0);
+
+  stats.domElement.style.position = 'absolute';
+
+  stats.domElement.style.right = '0px';
+
+  stats.domElement.style.top = '0px';
+
+  document.body.appendChild(stats.domElement);
+			$(function(){
+				var can  = $("#can")[0];
+				var ctx = can.getContext("2d");
+				var one = 1;
+				var w = $(document).width();
+				var h = $(document).height();
+				console.log(w,h)
+				resize();
+				
+				var img = new Image();
+				img.src = "img/89585c7fd798b1a.jpg";
+				img.onload=function(){
+//					ctx.arc(300,300,50,0,Math.PI*2,true);
+//					ctx.strokeStyle = "#f00";
+//					ctx.lineWidth=50;
+//					ctx.stroke();
+//ctx.clip()
+					ctx.drawImage(img,0,0,w,h);
+// 				cacheCanvas = document.createElement("canvas");
+//              cacheCtx = cacheCanvas.getContext("2d");
+//              cacheCanvas.width = w;
+//              cacheCanvas.height = h;
+//				cacheCtx.drawImage(img,0,0,w,h);
+//					ctx.beginPath() 
+//					ctx.arc(300,300,23,0,Math.PI*2,true);
+//					ctx.fillStyle = "#f00";
+//					ctx.fill();
+//				drawimg();
+				}
+				
+				var cans = [];
+				function makecan(){
+					var len = lang/one;
+					for(var i = 0 ;i<len ;i++){
+						
+					}
+				}
+				var timer;
+				$("body").click(function(){
+//				 timer = setInterval(drawimg,1000/1000)
+				resize()
+				drawimg();
+				})
+				
+				var deg = 0.01;
+					var lang = Math.sqrt((w/2)*(w/2)+(h/2)*(h/2));
+					var len = lang/one;
+					var index = 0;
+					var zu = 10;//一次进行多少像素的旋转
+				function drawimg(){
+//					resize()
+//						deg*=1.1;
+//						deg+=0.001
+						
+						console.log(deg)
+//					for(var i = 0 ;i<len ;i++){
+					for(var i =index*zu ;i<zu+index*zu ;i++){
+						console.log(i)
+						ctx.beginPath();
+						ctx.save();
+						ctx.translate(w/2,h/2);
+//						console.log((lang-i)*0.0001)
+					
+						ctx.rotate((lang-i)*deg);
+						ctx.translate(-w/2,-h/2);
+						ctx.arc(w/2,h/2,lang-i*one,0,Math.PI*2,true);
+						ctx.clip();
+						ctx.drawImage(img,0,0,w,h);
+//						ctx.drawImage(cacheCanvas,0,0,w,h);
+						ctx.restore();
+						index++;
+					}
+			    	stats.update();
+			    	if(index<=len/zu-zu)
+					requestAnimationFrame(drawimg)
+//					if(index>len){
+//						clearInterval(timer)
+//					}
+				}
+				
+
+//				drawimg();
+				
+				
+				
+				
+				function quan(a,b){
+					resize();
+					ctx.drawImage(img,100,100,400,400);
+					ctx.arc(300,300,a,0,Math.PI*2,true);
+					ctx.strokeStyle = "#f00";
+					ctx.lineWidth=b;
+					ctx.stroke();
+				}
+				
+				
+				
+				
+				function resize(){
+					
+					$("#can").attr({
+						width:w+"px",
+						height:h+"px"
+					})
+				}
+				
+				$("input").change(function(){
+					console.log($(this).val());
+					$(this).prev().text($(this).val());
+					var a = $("#r1").val();
+					var b = $("#r2").val();
+					quan(a,b)
+				})
+			})
+		</script>
+	</body>
+</html>

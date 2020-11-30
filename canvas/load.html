@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>		
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function img(src){
+				var img = new Image();
+				img.src=src;
+				img.onload=function(){
+					console.log(src);
+				}
+				
+			}
+			img("img/1.jpg")
+			img("img/heart.jpg")
+			
+		</script>
+	</body>
+</html>

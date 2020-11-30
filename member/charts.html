@@ -1,0 +1,609 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>会员管理——会员中心</title>
+<link href="http://static.hx2cars.com/resource/web/member_new/css/member_common.css" rel="stylesheet" type="text/css"/>
+<link href="http://static.hx2cars.com/resource/web/member_new/css/vip_manage.css" rel="stylesheet" type="text/css"/>
+<link href="http://static.hx2cars.com/resource/web/page/trade/person.css" rel="stylesheet" type="text/css" />
+<link href="http://static.hx2cars.com/resource/web/member_new/css/datacenter.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/common/js/jquery/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/car/js/hc/highcharts.js" ></script>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/gbpage/js/common/hx2carPages.js?t=20151225"></script>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/common/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/mobpages/js/common/jsPlug.min.js"></script>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/pc/common/pcPlug.js"></script>
+<script type="text/javascript">
+	var STATICSERVER="http://static.hx2cars.com/resource";
+	var CONTEXTPATH="";
+</script>
+</head>
+
+<body>
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/member_new/js/vip_top.js"></script>
+<div class="header">
+     <div class="header_top">
+          <ul class="header_topL">
+              <li>您好，
+              	<a ref="nofollow" class="orange12">
+	              		华夏二手车
+              	</a>！
+              </li>
+              <li style="display:none;">[ <a href="/comments/getcomments.htm" target="_blank" class="orange12">消息管理</a> ]</li>
+              <li>[ <a href="/toolbox/collection.htm" target="_blank" class="orange12">我的收藏</a> ]</li>
+              <li>[ <a href="/vip/index.htm" target="_blank" class="orange12">会员中心</a> ]</li>
+              <li>[ <a href="javascript:userLogout();" target="_self" class="orange12">退出</a> ]</li>
+          </ul>
+          <div><a class="icon" href="/user/member.htm" target="_self">返回旧版</a></div>         
+          <ul class="header_topR">
+          	  <li><a href="/" target="_blank" class="black12">华夏首页</a> |</li>
+              <li><a href="/vip/publishcar.htm" target="_blank" class="black12">我要卖</a> |</li>
+              <li><a href="/car/search.htm" target="_blank" class="black12">我要买</a> |</li>
+              <li><a href="http://auto.hx2car.com" target="_blank" class="black12">资讯中心</a> |</li>
+			  <li><a href="/help/nbenefit.htm" target="_blank" class="black12">产品推荐</a> |</li>
+              <li class="APP"><a href="http://www.hx2car.com/ads/hxapp.htm" class="black12" target="_blank">APP下载</a><span class="APP_ewm" style="display:none;"><img src="http://static.hx2cars.com/resource/web/gbpage/images/common/hx2carAppCode.png" width="150" height="150"></span></li>
+          </ul>
+     </div>
+</div>	
+<script type="text/javascript" src="http://static.hx2cars.com/resource/web/member_new/js/vip_search.js"></script>
+<div class="Search">
+     <div class="Search_cont">
+          <a href="/vip/index.htm" class="logo"></a>
+          <div class="NAV">
+               <ul>
+                  <li><a href="/vip/index.htm">首页</a></li>
+                    <li><a href="/profile/5" target="_blank">个人主页</a></li>
+                    		<li><a href="/help/nbenefit.htm#sroduct1" target="_blank">网上门店</a></li>
+                    <li id="message">
+                        <a onclick="open_unreadmsg(123);">消息</a>
+                        <span class="news2">...</span>
+                        <span class="newbox" style="display:none;">
+                        	 		<a href="/vip/demandmanager.htm" target="_blank">需求管理<em class="news2">1</em></a>
+                        </span>
+                    </li>
+                    <li class="clear"></li>
+               </ul>
+          </div>
+          <form action="/search/index.htm" target="_blank" id="indexsearch" name="indexsearch" method="get">
+          <div class="search_box">
+          	  <label for="keyword">搜”<span></span>“试试，您可能喜欢</label>
+          	  <div class="roundleft"></div>
+          	  <div class="search_icon">搜索</div>
+          	  <div class="HXsearch">
+			  	<input class="indexsearch" id="keyword" name="keyword" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate">
+			  </div>
+              <s></s>
+              <div class="searchbox" style="display:none;">
+              </div>
+          </div>
+          </form>
+     </div>
+</div>
+<div class="vipcenter">
+<style>
+/*animation*/
+.centerLeft .clNav .clnTitle .down,.centerLeft .clNav .clnList{transition:all .3s;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;}
+.centerLeft .clNav .clnList{transform-origin:50% 0;-webkit-transform-origin:50% 0;-ms-transform-origin:50% 0;-moz-transform-origin:50% 0;}
+.centerLeft .clNav .clnTitle .down{transform-origin:50% 25%;-webkit-transform-origin:50% 25%;-ms-transform-origin:50% 25%;-moz-transform-origin:50% 25%;}
+
+  body{ background-color:#f5f5f5 !important}
+.vipcenter{width: 1200px;overflow: hidden;margin: 0 auto;}
+.centerLeft{float: left;width: 195px;margin:15px 12px 0  0; background:#fff;}
+.centerLeft .clNav{padding: 11px 0;border-bottom:1px solid #ddd;-webkit-transition:all .3s;transition:all .3s;overflow: hidden;}
+.centerLeft .clNav .clnTitle{cursor:pointer;position: relative;font-size:16px;line-height:38px;}
+.centerLeft .clNav .clnTitle i{display:inline-block;width:30px;height:38px;margin:0 15px;;background:url("http://static.hx2cars.com/resource/web/common/images/vip_left_icon.png") no-repeat;}
+.centerLeft .clNav .clnTitle span{display:inline-block;vertical-align:bottom;width:75px;margin-left:3px;}
+.centerLeft .clNav .clnTitle .down{display:inline-block;width:22px;height:38px;background:url("http://static.hx2cars.com/resource/web/common/images/vip_left_icon.png") no-repeat -60px -102px;}
+.centerLeft .clNav .clnTitle .user{background-position:-110px -8px;}
+.centerLeft .clNav .clnTitle .car{background-position:-159px -8px;}
+.centerLeft .clNav .clnTitle .fund{background-position:-8px -100px;}
+.centerLeft .clNav .clnTitle .buy{background-position:-108px -56px;}
+.centerLeft .clNav .clnTitle .sell{background-position:-60px -56px;}
+.centerLeft .clNav .clnTitle .spread{background-position:-158px -56px;}
+.centerLeft .clNav .clnTitle .hx{background-position:-10px -56px;}
+.centerLeft .clNav .clnTitle .data{background-position:-56px -6px;}
+.centerLeft .clNav .clnTitle .manage{background-position:-6px -6px;}
+.centerLeft .clNav .clnList{height:auto;transform: scaleY(1);-webkit-transform: scaleY(1);-moz-transform: scaleY(1);-ms-transform: scaleY(1);}
+.centerLeft .clNav .clnList a{display:block;height: 24px;color:#666;font-size:14px;line-height: 26px;margin-left:65px;}
+.centerLeft .clNav .clnList a:hover,.centerLeft .clNav .clnList a.leftNavon{color:#027cff;}
+.centerLeft .navhide .clnList{transform: scaleY(0);-webkit-transform: scaleY(0);}
+.centerLeft .navhide .clnTitle .down{background-position:-96px -104px;}
+.centerRight{float: left;margin-top: 15px;background:#fff;}
+
+</style>
+<script>
+//左侧导航展开收起
+$(function(){
+    $('.centerLeft .clNav .clnList').each(function(){
+        $(this).css({
+            'height':$(this).find('a').length*24
+        });
+    });
+    $('.centerLeft .clNav .clnTitle').click(function(){
+        var itlength = $(this).next('.clnList').find('a').length;
+        if ($(this).parent('.clNav').hasClass('navhide')) {
+            $(this).parent('.clNav').removeClass('navhide');
+            $(this).next('.clnList').css({'height':itlength*24});
+        }else{
+            $(this).parent('.clNav').addClass('navhide');
+            $(this).next('.clnList').css({'height':0});
+        }
+    });
+    var tsurl = window.location.pathname;
+    $('.centerLeft .clNav .clnList a').each(function(){
+      if($(this).attr('href') == tsurl){
+        $(this).addClass('leftNavon');
+      }
+    });
+  });
+</script>
+<div class="centerLeft">
+      <div class="clNav">
+        <div class="clnTitle"><i class="manage"></i><span>公司管理</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/vip/modifyvipinfo.htm" title="公司信息">公司信息</a>
+          <a href="/vip/staffmanager.htm" title="员工管理">员工管理</a>
+        </div>
+      </div>
+      <div class="clNav">
+        <div class="clnTitle"><i class="car"></i><span>车源管理</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/vip/publishcar.htm" title="发布车源">发布车源</a>
+          <a href="/vip/manageronsell.htm" title="车源管理">车源管理</a>
+          <a href="/vip/timingjoblist.htm" title="定时管理">定时管理</a>
+        </div> 
+      </div>
+      <div class="clNav">
+        <div class="clnTitle"><i class="fund"></i><span>我的资金</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/vip/rechargelist.htm" title="华币管理">华币管理</a>
+        </div>
+      </div>
+      <div class="clNav">
+        <div class="clnTitle"><i class="buy"></i><span>收购线索</span><b class="down"></b></div>
+        <div class="clnList">
+           <a href="/vip/carfinds.htm" title="找车记录">找车记录</a>
+           <a href="/vip/getpurchasecar.htm" title="收购推荐">收购推荐</a>
+           <a href="/trade/tradeallcar.htm" target="_blank" title="我要批发">我要批发</a>
+        </div>
+      </div>
+      <div class="clNav">
+        <div class="clnTitle"><i class="sell"></i><span>销售线索</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/vip/demandmanager.htm" title="需求管理">需求管理</a>
+          <a href="/vip/getdetielmessage.htm" title="170通话记录">170通话记录</a>
+        </div>
+      </div>
+      
+      <div class="clNav">
+        <div class="clnTitle"><i class="hx"></i><span>华夏服务</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/car/findcar.htm" title="找车服务">找车服务</a>
+          <a href="/4s" title="4S查询服务" target="_blank">4S查询服务</a>
+          <a href="/vip/orderlogo.htm" title="订购车标">订购车标</a>
+          <a href="/vip/bigpackageitem.htm" title="大礼包">大礼包</a>
+          <a href="/vip/getcarlogoservice.htm" title="我的服务">我的服务</a>
+        <a href="/weixin/wxenter.htm" title="微信服务">微信服务</a>
+        </div>
+      </div>
+      <div class="clNav">
+        <div class="clnTitle"><i class="spread"></i><span>推广中心</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/vip/myappad.htm?appadtype=caradd" title="车源推广">车源推广</a>
+          <a href="/vip/myappad.htm?appadtype=shopadd" title="店铺推广">店铺推广</a>
+          <a href="/vip/myappads.htm" title="我的推广">我的推广</a>
+        </div>
+      </div>
+      <div class="clNav">
+        <div class="clnTitle"><i class="data"></i><span>数据中心</span><b class="down"></b></div>
+        <div class="clnList">
+          <a href="/vip/datacenter.htm" title="运营数据">运营数据</a>
+          <a href="/hxdata/repertory.htm" target="_blank" title="市场库存">市场库存</a>
+          <a href="/hxdata/index.htm" target="_blank" title="华夏指数">华夏指数</a>
+          <a href="/car/chart.htm" target="_blank" title="行情趋势">行情趋势</a>
+        </div>
+      </div>
+      <div class="clNav" style="display:none">
+        <div class="clnTitle">公司管理<i></i></div>
+        <div class="clnList">
+          <a href="/vip/staffmanager.htm" title="员工管理">员工管理</a>
+        </div>
+      </div>
+  </div>
+	
+<div class="dataCenter">
+     <div class="dcTitle">
+          <span class="dctSelect"><a>车源流量</a></span>
+          <span><a>店铺流量</a></span>
+          <span><a>需求统计</a></span>
+          <span><a>170电话统计</a></span>
+          <span><a>商家车源</a></span>
+          <span><a>华币使用统计</a></span>
+     </div>
+     <div class="dcList">
+		  <div class="dclTab">
+		  	<div class="dcltTop">
+		  		<div class="dclttLeft">
+		  			<span class="dclttlTitle">日期：</span>
+		  			<input onclick="WdatePicker()" type="text" id="date1" />
+		  			<span>一</span>
+		  			<input onclick="WdatePicker()" type="text" id="date2" />
+		  			<a id="subDate">查询</a>
+		  		</div>
+		  		<a class="dclttExport" onclick="javascript:method1('exportEXL')">导出列表</a>
+		  		<div class="clear"></div>
+		  	</div>
+		  	<div class="dcltCon">
+		  		<div class="dcltcTitle" id="data1">
+		  			<span class="dcltct1 dcltctOn">需求意向统计</span>
+		  			<span class="dcltct2">需求跟进统计</span>
+		  		</div>
+		  		<div class="dcltcTab">
+		  			<div class="dcltctChart" id="dcltctChart11"></div>
+		  			<div class="dcltctBox">
+		  				<div class="dcltctbTitle" id="dcltctbTitle"></div>
+		  				<div class="dcltctbList" id="dcltctbList11"></div>
+		  			</div>
+		  			<div class="dListchangepage" id="dListchangepage"></div>
+		  		</div>
+		  	</div>
+		  </div>
+     </div>
+</div>
+</div>
+<table id="exportEXL" style="display:none;">
+	<tr align="center" id="EXLtitle"></tr>
+</table>
+<div class="bottom">
+     <div class="bottom_nav">
+     	<a href="/help/nabout.htm" target="_blank">关于我们</a> |
+		<a href="/help/link.htm" target="_blank">友情链接</a> |
+		<a href="/help/nad.htm" target="_blank">广告指南</a> |
+		<a href="/help/nbenefit.htm" target="_blank">服务指南</a> |
+		<a href="/help/nbenefit.htm#pro" target="_blank">帮助中心</a> |
+		<a href="/topgradecar/citynavigation.htm" target="_blank">地区导航</a> |
+		<a href="http://auto.hx2car.com/" target="_blank">资讯中心</a> | 
+		<a href="/help/npay.htm" target="_blank">联系我们</a>
+     </div>
+     <p>服务信箱：kf@hx2car.cn 联系电话：0571-88212994 QQ群：41281177</br>
+		Copyright © 2003-2017 版权所有 hx2car.com 浙ICP备05000595号</br>
+		增值电信业务经营许可证: 浙B2-20120219
+	 </p>
+</div>
+<script type="text/javascript">
+  var _hmt =_hmt || [];
+	
+	(function() {
+		
+		var hm = document.createElement("script");
+		
+		hm.src = "//hm.baidu.com/hm.js?5b941f460f2ec63730c9f325ba44961f";
+		
+		var s = document.getElementsByTagName("script")[0];
+		
+		s.parentNode.insertBefore(hm, s);
+		
+	})();
+</script>	
+<script type="text/javascript">
+	$(function(){
+		//顶部tab切换
+		$('.dcTitle span').tabChange({
+			addClass: 'dctSelect', //需要添加的class
+            tabCallback: topdatatab
+		});
+		//车源流量切换
+		$('#data1 span').tabChange({
+			addClass: 'dcltctOn', //需要添加的class
+            tabCallback: data1change
+		});
+		var colorar = ['#00c9c9','#bba0e3','#7cc5fd','#efec91','#edab37','#aad332','#ff6b6b','#f00','#f00'];
+		var filtab = 0;
+		var preindex = 0;
+		function topdatatab(index){
+			if (index == preindex) {
+				return;
+			}
+			preindex = index;
+			switch(index){
+				case 0:
+					$('#data1').hide();
+					getdata(1,'','','');
+				break;
+				case 1:
+					$('#data1').hide();
+					getdata(2,'','','');
+				break;
+				case 2:
+					$('#data1').show();
+					getdata(3,'','','');  // datatype starttime endtime 页码 
+					$('#data1 span').eq(0).attr('data-tp',3).addClass('dcltctOn');
+					$('#data1 span').eq(1).attr('data-tp',4).removeClass('dcltctOn');
+				break;
+				case 3:
+					$('#data1').hide();
+					getdata(5,'','','');
+				break;
+				case 4:
+					$('#data1').hide();
+					getdata(6,'','','');
+				break;
+				case 5:
+					$('#data1').hide();
+					getdata(7,'','','');
+				break;
+				default:
+				break;
+			}
+		}
+		var predataindex = 0;
+		function data1change(index){
+			if (predataindex == index) {
+				return;
+			}
+			predataindex = index;
+			var ti = index;
+			var gettype = $('#data1 span').eq(ti).attr('data-tp');
+			getdata(parseInt(gettype),'','','');
+		}
+		//表格分页
+		function pagetabpost(cpg){
+			var stime = $('#date1').val();
+				var etime = $('#date2').val();
+				$.post('/vip/getdata.json',{dataType: filtab,startTime: stime,endTime: etime,currPage: cpg},function(data){
+					if (data) {
+						//表格内容
+						$('#dcltctbList11').html('');
+						for (var i = 0; i < data.tableList.length; i++) {
+							var str = '';
+							str += '<div class="dcltctbTitle">';
+							str += '<span>'+data.tableList[i].time+'</span>';
+							for(var key in data.tableList[i]){
+								if (key == 'time') continue;
+								if (data.tableList[i][key] != null) {
+									str += '<span>'+data.tableList[i][key]+'</span>';
+								}
+							}
+							str += '</div>';
+							$('#dcltctbList11').append(str);
+						};
+						var spanwidth = 922/tar.length;
+						$('.dataCenter .dcList .dcltCon .dcltcTab .dcltctBox .dcltctbTitle span').css({'width':spanwidth});
+						}
+				});
+		}
+		//日期查询
+		$('#subDate').click(function(){
+			var stime = $('#date1').val();
+			var etime = $('#date2').val();
+			var todaytime = new Date();
+			if(new Date(stime) > todaytime || new Date(etime) > todaytime){
+				alert('请选择正确的日期 注意：日期不能超过今天');
+				return;
+			}
+			getdata(filtab,stime,etime,'');
+		});
+		function getthemeandh(tps){
+			switch(tps){
+				case 1:
+					tar = ['日 期','电脑网页浏览量','手机网页浏览量','APP浏览量','总浏览量'];
+					hmany = 4;
+					filtab = 1;
+				break;
+				case 2:
+					tar = ['日 期','浏览量（PV）'];
+					hmany = 2;
+					filtab = 2;
+				break;
+				case 3:
+					tar = ['时 间','出 价','预约批发','降价通知','咨询底价','需求意向总量'];
+					hmany = 5;
+					filtab = 3;
+				break;
+				case 4:
+					tar = ['时 间','有 效','无效','已联系','未联系','需求跟进总量'];
+					hmany = 5;
+					filtab = 4;
+				break;
+				case 5:
+					tar = ['日 期','电话量'];
+					hmany = 2;
+					filtab = 5;
+				break;
+				case 6:
+					tar = ['日 期','新增车辆','销售车辆','在售车辆'];
+					hmany = 3;
+					filtab = 6;
+				break;
+				case 7:
+					tar = ['日 期','付费发车','更新车辆','推荐车辆','购买车标','店铺推广','车源推广','4S查询','总消费'];
+					hmany =8;
+					filtab = 7;
+				break;
+				default:
+			}
+		}
+		var tar = [],hmany = 0;
+		$('#data1').hide();
+		getdata(1,'','','');
+		function getdata(type,stime,etime,cpg){
+			$('#centernodata').remove();
+			//根据type获取标题等信息
+			getthemeandh(type);
+			$.post('/vip/getdata.json',{dataType: type,startTime: stime,endTime: etime,currPage: cpg},function(data){
+				if (data.message == 'success') {
+					var datax = [],datay = [],datal = [];
+					datax = data.chartList[0].time;
+					for (var i = 0; i < datax.length; i++) {
+						var itstring = datax[i].substring(0,(datax[i].indexOf('-')+1));
+						datal.push(datax[i].replace(itstring,''));
+					}
+					datal = datal.reverse();
+					var alldate = datax.length;
+					if (stime == '' || etime == '') {
+						var ctitle = datax[datax.length-1]+'至'+datax[0];
+						$('#date1').val(datax[datax.length-1]);
+						$('#date2').val(datax[0]);
+					}else{
+						var ctitle = new Date(etime) - new Date(stime) > 0? stime+'至'+etime : etime+'至'+stime;
+						$('#date1').val(stime);
+						$('#date2').val(etime);
+					}
+					//分页
+					var totalpage = data.total;
+					var pagenum = Math.ceil(totalpage/10);
+					$('#dListchangepage').pageSwitch({
+						ifInput: true,
+						pageTotal: pagenum,
+						prevCallback: pagetabpost,
+		                nextCallback: pagetabpost,
+		                clickCallback: pagetabpost
+					});
+					//表格内容
+					$('#dcltctbList11').html('');
+					for (var i = 0; i < data.tableList.length; i++) {
+						var str = '';
+						str += '<div class="dcltctbTitle">';
+						str += '<span>'+data.tableList[i].time+'</span>';
+						for(var key in data.tableList[i]){
+							if (key == 'time') continue;
+							if (data.tableList[i][key] != null) {
+								str += '<span>'+data.tableList[i][key]+'</span>';
+							}
+						}
+						str += '</div>';
+						$('#dcltctbList11').append(str);
+					};
+					//表格标题
+					var ttr = '',exltr = '';
+					$('#dcltctbTitle').html('');
+					$('#EXLtitle').html('');
+					for (var i = 0; i < tar.length; i++) {
+						ttr += '<span>'+tar[i]+'</span>';
+						exltr += '<th>'+tar[i]+'</th>';
+					};
+					$('#dcltctbTitle').append(ttr);
+					$('#EXLtitle').append(exltr);
+					//span标签宽度
+					var spanwidth = 922/tar.length;
+					$('.dataCenter .dcList .dcltCon .dcltcTab .dcltctBox .dcltctbTitle span').css({'width':spanwidth});
+					/*图表数据*/
+					//Y轴数据
+					var dataEXL = [];
+					for (var i = 0; i < data.chartList.length; i++) {
+						for(var key in data.chartList[i]){
+							if (key == 'time') {
+								dataEXL.push(data.chartList[i][key]);
+							}else{
+								datay.push(data.chartList[i][key]);
+								dataEXL.push(data.chartList[i][key]);
+							}
+						}
+					};
+					//EXCEL数据
+					var EXCELall = '';
+					$('#exportEXL').find('tr:not(#EXLtitle)').remove();
+					for (var i = 0; i < dataEXL[0].length; i++) {
+						EXCELall += '<tr align="center">';
+						for (var n = 0; n < dataEXL.length; n++) {
+							EXCELall += '<td>'+dataEXL[n][i]+'</td>';
+						};
+						EXCELall += '</tr>';
+					};
+					$('#EXLtitle').after(EXCELall);
+					//标题分类
+					var themear = [];
+					for (var i = 1; i < hmany; i++) {
+						themear.push(tar[i]);
+					};
+					//颜色分类
+					var seriesar = [];
+					for (var i = 0; i < themear.length; i++) {
+						var datarev = datay[i].reverse();
+						var ser = '{"name":"'+themear[i]+'","color":"'+colorar[i]+'","data":['+datarev+']}';
+						//JSON IE6.7兼容性
+						if (typeof(JSON) == 'undefined'){ 
+						    var jsonser = eval("("+ser+")");  
+						}else{
+							var jsonser = JSON.parse(ser);
+						}  
+						seriesar.push(jsonser);
+					};
+					var charttype = '';
+					var totalname = '';
+					switch(type){
+						case 3:case 4:case 1:case 7:
+							charttype = 'column';
+							totalname = tar[tar.length - 1];
+						break;
+						case 5:case 6:case 2:
+							charttype = '';
+						break;
+						default:
+					}
+					$('#dcltctChart11').getcharts(charttype, datal, seriesar, ctitle, totalname);	
+				}else{
+					$('#dcltctChart11').html('');
+					$('#dcltctbTitle').html('');
+					$('#dcltctbList11').html('');
+					$('#dListchangepage').html('');
+					$('.dcltCon').append('<span id="centernodata" style="font-size:20px;color:#999;margin:0 0 80px 0;display:inline-block;">'+data.message+'</span>');
+				}
+			});
+		}
+
+		$.fn.getcharts = function(charttype, dataX, dataY, ctitle, totalname){
+			var datax = dataX;
+			var datay = dataY;
+			$(this).highcharts({
+			        chart: {
+			        	type: charttype
+			        },
+			        title: {
+			            text: ctitle
+			        },
+			        xAxis: {
+			            categories: datax,
+			            labels: {
+			            	rotation: -45
+			            }
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: ''
+			            }
+			        },
+			        legend: { //注释栏
+            			align: 'center',
+            			verticalAlign: 'bottom',
+			            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
+			            borderColor: '#CCC',
+			            borderWidth: 1,
+			            shadow: false,
+			            floating:false
+			        },
+			        tooltip: {
+			            formatter: function() {
+			            	var totaldate = '';
+			            	if (totalname != '') {
+								totaldate = '<br/>'+totalname+': '+ this.point.stackTotal;
+							}
+			                return '<b>'+ this.x +'</b><br/>'+
+			                    this.series.name +': '+ this.y+totaldate
+			            }
+			        },
+			        plotOptions: {
+			            column: {
+			                stacking: 'normal'
+			            }
+			        },
+			        series: datay
+		    	});
+		}
+	});
+</script> 
+</body>
+</html>

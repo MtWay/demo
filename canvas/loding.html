@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			canvas {
+				background: #000;
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="can" width="400" height="400"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById('can');
+			var context = canvas.getContext('2d');
+			var num = 1000,
+				arr = [];
+			context.fillStyle = "rgba(255,255,255,1)";
+//			context.strokeStyle = "#fff";
+			context.arc(200, 200, 100, 0,Math.PI, false)
+			context.fill()
+			for(var i = 1; i <= num; i++) {
+				arr["num"+i]=i;
+			}
+			console.log(arr)
+			//度转角
+			hd = a => Math.PI * 2 * a / 360;
+
+			function loop() {
+			canvas.width=canvas.width;
+				for(var i = 1; i <= num; i++) {
+					context.beginPath();
+		context.moveTo(200,200)
+//	console.log(arr["num"+i] / num );
+					context.fillStyle = "rgba(255,0,0," + arr["num"+i] / num + ")";
+					context.arc(200, 200, 100, i / num * Math.PI*2 - hd(1), i / num * Math.PI*2 + hd(1), false);
+					context.fill();
+					context.closePath();
+//					console.log(arr["num"+i])
+					arr["num"+i]+=2;
+//					console.log(arr["num"+i])
+					if(arr["num"+i] > num) {
+						arr["num"+i] = 1;
+					}
+				}
+//				console.log(arr['num1'])
+					context.beginPath();
+				context.fillStyle = "#000";
+				context.arc(200, 200, 50, 0,Math.PI*2, false);
+					context.fill();
+					context.closePath();
+			timer = requestAnimationFrame(loop);
+			}
+			loop()
+//			var timer = setInterval(loop, 1000 / 6);
+			var timer = requestAnimationFrame(loop);
+		</script>
+	</body>
+
+</html>

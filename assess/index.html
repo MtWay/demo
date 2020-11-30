@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>车辆评估</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="car.css" />
+		<link rel="stylesheet" type="text/css" href="common.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/date.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jsPlug.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">车辆评估</h1>
+		</header>
+		<div class="banner">
+			<img src="banner.png">
+		</div>
+		<div class="box">
+
+			<div class="line">
+				<span class="red">*</span>
+				<span class="key"> 手机号码</span>
+				<input type="" name="" id="mobile" value="" placeholder="请输入手机号码" class="right" />
+			</div>
+			<div class="line">
+				<span class="red">*</span>
+				<span class="key"> 选择车型</span>
+				<span class="black" id="Brand">请选择车型</span><img src="right.png">
+			</div>
+			<div class="line">
+				<span class="red">*</span>
+				<span class="key"> 上牌日期</span>
+				<input type="" name="" id="date1" value="" placeholder="请选择日期" />
+				<img src="right.png">
+			</div>
+			<div class="line">
+				<span class="red">*</span>
+				<span class="key"> 车辆属地</span>
+				<span class="black" id="address">请选择地区</span><img src="right.png">
+			</div>
+			<div class="line">
+				<span class="red">*</span>
+				<span class="key"> 行驶里程</span>
+				<input type="" name="" id="mile" value="" placeholder="请输入行驶里程" class="right" />
+				<span class="black">万公里</span>
+			</div>
+		</div>
+		<div class="bot">
+			<div class="sub" id="sub">
+				<span>
+					提交
+				</span>
+			</div>
+		</div>
+		<div id="datePlugin"></div>
+		<section class="provincePage">
+			<div class="pageTitle">请选择地区<i class="backArrow" id="provinceArrow"></i></div>
+			<div class="province_panel">
+				<ul id="addBox"></ul>
+			</div>
+		</section>
+		<section class="cityPage">
+			<div class="pageTitle">请选择地区<i class="backArrow" id="cityArrow"></i></div>
+			<ul class="city_panel">
+			</ul>
+		</section>
+		<section class="resultPage">
+			<div class="pageTitle">评估结果<i class="backArrow" id="resultArrow"></i></div>
+			<img src="http://img.hx2cars.com/upload/brandlogo/carSerial/logonew/alpina.png" class="resultLogo" id="resultLogo">
+			<p class="resultTitle" id="resultTitle">奥迪 奥迪Q5 40 TFSI 舒适型 </p>
+			<div class="resultWrap">
+				<div class="resultList right-line">
+					<p class="gray">归属地</p>
+					<p class="black">安徽马鞍山</p>
+				</div>
+				<div class="resultList right-line">
+					<p class="gray">行驶里程</p>
+					<p class="black">2万公里</p>
+				</div>
+				<div class="resultList">
+					<p class="gray">上牌时间</p>
+					<p class="black">2020年4月</p>
+				</div>
+			</div>
+			<p class="quarantine"></p>
+			<div class="priceWrap">
+				<div class="priceBg"></div>
+				<div class="priceList c1">
+					<p class="pecieTxt">31.32万-33.06万</p>
+					<span class="pecieRadius "></span>
+					<p class="pecieName">收购价</p>
+				</div>
+				<div class="priceList c2">
+					<p class="pecieTxt">31.32万-33.06万</p>
+					<span class="pecieRadius "></span>
+					<p class="pecieName">零售价</p>
+				</div>
+				<div class="priceList c3">
+					<p class="pecieTxt">31.32万</p>
+					<span class="pecieRadius "></span>
+					<p class="pecieName">新车价</p>
+				</div>
+			</div>
+		</section>
+		
+
+		<section class="fourgradeBrand">
+			<div class="firstGrade" style="display:none;">
+				<div class="fGrade">
+					<div class="fgTitle" id="firstTitle">选择品牌<i id="fgradeArrow"></i></div>
+					<div class="fgTab" id="fgTab">
+						<div class="tabList cur">
+							乘用车
+						</div>
+						<div class="tabList">
+							商用车
+						</div>
+					</div>
+					
+					<div class="fgList" id="fgList"></div>
+				</div>
+				<div class="letterNav" id="letterNav"></div>
+				<div class="preLetter" id="preLetter" style="display:none;"></div>
+			</div>
+			<div class="secondGrade" style="display:none;">
+				<div class="fgTitle" id="allGrade"><i id="sgradeArrow"></i></div>
+				<div class="sgList" id="getThirdgrade"></div>
+			</div>
+			<div class="thirdGrade" style="display:none;">
+				<div class="fgTitle" id="allGrade2" style="position:absolute;top:0;"><i id="tgradeArrow"></i></div>
+				<div class="tgList">
+					<div class="tglLeft" id="getForthgrade"></div>
+					<div class="tglRight" id="tglForthgrade"></div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

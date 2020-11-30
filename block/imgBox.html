@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查看大图</title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		ul{width: 800px;background: #00f;}
+		li{list-style: none;}
+		.list li{width: 24%;float: left;border: 1px solid #f00;margin: -1px;}
+		.list li img{width: 95%;display: block;margin: 0 auto;}	
+		.img_model{position: fixed;top: 50%;left: 50%;margin: -350px 0 0 -400px;width: 800px;background: #fff;padding: 20px;overflow: hidden;}
+		.content{height: 600px;overflow: hidden;position: relative;}
+		.content li{float: left;width: 800px;position: relative;height: 600px;text-align: center;}
+		.content li:after{display: inline-block;height: 100%;vertical-align: middle;content: "";}
+		.content li img{margin: 0 auto;display: inline-block;vertical-align: middle;}
+		.content ul{width: 1000%;position: relative;} 
+		.content .btn{width: 40px;height: 75px;position: absolute;top: 50%;margin-top: -37px;background:url(http://static.hx2cars.com/resource/web/car/images/slider.png) no-repeat ;z-index: 2;cursor: pointer;}
+		.content .left_btn{background-position:left -83px  ;}
+		.content .right_btn{background-position:left top ;right: 0;}
+		
+		/*.close{background: url(http://static.hx2cars.com/resource/web/common/images/loginclose.png) no-repeat center;position: absolute;width: 19px;height: 19px;right: 0;top: 0; }*/
+		
+		.myModel .title {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 32px;
+}
+
+.myModel .title span {
+    display: block;
+    width: 135px;
+    border-bottom: 1px solid #f60;
+    margin: 0;
+    height: 55px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.myModel .title i {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url(http://static.hx2cars.com/resource/web/common/images/loginclose.png) center center no-repeat;
+    right: 50px;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+		
+		.model_bg{position: fixed;width: 100%;height: 100%;background: #000;opacity: 0.5;}
+		.hide{display: none;}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$(".close").click(function(){
+					$(".myModel,.model_bg").addClass("hide");
+				})
+				var k = 0.75;//3：4
+				$(".list li").click(function(){
+					var index = $(this).index();
+					console.log($(this).parent().find('li').length);
+					var imgList=[];
+					$(this).parent().find('li').each(function(i,n){
+						var img =  {
+							src:$(n).find('img').attr('src')
+						};
+						if($(n).find('img').height()/$(n).find('img').width()>k){
+							img.height=1;
+						}else{
+							img.width=1;
+						}
+						imgList.push(img);
+					})
+					console.log(imgList);
+					showImg({
+						index:index,
+						imgList:imgList
+					})
+				})
+				
+				function showImg(obj){
+					var defaults = {
+						index:0,
+						imgList:[],//要展示的图片列表
+						width:800,
+						height:600
+					};
+					
+					var opt = $.extend(defaults,obj);
+					var len  = opt.imgList.length;
+					$(".content ul").empty();
+					for(var i=0;i<len;i++){
+						var str = "<li><img src='"+opt.imgList[i].src+"'";
+						if(opt.imgList[i].height){
+							str+="style='height:"+opt.height+"px'";
+						}else{
+							str+="style='width:"+opt.width+"px'";
+						}
+						str+="></li>";
+						
+						$(".content ul").append(str);
+						
+					};
+					$(".content ul").css("left",-opt.index*opt.width+"px");
+					$(".myModel,.model_bg").removeClass("hide");
+					
+					$(".left_btn").click(prev);
+					$(".right_btn").click(next);
+					
+					function next(){
+						opt.index++;		
+						if(opt.index>len-1){
+							opt.index=len-1;
+						}
+						$(".content ul").animate({"left":-opt.index*opt.width+"px"});
+//						$(".content ul").css("left",-opt.index*opt.width+"px");
+					}
+					
+					function prev(){
+						opt.index--;		
+						if(opt.index<0){
+							opt.index=0;
+						}
+						$(".content ul").animate({"left":-opt.index*opt.width+"px"});
+//						css("left",);
+					}
+					
+				}
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li><img src="img/8f030a025b785cc9563e8947ce08bffe.JPG"/></li>
+			<li><img src="img/fcfe3702eaef1e8e2c2b13b04d84bd6b.jpg"/></li>
+			<li><img src="img/955a4385598e51cfa695e6906fc0f3f1.JPG"/></li>
+			<li><img src="img/aa59236d7e76d02a65033fcfd14ee10d.jpeg"/></li>
+			<li><img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg"/></li>
+		</ul>
+		<div class="model_bg hide">
+			
+		</div>
+		<div class="img_model myModel hide">
+			<p class="title"><span>查看图片</span><i class="close"></i></p>
+			<div class="content">
+				<div class="btn left_btn">
+					
+				</div>
+				<div class="btn right_btn">
+					
+				</div>
+				<ul>
+					
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>

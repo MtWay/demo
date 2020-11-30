@@ -1,0 +1,391 @@
+<view class ="container" hidden="{{!loading}}">
+
+
+
+<view  wx:if="{{showcarinfo}}">
+
+
+<scroll-view  scroll-y="true" class="scrollview"
+      style="height: {{windowHeight-40}}px; width: {{windowWidth}}px;">
+
+      <view class="topSelectStyle">
+    <view class="carinfoStyle" bindtap="carinfo">
+            车辆信息
+    </view>
+    <view class="sellinfoStyle" bindtap="sellinfo">商家信息</view>
+</view>
+
+      <!--显示的车辆图片-->
+    <swiper bindchange="durationChange"  style="width:{{imageWidth}}px;height:{{imageheight}}px" circular="true"
+    autoplay="true" interval="2500" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+        <image src="{{item}}" bindload="cusImageLoad" style="width:{{imageWidth}}px;height:{{imageheight}}px"
+  />
+        </swiper-item>
+    </block>
+    </swiper>
+
+    <!--显示的车辆数量图标-->
+    <image src="../../images/vehicleinfo_carousel_car.png" class="imgnumber"></image>
+
+    <view class="numbercar">{{currentImage}}</view>
+
+        <!--浏览量-->
+        <view class="privewStyle">
+       <image src="../../images/collect.png"        class="imgstyle" /> 
+       <view class="clickcountstyle">{{clickcount}}</view>
+        </view>
+         <!--信誉值-->
+           <view class="creditStyle">
+       <image src="../../images/prestige.png"        class="imgstyle" /> 
+       <view class="clickcountstyle">{{creditvalue}}</view>
+        </view>
+
+<!--车辆信息-->
+<view class="carinfo">
+    <!--品牌出厂日期等信息-->
+    <view class="cardetailinfoStyle">{{carinfo}}</view>
+    <!--价格-->
+    <view class="priceStyle">
+        <view class="sellprice">{{price}}</view>
+        <view class="guideprice">{{newcarprice}}</view>
+          <!--发布时间-->
+    <view class="timeStyle">{{publishdata}}</view>
+    </view>
+    <view class="blank"></view>
+</view>
+
+<!--基本信息-->
+<view class="basicInfoStyle">
+  
+    <!--车型和里程和排放-->
+    <view class="neirongStyle">
+        <view class ="leftStyle">{{cartype}}</view>
+        <view class = "middlestyle">{{mileage}}</view>
+           <view class ="rightStyle">{{paifang}}</view>
+    </view>
+
+    <view class="neirongStyle1">
+        <view class ="leftStyle">车型</view>
+        <view class = "middlestyle">里程</view>
+           <view class ="rightStyle">排放</view>
+    </view>
+
+       <!--燃油 用途和颜色-->
+    <view class="neirongStyle">
+        <view class="leftStyle">{{ranyou}}</view>
+          <view class = "middlestyle">{{yongtu}}</view>
+        <view class="rightStyle">{{anjie}}</view>
+    </view>
+        <!--用途和颜色-->
+    <view class="neirongStyle1">
+        <view class="leftStyle">燃油</view>
+            <view class = "middlestyle">用途</view>
+        <view class="rightStyle">按揭</view>
+    </view>
+        <!--按揭和过户和年审情况-->
+    <view class="neirongStyle">
+        <view class="leftStyle">{{guohu}}</view>
+        <view class = "middlestyle">{{nianshen}}</view>
+         <view class="rightStyle">{{baoxian}}</view>
+    </view>
+        <!--年审情况和保险情况-->
+    <view class="neirongStyle1">
+         <view class="leftStyle">过户</view>
+            <view class = "middlestyle">年审情况</view>
+        <view class="rightStyle">保险情况</view>
+    
+    </view>
+        <view class="blank"></view>
+</view>
+
+<!--车辆描述-->
+<view class="describeStyle">
+        <view class="troduce">车辆描述</view>
+        <view class="describeText">{{cardescribe}}</view>
+             <view class="blank"></view>
+</view>
+
+      <!--联系人-->
+      <view class="contract">
+        <image src="../../images/merchant_linkman.png"        class="linkman" /> 
+        <view class="manname">{{linkman}}</view>
+      </view>
+
+         <!--联系人电话-->
+      <view class="contract1">
+        <image src="../../images/merchant_telephone.png"        class="linkman" /> 
+        <view class="manname">电话: </view>
+        <view class="lianxi" bindtap="callphone">{{telePhone}}</view>
+          <view class="lianxi" bindtap="callphone1">{{mobliePhone}}</view>
+      </view>
+
+             <!--地址-->
+      <view class="contract1" bindtap="tomap">
+        <image src="../../images/merchant_map.png"        class="linkman" /> 
+        <view class="manname">{{location}}</view>
+      </view>
+
+<!--找相似车-->
+<view class="sameStyle">
+        <view class="troduce">找相似车</view>
+        <view class="commonStyle">
+            <view class="item" bindtap="samecar" id="1">
+                 <image src="../../images/vehicleinfo_type.png"        class="similarImg" /> 
+                 <view>同类型</view>
+            </view>
+            <view class="item"  bindtap="samecar" id="2">
+                 <image src="../../images/vehicleinfo_brand.png"        class="similarImg" /> 
+                 <view>同品牌</view>
+            </view>
+                 <view class="item"  bindtap="samecar" id="3">
+                 <image src="../../images/vehicleinfo_area.png"        class="similarImg" /> 
+                 <view>同地区</view>
+            </view>
+                 <view class="item"  bindtap="samecar" id="4">
+                 <image src="../../images/vehicleinfo_price.png"        class="similarImg" /> 
+                 <view>同价位</view>
+            </view>
+        </view>
+          <view class="blank"></view>
+  </view>   
+
+     <!--推荐车源-->
+<view class="tuijianStyle">
+      <view class="tuijiantext">推荐车源</view>
+</view>
+
+<view class="itemcontainer" wx:key="{{index}}" wx:for="{{carList}}" >
+
+ <view class="itemtuijianleft" bindtap="todetail"  id="{{item.id}}" wx:if="{{index%2 !=0}}"  style="height: {{(windowWidth/2-22)*2/3+70}}px;">
+ <!--左边的图片-->
+ <view class="insideitem">
+   <image 
+    binderror="binderrorimgmain" data-errorimg="{{index}}"
+      style="height: {{(windowWidth/2-22)*2/3}}px; width: {{windowWidth/2-22}}px;"
+                class="itemImageStyle" 
+                  mode= "aspectFit"
+                  src="http://img.hx2cars.com/upload{{item.firstSmallPic}}"
+              ></image>
+                <!--右边的数据-->
+          <!--品牌标题-->
+            <view class="itemBrandTitle">
+      {{item.usedate}}{{item.title}} 
+            </view>
+            <!--地区和公里数-->
+              <view class="areaAndMileage">
+            {{item.areaName}}
+            </view>
+
+            <!--发布日期-->
+            <!--<view class="publishdata">
+                 信誉值: {{item.creditNum}}
+             </view>-->
+            <!--价格-->
+                <view class="pricestyle" wx:if="{{item.money == 0.0}}">
+                 面议
+                </view>
+                <view  class="pricestyle" wx:elif="{{item.money == 0}}">面议               </view>
+   <view  class="pricestyle" wx:elif="{{item.money == '面议'}}"> 面议                </view>
+                <view  class="pricestyle" wx:else> ￥{{item.money}}万 </view>
+ </view>
+                
+ </view>
+
+ <view  class="itemtuijianright" bindtap="todetail"  id="{{item.id}}" style="height: {{(windowWidth/2-22)*2/3+70}}px;" wx:else> 
+  <!--左边的图片-->
+
+                 <view class="insideitem">
+   <image 
+    binderror="binderrorimgmain" data-errorimg="{{index}}"
+      style="height: {{(windowWidth/2-22)*2/3}}px; width: {{windowWidth/2-22}}px;"
+                class="itemImageStyle" 
+                  mode= "aspectFit"
+                  src="http://img.hx2cars.com/upload{{item.firstSmallPic}}"
+              ></image>
+                <!--右边的数据-->
+          <!--品牌标题-->
+            <view class="itemBrandTitle">
+      {{item.usedate}}{{item.title}} 
+            </view>
+            <!--地区和公里数-->
+              <view class="areaAndMileage">
+            {{item.areaName}}
+            </view>
+
+            <!--发布日期-->
+            <!--<view class="publishdata">
+                 信誉值: {{item.creditNum}}
+             </view>-->
+            <!--价格-->
+                <view class="pricestyle" wx:if="{{item.money == 0.0}}">
+                 面议
+                </view>
+                <view  class="pricestyle" wx:elif="{{item.money == 0}}">面议               </view>
+   <view  class="pricestyle" wx:elif="{{item.money == '面议'}}"> 面议                </view>
+                <view  class="pricestyle" wx:else> ￥{{item.money}}万 </view>
+ </view>
+ </view>
+
+       
+</view>
+
+</scroll-view>
+
+</view>
+
+<view  wx:if="{{showsellinfo}}">
+
+    <scroll-view  scroll-y="true" class="scrollview"
+      style="height: {{windowHeight-40}}px; width: {{windowWidth}}px;" bindscrolltolower="loadmore">
+
+      <view class="topSelectStyle">
+    <view class="carinfoStyle1" bindtap="carinfo">
+            车辆信息
+    </view>
+    <view class="sellinfoStyle1" bindtap="sellinfo">
+            商家信息
+        </view>
+</view>
+
+      <view class="sellbasicinfo">
+         <!--公司头像-->
+          <image 
+    class="companyhead" 
+      src="{{companyhead}}"
+   ></image>
+      <!--公司名称-->
+      <view class="companyname">
+        {{companyname}}
+      </view>
+
+   <!--个性签名-->
+      <view class="signature">
+        <view class="signtext">{{signature}}</view>
+      </view>
+         <view class="blank"></view>
+      </view>
+
+         <!--联系人-->
+      <view class="contract">
+        <image src="../../images/merchant_linkman.png"        class="linkman" /> 
+        <view class="manname">{{linkman}}</view>
+      </view>
+
+         <!--联系人电话-->
+      <view class="contract1">
+        <image src="../../images/merchant_telephone.png"        class="linkman" /> 
+        <view class="manname">电话: </view>
+        <view class="lianxi" bindtap="callphone">{{telePhone}}</view>
+          <view class="lianxi" bindtap="callphone1">{{mobliePhone}}</view>
+      </view>
+
+             <!--地址-->
+      <view class="contract1">
+        <image src="../../images/merchant_map.png"        class="linkman" /> 
+        <view class="manname">{{location}}</view>
+      </view>
+
+        <view class="kuncunstyle">
+           <view class="kucun">TA的库存</view>
+        </view>
+
+        <view class="itemcontainer" wx:key="{{index}}" wx:for="{{kucunList}}" >
+
+             <view class="itemtuijianleft" bindtap="todetail"  id="{{item.id}}" wx:if="{{index%2 !=0}}" style="height: {{(windowWidth/2-22)*2/3+70}}px;">
+ <!--左边的图片-->
+ <view class="insideitem">
+   <image 
+    binderror="binderrorimgmain1" data-errorimg="{{index}}"
+      style="height: {{(windowWidth/2-22)*2/3}}px; width: {{windowWidth/2-22}}px;"
+                class="itemImageStyle" 
+                  mode= "aspectFit"
+                src="{{item.photoAddress}}"
+              ></image>
+                <!--右边的数据-->
+          <!--品牌标题-->
+            <view class="itemBrandTitle">
+     {{item.buyDate}}{{item.seriesBrandCarStyle}} 
+            </view>
+            <!--地区和公里数-->
+              <view class="areaAndMileage">
+              {{item.location}}
+            </view>
+
+            <!--发布日期-->
+            <!--<view class="publishdata">
+                 信誉值: {{item.creditNum}}
+             </view>-->
+            <!--价格-->
+                <view class="pricestyle" wx:if="{{item.price == 0.0}}">
+                 面议
+                </view>
+                <view  class="pricestyle" wx:elif="{{item.price == 0}}">面议               </view>
+   <view  class="pricestyle" wx:elif="{{item.price == '面议'}}"> 面议                </view>
+                <view  class="pricestyle" wx:else> ￥{{item.price}}万 </view>
+ </view>
+                
+ </view>
+
+ <view  class="itemtuijianright" bindtap="todetail"  id="{{item.id}}" style="height: {{(windowWidth/2-22)*2/3+70}}px;" wx:else> 
+  <!--左边的图片-->
+
+                 <view class="insideitem">
+   <image 
+    binderror="binderrorimgmain" data-errorimg="{{index}}"
+      style="height: {{(windowWidth/2-22)*2/3}}px; width: {{windowWidth/2-22}}px;"
+                class="itemImageStyle" 
+                  mode= "aspectFit"
+                src="{{item.photoAddress}}"
+              ></image>
+                <!--右边的数据-->
+          <!--品牌标题-->
+            <view class="itemBrandTitle">
+    {{item.buyDate}}{{item.seriesBrandCarStyle}} 
+            </view>
+            <!--地区和公里数-->
+              <view class="areaAndMileage">
+           {{item.location}}
+            </view>
+
+            <!--发布日期-->
+            <!--<view class="publishdata">
+                 信誉值: {{item.creditNum}}
+             </view>-->
+            <!--价格-->
+                <view class="pricestyle" wx:if="{{item.price == 0.0}}">
+                 面议
+                </view>
+                <view  class="pricestyle" wx:elif="{{item.price == 0}}">面议               </view>
+   <view  class="pricestyle" wx:elif="{{item.price == '面议'}}"> 面议                </view>
+                <view  class="pricestyle" wx:else> ￥{{item.price}}万 </view>
+ </view>
+ </view>  
+</view>
+
+<!--加载更多的动画-->
+   <!--<view class="tips" wx:if="{{hasMore}}">
+     
+        <image src="../../images/loading.gif"   mode="aspectFill"/>
+        <view class="loadmoreText">加载中...</view>
+        
+</view>-->
+     
+      </scroll-view>
+
+</view>
+
+
+
+</view>
+
+
+
+
+<loading  hidden="{{loading}}">加载中...</loading>
+
+<view class="bottombutton" wx:if="{{loading}}">
+<view class="callphone" bindtap="callphone">打电话</view>
+<view class="chujia" bindtap="chujia">出价</view>
+</view>

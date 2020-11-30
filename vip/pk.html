@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>找车大pk</title>
+		<link rel="stylesheet" type="text/css" href="css/pk.css" />
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var cw = document.documentElement.clientWidth;
+			var ch = document.documentElement.clientHeight;
+			if(cw > 1242) {
+				cw = 1242;
+			}
+			document.getElementsByTagName("html")[0].style.fontSize = 20 * (cw / 621) + 'px';
+			$(function() {
+				setTimeout(function() {
+//					$(".def").removeClass("def")
+
+				})
+				$(document).scroll(function(e){
+					var top = $(this).scrollTop()
+					//页面滚动到某一项时出现对比动画
+					$(".def").each(function(i,n){
+						if($(n).offset().top-ch<=top){
+							$(n).removeClass("def")
+						}
+					})
+				})
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="banner">
+			<img src="img/banner.jpg" />
+			<div class="rule">
+				活动规则
+			</div>
+		</div>
+		<div class="section">
+			<h3 class="title1"></h3>
+			<div class="content">
+				<div class="headWrap">
+					<div class="headBox winner">
+						<div class="head">
+							<img src="img/h1.png" />
+							<span class="hat">
+								<!--需要跟据胜利与否修改路径-->
+								<img src="img/win.png"/>
+							</span>
+						</div>
+						<div class="userBtn">
+							郭美美
+						</div>
+					</div>
+					<div class="pkLogo">
+						<img src="img/PK.png" />
+					</div>
+					<div class="headBox loser">
+						<div class="head">
+							<img src="img/h2.png" />
+							<span class="hat">
+								<img src="img/lose.png"/>
+							</span>
+						</div>
+						<div class="userBtn">
+							李玉婷
+						</div>
+					</div>
+				</div>
+				<div class="pkList">
+					<div class="lTxt cf9882c">
+						100辆
+					</div>
+					<div class="rTxt cff8282">
+						200辆
+					</div>
+					<div class="clear">
+
+					</div>
+					<div class="line">
+						<div class="jindu">
+							<div class="lLine bf9862b def" style="width: 53%;">
+
+							</div>
+						</div>
+						<div class="pkIcon">
+							<img src="img/icon-pk.png" />
+						</div>
+						<div class="jindu">
+							<div class="rLine bff8282 def" style="width: 80%;">
+
+							</div>
+						</div>
+
+					</div>
+					<div class="pkName">
+						浏览车辆
+					</div>
+				</div>
+				<div class="pkList">
+					<div class="lTxt cf9882c">
+						100辆
+					</div>
+					<div class="rTxt cff8282">
+						200辆
+					</div>
+					<div class="clear">
+
+					</div>
+					<div class="line">
+						<div class="jindu">
+							<div class="lLine bf9862b def" style="width: 53%;">
+
+							</div>
+						</div>
+						<div class="pkIcon">
+							<img src="img/icon-pk.png" />
+						</div>
+						<div class="jindu">
+							<div class="rLine bff8282 def" style="width: 80%;">
+
+							</div>
+						</div>
+
+					</div>
+					<div class="pkName">
+						浏览车辆
+					</div>
+				</div>
+				<div class="pkList">
+					<div class="lTxt cf9882c">
+						100辆
+					</div>
+					<div class="rTxt cff8282">
+						200辆
+					</div>
+					<div class="clear">
+
+					</div>
+					<div class="line">
+						<div class="jindu">
+							<div class="lLine bf9862b def" style="width: 53%;">
+
+							</div>
+						</div>
+						<div class="pkIcon">
+							<img src="img/icon-pk.png" />
+						</div>
+						<div class="jindu">
+							<div class="rLine bff8282 def" style="width: 80%;">
+
+							</div>
+						</div>
+
+					</div>
+					<div class="pkName">
+						浏览车辆
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="section">
+			<h3 class="title2"></h3>
+			<div class="content content2">
+				<div class="flist">
+					<img src="img/coin.png" />
+					<div class="ftxt">
+						批发车源免费看 <br /> 收车快人一步
+					</div>
+				</div>
+				<div class="flist">
+					<img src="img/coin.png" />
+					<div class="ftxt">
+						微信全网批发车源 <br />一手掌握全国朋友圈
+					</div>
+				</div>
+				<div class="flist">
+					<img src="img/coin.png" />
+					<div class="ftxt">
+						查4S记录6元起<br /> 用券可享2元底价
+					</div>
+				</div>
+				<div class="flist">
+					<img src="img/coin.png" />
+					<div class="ftxt">
+						会员尊贵身份 <br />在万千车商中脱颖而出
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+<div class="bottom">
+				立即开通个人会员
+			</div>
+	</body>
+
+</html>

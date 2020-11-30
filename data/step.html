@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>定格</title>
+		<style type="text/css">
+			.box{margin: 100px;border: 1px solid #f00;width: 92px;height: 118px;position: relative;overflow: hidden;}
+			img{position:absolute;top:-250px;left: -30px; animation: name steps(1) 1.5s infinite; }
+			@keyframes name{
+				from{left: -30px;}
+				20%{left: -117px;}
+				40%{left: -194px;}
+				60%{left: -262px;}
+				80%{left: -335px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		<img src="img/webwxgetmsgimg.jpg">
+		</div>
+	</body>
+</html>

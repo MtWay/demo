@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我想象中的背景</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{
+				overflow: hidden;
+			}
+			canvas{
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="" height=""></canvas>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>	
+		<script type="text/javascript">
+			var canvas = $("#canvas")[0];
+			var ctx =canvas.getContext("2d");
+			
+			
+			function line(obj){
+				var def = {
+					deg:45,//倾斜角度
+					lw:2,//线宽
+					color:'#f00',
+					x:0,
+					y:0
+				}
+				
+				 return  $.extend(def,obj);
+			}
+
+			var arr = [];
+			var num = 10;
+			for(var i = 0;i<num;i++){
+				var deg = 45;
+				if(i%2==0){
+					deg=-45;
+				}
+				var a = {
+					deg:deg,
+					y:$(window).height()/10*i
+				}
+				arr.push(line(a))
+			}
+			console.log(arr)
+
+			size()
+			draw()
+			function draw(){
+				size();
+			var k = $(window).width()/2;
+				var x = $(window).width();
+			for(var i = 0;i<num;i++){
+				ctx.beginPath()
+				ctx.strokeStyle=arr[i].color;
+				var y = arr[i].y
+				if(arr[i].deg<0){
+					ctx.moveTo(-x+k,y-x/2);
+				ctx.lineTo(x+k,y+x/2)
+				}else{
+					ctx.moveTo(-x+k,y+x/2);
+				ctx.lineTo(x+k,y-x/2)
+				}
+				
+			ctx.stroke();
+			}
+//			ctx.arc(0,0,100,0,Math.PI*2,true)
+//			ctx.stroke();
+requestAnimationFrame(draw)
+			}
+			
+			//画布铺满屏幕
+
+			function size(){
+				$("#canvas").attr({
+					"height":$(window).height(),
+					"width":$(window).width()
+				})
+			}
+			
+			$(window).resize(size)
+			
+		</script>
+	</body>
+</html>

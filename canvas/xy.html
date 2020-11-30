@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>xy双轴绘制路线</title>
+		<style type="text/css">
+			.x{
+				position: relative;
+				width: 100px;
+				height: 100px;
+				/*border: 1px solid #f00;*/
+				animation: x linear 10s infinite;
+			}
+			.y{
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				animation:  y linear 3s infinite;
+			}
+			.y img{
+				width: 100%;
+				height: 100%;
+			}
+			@keyframes x{
+				from{transform: translateX(0);}
+				50%{transform: translateX(1800px);}
+			}
+			@keyframes y{
+				from{transform: translateY(0);}
+				50%{transform: translateY(800px);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="x">
+			<div class="y">
+				<img src="chapter6/textures/crate.gif"/>				
+			</div>
+		</div>
+	</body>
+</html>

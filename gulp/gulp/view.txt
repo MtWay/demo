@@ -1,0 +1,39 @@
+let gulp = require('gulp');
+let args = require('yargs').argv;
+let $ = {
+    path: require('path'),
+    glob: require('glob'),
+    merge: require('merge-stream'),
+    del: require('del'),
+
+    runSequence: require('run-sequence'),
+    gulpif: require('gulp-if'),
+    util:require('gulp-util'),
+    less: require('gulp-less'),
+    spritesmith: require('gulp.spritesmith'),
+    newer: require('gulp-newer'),
+    plumber:require('gulp-plumber'),
+    imagemin: require('gulp-imagemin'),
+    base64: require('gulp-base64'),
+    cssmin: require('gulp-clean-css'),
+    rev: require('gulp-rev'),
+    revCollector: require('gulp-rev-collector'),
+    webpack: require('webpack'),
+    autoprefixer: require('autoprefixer'),
+    postcss: require('gulp-postcss'),
+    browserSync: require('browser-sync').create(),
+    webpackConfigFun:require('./gulp/webpack.config')
+};
+let config = require('./gulp/config')($.path, args);
+let taskList = require('fs').readdirSync('./gulp/tasks/');
+taskList.forEach(function (file) {
+    require('./gulp/tasks/' + file)(gulp, config, $, args);
+});
+gulp.task('test',['ftl2copy','pcftlcopy'])
+
+gulp.task('dev', function () {
+    $.runSequence('clean:views', ['img2copy', 'html2copy','ftl2copy', 'sprite', 'less', 'webpack'])
+});
+gulp.task('build', function () {
+    $.runSequence('clean:views', ['img2copy', 'html2copy', 'sprite', 'less', 'webpack'], 'rev')
+});

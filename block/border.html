@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				float: left;
+				margin: 20px 0 0 20px;
+				font-size: 20px
+			}
+			
+			.box1 {
+				background: #fff;
+				position: relative;
+				padding: 1em;
+				background-clip: content-box;
+			}
+			.box1::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: #000;
+					z-index: -2;
+				}
+			.box1::before {
+					content: '';
+					position: absolute;
+					top: 0.5em;
+					right: 0.5em;
+					bottom: 0.5em;
+					left: 0.5em;
+					background: #f00;
+					z-index: -1;
+				}
+			.box2{
+				background:linear-gradient(to right, #fff, #fff),#000;
+				padding: 1em;
+				background-clip: content-box,border-box;
+			}
+			.box3{
+				 box-shadow: 0 0 0 1em #000;
+				 margin: 40px 20px 0 40px;
+			}	
+			.box4{
+				 color: #f00;
+				border: 1em solid currentColor;/*最接近元素的color色值*/
+			}
+			.box5{
+				outline: 1em solid #f00;
+				border: 1em solid currentColor;/*最接近元素的color色值*/
+				 margin: 20px 20px 0 40px;
+			}
+			.box6{
+				 border: 1em solid transparent; border-image: linear-gradient(to right, #f00, #000) 1% round; 
+			}
+			.box7{
+					outline: 1em dotted #f00;
+				 box-shadow: 0 0 0 1em #000;
+				}
+				
+			.box8{
+				 border: 10px dashed;
+    background:
+      linear-gradient(to top, red, 10px, transparent 10px),
+      linear-gradient(to right, red, 10px, transparent 10px),
+      linear-gradient(to bottom, red, 10px, transparent 10px),
+      linear-gradient(to left, red, 10px, transparent 10px);
+    background-origin: border-box;
+			}
+			.box9{
+				background: #fff;
+				position: relative;
+				padding: 10px;
+				background-clip: content-box;
+			}
+			.box9::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: #f00;
+					z-index: -1;
+				}
+				
+				/*.box9 {
+				background: #fff;
+				position: relative;
+				padding: 1em;
+				background-clip: content-box;
+			}
+			.box9::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: #000;
+					z-index: -2;
+				}*/
+		</style>
+	</head>
+
+	<body>
+		<div class="box box1">
+
+		</div>
+		<div class="box box2">
+
+		</div>
+		<div class="box box3">
+
+		</div>
+		<div class="box box4">
+
+		</div>
+		<div class="box box5">
+
+		</div>
+		<div class="box box6">
+
+		</div>
+		<div class="box box7">
+
+		</div>
+		<div class="box box8">
+
+		</div>
+		<div class="box box9">
+
+		</div>
+		<div class="box box10">
+
+		</div>
+		<div class="box box11">
+
+		</div>
+		
+		<div class="box box12">
+
+		</div>
+
+	</body>
+
+</html>

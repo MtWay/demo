@@ -1,0 +1,15 @@
+html{font-size: 62.5%;}
+body{ background-color:#fafafa; margin: 0;  padding: 0; font-family:"微软雅黑"; color:#4d4d4d;}
+body, div, dl, dt, dd, ul, ol, li,h1, h2, h3, h4, h5, h6, pre, code,form, fieldset, legend, input, iframe, button, textarea, p, blockquote, th, td { margin: 0;  padding: 0;}
+fieldset, img, iframe, button,a{ border:0; text-decoration:none;}
+ul { list-style: none;}
+input{ border:0px; font-family:"微软雅黑"; }
+textarea{ border:0px; font-family:"微软雅黑"; }
+.hide{display: none;}
+h2{height: 3.7rem;line-height:3.7rem;padding:0 1rem;font-size:1.6rem;color:#f60;font-weight: normal;border-bottom: 1px solid #ccc;margin-bottom: 4.2rem;}
+.main img{display: block;width: 12rem;margin: 0 auto;}
+.main p{font-size:1.6rem;line-height: 1;margin-top:1.6rem;color: #666;text-align: center;}
+.main .red{color: #d70d0d;}
+.main{text-align: center;}
+.main .btn{width: 12rem;height: 3rem;line-height: 3rem;font-size: 1.6rem;color: #f60;border: 1px solid #f60;margin: 15rem auto 2rem;border-radius:5px;}
+.main a{text-align: center;color: #999;}

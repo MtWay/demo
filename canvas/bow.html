@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>小游戏</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				height: 100%;
+			}
+			
+			div {
+				display: none;
+			}
+			
+			.box {
+				width: 150px;
+				margin: 20px auto;
+				display: block !important;
+			}
+			
+			input {
+				width: 100px;
+				margin-right: 10px;
+			}
+			
+			canvas {
+				width: 600px;
+				height: 600px;
+				margin: 100px auto;
+				display: block;
+				border: 1px solid #f00;
+				cursor: pointer;
+			}
+			/*canvas{background: #0f0 ;}*/
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				canvas = document.getElementById("can");
+				ctx = canvas.getContext('2d');
+
+				w = $("canvas").width();
+				h = $("canvas").height();
+				resize();
+				//调整画布尺寸
+				function resize() {
+
+					$("canvas").attr({
+						width: w,
+						height: h
+					});
+				}
+				var arr = [];
+				var level = 5;
+
+				init();
+
+				function init() {
+					arr=[]
+					var a = w / level;
+					for(var i = 0; i < level; i++) {
+						for(var j = 0; j < level; j++) {
+							arr.push({
+								x: a * i,
+								y: a * j,
+								w: a,
+								flag: 0
+							})
+						}
+					}
+					console.log(arr)
+
+					draw()
+				}
+
+				function draw() {
+					var len = arr.length;
+					for(var i = 0; i < len; i++) {
+						ctx.beginPath();
+						ctx.strokeStyle = "#f00";
+						ctx.fillStyle = "#0080FF";
+						if(arr[i].flag == 1) {
+							ctx.fillStyle = "#00FF00";
+						}
+						ctx.rect(arr[i].x, arr[i].y, arr[i].w, arr[i].w);
+						ctx.fill();
+						ctx.stroke();
+					}
+				}
+				var cx = $("#can").offset().left;
+				var cy = $("#can").offset().top;
+
+				$("#can").click(function(e) {
+					console.log(e.clientX);
+					var x = e.clientX - cx;
+					var y = e.clientY - cy;
+					var len = arr.length;
+					var a = w / level;
+
+					for(var i = 0; i < len; i++) {
+						if(arr[i].x <= x && arr[i].x + a >= x && arr[i].y <= y && arr[i].y + a >= y) {
+							arr[i].flag = !arr[i].flag;
+							var hit = arr[i]; //点中的元素；
+							for(var j = 0; j < len; j++) {
+//									console.log(arr[j]);
+								if(hit.y == arr[j].y && (arr[j].x==hit.x+a || arr[j].x==hit.x-a)){
+									console.log(arr[j]);
+									arr[j].flag = !arr[j].flag;
+								}
+								
+								if(hit.x == arr[j].x && (arr[j].y==hit.y+a || arr[j].y==hit.y-a)){
+									console.log(arr[j]);
+									arr[j].flag = !arr[j].flag;
+								}
+							}
+
+//							if(arr[i + level])
+//								arr[i + level].flag = !arr[i + level].flag;
+//							if(arr[i - level])
+//								arr[i - level].flag = !arr[i - level].flag;
+//							if(arr[i + 1])
+//								arr[i + 1].flag = !arr[i + 1].flag;
+//							if(arr[i - 1])
+//								arr[i - 1].flag = !arr[i - 1].flag;
+							draw()
+						}
+					}
+					var flag = 1;
+					for(var i = 0; i < len; i++) {
+						if(!arr[i].flag){
+							flag=0;
+						}
+					}
+					setTimeout(function(){
+						if(flag){
+						level++;
+						init()//升级
+					}
+					},100)
+					
+					
+				})
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<canvas id="can" width="" height=""></canvas>
+		<div class="box">
+			<!--<input type="text" name="txt" id="txt" value="" /><button>变</button>
+			<input type="file" name="file" id="file" value="" placeholder="选择一张图片"/>
+			<img src=""/>-->
+		</div>
+	</body>
+
+</html>

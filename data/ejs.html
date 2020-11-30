@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ejs</title>
+		<script src="js/ejs.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var people = ['geddy', 'neil', 'alex'],
+				html = ejs.render('<%= people.join(", "); %>', {
+					people: people
+				});
+				console.log(html)
+				
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

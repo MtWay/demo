@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			canvas {
+				width: 400px;
+				height: 400px;
+				border: 1px solid #f00;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="can" width="" height=""></canvas>
+		<script type="text/javascript">
+			$.ajax({
+				type: "get",
+				url: "http://test1.2schome.net/monitor/getheatmapinfo.json",
+				data: {
+					mobile: getQueryString("mobile") || "15771374022",
+					token: getQueryString("token") || "ab3ba540f3c9fc9c5b3835fb16209e90",
+				},
+				async: true,
+				success: function(data) {
+					console.log(data)
+					gsh(data.heatMap)
+				}
+			});
+
+			//获取url参数
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+
+			}
+
+			var canvas = document.getElementById("can");
+			ctx = canvas.getContext('2d');
+			var li = 20;
+
+			function gsh(arr) {
+				var dot = {};
+				for(var x = 0; x < li; x++) {
+					for(var y = 0; y < li; y++) {
+						var name = x + "-" + y;
+						dot[name] = 0;
+					}
+				}
+				arr.map(t => {
+					var x = Math.floor(t.x / w * li);
+					var y = Math.floor(t.y / h * li);
+					var name = x + "-" + y;
+					console.log(name)
+					dot[name]++;
+				})
+				console.log(dot)
+				draw(dot, 0)
+			}
+			var arr = [],
+				w, h,dw;
+			var max = 300;
+			for(var i = 0; i < max; i++) {
+				arr.push({
+					x: Math.floor(Math.random() * 400),
+					y: Math.floor(Math.random() * 400),
+				})
+			}
+			
+			console.log(arr)
+			var crr = ["rgba(255,255,255)", "rgba(35,192,192)", "rgba(73,192,35)", "rgba(196,226,28)", "rgba(226,120,28)", "rgba(255,0,0)"];
+gsh(arr)
+			//			var dot ={};
+			//			for(var x  =0;x<40;x++){
+			//				for(var y  =0;y<40;y++){
+			//					var name = x+"-"+y;
+			//					dot[name]=0;
+			//				}
+			//			}
+			//			console.log(dot)
+			//			
+			//			arr.map(t => {
+			//				var x = Math.floor(t.x/10);
+			//				var y = Math.floor(t.y/10);
+			//				var name = x+"-"+y;
+			//				dot[name]++;
+			//			})
+			//			console.log(dot)
+
+			//			$("canvas").attr({
+			//						width: 400,
+			//						height: 400
+			//					});
+			//			for (let key in dot){
+			//
+			//				var x = Number(key.split("-")[0])*20+10;
+			//				var y = Number(key.split("-")[1])*20+10;
+			//				var num = dot[key];
+			//				if(num>crr.length)num=crr.length;
+			//				
+			////				console.log(crr[num]);
+			//				ctx.beginPath()
+			//				ctx.fillStyle=crr[num];
+			//				ctx.arc(x,y,40,0,Math.PI*2)
+			//				ctx.fill()
+			//			}
+			var img = new Image();
+			img.src = "img/hot_bg.png";
+
+			img.onload = function() {
+				w = img.width;
+				h = img.height;
+				var ch = h / w * 400;
+				dw = w/li*1.2
+				$("canvas").attr({
+					width: w,
+					height: h
+				}).css("height", ch);
+
+				ctx.drawImage(img, 0, 0);
+				//				draw(dot, 0)
+			}
+
+			function draw(dot, num1) {
+				console.log(num1)
+				if(num1 >= crr.length) return false;
+
+				var t = [];
+				for(let key in dot) {
+
+					var x = Math.floor(Number(key.split("-")[0]) * w / li + w / li / 2);
+					var y = Math.floor(Number(key.split("-")[1]) * h / li + h / li / 2);
+					var num = dot[key];
+					if(num > crr.length) num = crr.length;
+
+					//				console.log(crr[num]);
+					if(num >= num1) {
+						ctx.beginPath()
+						var r = dw * (10 - num1) / 10
+						var cfg = {
+							x: x,
+							y: y,
+							r: r
+						};
+						var grd = ctx.createRadialGradient(cfg.x, cfg.y, 0.000, cfg.x, cfg.y, cfg.r);
+						var color = crr[num1].split(")")[0];
+						grd.addColorStop(0.000, color + ",0.9)");
+						grd.addColorStop(0.5, color + ",0.8)");
+						grd.addColorStop(1.0, color + ",0.0)");
+						ctx.fillStyle = grd;
+						//					ctx.fillStyle=crr[num1];
+						ctx.arc(x, y, r, 0, Math.PI * 2)
+						if(num1 > 0) {
+							ctx.fill()
+							ctx.beginPath()
+							ctx.fillStyle = "#fff";
+							ctx.textAlign="center";
+							ctx.font = "25px Verdana";
+							ctx.fillText("(" + x + "," + y + ")", x, y + 50);
+							ctx.fill()
+						}
+					}
+					if(num > num1) {
+						t[key] = dot[key]
+					}
+
+				}
+				//				requestAnimationFrame(function(){
+				//					draw(t,++num1)
+				//				})
+				return draw(t, ++num1)
+			}
+		</script>
+	</body>
+
+</html>

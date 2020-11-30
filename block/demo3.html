@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			const toChineseNum = (num) => {
+  // TODO
+  let brr = ["零","一","二","三","四","五","六","七","八","九"];
+  let wrr = ["十","百","千","万","十","百","千"];
+  var srr = num.toString().split("");
+  var str = "";
+  console.log(srr)
+  var len =	srr.length;
+  for(let i = 0;i<len;i++){
+    var num = srr[len-i-1];//当前位的数字
+    if(num!=0 || wrr[i-1]=="万"){
+      str=(wrr[i-1]||"")+str
+    }
+    if((str.length==0 || str.charAt(0)=="万") && num==0)
+    {
+      continue;
+    }
+    
+    if(str.charAt(0)=="零" && num==0)
+    continue;
+    
+    str=brr[num]+str
+    
+  }
+  console.log(str)
+  return str;
+  // return srr.join();
+}
+toChineseNum(10002340)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

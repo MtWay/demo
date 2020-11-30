@@ -1,0 +1,112 @@
+.clear{clear: both;}
+.right{float: right;}
+.hide{display: none !important;}
+.demand{border: none;padding: 25px;box-sizing: border-box;}
+.demand_title{height: 50px;line-height: 50px;}
+.SearchCule{line-height: 25px;padding-top:25px;font-size: 14px;color: #666;}
+.SearchCule .cond{width: auto;float: left;margin-right: 50px;}
+.search_btn{margin-right:30px ;}
+.SearchCule select{width: 90px;height: 25px;border: 1px solid #b7b7b7;margin-right: 15px;}
+.SearchCule input{height: 23px;}
+.SearchCule button{padding:0 15px;height: 25px;color: #fff;background: #027cff;}
+.SearchCule .newClue span{font-size: 15px;color: #f60;margin: 0 2px;}
+.demand_manage table{width: 940px;color: #666;font-size: 14px;text-align: center;}
+.demand_manage th{height: 40px;line-height: 40px;background: #eff2f9;text-align: center;}
+.demand_manage td{height: 60px;line-height: 30px;padding: 10px;border-bottom: 1px solid #eff2f9;}
+.demand_manage a{color:#027CFF ;}
+.demand_manage .allot,.demand_manage .tel{color: #027CFF;cursor: pointer;position: relative;}
+.demand_manage .allot .model-allot{width: 390px;height: 190px;position: absolute;background: #fff;z-index: 20;right: 70px;top: 10px;border:5px solid #d8e3ff;color: #666;}
+.model-allot h3{text-align: left;padding:10px ;margin: 0 10px;border-bottom: 1px solid #D8E3FF;line-height: 1;font-weight: normal;}
+.allotBox{height: 30px;line-height: 30px;margin: 35px auto;}
+.allotBox select{width: 148px;height: 28px;border: 1px solid #B7B7B7;color: #999;margin:0 10px;}
+.allotBox button{width: 98px;height: 33px;border: 1px solid #ccc;line-height: 33px;color: #bdbdb;background: #f4f4f4;border-radius: 3px;}
+.allotBox .squied{background: #027cff;border-color: #027CFF;color: #fff;margin-right: 20px;}
+.allotBox .btnBox{width: 220px;margin: 35px auto;}
+.close{right: 15px;top: 15px;cursor: pointer;transform: scale(1);z-index: 2;}
+.close:hover{animation: .2s scal linear infinite;}
+@keyframes scal{
+	from{transform: scale(.8);}
+	to{transform: scale(1.2);}
+}
+.close.icon {
+  color: #999;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  width: 16px;
+  height: 16px;
+  right: 10px;
+  top: 10px;
+}
+.close.icon:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  left: 0;
+  top: 10px;
+  background-color: #999;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.close.icon:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  left: 0;
+  top: 10px;
+  background-color: #999;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+
+.follow{height: 15px;margin-top: 10px;line-height: 1;color: #666;font-size: 14px;padding-top: 10px;}
+.follow label{color: #999;margin-right: 10px;}
+.follow input{vertical-align: middle;width: 14px;height: 14px;border: none;background: #e9e9e9;margin-right: 10px;}
+.demand_manage{padding: 0;margin-top: 20px;}
+.demand_title .right{float: right;padding: 0;}
+.demand_title .right a{color:#666;font-weight: bold;font-size: 14px;}
+.witch{margin-right: 50px;}
+.section{font-size: 14px;color: #666;line-height: 35px;margin-bottom: 20px;}
+.section h4{line-height: 40px;}
+.section span{margin-right: 50px;}
+.section .btn{width: 115px;height: 35px;line-height: 35px;text-align: center;color: #fff;background: #f60;border-radius: 5px;margin-top: -35px;cursor: pointer;margin-right: 35px;}
+.section li{width: 160px;float: left;margin-right: 15px;line-height: 1.5;color: #999;}
+.section li p{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+margin-bottom: 20px;
+}
+.section li img{width: 160px;height: 122px;margin-bottom: 5px;}
+.section .recordList{height: 128px;position: relative;padding-left: 30px;}
+.section .recordList:before{width: 10px;height: 10px;content: "";display: block;border:2px solid #f60;border-radius: 50%;position: absolute;left: 0;top:10px;}
+.section .recordList:after{width: 1px ;height: 105px;background: #d9d9d9;left: 7px;content:"";display: block;top: 28px;position: absolute;}
+
+
+/*弹框*/
+.model{width: 100%;height: 100%;position: fixed;top: 0;left: 0;}
+.black{width: 100%;height: 100%;background: #000;opacity: .5;}
+.model-box{width: 600px;height: 780px;background: #fff;position: absolute;top:10%;left: 50%;margin-left: -300px;padding: 45px;box-sizing: border-box;}
+.model-box h3{margin-bottom:20px;font-size: 24px;line-height: 1;color: #333;}
+.model-main li{position: relative;height:auto;line-height: 40px;}
+.model-main li input[type="text"] {height: 30px;width: 150px;}
+.model-main li .red{color: #f00;position: absolute;left: -10px;}
+.model-main .key{display: inline-block;width: 60px;text-align: right;color: #666;position: absolute;}
+.model-main .value{display: inline-block;font-size: 14px;height: auto;margin-left: 65px;}
+.model-main .followState ul{position: absolute;top: 0;}
+.model-main .followState li{float: left;margin-right:20px;}
+.model-main .value li input{vertical-align: middle;margin-right: 5px;}
+.model-main .value textarea{margin-top: 10px;width:380px;padding: 10px;resize: none;}
+.model-main .value .half{width: 60px;}
+.btnBox{width: 260px;height: 40px;margin: 0 auto;}
+.btnBox .btn{width: 120px;height: 38px;border:solid 1px #f60;background: #f60;color: #fff;border-radius: 5px;text-align: center;line-height: 38px;font-size: 18px;float: left;cursor: pointer;}
+.btnBox .btn-no{color: #999;background: #f4f4f4;border-color: #e5e5e5;float: right;}
+.iconBox{transform: scale(1.5);width:16px;height:16px;position: absolute;right: 0px;top: 0px;}
+.value .icon{width: 30px;height: 30px;display: inline-block;vertical-align: middle; cursor: pointer;}
+.value .add{background: url(../images/add.png) no-repeat center;}
+.value .remove{background: url(../images/remove.png) no-repeat center;}

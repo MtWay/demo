@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:20px;
+				height:20px;
+				background:#fff
+				margin:500px;
+				border: 2px solid #f60;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content:center;
+				position: relative;
+				overflow: hidden;
+				transform-origin: left top;
+				transform: scale(5);
+				
+			}
+			.mb{
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 20px;
+				height: 20px;
+				background: #fff;
+				transition: all 0.2s;
+			}
+			.box:hover .mb{
+				width: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/icon.png"/>
+			<div class="mb">
+				
+			</div>
+		</div>
+	</body>
+</html>

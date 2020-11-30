@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button id="shareButton">share</button>
+		<script type="text/javascript">
+			var shareButton =document.getElementById("shareButton")
+			shareButton.addEventListener('click', event => {
+  if (navigator.share) {
+    navigator.share({
+      title: 'WebShare API Demo',
+      url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+  } else {
+    // fallback
+  }
+});
+$(function(){
+	$.ajax({
+		type:"get",
+		url:"https://easy-mock.com/mock/5d31594374c59f4ee28967e1/example/mock#!method=get",
+		async:true,
+		success:function(data){
+			console.log(data)
+		}
+	});
+})
+		</script>
+	</body>
+</html>

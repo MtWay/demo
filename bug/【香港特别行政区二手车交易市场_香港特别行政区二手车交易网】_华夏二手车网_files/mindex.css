@@ -1,0 +1,488 @@
+body,p,img,ul,li,ol,dl,dd,dt,h1,h2,h3,a,input{margin:0;padding:0;font-family: "微软雅黑",arial;text-shadow:none;font-weight:normal;font-size:14px; font-size:1.4rem;}
+body{line-height:inherit;background-color:#ecedf1;}
+ul,ol{list-style:none;}
+a{color:#000;text-decoration:none;}
+img{border:none;display: block;}
+*:focus{outline:0;}
+.clear{clear:both;}
+*{-webkit-tap-highlight-color: transparent;}
+
+html,body{font-size: 62.5%;}
+.hide{display: none;}
+
+.mTop,
+.mProgram .mpbBtn,
+.mTop .mtSearch span,
+.mCartype .mcTitle,
+.mPrice .mpTitle,
+.mPrice .mpList a,
+.mPrice .mpList,
+.mHot .mhTitle,
+.mHot .mhList,
+.mHot .mhList a,
+.mFourcar .mfCarlist,
+.mFourcar .mfCarlist .mfcCar,
+.mFourcar .mfCarlist .mfcCar a .mfccName,
+.mFourcar .mfCarlist .mfcCar a .mfccInfo,
+.mMarket .mmTitle,
+.mMarket .mmList a,
+.mMarket .mmList,
+.msTop .mstInput,
+.msTop .mstInput span,
+.msTop .mstInput span input,
+.msCon a,
+.msCon,
+.mmHelplist,
+.mNav,
+.introduce,
+.mobcheck,
+.mobcheck .mBox input,
+.mcCarlist,
+.mcCarlist .mccCar a .mcccName,
+.mcCarlist .mccCar a .mcccBtn,
+.mcCarlist .mccCar a .mcccBtn span,
+.mcCarlist .mccCar,
+.mfCarlist,
+.mfCarlist .mfcBox,
+.mfCarlist .mfcBox .mfcbRow,
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox,
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo,
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo .mfcbrbcName,
+.mcInfo .mciLine .mcilCon,
+.cbList .cblOpenlist,
+.mcCarlist .mccCar a .mcccInfo,
+.csList,
+.csList a,
+.csList span,
+.frCon .frcTop .frctTip,
+.frCon .frcBottom,
+.frCon .frcBottom .frcbCancel,
+.csList a b i,
+.mzBox,
+.mzBox .mzbAll .mzaProvince p,
+.mzBox .mzbAll .mzaLocation,
+.mzBox .mzbAll .mzaProvince .mbbaBrand b,
+.midetail .mdSeek .mdsList i,
+.mzcity .mzcBox,
+.mzcity .mzcBox .mzcbAll .mzcbaL,
+.mcTitle,
+.mcTitle span,
+.mFBtn .musrBtn li,
+.mFBtn{
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.mCartype .mcTitle span:after,
+.mPrice .mpTitle span:after,
+.mHot .mhTitle p:after,
+.mMarket .mmTitle span:after,
+.msTop:after,
+.msCon a:after,
+.mmTop:after,
+.m4rLine:before,
+.m4rLine:after,
+.m4rLine .m4rlRight .m4rlrCarname:after,
+.mcInfo .mciLine:after,
+.mobcheck .mBox .mbCode:after,
+.csList a:after,
+.mzBox .mzbAll .mzaProvince .mbbaBrand:after,
+.mzBox .mzbAll .mzaProvince .zxs:after,
+.mzcity .mzcBox .mzcbAll .mzcbaL:after,
+.mzBox .mzbAll .mzaLocation:after,
+.mcTitle span:after,
+.infoList:after{
+	transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+    -moz-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+}
+
+.mProgram a:first-child:after{
+	transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+    -moz-transform: scaleX(0.5);
+    -ms-transform: scaleX(0.5);
+}
+
+body{width: 100%;background-color:#f6f6f6;}
+
+.listNodata{width: 100%;text-align: center;margin: 4rem 0 0 0;}
+.listNodata img{width: 17.6rem;display: inline-block;margin: auto;}
+
+/*****************************mindex*********************************/
+section.mindex{width: 100%;-webkit-filter: blur(0);filter: blur(0);transition:all .3s;}
+section.mindex.bluron{-webkit-filter: blur(50px);filter: blur(50px);}
+.mladv{display:block;position: relative;}
+.mladv img{width:100%;}
+.mladv .closeAdv{position:absolute;left:5%;top:50%;transform:translate(-50%,-50%);width:2rem;height:2.6rem;background:url(../images/mindex/adv_icon.png) no-repeat center center;background-size:2rem auto;}
+.mlTop{background-color:transparent;top:0;left:0;}
+.mlTop .mltSearch{float:left;width:77%;background-color:rgba(255,255,255,0.9);}
+.mlTop:after{display: none;}
+.mlTop .mltRight .mltrUser{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/topuser.png) center center no-repeat;background-size: 2.3rem auto;}
+.mlTop .mltRight .mltrNav{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/topuser2.png) center center no-repeat;background-size: 2.3rem auto;}
+.mlTop .mltRight .login {font-size:1.4rem;color:#666;display:block;width:100%;height:4.6rem;line-height:4.6rem;text-align:center;}
+.mlTop .station{position: relative;float:left;width:20%;height:3rem;line-height:3rem;margin-right:3%;margin-top:0.8rem;font-size:1.4rem;color:#666;}
+.mlTop .station span{float:left;width:100%;height:3rem;box-sizing: border-box;padding-right:1.2rem;text-align: center;line-height:3rem;;font-size:1.4rem;color:#666;overflow: hidden;}
+.mlTop .station i{position:absolute;top:1.1rem;right:0;display:inline-block;line-height:3.5rem;margin-left:8%;width: .8rem;height: .8rem;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/sselectdown.png) right center no-repeat;background-size: 0.8rem auto;}
+.mFocus{width: 100%;height: 0;padding: 30% 0 0 0;overflow: hidden;position: relative;}
+.mFocus .mfSwiper{position: absolute;top:0;left: 0;width: 100%;}
+.mFocus a{width: 100%;}
+.mFocus a img{width: 100%;display: block;}
+.mFocus .mfTurn{width: 100%;position: absolute;bottom: 1rem;left: 0;z-index:10;text-align: center;}
+.mFocus .mfTurn span{margin: 0 0.3rem;}
+.mFocus .mfTurn span.swiper-pagination-bullet{width: 0.7rem;height: 0.2rem;opacity:1;border-radius: 0.1rem;background: rgba(255,255,255,0.5);}
+.mFocus .mfTurn span.swiper-pagination-bullet-active{background-color:rgba(255,255,255,1);}
+
+.mTool{width: 100%;background-color:#fff;overflow: hidden;margin: 0 0 1rem 0;}
+.mTool a,.mTool button{width: 20%;float:left;}
+.mTool button{width: 20%;float:left;background-color:#fff;border:none;padding:0;}
+.mTool a span,.mTool button span{display: block;}
+.mTool .mtIcon{width: 100%;height: 5rem;}
+@media only screen and (max-width:375px){
+    .mTool .mtIcon{width: 100%;height:4rem;}
+	.mlTop .mltSearch{width:70%;}
+	.mlTop .station{width:27%;}
+}
+.mTool .mtFont{font-size: 1.2rem;color:#666;width: 100%;text-align: center;height: 3rem;line-height: 3rem;margin: 0 0 1rem 0;}
+.mTool .mt4S .mtIcon{background: url(../images/mindex/tool1.png) center bottom no-repeat;}
+.mTool .mtAssess .mtIcon{background: url(../images/mindex/tool16.png) center bottom no-repeat;}
+.mTool .mmhTy .mtIcon{background: url(../images/mindex/tool17.png) center bottom no-repeat;}
+.mTool .mtData .mtIcon{background: url(../images/mindex/tool2.png) center bottom no-repeat;}
+.mTool .mtMore .mtIcon{background: url(../images/mindex/tool5.png) center bottom no-repeat;}
+.mTool .mtFindCar .mtIcon{background: url(../images/mindex/tool11.png) center bottom no-repeat;}
+.mTool .mmhRule .mtIcon{background: url(../images/mindex/tool19.png) center bottom no-repeat;}
+.mindex .mTool .mtIcon{background-size: 40% auto;}
+
+.mProgram{overflow: hidden;padding:1rem 1.5rem ;}
+.mProgram a{width: 50%;float: left;text-align: center;position: relative;}
+.mProgram a>div{padding: 1.75rem  0  ;position: relative;width: 97%;color: #fff;box-sizing:border-box;-webkit-box-sizing:border-box;line-height: 0;text-align: center;}
+.mProgram .mpTablebuy{background: #ff8450;}
+.mProgram .mpTablepf{background: #ff6d62;float: right;}
+.mProgram .mpTablepf:after{background-image:url(../images/mindex/icon-m2.png) ;}
+.mProgram i{display: inline-block;margin-left: 0.5rem;position: relative;width:1.3rem ;}
+.mProgram i:after{background: center no-repeat;background-size:100% ;height: 1.3rem;position: absolute;left: 0;display: block;content: "";top: 0;transform: translateY(-85%);}
+.mpTablebuy i:after{background-image:url(../images/icon-n1.png) ;width: 1.3rem;}
+.mpTablepf i:after{background-image:url(../images/icon-n2.png) ;width: 1.4rem;}
+/*.mProgram a>div.mpTablebuy{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/indexmc.png) right center no-repeat;background-size: 3.7rem auto;}
+.mProgram a>div.mpTablepf{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/indexpf.png) right center no-repeat;background-size: 3.7rem auto;}*/
+
+
+.mProgram a .mptTitle{font-size: 1.3rem;line-height: 0;height: 0;}
+.mProgram a .mptTip{font-size: 1rem;}
+
+.mCartype{width: 100%;background-color:#fff;overflow: hidden;margin: 0 0 1rem 0;}
+.mCartype .mcTitle{width: 100%;padding: 0 1.8rem 0 1.8rem;height: 4.9rem;line-height: 4.9rem;font-size: 1.5rem;color:#333;}
+.mCartype .mcTitle span{display:block;width: 100%;position:relative;}
+.mCartype .mcTitle span:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.mCartype .mcList{width: 100%;overflow: hidden;margin: 0 0 1rem 0;}
+.mCartype .mcList a{width: 25%;float: left;}
+.mCartype .mcList a .mcltIcon{width: 100%;height: 4.55rem;display: block;}
+.mCartype .mcList a .mcltName{width: 100%;height: 3rem;display:block;line-height: 3rem;font-size:1.3rem;color:#666;text-align: center;}
+.mCartype .mcList a.mclType1 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype1.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType2 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype2.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType3 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype3.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType4 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype4.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType5 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype5.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType6 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype6.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType7 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype7.png) center bottom no-repeat;background-size: 75% auto;}
+.mCartype .mcList a.mclType8 .mcltIcon{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/cartype8.png) center bottom no-repeat;background-size: 75% auto;}
+
+.mPrice{width: 100%;background-color:#fff;overflow: hidden;}
+.mPrice .mpTitle{width: 100%;padding: 0 1.8rem 0 1.8rem;height: 4.9rem;line-height: 4.9rem;font-size: 1.5rem;color:#333;}
+.mPrice .mpTitle span{display:block;width: 100%;position:relative;}
+.mPrice .mpTitle span:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.mPrice .mpList{width: 100%;padding: 0 1.2rem;overflow: hidden;margin:1rem 0  0;}
+.mPrice .mpList a{width: 25%;padding:0 0.3rem;float: left;margin: 0 0 1.3rem 0;}
+.mPrice .mpList a span{width: 100%;border-radius: 0.2rem;height: 1.8rem;display:block;color:#333;font-size:1.4rem;text-align: center;line-height: 1.8rem;}
+
+.mHot{width: 100%;background-color:#fff;overflow: hidden;margin: 0 0 1rem 0;}
+.mHot .mhTitle{width: 100%;padding: 0 1.8rem 0 1.8rem;height: 4.9rem;line-height: 4.9rem;font-size: 1.5rem;color:#333;}
+.mHot .mhTitle p{display:block;width: 100%;position:relative;height: 100%;}
+.mHot .mhTitle p:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.mHot .mhTitle p span{margin: 0 1.9rem 0 0;}
+.mHot .mhTitle p span.mhtOn{color:#f60;}
+.mhtMore{height: 100%;display: block;padding: 0 1.2rem 0 0;font-size: 1.3rem;color:#f60;position: absolute;right: 0;top:0;background:url(../images/mindex/icon-rc.png) right center no-repeat;background-size:0.6rem auto;}
+.mHot .mhList{width: 100%;padding: 0 1.2rem 0.5rem;overflow: hidden;}
+.mHot .mhList a.mhlBrand{width: 20%;float: left;padding:0 0.5rem;margin: 0 0 0.8rem 0;}
+.mHot .mhList a.mhlBrand .mhlbIcon{width: 100%;display:block;background-color: #fff;text-align:center;border-radius:0.2rem;}
+.mHot .mhList a.mhlBrand .mhlbIcon img{width: 2.6rem;display: inline-block;}
+.mHot .mhList a.mhlBrand .mhlbName{height: 2.2rem;line-height: 2.2rem;font-size: 1.3rem;color:#666;width: 100%;text-align: center;display: block;}
+.mHot .mhList a.mhlStyle{width: 25%;padding:0 0.3rem;float: left;margin: 0 0 1.3rem 0;}
+.mHot .mhList a.mhlStyle span{width: 100%;border-radius: 0.2rem;height: 3.6rem;display:block;background-color:#ebebeb;color:#333;font-size:1.2rem;text-align: center;line-height: 3.6rem;}
+
+.mFourcar{width: 100%;}
+.mFourcar .mfTitle{width: 100%;height: 4.9rem;background-color:#fff;/*overflow: hidden;*/position: relative;box-shadow: 0 2px 3px #eee;border-bottom: 1px solid #ffe9da;}
+.mFourcar .mfTitle .select{color: #f60;font-weight: bold;}
+.mFourcar .mfTitle p{width: 20%;float: left;height: 4.9rem;line-height: 4.9rem;font-size:1.33rem;color:#333;text-align: center;}
+.mFourcar .mfTitle i{width: 20%;position:absolute;height: 1px;transition: all .3s;-webkit-transition: all .3s;background-color:#f60;bottom:-1px;left: 0;}
+.mFourcar .mfTitle p span{display: inline-block;}
+.mFourcar .mfCarlist{width: 100%;overflow: hidden;padding: 0 1rem;margin:0.8rem 0 0 0;}
+.mFourcar .mfCarlist .mfcCar{width: 50%;padding: 0 0.5rem ;margin:0 0 0.8rem 0;float: left;}
+.mFourcar .mfCarlist .mfcCar a{width: 100%;background-color:#fff;display: block;overflow: hidden;}
+.mFourcar .mfCarlist .mfcCar a .mfccPic{width: 100%;height: 0;padding: 75% 0 0 0;overflow: hidden;position: relative;}
+.mFourcar .mfCarlist .mfcCar a .mfccPic img{width: 100%;position: absolute;top:0;left: 0;}
+.mFourcar .mfCarlist .mfcCar a .mfccPic .picclWhitebg{width: 100%;height: 100%;background-color:rgba(255,255,255,.4);position: absolute;top:0;left:0;}
+.mFourcar .mfCarlist .mfcCar a .mfccPic .picclPastbg{width:3.6rem;height:3.6rem;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/carpst.png) 0 0 no-repeat;background-size: 3.6rem auto;position: absolute;top:0;left:0;}
+.mFourcar .mfCarlist .mfcCar a .mfccName{width: 100%;padding: 0 1rem;font-size:1.3rem;color:#333;line-height: 1.7rem;height:3.4rem;overflow:hidden;margin:1rem 0 1rem 0;}
+.mFourcar .mfCarlist .mfcCar a .mfccInfo{width: 100%;padding: 0 1rem;height:1.7rem;line-height:1.7rem;overflow: hidden;margin:0 0 1.6rem 0;font-size: 1.45rem;}
+.mFourcar .mfCarlist .mfcCar a .mfccInfo .mfcciPrice{color:#f60;float: left;}
+.mFourcar .mfCarlist .mfcCar a .mfccInfo .mfcciPrice b{font-size: 1.1rem;color:#999;font-weight:normal;text-decoration:line-through;}
+.mFourcar .mfCarlist .mfcCar a .mfccInfo .mfcciRight{float: right;padding: 0 0 0 1.3rem;color:#666;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/area.png) left center no-repeat;background-size: 0.9rem auto;font-size:1.1rem;}
+.mFourcar .mfMorecar{width: 100%;height: 3.7rem;line-height: 3.7rem;margin: 0 0 0.8rem 0;display:block;font-size:1.3rem;color:#999;text-align: center;}
+
+.mMarket{width: 100%;background-color:#fff;overflow: hidden;}
+.mMarket .mmTitle{width: 100%;padding: 0 1.8rem 0 1.8rem;height: 4.9rem;line-height: 4.9rem;font-size: 1.5rem;color:#333;}
+.mMarket .mmTitle span{float:left;width: 100%;position:relative;}
+.mMarket .mmTitle span:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.mMarket .mmList{width: 100%;padding: 0 0.8rem;overflow: hidden;margin:1.8rem 0 ;}
+.mMarket .mmList a{width: 20%;padding:0 0.8rem;float: left;margin: 0 0 1rem 0;}
+.mMarket .mmList a span{width: 100%;border-radius: 0.2rem;height: 3.64rem;display:block;background-color:#ebebeb;color:#333;font-size:1.2rem;text-align: center;line-height: 3.64rem;}
+
+.mFBtn {padding:1.8rem 1.45rem 0.8rem;width:100%;box-sizing:border-box;overflow: hidden;}
+.mFBtn .musrBtn {overflow:hidden;width:100%;}
+.mFBtn .musrBtn li {float:left;box-sizing:border-box;width:45%;text-align:center;line-height:0;padding:2.43rem;border:1px solid #f60;margin:0 2.5%;background: #fff;}
+.mFBtn .musrBtn li a{font-size:1.3rem;color:#f60;font-weight: bold;}
+
+.mFoot{width: 100%;text-align: center;padding: 0 0 3rem 0;overflow: hidden;}
+.mFoot .mfNav{overflow: hidden;display: inline-block;color:#e7e7e7;margin:0 0 0.8rem 0;}
+.mFoot .mfNav li{display: inline-block;}
+.mFoot .mfNav li a{color:#666;font-size:1.3rem;padding:0 0.1rem;}
+.mFoot .mfCopyright{color:#999;font-size: 0.9rem;}
+
+.mFloat{width: 4.6rem;position:fixed;right: 1.4rem;bottom:1.4rem;}
+.mFloat a{width: 4.6rem;display: block;height: 4.6rem;}
+.mFloat a.mfDownload{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/float1.png) center center no-repeat;background-size:4.5rem 4.5rem;}
+.mFloat a.mfGotop{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/float2.png) center center no-repeat;background-size:4.5rem 4.5rem;margin: 0 0 1.7rem 0;}
+
+section.mMoretool{width: 100%;height: 100%;background-color:#f3f3f3;position: fixed;top:0;overflow-y:scroll;}
+.mmTop{width: 100%;height: 4.6rem;position:relative;background-color:#fff;font-size: 1.8rem;line-height: 4.6rem;color:#333;text-align: center;}
+.mmTop .mmtBack{width: 4.1rem;height: 4.6rem;position:absolute;left:0;top:0;background: url(../images/back-icon.png) center center no-repeat;background-size: 1.2rem auto;display: block;}
+.mmTop:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.mmHelplist{width: 100%;overflow: hidden;background: #fff;margin : 1rem  0 0 ;padding: 0;}
+.mmHelplist a{width: 25%;float: left;display: block;}
+.mmHelplist button{width: 25%;float: left;display: block;border:none;background-color:#fff;padding:0;}
+.mmHelplist a .mmhIcon,.mmHelplist button .mmhIcon{width: 100%;height: 7.33rem;display: block;background-size:60% ;background-position:center;background-repeat:no-repeat;}
+.mmHelplist a .mmhName,.mmHelplist button .mmhName{width: 100%;height: 4.5rem;line-height: 4.5rem;text-align: center;font-size: 1.2rem;color:#333;display: block;}
+.mmHelplist .mmh4S .mmhIcon{background-image: url(../images/mindex/tool20.png);}
+.mmHelplist .mmFindCar .mmhIcon{background-image: url(../images/mindex/tool18.png);}
+.mmHelplist .mmSellCar .mmhIcon{background-image: url(../images/mindex/tool15.png);}
+.mmHelplist .mmBuyCar .mmhIcon{background-image: url(../images/mindex/tool13.png);}
+.mmHelplist .mmpfCar .mmhIcon{background-image: url(../images/mindex/tool14.png);}
+.mmHelplist .mmhAssess .mmhIcon{background-image: url(../images/mindex/tool2.png);}
+.mmHelplist .mmhRule .mmhIcon{background-image: url(../images/mindex/tool19.png);}
+.mmHelplist .mmhData .mmhIcon{background-image: url(../images/mindex/tool4.png);}
+.mmHelplist .mmhInsurance .mmhIcon{background-image: url(../images/mindex/tool6.png);}
+.mmHelplist .mmhLoan .mmhIcon{background-image: url(../images/mindex/tool7.png);}
+.mmHelplist .mmhAsk .mmhIcon{background-image: url(../images/mindex/tool8.png);}
+.mmHelplist .mmhTy .mmhIcon{background-image: url(../images/mindex/tool17.png);}
+.mmHelplist .mmhCheck .mmhIcon{background-image: url(../images/mindex/tool16.png);}
+@media only screen and (max-width:320px){
+    /*.mmHelplist a.mmh4S .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmFindCar .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhAssess .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhRule .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhData .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhInsurance .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhLoan .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhAsk .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhTy .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmhCheck .mmhIcon{background-size: 5rem auto;}
+    .mmHelplist a.mmSellCar .mmhIcon{background-size: 5rem auto;}*/
+}
+section.coolbrandselect{position:fixed;overflow-y:scroll;width: 100%;height: 100%;background-color:#fff;left:0;top:0;}
+.cbList{width: 100%;background-color:#333;}
+.cbList .cblBox{transition: all .3s;-webkit-transition: all .3s;width: 100%;background-color:#212121;height: 0;padding: 20% 0 0 0;position: relative;overflow: hidden;}
+.cblBoxon .cblBox{padding: 12% 0 0 0;}
+.cbList img.cblBg{transition: all .3s;-webkit-transition: all .3s;opacity:1;width: 100%;position: absolute;top: 0;left: 0;bottom:0;margin: auto 0;}
+.cblBoxon img.cblBg{opacity: 0;}
+.cbList .cblTheme{width: 100%;position: absolute;top:0;left: 0;bottom: 0;margin: auto 0;height: 4.1rem;}
+.cbList .cblTheme .cbltLetter{width: 100%;height: 2.6rem;line-height: 2.6rem;font-size: 2.7rem;color:#fff;text-align: center;}
+.cbList .cblTheme .cbltHotbrand{font-size: 1.3rem;height: 1.5rem;line-height: 1.5rem;color:#fff;width: 100%;text-align: center;}
+.cbList .cblOpenlist{transition: all .3s;-webkit-transition: all .3s;width: 100%;height:0;opacity:0;transform-origin: 50% 0;padding: 0 3.3rem;overflow: hidden;background-color:#fff;}
+.cbList .cblOpenlist .cbloBox{padding: 0.8rem 0 0 0;overflow: hidden;}
+.cbList .cblOpenlist a{overflow:hidden;width: 33%;float: left;color:#666;font-size: 1.5rem;height: 3.2rem;line-height: 4rem;margin:0.4rem 0 0 0;display: block;}
+.cbList .cblOpenlist a:last-child{margin-bottom:2rem;}
+.cblBoxon .cblOpenlist{opacity:1;height: auto;}
+
+section.coolstyle{width: 100%;height: 100%;position: fixed;left: 0;z-index:120;top:0;}
+.csTitle{width: 100%;padding:4.6rem 0 0 0;height:0;background: #212121;position:fixed;z-index:999;}
+.csTitle .cstArrow{position: absolute;top:0;left:0;z-index:98;width: 5rem;height: 4.6rem;display: block;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/whitearrow.png) center center no-repeat;background-size: 0.9rem auto;}
+.csTitle .cstAffirm{position: absolute;top:0;right:0;z-index:98;width: 5rem;text-align: center;line-height: 4.6rem;height: 4.6rem;font-size: 1.5rem;color:#fff;font-style: normal;display: block;}
+.csTitle span{display:inline-block;width:100%;height: 4.6rem;position:absolute;top:0;left:0;text-align: center;font-size: 1.8rem;color:#fff;line-height: 4.6rem;}
+.csList{width: 100%;height: 100%;padding: 4.6rem 0 0 0;background:#fff;overflow-y:scroll;}
+.csList a{padding:0 0 0 1.9rem;width: 100%;height:4.5rem;font-size: 1.5rem;color:#333;display: block;line-height: 4.5rem;position: relative;}
+.csList a:after{content:'';position:absolute;height: 1px;background-color:#e1e1e1;width: 100%;bottom:0;left:0;}
+.csList a b{width: 5rem;height: 4.5rem;position: absolute;display: block;top:0;right: 0;font-weight:normal;}
+.csList a b i{width: 2.2rem;height: 2.2rem;border:1px solid #ccc;display: block;position: absolute;top:0;bottom:0;left:50%;margin:auto 0 auto -1.1rem;border-radius:50%;}
+.csList a b.wtselectOn i{border:none;background: #f60 url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/brandselect.png) center center no-repeat;background-size: 1.3rem auto;}
+.csList span{display:block;width: 100%;height: 3.7rem;background-color:#f6f6f6;color:#9b9b9b;font-size: 1.5rem;padding-left: 1.9rem;line-height: 3.7rem;}
+
+/*****************************mindex*********************************/
+
+
+/*****************************mcollect*********************************/
+section.mCollect{width: 100%;}
+.mcCarlist{width: 100%;padding: 0 0 0 0.8rem;overflow: hidden;}
+.mcCarlist .mccCar{width: 50%;padding: 1.4rem 0.8rem 0 0;float: left;}
+.mcCarlist .mccCar a{width: 100%;display: block;background-color:#fff;overflow: hidden;}
+.mcCarlist .mccCar a .mcccPic{width: 100%;height: 0;padding: 75% 0 0 0;overflow: hidden;position: relative;}
+.mcCarlist .mccCar a .mcccPic img{width: 100%;position: absolute;top:0;left: 0;}
+.mcCarlist .mccCar a .mcccPic .picclWhitebg{width: 100%;height: 100%;background-color:rgba(255,255,255,.4);position: absolute;top:0;left:0;}
+.mcCarlist .mccCar a .mcccPic .picclPastbg{width:3.6rem;height:3.6rem;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/carpst.png) 0 0 no-repeat;background-size: 3.6rem auto;position: absolute;top:0;left:0;}
+.mcCarlist .mccCar a .mcccName{width: 100%;padding: 0 1rem;font-size: 1.3rem;color: #666;line-height: 1.7rem;height: 3.4rem;overflow: hidden;margin: 1rem 0 0.5rem 0;}
+.mcCarlist .mccCar a .mcccInfo{width: 100%;height: 1.7rem;padding:0 1rem;line-height: 1.7rem;overflow: hidden;margin: 0 0 0.7rem 0;text-align: center;}
+.mcCarlist .mccCar a .mcccInfo .mccciPrice{font-size: 1.3rem;color:#f60;font-weight: normal;display: inline-block;margin:0 0.7rem 0 0;}
+.mcCarlist .mccCar a .mcccInfo .mccciTime{font-size: 1.3rem;color:#999;font-weight: normal;display: inline-block;}
+.mcCarlist .mccCar a .mcccBtn{width: 100%;padding: 0 1.6rem;overflow: hidden;margin:0 0 1.7rem 0;}
+.mcCarlist .mccCar a .mcccBtn span{width: 50%;padding: 0 0.4rem;float: left;}
+.mcCarlist .mccCar a .mcccBtn span b{font-weight: normal;font-size:1.2rem;color:#666;width: 100%;height: 2.2rem;line-height: 2.2rem;border:1px solid #eaeaea;border-radius:0.4rem;display: block;text-align: center;}
+
+/*****************************mcollect*********************************/
+
+/*****************************mfootprint*********************************/
+section.mFootprint{width: 100%;}
+.mfCarlist{width: 100%;padding: 0 0 0 1.3rem;margin:2.6rem 0 0 0;}
+.mfCarlist .mfcBox{width: 100%;border-left:0.2rem solid #e5e5e5;position: relative;}
+.mfCarlist .mfcBox .mfcbDate{font-size:1.7rem;color:#666;padding: 0 0 0 2.5rem;height: 1.8rem;line-height: 1.8rem;background:url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/foottime.png) left center no-repeat;background-size: 1.8rem auto;margin:-0.9rem 0 1.5rem -0.9rem;}
+.mfCarlist .mfcBox .mfcbRow{width: 100%;padding: 0 0 0 1.6rem;margin: 0 0 2.6rem 0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox{width: 100%;background-color:#fff;padding: 1.8rem 0 1.8rem 1.8rem;overflow-x: scroll;border:1px solid #eaeaea;border-right: none;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrIf{width: 100%;overflow: hidden;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar{width: 150px;margin:0 9px 0 0;float: left;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcPic{width: 100%;height: 0;padding: 75% 0 0 0;position: relative;overflow: hidden;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcPic img{width: 100%;position: absolute;top:0;left: 0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcPic .picclWhitebg{width: 100%;height: 100%;background-color:rgba(255,255,255,.4);position: absolute;top:0;left:0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcPic .picclPastbg{width:3.6rem;height:3.6rem;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/carpst.png) 0 0 no-repeat;background-size: 3.6rem auto;position: absolute;top:0;left:0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo{width: 100%;border:1px solid #f6f6f6;border-top:none;overflow: hidden;position: relative;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo .mfcbrbcName{width: 100%;padding: 0 1rem;font-size: 1.3rem;color: #666;line-height: 1.7rem;height: 3.4rem;overflow: hidden;margin: 1rem 0 0.5rem 0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo .mfcbrbcTime{width: 100%;padding: 0 1rem;font-size: 1.0rem;color: #999;line-height: 1.7rem;margin: 0 0 0.3rem 0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo .mfcbrbcPrice{width: 100%;padding: 0 1rem;font-size: 1.3rem;color: #f60;line-height: 1.7rem;margin: 0 0 1.5rem 0;}
+.mfCarlist .mfcBox .mfcbRow .mfcbrBox .mfcbrbCar .mfcbrbcInfo .mfcbrbcSame{width: 50px;height: 20px;line-height: 20px;font-size:1.2rem;border:1px solid #eaeaea;color:#666;position: absolute;right: 1rem;text-align: center;bottom:1.4rem;border-radius:0.4rem;}
+
+/*****************************mfootprint*********************************/
+
+
+/*****************************m4sresult*********************************/
+section.m4sresult{width: 100%;}
+.m4Result{overflow: hidden;margin: 0 0 1rem 0;}
+.m4rLine{width: 100%;background-color:#fff;margin:1rem 0 0 0;position: relative;overflow: hidden;display: block;}
+.m4rLine:before{content:'';position:absolute;height: 1px;background-color:#e1e1e1;width: 100%;top:0;left:0;}
+.m4rLine:after{content:'';position:absolute;height: 1px;background-color:#e1e1e1;width: 100%;bottom:0;left:0;}
+.m4rLine .m4rlLeft{width: 2rem;float:left;margin-right: 1rem;height: 4.5rem;background:url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/4slist.png) center 1.5rem no-repeat;background-size:1.5rem auto;}
+.m4rLine .m4rlRight{width: 100%;padding:0 1.5rem;box-sizing:border-box;/*float: left;*/}
+.m4rLine .m4rlRight .m4rlrCarname{width: 100%;height: 4.5rem;color:#333;font-size: 1.5rem;line-height: 4.7rem;position: relative;}
+.m4rLine .m4rlRight .m4rlrCarname:after{content:'';position:absolute;height: 1px;background-color:#e1e1e1;width: 100%;bottom:0;left:0;}
+.m4rLine .m4rlRight .m4rlrCarname .m4rlrcDelete{width: 3rem;position:absolute;right:0;top:0;height: 100%;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/4sdelete.png) 0.7rem center no-repeat;background-size: 1.8rem auto;}
+.m4rLine .m4rlRight .m4rlrInfo{width: 100%;overflow: hidden;position: relative;}
+.m4rLine .m4rlRight .m4rlrInfo p{width: 100%;font-size: 1.3rem;color:#999;line-height: 2.4rem;}
+.m4rLine .m4rlRight .m4rlrInfo .m4rlriVin{margin: 0rem 0 0 0;}
+.m4rLine .m4rlRight .m4rlrInfo .m4rlrPrice{color:#f60;font-size: 1.5rem;line-height: 2.8rem;margin: 0 0 0.5rem 0;}
+.m4rLine .m4rlRight .m4rlrInfo .m4rlrPrice span{margin: 0 1.2rem 0 0;}
+.m4rLine .m4rlRight .m4rlrInfo .m4rlrNext{height: 100%;width: 5rem;position:absolute;top:0;right:0;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/nextbrandarrow.png) 2.1rem center no-repeat;background-size: 0.8rem auto;}
+
+.m4rLine .m4rlRight .m4rlrInfo .carinfo {width:100%;overflow:hidden;margin-top:0.3rem;line-height: 2.4rem;}
+.m4rLine .m4rlRight .m4rlrInfo .carinfo .cartitle{float:left;width:80%;}
+.m4rLine .m4rlRight .m4rlrInfo .carinfo .m4rlrzhutai{float:right;width:20%;color:#f60;text-align:right;}
+.m4rLine .m4rlRight .m4rlrInfo .carinfo .m4rlrPrice {float:left;width:20%;color:#f60;}
+.m4rLine .m4rlRight .m4rlrInfo .carinfo .m4rlrTime {float:right;width:80%;text-align:right;}
+
+
+section.fsreturn{width: 100%;height: 100%;position: fixed;left: 0;top:0;background-color:#f6f6f6;overflow-y: scroll;}
+.frCon{width: 100%;height: 100%;}
+.frCon .frcTop{width: 100%;overflow:hidden;background:#fff url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/fsresultbg.jpg) center top no-repeat;background-size:100% auto;}
+.frCon .frcTop .frctIcon{width: 100%;padding: 30% 0 0 0;height: 0;background:url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mindex/return.png) center center no-repeat;background-size: 6.9rem auto;}
+.frCon .frcTop .frctTitle{width: 100%;height: 3.9rem;line-height: 3.9rem;font-size:2rem;text-align:center;color:#333;margin: 0 0 1rem 0;}
+.frCon .frcTop .frctTip{width: 100%;font-size: 1.5rem;text-align:center;margin:0 0 4rem 0;color:#999;line-height: 2.3rem;padding:0 1.5rem;}
+.frCon .frcBottom{width: 100%;padding:0 1.5rem;}
+.frCon .frcBottom .frcbTip{width: 100%;font-size: 1.5rem;margin:3.9rem 0 2.5rem 0;color:#999;line-height: 2.3rem;}
+.frCon .frcBottom .frcbGoto{width: 100%;height: 4.6rem;margin: 0 0 2rem 0;background-color:#f60;border-radius:0.4rem;line-height: 4.6rem;text-align: center;font-size:1.8rem;color:#fff;}
+.frCon .frcBottom .frcbCancel{width: 100%;height: 4.6rem;line-height: 4.6rem;margin: 0 0 3rem 0;background-color:#fff;border-radius:0.4rem;border:1px solid #eaeaea;line-height: 4.6rem;text-align: center;font-size:1.8rem;color:#999;}
+
+/*****************************m4sresult*********************************/
+
+
+/*****************************mContact*********************************/
+section.mContact{width: 100%;}
+.mcInfo{width: 100%;}
+.mcInfo .mciLine{width: 100%;height: 7rem;background-color:#fff;position:relative;display:block;}
+.mcInfo .mciLine:after{content:'';position:absolute;height: 1px;background-color:#e1e1e1;width: 100%;bottom:0;left:0;}
+.mcInfo .mciLine .mcilCon{width: 100%;padding: 0 1.5rem 0 7rem;overflow: hidden;position: relative;}
+.mcInfo .mciLine .mcilCon .mcilcName{width: 100%;color:#333;font-size: 1.5rem;height: 3.6rem;overflow:hidden;line-height: 5.2rem;}
+.mcInfo .mciLine .mcilCon .mcilcDetail{width: 100%;color:#888;font-size: 1.2rem;height: 2rem;line-height: 2rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.mcInfo .mciLine .mcilCon .mcilcDate{position: absolute;top:1rem;right: 1.5rem;color:#999;font-size: 1rem;}
+.mcInfo .mciLine .mcilHead{width: 7rem;height: 7rem;position: absolute;top:0;}
+.mcInfo .mciLine .mcilHead .mcilhBox{width: 4.4rem;height: 4.4rem;border-radius:50%;border:1px solid #ededed;position: absolute;overflow:hidden;display: inline-block;top:0;bottom:0;left:50%;margin: auto 0 auto -2.2rem;}
+.mcInfo .mciLine .mcilHead img{width: 4.4rem;}
+.mcInfo .mciLine .mcilHead .mcilhbBowl{width: 1.6rem;height: 1.6rem;background-color:#f60;position: absolute;top:1.1rem;right: 1.1rem;border-radius:50%;font-size: 1.0rem;color:#fff;line-height: 1.6rem;text-align: center;}
+
+/*****************************mContact*********************************/
+/**********************************新增站点选择***************************************/
+section.mzarea{position: fixed;width: 100%;height: 100%;background-color: #fff;top: 0;z-index:10;}
+.mzBox{width: 100%;height: 100%;}
+.mzBox .mzbAll{width: 100%;height: 100%;overflow-y:scroll;overflow-x: hidden;background-color:#f6f6f6;}
+.mzBox .mzbAll .areaNav{position:fixed;top:25%;right:0;width:2rem;z-index: 100;}
+.mzBox .mzbAll .areaNav li{width:2rem;height:2rem;margin:.5rem 0;}
+.mzBox .mzbAll .areaNav a{display:block;width:2rem;height:2rem;color:#666;line-height:2rem;text-align: center;}
+.mzBox .mzbAll .mzaLocation{width: 100%;font-size:1.5rem;color:#333;line-height:4.6rem;height: 4.6rem;padding: 0 0 0 3.8rem;position: relative;background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/mcarlist/listlocal.png) 2rem center no-repeat;background-size: 1.2rem auto;background-color: #fff;}
+.mzBox .mzbAll .mzaLocation:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.mzBox .mzbAll .mzaLocation a{display: inline-block; box-sizing: border-box;height: 2.6rem;vertical-align: top;padding: 0 1rem;line-height: 2.6rem;color: #999;font-size: 1.4rem;border: 1px solid #eee;border-radius: .4rem;text-align: center;margin-top: 1rem;}
+.mzBox .mzbAll .mzaHistory,.mzBox .mzbAll .mzaHot{width:100%;font-size:1.5rem;color:#333;background-color: #fff;}
+.mzBox .mzbAll .mzaHistory .history_title,.mzBox .mzbAll .mzaHot .hot_title{position: relative;box-sizing: border-box;width:100%;height:4.6rem;padding-left:2rem;line-height:4.6rem;}
+.mzBox .mzbAll .mzaHistory .history_content{box-sizing: border-box;width:100%;height:4.6rem;padding:0 1.5rem;line-height:4.6rem;margin-bottom:2rem;}
+.mzBox .mzbAll .mzaHot .hot_content{box-sizing: border-box;width:100%;height:8rem;padding:0 1.5rem;margin-bottom:2rem;}
+.mzBox .mzbAll .mzaHistory .history_content a{width:8rem;height: 3rem;line-height: 3rem;color: #999;font-size: 1.4rem;float: left;border: 1px solid #eee;border-radius: .4rem;text-align: center;margin: 0 0.5rem 1rem 0.5rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.mzBox .mzbAll .mzaHot .hot_content a{float: left;width:15%;box-sizing: border-box;height: 2.5rem;padding:0;line-height: 2.5rem;color: #999;font-size: 1.4rem;border: 1px solid #eee;border-radius: .4rem;text-align: center;margin: 0 .75% 1rem .75%;background-color: #fff;}
+@media screen and (max-width: 320px) {
+    .mzBox .mzbAll .mzaHot .hot_content a {
+        font-size:1.2rem;
+    }
+}
+.mzBox .mzbAll .mzaProvince{width: 100%;}
+.mzBox .mzbAll .mzaProvince p,.mzBox .mzbAll .mzaProvince a{padding: 0 0 0 2rem;width: 100%;font-size: 1.5rem;display: block;}
+.mzBox .mzbAll .mzaProvince .mbbaLetter{height: 3.6rem;background-color:#f6f6f6;color:#9b9b9b;line-height: 3.6rem;}
+.mzBox .mzbAll .mzaProvince .mbbaBrand,.mzBox .mzbAll .mzaProvince .zxs{overflow: hidden;height: 4.6rem;color:#333;line-height: 4.6rem;position: relative;background-color:#fff;}
+.mzBox .mzbAll .mzaProvince .mbbaBrand:after,.mzBox .mzbAll .mzaProvince .zxs:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+
+.mzaTop{width: 100%;height: 4.6rem;position: relative;line-height: 4.6rem;font-size: 1.8rem;text-align: center;background-color: #fff;}
+.mzaTop:after{content: '';width: 100%;height: 1px;background-color: #e1e1e1;position: absolute;bottom: 0;left: 0;}
+.mzaTop .leftArrow{background: url(http://static.hx2cars.com/resource/web/dist/static/mobpages/images/leftarrow.png) center center no-repeat;background-size: 1.2rem auto;width: 5rem;height: 100%;position: absolute;top: 0;left: 0;}
+
+.mzarea .mfBtn{width: 100%;height: 4.3rem;position: fixed;bottom: -4.3rem;left: 0;background-color: #f60;transition: all .1s;-webkit-transition: all .1s;font-size: 1.8rem;color: #fff;line-height: 4.3rem;text-align: center;}
+
+section.mzcity{width: 100%;height: 100%;position: fixed;top:0;left:0;background-color:#f6f6f6;}
+.mzcity .mzcBox{width: 100%;height: 100%;padding: 0 0 4.3rem 0;overflow-y:scroll;}
+.mzcity .mzcBtn{width: 100%;height: 4.3rem;position: fixed;bottom: -4.3rem;left: 0;background-color: #f60;transition: all .1s;-webkit-transition: all .1s;font-size: 1.8rem;color: #fff;line-height: 4.3rem;text-align: center;}
+.mzcity .mzcBox .mzcbAll{width: 100%;background-color:#fff;}
+.mzcity .mzcBox .mzcbAll .cityMult{position:absolute;top:0;right:0;font-size:1.4rem;display:block;width: 8rem;height:4.6rem;text-align: center;color: #f60;line-height: 4.6rem;z-index: 5;}
+.mzcity .mzcBox .mzcbAll .mzcbaL{display:block;width: 100%;height: 4.6rem;line-height: 4.6rem;color:#333;position: relative;padding: 0 0 0 2rem;font-size: 1.5rem;}
+.mzcity .mzcBox .mzcbAll .mzcbaL:after{content: '';width: 100%;height: 1px;background-color: #e1e1e1;position: absolute;bottom: 0;left: 0;}
+
+
+/*0728新版*/
+.mcTitle{width: 100%;padding: 0 1.5rem ;height: 4.4rem;line-height: 4.4rem;font-size: 1.5rem;color:#333;font-weight:bold ;}
+.mcTitle p{position: relative;}
+.mcTitle span{display:block;width: 100%;position:relative;padding-left: 1rem;font-weight: bold;}
+.mcTitle span:before{content:'';position:absolute;width: 3px;height: 33%;background-color:#f60;left:0;top: 33%;}
+.mcTitle span:after{content:'';position:absolute;width: 100%;height: 1px;background-color:#e1e1e1;bottom:0;left:0;}
+.section{background: #fff;margin-bottom: 1rem;}
+
+.infoList{padding: 1rem 1.45rem;overflow: hidden;position: relative;}
+.infoList .imgBox{width:24.4% ;float: left;margin-right: 1.15rem;}
+.imgBox img{width: 100%;height:6.3rem;}
+.infoList:after{width: 100%;height: 1px;background: #e1e1e1;display: block;content:"";position: absolute;top: 0;left: 0;}
+.infoList .right{overflow: hidden;}
+.infoList .title{font-size: 1.36rem;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;margin-bottom: 0.3rem;}
+.infoList .intro{font-size: 1.1rem;line-height: 1.5rem;color: #666;;
+overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.shop{padding: 0 1.45rem;width: auto;}
+.shop .infoList{padding: 1rem 0;}
+.shop .mcTitle{padding: 0;}
+.shop .mcTitle span:after{display: none;}

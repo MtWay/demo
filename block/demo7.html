@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			const injectSections = (items, sections) => {
+				const res = items.map(item => [item]);
+				console.log(res)
+				sections.forEach(section => {
+					res[section.index].unshift(section.content);
+				})
+				return Array.prototype.concat.apply([], res)
+			}
+			var a = injectSections(
+				['item1', 'item2', 'item3', 'item4', 'item5'], [{
+						content: 'section1',
+						index: 0
+					},
+					{
+						content: 'section2',
+						index: 2
+					}
+				]
+			)
+			console.log(a)
+			
+			var ar = [[1,2],[3,4]]
+			console.log(ar);
+			var b = ar.concat.apply([],ar)
+			console.log(b)
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

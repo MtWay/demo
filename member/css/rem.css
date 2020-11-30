@@ -1,0 +1,5 @@
+html{font-size: 625%;}
+a{font-size: .5rem;width: 1rem;display: block;}
+@media only screen and (max-width:320px ) {
+	html{font-size: 500%;}
+}

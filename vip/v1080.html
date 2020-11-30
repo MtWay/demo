@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/v1080.css">
+    <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var cw = document.documentElement.clientWidth;
+        var ch = document.documentElement.clientHeight;
+        if(cw > 1242) {
+            cw = 1242;
+        }
+        document.getElementsByTagName("html")[0].style.fontSize = 20 * (cw / 621) + 'px';
+
+    </script>
+    <title>1080会员</title>
+</head>
+<body>
+    <div class="content">
+        <form>
+            <label class="phoneBox">
+                <input type="text" placeholder="请输入您的手机号码">
+            </label>
+            <label>
+                <input type="text" placeholder="请输入短信验证码">
+                <span class="btn" id="getCode">获取验证码</span>
+            </label>
+        </form>
+        <div class="sub">购买1018个人会员，立减100元！</div>
+        <div class="doubleArc"></div>
+        <div class="msg">
+            <h3>1018套餐说明</h3>
+            <div class="mList">
+                <span class="index"><i>1</i></span>
+                <div class="right">
+                    通过此页面购买1018个人会员，立减100元，即仅需支付918元；
+                </div>
+            </div>
+            <div class="mList">
+                <span class="index"><i>2</i></span>
+                <div class="right">
+                    1018套餐=518个人会员+500华币，价值1599元的礼包，收车卖车4S查询一次搞定；
+                </div>
+            </div>
+            <div class="mList">
+                <span class="index"><i>3</i></span>
+                <div class="right">
+                    518个人会员包括1年个人会员+80张2元4S查询券（分4个月返还，每个月20张，有效期30天），个人会员独享四大VIP车源、4S查询低至6元，收车快人一步！
+                </div>
+            </div>
+            <div class="mList">
+                <span class="index"><i>4</i>  </span>
+                <div class="right">
+                    500华币主要用于卖车，也可以用来发车，进行车辆的更新、推荐和推广，提高车辆曝光率，车辆售出更快！
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

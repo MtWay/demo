@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>背景渐变</title>
+		<style type="text/css">
+			img{
+				width: 200px ;
+				height: 200px;
+				margin:  10px;
+			}
+			img:hover{
+			filter: none;}
+			.img1{
+				animation: mo 5s linear infinite;
+			}
+			@keyframes mo{
+				from{filter: hue-rotate(360deg);}
+				to{filter: hue-rotate(0deg);}
+			}
+			
+			.img2{
+				filter: saturate(0.5)
+			}
+			.img3{
+				filter: brightness(0.5);
+			}
+			.img4{
+				filter: grayscale(0.5);
+			}
+			.img5{
+				filter: contrast(0.5);
+			}
+			.img6{
+				filter: sepia(0.2);
+			}
+			.img7{
+				filter: invert(0.5);
+			}
+			.img8{
+				filter: opacity(0.9);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<img src="img/7cbc481b3dded46ed402959651c82817.jpg" class="img1"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img2"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img3"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img4"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img5"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img6"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img7"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img8"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class="img9"/>
+		<img src="img/4c13c40cc2082ae82f7f44e0df2928cc.jpg" class=""/>
+	</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"><title>Moving Canvas</title>   
+<script>
+ 
+var k6=0; //产生动画背景效果、使每次调用m6()时，color6 数组下标更
+//用于同心环颜色渐变的数组数据新
+var color6= new Array("#0F0","#0F2","#0F4","#0F6", "#0F8","#0FA","#0FC","#0FE","#0FF","#0FE","#0FC","#0FA","#0F8","#0F6","#0F4","#0F2"); 
+function m6(){
+        <!--原刑渐变-->
+   var h = document.getElementById("myCanvas6");
+   var ctx6 = h.getContext("2d");
+   var grd2 = ctx6.createRadialGradient(80,80,15,80,80,220);
+   for (var i=0;i<=10;i++)
+   grd2.addColorStop(i/10,color6[(i+k6++)%color6.length]);
+   ctx6.fillStyle=grd2;
+   ctx6.fillRect(0,0,320,500);
+    }
+ 
+ //用于同心环颜色渐变的数组数
+var color5=new Array("red","#FF6100","#FFFF00","green","blue","#082E54","#A020F0");
+var k=0;    //产生动画背景效果、使每次调用m5()时，color5 数组下标更
+function m5(){
+        <!--长方行颜色渐变-->
+     var g=document.getElementById("myCanvas5");
+     var ctx5 = g.getContext("2d");
+     var grad = ctx5.createLinearGradient(0,0,500,0);
+     for (var i=0;i<=10;i++)
+     grad.addColorStop(i/10,color5[(i+k++)%color5.length]);
+     ctx5.fillStyle=grad;
+     ctx5.font="35Px KAITI";
+     ctx5.fillText("你好，开源中国", 10,100);
+    }
+ 
+var m4_alpha=0; //产生坐标轴旋转的递增变量
+function m4(){
+        var f = document.getElementById("myCanvas4");
+        var ctx4 = f.getContext("2d");
+        ctx4.clearRect(0,0,f.width,f.height);
+        ctx4.save();
+        ctx4.translate(130,150);
+        ctx4.rotate(Math.PI/180*m4_alpha++);
+        ctx4.font="35px KAITI";
+        ctx4.strokeText("开源中国",0,0);
+        ctx4.restore();
+        }
+     
+var font_size=20; //产生文字大小变化的变量
+var m3_larger=true; //此变量为真，文字变大，为徦，文字变小
+function m3(){
+        var e = document.getElementById("myCanvas3")
+        <!--获得上下文，并定义文字属性-->
+        var ctx3= e.getContext("2d");
+        ctx3.clearRect(0,0,e.width,e.height);
+        ctx3.font=font_size+"px Arial";
+    if (m3_larger) font_size++; else font_size--;
+    if(font_size==30) m3_larger=false;
+    if (font_size==20) m3_larger=true;
+        ctx3.fillStyle="orange";
+        ctx3.fillText("Hello, Open Source",5,30);   
+    }
+    var m2_x0=0; //造成园的横坐标变化
+    var m2_eastward=true; //变量为真，横坐标变大，园往西走
+    function m2(){      <!--画圆-->
+        var d = document.getElementById("myCanvas2");
+        var ctx2 = d.getContext("2d");
+        ctx2.clearRect(0,0,d.width,d.height);
+        ctx2.beginPath();
+        ctx2.arc(95 + m2_x0, 50, 40,0,2*Math.PI);
+        //ctx2.fillStyle="green";
+        var grd2 = ctx2.createRadialGradient(95 + m2_x0,50,5, 
+        95 + m2_x0, 50, 40);
+        grd2.addColorStop(0,"white");
+        grd2.addColorStop(1,"green");
+        ctx2.fillStyle=grd2;
+        ctx2.fill();
+        ctx2.stroke();
+        if (m2_eastward) m2_x0++; else m2_x0--;
+        if (m2_x0==100) m2_eastward=false;
+        if (m2_x0==0) m2_eastward=true;
+    }
+     
+    var m1_x=0; //造成直线和红长方形末端变化的 x 坐标
+    var m1_y=0; //造成直线和红长方形末端变化的 y 坐标
+    var m1_increase=true; //控制直线和红方块末端变化的布尔变量
+    function m1(){ 
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.clearRect(0,0,c.width,c.height);
+        ctx.fillStyle="#FF0000";
+        ctx.fillRect(0,0, m1_x+35,m1_y+25);
+        ctx.beginPath(); //必须的
+        ctx.moveTo(0,0);
+        ctx.lineTo(m1_x+35,m1_y+25);
+        ctx.stroke();
+        if (m1_increase) {m1_x++; m1_y++;}
+        else { m1_x--; m1_y--;};
+        if (m1_x==45) m1_increase=false;
+        if (m1_y==0) m1_increase=true;
+        }
+         
+function ani(){
+    //设置各个画布更新的频度
+setInterval('m1()',200);
+setInterval('m2()',300);
+setInterval('m3()',400);
+setInterval('m4()',500);
+setInterval('m5()',600);
+setInterval('m6()',700);
+    }
+    </script>
+    <style>
+    #myCanvas{
+        z-index:1;
+position:absolute;left:0;top:0;
+ 
+    }
+    #myCanvas2{
+        z-index:2;
+position:absolute;left:80px;top:0;
+    }
+    #myCanvas3{
+        z-index:3;
+position:absolute;left:0;top:90px;
+    }  
+    #myCanvas4{
+        z-index:4;
+position:absolute;left:0;top:100px;
+    }  
+    #myCanvas5{
+        z-index:5;
+position:absolute;left:0;top:300px;
+    }  
+    #myCanvas6{
+        position:absolute;
+        left:0px;
+        top:0px;
+        z-index:0;
+    }
+     
+    </style>
+</head>
+<body onLoad="ani()">
+<canvas id="myCanvas" width="80px" height="80px" style="border: 1px solid #000000"></canvas>
+    <canvas id="myCanvas2"></canvas>
+    <canvas id="myCanvas3"></canvas>
+    <canvas id="myCanvas4" width="300px" height="300px"></canvas>
+    <canvas id="myCanvas5"></canvas>
+    <canvas id="myCanvas6" width="320px" height="410px"></canvas>
+ 
+</body>
+</html>

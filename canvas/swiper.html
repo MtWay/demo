@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>滑动特效</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				overflow: hidden;
+			}
+			
+			html {
+				font-size: 5vw;
+			}
+			
+			ul {
+				width: 1000%;
+				transition: all 0.1s;
+			}
+			
+			li {
+				float: left;
+				width: 25vw;
+				list-style: none;
+				height: 40vw;
+				transform: translate();
+				transition: all 0.2s;
+			}
+			
+			li:nth-child(2n) {
+				background: url(img/e3e08a1ebc0020309c7f9b24e59c423e.jpg) no-repeat center;
+				background-size: 80% 80%;
+			}
+			
+			li:nth-child(2n-1) {
+				background: url(img/335524e01eb308622c5aae46ad645f9e.jpg) no-repeat center;
+				background-size: 80% 80%;
+			}
+			
+			.left {
+				transform: rotate(15deg);
+			}
+			
+			.right {
+				transform: rotate(-15deg);
+			}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//				容器宽度
+				var length = $("li").length;
+				var width = $("li").width();
+				var maxWidth = length * width;
+				//				console.log(maxWidth)
+				$("ul").width(maxWidth);
+				//				maxWidth-=4*width;
+
+				var x1 = 0,
+					dx = 0,
+					arr = [],
+					timer;
+				$(document)
+					.on('touchstart', function(e) {
+						arr = [];
+						firstTouch = e.originalEvent.touches[0];
+						x1 = firstTouch.pageX;
+					})
+					.on('touchmove', function(e) {
+						firstTouch = e.originalEvent.touches[0];
+						var x2 = firstTouch.pageX;
+						var deltax = x2 - x1 + dx;
+						//      console.log(deltax)
+						if(deltax < -maxWidth - 150 ) {
+							deltax = -maxWidth - width * 4;
+						}
+						if(deltax > 4*width) {
+							deltax = 0;
+						}
+						$("ul").css("transform", "translate(" + deltax + "px)");
+						var len = arr.length;
+						if(len > 2) {
+							if(arr[len - 1].d > arr[len - 2].d) {
+								$("li").addClass("right").removeClass("left");
+							} else {
+								$("li").addClass("left").removeClass("right");
+
+							}
+						}
+
+						var t = new Date();
+						arr.push({
+							t: t,
+							d: deltax
+						})
+					})
+					.on('touchend', function(e) {
+						var x2 = firstTouch.pageX;
+						dx += x2 - x1;
+						if(dx < -maxWidth) {
+							dx = -maxWidth;
+						}
+						if(dx > 0) {
+							dx = 0;
+						}
+						//滑动结束时的速度
+						if(arr.length > 2) {
+							var dt = arr[arr.length - 1].t - arr[arr.length - 2].t;
+							var dl = arr[arr.length - 1].d - arr[arr.length - 2].d;
+							var v = dl / dt;
+							var timer = setTimeout(loop, 1000 / 60);
+						}
+						//    	console.log(dx)
+
+						function loop() {
+							dx += v * 3;
+							$("ul").css("transform", "translate(" + dx + "px)");
+							v = v * 0.95;
+							//    		console.log(v)
+							if(Math.abs(v) < 0.3) {
+								$("li").removeClass("left").removeClass("right");
+								//    		console.log(dx)
+								var index = Math.floor(dx / width);
+								dx = index * width;
+								if(dx < -maxWidth + 4 * width) {
+									dx = -maxWidth + 4 * width;
+								}
+								if(dx > 0) {
+									dx = 0;
+								}
+
+								console.log(dx)
+								$("ul").css("transform", "translate(" + dx + "px)");
+								//    			clearTimeout(timer);
+							} else {
+								setTimeout(loop, 1000 / 120)
+							}
+						}
+						//      $("ul").css("transform","translate("+dx+"px)");
+					})
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+
+</html>

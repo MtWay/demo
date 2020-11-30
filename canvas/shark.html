@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				height: 252px;
+				position: relative;
+				overflow: hidden;
+			}
+			.box img{
+				position: absolute;
+				top: 0px;
+				animation: names steps(12) infinite 2s;
+			}
+			@keyframes names{
+				from{top: 0;}
+				to{top: -3240px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/shark1.png"/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>轻松换&玩转车</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			img {
+				width: 100vw;
+				height: 90vh;
+			}
+			
+			.code {
+				width: 200px;
+				height: 200px;
+				display: block;
+				margin: 100px auto;
+			}
+			
+			p {
+				padding: 0 100px;
+				text-align: center;
+			}
+			
+			.swiper-container {
+				height: 90vh;
+			}
+			
+			.bottomArrow {
+				border-bottom: 2px solid #3385ff;
+				border-right: 2px solid #3385ff;
+				transform: rotate(45deg);
+				width: 30px;
+				height: 30px;
+				position: fixed;
+				left: 50%;
+				bottom: 13vh;
+				margin-left: -15px;
+				z-index: 100;
+				animation: name 2s infinite ease-in;
+			}
+			
+			@keyframes name {
+				from {
+					bottom: 15vh;
+					opacity: 0.5;
+				}
+				50% {
+					bottom: 13vh;
+					opacity: 1;
+				}
+				to {
+					bottom: 15vh;
+					opacity: 0.5;
+				}
+			}
+			.bottomBox{
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				line-height: 10vh;
+				text-align: center;
+				z-index: 200;
+			}
+			.left{
+				float: left;
+				width: 50%;
+				color: #fff;
+				background: #ff8450;
+				font-size: 18px;
+			}
+			.right{
+				float: left;
+				width: 50%;
+				color: #fff;
+				background: #ff6d62;
+				font-size: 18px;
+			}
+		</style>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/微信图片_20180806094844.jpg" /></div>
+				<div class="swiper-slide"><img src="img/微信图片_20180806094903.jpg" /></div>
+				<div class="swiper-slide"><img src="img/微信图片_20180806094907.jpg" /></div>
+			</div>
+
+		</div>
+		<div class="bottomArrow"> </div>
+		<div class="bottomBox">
+			<a href="tel:400-819-6169">
+			<div class="left">
+				电话咨询
+			</div></a>
+			<a href="/summit2018/register.htm">
+			<div class="right">
+				马上报名
+			</div></a>
+		</div>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'vertical',
+				on: {
+					progress: function(progress) {
+						console.log(progress);
+						if(progress >= 1) {
+							$(".bottomArrow").hide();
+
+						} else {
+							$(".bottomArrow").show();
+
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>深度优先级&广度优先级实现深复制</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			let _toString = Object.prototype.toString
+			let map = {
+				array: 'Array',
+				object: 'Object',
+				function: 'Function',
+				string: 'String',
+				null: 'Null',
+				undefined: 'Undefined',
+				boolean: 'Boolean',
+				number: 'Number'
+			}
+			let getType = (item) => {
+				return _toString.call(item).slice(8, -1)
+			}
+			let isTypeOf = (item, type) => {
+				//				debugger
+				return map[type] && map[type] === getType(item)
+			}
+
+			//console.log(isTypeOf([], 'Array'))
+
+			let DFSdeepClone = (obj, visitedArr = []) => { //默认定义一个visitedArr暂存数组
+				let _obj = {}
+				if(isTypeOf(obj, 'array') || isTypeOf(obj, 'object')) { //可能是因为typeof (array,null,) 也会是object，
+					let index = visitedArr.indexOf(obj)
+					console.log(index)
+					_obj = isTypeOf(obj, 'array') ? [] : {}
+					if(~index) { // 判断环状数据
+						_obj = visitedArr[index]
+					} else {
+						visitedArr.push(obj)
+						console.log(JSON.stringify(visitedArr))
+						for(let item in obj) {
+							_obj[item] = DFSdeepClone(obj[item], visitedArr)
+						}
+					}
+				} else if(isTypeOf(obj, 'function')) {
+					_obj = eval('(' + obj.toString() + ')');
+				} else {
+					_obj = obj
+				}
+				return _obj
+			}
+
+			var a = {
+				A: 1,
+				b: 2,
+				d:{a:1},
+				d1:{a:1},
+				d2:{a:1}
+			}
+			var b = DFSdeepClone(a);
+			b.c=1;
+			console.log(a,b)
+		</script>
+	</body>
+
+</html>

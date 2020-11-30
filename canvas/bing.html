@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>饼图</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		<canvas id="can" width="600" height="800"></canvas>
+		<script type="text/javascript">
+			var can  = $("#can")[0]
+			var ctx = can.getContext("2d");
+			var list = [];
+			var prev = {}; 
+			function draw(x,y){
+				
+				if(!prev.x){
+					prev = {x:x,y:y}
+					return false;
+				}
+				ctx.beginPath()
+				var r1 = Math.floor(Math.random()*255);
+				var r2 = Math.floor(Math.random()*255);
+				var r3 = Math.floor(Math.random()*255);
+//				ctx.fillStyle="rgba("+r1+","+r2+","+r3+",1)";
+//var my_gradient=ctx.createLinearGradient(0,0,0,170);
+//my_gradient.addColorStop(0,"black");
+//my_gradient.addColorStop(1,"rgba("+r1+","+r2+","+r3+",1)");
+				ctx.strokeStyle="rgba("+r1+","+r2+","+r3+",1)";
+//				ctx.strokeStyle=my_gradient;
+				ctx.lineWidth=10;
+//				ctx.arc(x,y,20,20,0,Math.PI*2)
+				ctx.moveTo(prev.x,prev.y);
+				ctx.lineTo(x,y)
+//				ctx.fill()
+				ctx.stroke();
+				prev = {x:x,y:y}
+			}
+			resize()
+			$("body").mousemove(function(e){
+				draw(e.clientX,e.clientY)
+			})
+			
+			function resize(){
+				$("#can").attr("width",$("body").width())
+				$("#can").attr("height",$("body").height())
+			}
+		</script>
+	</body>
+</html>

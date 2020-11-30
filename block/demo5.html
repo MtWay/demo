@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			if(typeof a!="undefined"){
+//				var b =a
+//			}
+//			
+			
+//			class a{
+//				b(){
+//					console.log(2)
+//				}
+//			}
+//			console.log(a)
+//			var c = new a()
+//			console.log(c instanceof a)
+//			
+//			var d = document.createElementNS("<div>1</div>","div1")
+////			document.createElementNS("")
+////			d.append("<div>1</div>");
+//			console.log(d)
+
+class VNode {
+  constructor (tagName, props, children) {
+    this.tagName = tagName
+    this.props = props
+    this.children = children
+  }
+  render(){
+    // console.log();
+    // var prop = "";
+    // for(sty in this.props){
+    //   prop=prop+sty+"='"+this.props[sty]+"'";
+    // }
+    // var str = `
+    // <`+this.tagName prop+`></`+this.tagName+`>
+    // `
+    // var index = this.index++;
+    var str =  this.joinstr(this);
+    console.log(str)    
+    return str
+    
+  }
+  joinstr(obj,index){
+    if(typeof obj == "string"){
+      return obj
+    }
+    var prop = "";
+    var tag = document.createElement(obj.tagName);
+    if(typeof obj.props =="object"){
+    for(var sty in obj.props){
+      // prop=prop+sty+"='"+obj.props[sty]+"'";
+      // tag[sty]=obj.props[sty];
+      tag.setAttribute(sty,obj.props[sty])
+    }
+    }
+    // var str = `
+    // <`+obj.tagName+` `+prop+`></`+obj.tagName+`>
+    // `
+    // var tag = document.createElement(str);
+    var child = "";
+    for(let i =0;i<obj.children.length;i++){
+      // child+=joinstr(obj.children[i])
+      tag.append(this.joinstr(obj.children[i]))
+    }
+    // var index = index || 0;
+    
+    return tag;
+  }
+}
+
+
+const h = function (t, p, c) {
+  return new VNode(t, p, c)
+}
+h('h3', {id: 'list', style: 'red'}, [ h('p', {class: 'item'}, ['Item 1']), h('h2', {class: 'item'}, ['Item 2']), h('h1', {class: 'item'}, ['Item 3', h('h3', {class: 'username'}, ['Tomy'])]) ]).render()
+
+		</script>
+	</head>
+	<body>
+		
+		<h2 id="list" style="red"><span class="item">Item 1</span><h1 class="item">Item 2</h1><h2 class="item">Item 3<h1 class="username">Lucy</h1></h2></h2>
+		
+		
+		 而你的是 <h2><span>Item 1</span><h1>Item 2</h1><h2>Item 3<h1>Lucy</h1></h2></h2>
+	</body>
+</html>

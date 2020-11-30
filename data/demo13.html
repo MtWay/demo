@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取手机号码</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"https://www.hx2car.com/resource/web/dist/static/mobpages/images/mindex/toplogo.png",
+				async:true,
+				success: function(data, textStatus, jqXHR) {
+                console.log(jqXHR.getResponseHeader("Server"));
+                console.log(jqXHR.getResponseHeader("Content-Type"));
+                console.log(jqXHR.getResponseHeader("X-Powered-By"));
+                console.log(jqXHR.getResponseHeader("Content-Encoding"));
+                console.log(jqXHR.getAllResponseHeaders());
+                console.log(jqXHR.getResponseHeader("Set-Cookie"));       //返回null，不能获取Set-Cookie的值
+                console.log(data + textStatus);
+            }
+			});
+		</script>
+		<style type="text/css">
+			.box{
+				background: url(img/335524e01eb308622c5aae46ad645f9e.jpg);
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>

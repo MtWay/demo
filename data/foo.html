@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function foo(obj) {
+				obj.age = 20;//改变了外部obj的值
+				var obj = new Object();
+				obj.age = 30;
+				return obj;
+			}
+			var person = new Object();
+			person.age = 10;
+			var newPerson = foo(person);
+			console.log(person.age + ' | ' + newPerson.age);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

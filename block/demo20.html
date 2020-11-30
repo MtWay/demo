@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$.ajax({
+					type: "post",
+					url: "https://hemajf.com/cardealer/car/searchCar",
+					async: true,
+					data: {
+						carAgeRang: "",
+						cityCode: "",
+						cityName: "全国",
+						keyType: 3,
+						priceRang: "",
+						provinceCode: "",
+						searchKey: "",
+						seriesId: "",
+						size: "",
+						sortType: "",
+						start: 20,
+					},
+					success: function(data) {
+						console.log(data)
+					}
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

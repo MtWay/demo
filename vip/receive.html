@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/receive.css">
+    <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var cw = document.documentElement.clientWidth;
+        var ch = document.documentElement.clientHeight;
+        if(cw > 1242) {
+            cw = 1242;
+        }
+        document.getElementsByTagName("html")[0].style.fontSize = 20 * (cw / 621) + 'px';
+
+    </script>
+    <title>领取现金红包</title>
+</head>
+<body>
+    <div class="content">
+        <form class="halfBorder">
+            <label class="phoneBox">
+                <input type="text" placeholder="请输入您的手机号码">
+            </label>
+            <label class="phoneBox">
+                <input type="text" placeholder="请输入图片验证码">
+                <span class="btn" id="getImgCode"><img src="http://www.hx2car.com/servlet/yzCode.jpg"/></span>
+            </label>
+            <label>
+                <input type="text" placeholder="请输入短信验证码">
+                <span class="btn" id="getCode">获取验证码</span>
+            </label>
+        </form>
+        <div class="sub">领取现金红包</div>
+        <div class="doubleArc"></div>
+        <div class="msg">
+            <h3>活动说明</h3>
+            <div class="mList">
+                <span class="index"><i>1</i></span>
+                <div class="right">
+                    仅限未付费办理过个人会员的用户参与领取；  
+                </div>
+            </div>
+            <div class="mList">
+                <span class="index"><i>2</i></span>
+                <div class="right">
+                    同一用户，活动期间有1次领取机会，红包过期后才能获得下一次领取机会；
+                </div>
+            </div>
+            <div class="mList">
+                <span class="index"><i>3</i></span>
+                <div class="right">
+                   红包仅限办理相应个人会员套餐时自动抵用，有效期30天；
+                </div>
+            </div>
+            <div class="mList">
+                <span class="index"><i>4</i>  </span>
+                <div class="right">
+                    查看红包，需下载华夏二手车APP，到“我的-优惠券”中查看。
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

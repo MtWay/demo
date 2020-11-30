@@ -1,0 +1,282 @@
+//顶部轮播图
+var MobileIndexAds = {
+    MobileIndexTop: function (args) {
+        str = '<div class="swiper-wrapper">';
+        if (args && args.length && args.length > 0) {
+            $.each(args, function (key, items) {
+                str += '<div class="swiper-slide">';
+                str += '<a rel="external" href="' + items.href + '" class="mfAd">';
+                str += '<img src="' + items.url + '" />';
+                str += '</a></div>'
+            })
+        }
+        str += '</div>';
+        $('#mfSwiper').html(str);
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.mfTurn', //分页符
+            centeredSlides: true, //分页符居中
+            //autoplay: 3500, //自动播放，不设置时不生效
+            autoplayDisableOnInteraction: false //操作之后（swipes,arrow以及pagination 点击）autoplay不会被禁掉，用户操作之后每次都会重新启动autoplay
+        });
+    },
+    MobileIndxFloat: function (arg) {
+        return;
+        // if (String(arg)) {
+        //     str = '<div class="mladv"><a href="' + arg[0].href + '"><img src="' + arg[0].url + '"></a><div class="closeAdv"></div></div>';
+        //     $('.mlTop').before(str);
+        //     $('.closeAdv').click(function () {
+        //         $('.mladv').slideUp();
+        //     });
+        // }
+    }
+};
+
+$(function () {
+    $("body").prepend($(".mindex").height());
+
+    //品牌车系tab
+    var pwidth = $('.mFourcar .mfTitle p').width();
+    var spwidth = $('.mFourcar .mfTitle p').eq(0).find('span').width();
+    var sleft = (pwidth - spwidth) / 2;
+    $('#fCar').css({'width': spwidth, 'left': sleft});
+    var hxfourcar = function (idx) {
+        var tsindex = idx;
+        spwidth = $('.mFourcar .mfTitle p').eq(tsindex).find('span').width();
+        sleft = (pwidth - spwidth) / 2;
+        sleft += idx * pwidth;
+        $('#fCar').css({'width': spwidth, 'left': sleft});
+        switch (tsindex) {
+            case 0:
+            case 1:
+                //本地车
+                var moreurl = '/' + STATIONPINYIN + '/soa1';
+                break;
+            case 2:
+                //精品车
+                var moreurl = '/' + STATIONPINYIN + '/soa3';
+                break;
+            case 3:
+
+                var moreurl = '/car/mcommendzq.htm';
+                break;
+            case 4:
+                var moreurl = '/' + STATIONPINYIN + '/soa6';
+                break;
+            default:
+                break;
+        }
+        $('#mfMorecar').off().on('click', function () {
+            $.attributeLink(moreurl, '');
+        });
+    };
+    //本地车系列栏目
+    $('.mFourcar .mfTitle p').tabChange({
+        addClass: 'select',
+        targetClass: '.mfCarlist',
+        tabCallback: hxfourcar
+    });
+    $('#mfMorecar').off().on('click',function(){
+        var moreurl = '/'+STATIONPINYIN+'/soa1';
+        if (SPURL != '') {
+            moreurl = '/' + STATIONPINYIN + SPURL;
+        }
+        $.attributeLink(moreurl, '');
+    });
+    //随机车系
+    var hxselectstyle = function () {
+        var tspid = $(this).attr('data-pid');
+        var dirname = $(this).data('dirname');
+        $.post('/tools/getCarSerialType.json', {pid: tspid}, function (data) {
+            if (data) {
+                $('#csList').html('');
+                var str = '<a data-dirname="' + dirname + '" data-pid="' + tspid + '">不限</a>';
+                $.each(data.first, function (key, items) {
+                    for (var ele in items) {
+                        str += '<span>' + ele + '</span>';
+                        for (var i = 0; i < items[ele].length; i++) {
+                            str += '<a data-sid="' + items[ele][i].id + '"data-dirname="/' + dirname + '/' + items[ele][i].pinyin + '">' + items[ele][i].title + '<b class="wtselect"><i></i></b></a>'
+                        }
+                    }
+                });
+                $('#csList').append(str).find('a').off().on('click', stylelink);
+            }
+        })
+    };
+    $('.cbloBox a').blockFly({
+        targetId: '.coolstyle',
+        flyType: 3,
+        ifShadow: false,
+        beginLocation: '100%',
+        targetLocation: '0%',
+        closebuttonId: '#cstArrow',
+        flyCallback: hxselectstyle
+    });
+
+    //车系多选
+    var stylelink = function () {
+        if ($(this).attr('data-sid')) {
+            if ($(this).find('.wtselect').hasClass('wtselectOn')) {
+                $(this).find('.wtselect').removeClass('wtselectOn');
+            } else {
+                if ($(this).find('.wtselect i').css('display') != 'none') {
+                    $(this).find('.wtselect').addClass('wtselectOn');
+                }
+            }
+            if ($(this).parent().find('.wtselectOn').length > 4) {
+                $(this).parent().find('.wtselect:not(.wtselectOn) i').hide();
+            } else {
+                $(this).parent().find('i').show();
+            }
+        } else {
+            var dirname = $(this).data('dirname');
+            var tspid = $(this).data('pid');
+            var surl = '/' + STATIONPINYIN + '/' + dirname + '/soa1t' + tspid;
+            $.attributeLink(surl, '');
+        }
+
+    };
+    $('#cstAffirm').off().on('click', function () {
+        var t = '';
+        var dirname = '';
+        var ssurl = '';
+        var selectNum = $('#csList .wtselectOn').length;
+        var $brandTarget = $('#csList .wtselectOn').parent();
+        if (selectNum > 0) {
+            if (selectNum > 1) {
+                dirname = $($brandTarget[0]).data('dirname').split('/')[1];
+                $brandTarget.each(function () {
+                    t += 't' + $(this).attr('data-sid');
+                });
+            } else {
+                dirname = $brandTarget.data('dirname').slice(1);
+                t = 't' + $brandTarget.data('sid');
+            }
+            ssurl = '/' + STATIONPINYIN + '/' + dirname + '/soa1' + t;
+            $.attributeLink(ssurl, '');
+        } else {
+            $.alertMessage.call($(this), '请选择车系');
+        }
+    });
+    //随机品牌
+    $('#mhtMore').blockFly({
+        targetId: '.coolbrandselect',
+        flyType: 2,
+        ifShadow: false,
+        beginLocation: '100%',
+        targetLocation: '0%',
+        closebuttonId: '#coolArrow'
+    });
+    var hxcbrandclick = function() {
+        $('.cbList').removeClass('cblBoxon');
+        $(this).addClass('cblBoxon');
+    };
+    $('.cbList').each(function () {
+        $(this).off().on('click', hxcbrandclick);
+    });
+
+    //返回顶部
+    $('#mfGotop').hxGototop({
+        ifSH: true, //是否添加滑动显示隐藏功能
+        showDis: 300, //显示距离
+        showID: '#mfGotop'
+    });
+
+    //更多工具
+    $('#mtMore').blockFly({
+        targetId: '.mMoretool',
+        flyType: 2,
+        ifShadow: false,
+        beginLocation: '100%',
+        targetLocation: '0%',
+        closebuttonId: '#mmtBack',
+        closeCallback: hxclosestyle,
+        preventDiv:'body',
+        nextCallback: null
+    });
+
+    function hxclosestyle() {
+        $('body').css({'overflow':'auto','height':'auto'});
+    }
+
+    function overflowBody() {
+        $('body').css({'overflow': 'hidden', 'height': $(window).height()});
+    }
+
+    //新增城市站点
+    $('#changeStation,#moreCity').blockFly({
+        targetId: '.mzarea',
+        flyType: 2,
+        ifShadow: false,
+        beginLocation: '100%',
+        targetLocation: '0%',
+        closebuttonId: '#areaArrow',
+        closeCallback: hxclosestyle,
+        flyCallback: overflowBody,
+        nextCallback: null
+
+    });
+    $('.mzaProvince .mbbaBrand').blockFly({
+        targetId: '.mzcity',
+        flyType: 2,
+        ifShadow: false,
+        beginLocation: '100%',
+        targetLocation: '0%',
+        closebuttonId: '#cityArrow',
+        nextCallback: hxtopcity
+    });
+    function hxtopcity() {
+        var $province = $(this).children('span'),
+            txt = $.trim($province.html()),
+            diraname = $.trim($(this).data('dirname'));
+        $.post('/wap/getCityBySF.json', {areaCode: txt}, function (data) {
+            var str = '<a class="mzcbaL" href="/' + diraname + '">不限</p>',
+                citys = data.city;
+            for (var key in citys) {
+                str += '<a class="mzcbaL" href="/' + citys[key].citypinyin + '">' + key + '</p>';
+            }
+            $('.mzcity .mzaTop span').html(txt);
+            $('#mzcbAll').html(str);
+        });
+    }
+
+    /************点击登录********/
+    $('#mlogin').waplogin({
+        loginState: loginstate,
+        redirectUrl: '/wap/personcenter.htm'
+    });
+    $('.mmhRule').waplogin({
+        loginState: loginstate,
+        redirectUrl: '/wzcx'
+    });
+    $('.mmhAssess').waplogin({
+        loginState: loginstate,
+        redirectUrl: '/tools/carassess.htm'
+    });
+    $('.mmhInsurance').waplogin({
+        loginState: loginstate,
+        redirectUrl: '/tools/safecount.htm'
+    });
+    $('.mmhLoan').waplogin({
+        loginState: loginstate,
+        redirectUrl: '/wap/addwillloan.htm'
+    });
+    $('.mmhData').waplogin({
+        loginState: loginstate,
+        redirectUrl: '/hxdata'
+    });
+    $("body").delegate('.msg-bottom .toDowload', "click", function () {
+        var label = "wap首页app下载";
+        window._hmt && window._hmt.push(['_trackEvent', label, 'click']);
+    });
+
+    //百度统计按钮点击
+    $("[data-track]").on("click", function () {
+        var label = $(this).data("track");
+        window._hmt && window._hmt.push(['_trackEvent', label, 'click']);
+    });
+    //下载or跳转
+    $('#mfDownload,.toDowload').click(function () {
+        $.hxWaptoapp();
+    });
+
+});

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.lit {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				position: absolute;
+				background: url(img/heart1.png) no-repeat;
+				background-size: 100%;
+			}
+			
+			.lit0 {
+				animation: name 1s linear;
+			}
+			
+			.lit1 {
+				animation: name1 1s linear;
+			}
+			
+			.lit2 {
+				animation: name2 1s linear;
+			}
+			
+			.lit3 {
+				animation: name3 1s linear;
+			}
+			
+			.lit4 {
+				animation: name4 1s linear;
+			}
+			
+			.lit5 {
+				animation: name5 1s linear;
+			}
+			
+			.lit6 {
+				animation: name6 1s linear;
+			}
+			
+			.lit7 {
+				animation: name7 1s linear;
+			}
+			
+			@keyframes name {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(100px, 100px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name1 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(0px, 100px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name2 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(100px, 0px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name3 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(-100px, 100px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name4 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(100px, -100px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name5 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(-100px, -100px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name6 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(-100px, 0px);
+					width: 0;
+					height: 0;
+				}
+			}
+			
+			@keyframes name7 {
+				from {
+					transform: translate(0, 0);
+				}
+				to {
+					transform: translate(0px, -100px);
+					width: 0;
+					height: 0;
+				}
+			}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//     var index= 0;
+				$(document).mousemove(function(e) {
+					//        index++;
+					var e = e || window.e;
+					var l = e.clientX - 25,
+						t = e.clientY - 25,
+						$div = document.createElement("div"),
+						r = Math.floor(Math.random() * 8),
+						R2 = Math.floor(Math.random() * 6),
+						color = ["#f00", "#00f", "#0f0", "#ff0", "#0ff", "#ccc"];
+					$($div).css({ left: l, top: t }).addClass("lit" + r).addClass("lit");
+					//        if(index%3==0)
+					$("body").append($div);
+					setTimeout(function() {
+						$($div).remove();
+					}, 900)
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

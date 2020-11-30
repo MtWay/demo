@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>我的“伴侣”分析报告</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/csshake.css" />
+		<link rel="stylesheet" type="text/css" href="css/mFindCars.css" />
+		<link rel="stylesheet" type="text/css" href="css/LCalendar.css"/>
+		<link rel="stylesheet" type="text/css" href="css/banlv.css" />
+	</head>
+
+	<body>
+		<div class="wrap swiper-container">
+			<div class="swiper-wrapper">
+				<div class="door swiper-slide section swiper-no-swiping" data-hash="slide1">
+					<p>请选择:</p>
+					<div class="btnBox">
+
+						<div class="btn btn-cff52a9 " id="havecar">
+							我是有车族
+						</div>
+						<div class="btn btn-c8973d1" id="nocar">
+							我是无车族
+						</div>
+						<div class="btn hide" id="next">
+
+						</div>
+					</div>
+				</div>
+				<div class="section swiper-slide " data-hash="slide2">
+					<div class="nocar hide">
+						<p class="question">您买车的预算是多少呢？</p>
+						<div class="moneyList">
+							<ul>
+								<li data-money="0-3">
+									<div class="mb">
+										<span>3万以下</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="3-5">
+									<div class="mb">
+										<span>3-5万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="5-10">
+									<div class="mb">
+										<span>5-10万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="10-15">
+									<div class="mb">
+										<span>10-15万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="15-20">
+									<div class="mb">
+										<span>15-20万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="20-30">
+									<div class="mb">
+										<span>20-30万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="30-50">
+									<div class="mb">
+										<span>30-50万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="50-100">
+									<div class="mb">
+										<span>50-100万</span><span class="bg"></span>
+									</div>
+								</li>
+								<li data-money="100-999">
+									<div class="mb">
+										<span>100万以上</span><span class="bg"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="havecar">
+						<p class="question">您的爱车型号是？</p>
+						<label class="w92"><input type="text" name="choiceBrands" id="choiceBrands" value="" /></label>
+						<div class="btn-next">
+							下一步
+						</div>
+					</div>
+				</div>
+				<div class="section swiper-slide" data-hash="slide3">
+					<div class="nocar hide">
+						<p class="question">你希望你的ta来自哪个国家？</p>
+						<div class="conutryList list">
+							<ul>
+								<li><div><img src="img/country1.png"/><span class="cname">国产</span></div></li>
+								<li><div><img src="img/country2.png"/><span class="cname">德国</span></div></li>
+								<li><div><img src="img/country3.png"/><span class="cname">日本</span></div></li>
+								<li><div><img src="img/country4.png"/><span class="cname">英国</span></div></li>
+								<li><div><img src="img/country5.png"/><span class="cname">美国</span></div></li>
+								<li><div><img src="img/country6.png"/><span class="cname">韩国</span></div></li>
+								<li><div><img src="img/country7.png"/><span class="cname">法国</span></div></li>
+								<li><div><img src="img/country8.png"/><span class="cname">意大利</span></div></li>
+								<li><div><img src="img/country9.png"/><span class="cname">瑞典</span></div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="havecar ">
+						<p class="question">ta陪你度过了多少时光？</p>
+						<label class="w53"><input type="text" name="tagTime" id="tagTime" readonly=""/></label>
+						<div class="btn-next">
+							下一步
+						</div>
+					</div>
+				</div>
+				<div class="section swiper-slide" data-hash="slide4">
+					<div class="nocar hide">
+						<p class="question">你对ta的颜值有何要求？（颜色）</p>
+						<div class="colorList list">
+							<ul>
+								<li><div><img src="img/color1.png"/><span class="color">黑色</span></div></li>
+								<li><div><img src="img/color2.png"/><span class="color">白色</span></div></li>
+								<li><div><img src="img/color3.png"/><span class="color">银灰</span></div></li>
+								<li><div><img src="img/color4.png"/><span class="color">深灰</span></div></li>
+								<li><div><img src="img/color5.png"/><span class="color">蓝色</span></div></li>
+								<li><div><img src="img/color6.png"/><span class="color">绿色</span></div></li>
+								<li><div><img src="img/color7.png"/><span class="color">香槟</span></div></li>
+								<li><div><img src="img/color8.png"/><span class="color">黄色</span></div></li>
+								<li><div><img src="img/color9.png"/><span class="color">红色</span></div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="havecar ">
+						<p class="question">ta陪你走过了多少路？（选填）</p>
+						<label class="w44"><input type="number" name="journey" id="journey" value="" /><span>万公里</span></label>
+						<div class="btn-next">
+							下一步
+						</div>
+					</div>
+				</div>
+				<div class="section swiper-slide" data-hash="slide5">
+					<div class="nocar hide">
+						<h2>为你推荐ta</h2>
+						<div class="carBox">
+							这里有辆车
+						</div>
+						<div class="btnBox ">
+							<div class="btn btn-blue">
+								生成我的“伴侣”分析报告
+							</div>
+							<div class="btn btn-white">
+								看看我的“备胎”
+							</div>
+						</div>
+					</div>
+					<div class="havecar ">
+
+						<h2>我的“伴侣”分析报告</h2>
+						<div class="assess">
+							<img src="img/335524e01eb308622c5aae46ad645f9e.jpg" class="carImg" />
+							<div class="assList">
+								<span class="til">车型</span>
+								<span class="msg">三大gas多个</span>
+							</div>
+							<div class="assList">
+								<span class="til">上牌时间</span>
+								<span class="msg">2018.01.17</span>
+							</div>
+							<div class="assList">
+								<span class="til">里程</span>
+								<span class="msg">12万</span>
+							</div>
+							<div class="assMoney">
+								估价
+							</div>
+
+						</div>
+						<div class="btnBox ">
+							<div class="btn btn-blue half">
+								生成我的“伴侣”分析报告
+							</div>
+							<div class="btn btn-white half right">
+								看看我的“备胎”
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section swiper-slide">
+					<canvas id="out" width="" height="" class="hide"></canvas>
+					<img class="outImg" src="img/335524e01eb308622c5aae46ad645f9e.jpg" />
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="second-bg">
+
+			</div>
+			<div class="bgBox">
+						<canvas id="index-bg" width="" height="" class="shake-constant  "></canvas>
+						<div class="animate1">
+						</div>
+					</div>
+		</div>
+		<div class="hide">
+			<img src="img/bg-phone.png" />
+			<img src="img/bg-top.png" />
+			<img src="img/bg-floor1.png" />
+			<img src="img/h.png" />
+			<img src="img/coin1.png" />
+			<img src="img/coin2.png" />
+			<img src="img/heart.png" />
+			<img src="img/heart-yy.png" />
+			<img src="img/tree1.png" />
+			<img src="img/tree2.png" />
+			<img src="img/tree-yy.png" />
+			<img src="img/woman.png" />
+			<img src="img/man.png" />
+			<img src="img/road.png" />
+			<img src="img/bg-car.png" />
+			<img src="img/bg-car-right.png" />
+			<img src="img/cloud.png" />
+			<img src="img/can-bg.png" />
+		</div>
+		<!--<div class="animate2">
+				<img src="img/bg-floor.png"/>
+			</div>-->
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jsPlug.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/commonUse.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Stats.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/LCalendar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/canvas-bg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/banlv.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

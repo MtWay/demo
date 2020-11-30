@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.effect{
+  width:330px;
+  height:100%;
+  padding-top:50px;
+  -webkit-filter:contrast(10);
+  background:#fff;
+  padding-left:30px;
+}
+.blackball{
+  width:100px;
+  height:100px;
+  background:black;
+  padding:10px;
+  border-radius:50%;
+  margin:0 auto;
+  z-index:1;
+  -webkit-filter:blur(5px);
+}
+.redball{
+  width:60px;
+  height:60px;
+  background:#f00;
+  padding:10px;
+  border-radius:50%;
+  position:absolute;
+  top:70px;
+  left:50px;
+  z-index:2;
+  -webkit-filter:blur(5px) ;
+  -webkit-animation:rball 4s infinite;
+}
+@-webkit-keyframes rball{
+  0%,100%{
+    left:35px;
+    width:60px;
+    height:60px;
+  }
+  4%,54%{
+    width:60px;
+    height:60px;
+  }
+  10%,60%{
+    width:50px;
+    height:70px;
+  }
+  20%,70%{
+    width:60px;
+    height:60px;
+  }
+  34%,90%{
+    width:70px;
+    height:50px;
+  }
+  41%{
+    width:60px;
+    height:60px;
+  }
+  50%{
+    left:calc(100% - 95px);
+    width:60px;
+    height:60px;
+  }
+}
+		</style>
+	</head>
+	<body>
+		<div class="effect">
+  <div class="blackball"></div>
+  <div class="redball"></div>
+</div>
+	</body>
+</html>

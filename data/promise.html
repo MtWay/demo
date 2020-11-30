@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>promise</title>
+		<style type="text/css">
+			img{
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var url = ['https://img.hx2car.com/upload/newimg2/M04/C5/E4/Clo8xFpQuHyAV6IbAALk5KLs8go567.jpg',
+        'https://img.hx2car.com/upload/newimg2/M02/8F/8F/Clo8xFol-biAGzi0AAQ20tSPv9s910.jpg',
+        'https://img.hx2car.com/upload/newimg1/M04/12/FA/Clo8w1q1txaARZUBAAJrpZlOrpE436.jpg',
+        'https://img.hx2car.com/upload/newimg1/M05/CC/34/Clo8w1pWu6qAEuWtAAQsIa2fQEQ225_small_400_300.jpg',
+        'https://img.hx2car.com/upload/newimg2/M02/C2/E7/Clo8xFpNoiOAcFWtAAQFhz6pC9Q471_small_400_300.jpg'
+      ],num=0;
+      function one(resolve,reject){	
+//					if(num<=0){
+//						reject()
+//					}
+
+					var src = url[num];
+					num++;
+					console.log(src)
+					var img = new Image();
+					img.src=src;
+					img.onload=function(){
+						$(".box").append("<img src='"+src+"'/>")
+						resolve();
+					}
+					if(num>=url.length){
+						reject();
+					}
+				}
+      function loop(){
+      			new Promise(one).then(function(){
+					loop();
+				})
+				.catch(function(){
+					console.log('gg')
+				})
+      }
+      loop()
+
+				
+				//假如用jQuery
+function gets(url, p) {
+  return $.gets(url + "?page=" + p)
+      .then(function(data) {
+          if(!data.list.length) {//递归结束条件
+              return [];
+          }
+
+          return get(url, p+1)//递归调用
+              .then(function(nextList) {
+                  return [].concat(data.list, nextList);//合并递归内容
+              });
+      });
+}
+
+//get("a.json", 1).then(function(list) {
+//  console.log(list);//your full list is here
+//});
+			})
+		</script>
+	</body>
+</html>

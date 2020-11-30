@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>尼尔骇入小游戏</title>
+		<style type="text/css">
+		*{
+				/*cursor: none;*/
+			
+		}
+			canvas {
+				border: 1px solid #f00;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -400px;
+				/*cursor: none;*/
+
+			}
+			
+			div {
+				/*display: none;*/
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			
+			.msg {
+				/*cursor: none;*/
+				display: block;
+				width: 800px;
+				height: 800px;
+				margin: -400px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				text-align: right;
+			}
+			.msg .left{text-align: left;position: absolute;top: 0;left: 0;}
+			.msg .right{transform: translateX(100%);display: inline-block;}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<canvas id="hr" width="800" height="800"></canvas>
+		<div class="msg">
+			<span class="right">w,↑：向上移动<br /> a,←：向左移动
+			<br /> s,↓：向下移动
+			<br /> d,→：向右移动
+			<br /> shift or 鼠标左键发射子弹</span>
+			
+			<span class="left">得分：<span id="num">0</span></span>
+		</div>
+		<script type="text/javascript">
+			var canvas = document.getElementById("hr");
+			var context = canvas.getContext("2d");
+			var cw = canvas.width;
+			var ch = canvas.height;
+			var cx = canvas.offsetLeft;
+			var cy = canvas.offsetTop;
+			var v = 7.5; //速度
+			var changeX, changeY, addbullet;
+			var bullets = [];
+			var index = 0;
+
+			//菱形战机
+			var l = 50; //等边三角形边长
+
+			var mid = l / (Math.sin(Math.PI / 3));
+			var kernel = {
+				x: 400,
+				y: 400,
+				r: 2,
+				deg: 0
+			}
+			var rhombus = [{
+				x: 0,
+				y: -mid
+			}, {
+				x: -l / 2,
+				y: 0
+			}, {
+				x: 0,
+				y: mid / 2
+			}, {
+				x: l / 2,
+				y: 0
+			}, {
+				x: 0,
+				y: -mid
+			}, {
+				x: l / 4,
+				y: mid * 3 / 4
+			}, {
+				x: -l / 4,
+				y: mid * 3 / 4
+			}];
+
+			//子弹模型
+			var d = 10; //子弹大小
+			//				var half = d / (Math.sin(Math.PI / 3));
+			var drr = [{
+				x: 0,
+				y: -d
+			}, {
+				x: -d / 2,
+				y: 0
+			}, {
+				x: -d / 2,
+				y: d
+			}, {
+				x: d / 2,
+				y: d
+			}, {
+				x: d / 2,
+				y: 0
+			}, {
+				x: 0,
+				y: -d
+			}];
+
+			//敌机实例
+			var enemyData = {
+				life:5,
+				w: 5,
+				num: 5,
+				v : 1
+			}
+
+			function enemy() {
+				var life = Math.ceil(enemyData.life * Math.random());
+				var x = Math.floor((cw - 2 * enemyData.w) * Math.random() + enemyData.w);
+				var y = Math.floor((ch - 2 * enemyData.w) * Math.random() + enemyData.w);
+				return {
+					score:life,
+					life: life,
+					radius: enemyData.w,
+					x: x,
+					y: y,
+					v:enemyData.v
+				};
+			}
+
+			var enemys = [];
+
+			function loop() {
+				index++;
+
+				//        铺底色
+				context.fillStyle = "#f3f3f3";
+				context.fillRect(0, 0, cw, ch);
+				context.fill();
+
+				//10个单位时间刷新敌人
+				if(index % 10 == 0 && enemys.length < enemyData.num) {
+					var enemyFly = enemy();
+					enemys.push(enemyFly);
+					//				console.log(enemyFly)
+				}
+
+				for(var i = 0; i < enemys.length; i++) {
+					var life = 	enemys[i].life;
+					if(life<3){
+						life=3;
+					}
+					var l = enemys[i].radius * life;
+					var len = bullets.length;
+					for(var j = 0; j < len; j++) {
+						var dl = Math.sqrt((bullets[j].x - enemys[i].x) * (bullets[j].x - enemys[i].x) + (bullets[j].y - enemys[i].y) * (bullets[j].y - enemys[i].y));
+						//					console.log(dl);
+						if(dl <= l && !bullets[j].out && !enemys[i].out) {
+							//子弹打中敌机
+							enemys[i].life--;
+							if(enemys[i].life < 1) {
+								enemys[i].out = true;
+								bullets[j].out = true;
+
+								//之后加敌机爆炸动画
+							}
+							break;
+						}
+					}
+					var dx  = kernel.x-enemys[i].x;
+					var dy  = kernel.y-enemys[i].y;
+					var vx = enemys[i].v;
+					var vy = enemys[i].v;
+					if(dx<0){
+						vx= -vx;
+					}
+					if(dy<0){
+						vy= -vy;
+					}
+//					console.log(vx)
+					enemys[i].x+=vx;
+					enemys[i].y+=vy;
+					
+					
+					if(enemys[i].out){
+								var num = Number($("#num").text())+enemys[i].score;
+								$("#num").text(num);
+								enemys.splice(i, 1);
+								i--;
+								if(i < 0) i = 0;
+					}
+					context.beginPath();
+					context.fillStyle = "#000000";
+					context.font = "16px Georgia";
+					if(enemys[i].life > 1) //为1不显示字
+						context.fillText(enemys[i].life, enemys[i].x - 4, enemys[i].y + 4);
+						
+
+						
+					if(enemys[i].life > 0) //为0不显示敌机
+						context.arc(enemys[i].x, enemys[i].y, enemys[i].radius *life, Math.PI * 2, 0, true);
+					context.stroke();
+				}
+
+				//				加入子弹
+				if(addbullet && index % 5 == 0) {
+					//				旋转变化
+					var x = rhombus[0].x * Math.cos(kernel.deg) - rhombus[0].y * Math.sin(kernel.deg);
+					var y = -rhombus[0].y * Math.cos(kernel.deg) - rhombus[0].x * Math.sin(kernel.deg);
+
+					var bull = new bullet({
+						x: x + kernel.x,
+						y: y + kernel.y
+					});
+					bullets.push(bull);
+				}
+				var bl = bullets.length;
+				for(var j = 0; j < bl; j++) {
+					context.beginPath();
+					context.fillStyle = "#000000";
+					var kl = drr.length;
+					var kernels = bullets[j];
+					for(var k = 0; k < kl; k++) {
+						// 		旋转变化
+						var x = drr[k].x * Math.cos(kernels.deg) - drr[k].y * Math.sin(kernels.deg);
+						var y = -drr[k].y * Math.cos(kernels.deg) - drr[k].x * Math.sin(kernels.deg);
+
+						if(j == 0) {
+							context.moveTo(x + kernels.x, y + kernels.y);
+						} else {
+							context.lineTo(x + kernels.x, y + kernels.y);
+						}
+						context.fill();
+					}
+					bullets[j].x += bullets[j].dx;
+					bullets[j].y += bullets[j].dy;
+
+					if(bullets[j].x > 850 || bullets[j].x < -50 || bullets[j].y > 850 || bullets[j].y < -50) {
+						bullets.splice(j, 1);
+						bl--;
+					}
+				}
+
+				//				x轴变化
+				if(changeX == 1) {
+					kernel.x -= v;
+				} else if(changeX == 2) {
+					kernel.x += v;
+				}
+				//				y轴变化
+				if(changeY == 1) {
+					kernel.y -= v;
+				} else if(changeY == 2) {
+					kernel.y += v;
+				}
+
+				context.beginPath();
+				context.fillStyle = "#fff";
+				var length = rhombus.length;
+				for(var i = 0; i < length; i++) {
+					//				旋转变化
+					var x = rhombus[i].x * Math.cos(kernel.deg) - rhombus[i].y * Math.sin(kernel.deg);
+					var y = -rhombus[i].y * Math.cos(kernel.deg) - rhombus[i].x * Math.sin(kernel.deg);
+
+					//				var x = rhombus[i].x;
+					//				var y = rhombus[i].y;
+
+					if(i == 0) {
+						context.moveTo(x + kernel.x, y + kernel.y);
+					} else if(i < 5) {
+						context.lineTo(x + kernel.x, y + kernel.y);
+					} else {
+						context.fill();
+						context.stroke();
+						context.beginPath();
+						context.arc(x + kernel.x, y + kernel.y, 7.5, Math.PI * 2, 0, true);
+					}
+
+				}
+				context.fill();
+				context.stroke();
+				context.beginPath();
+				context.fillStyle = "#000";
+				context.arc(kernel.x, kernel.y, kernel.r, Math.PI * 2, 0, true);
+				context.fill();
+				requestAnimationFrame(loop)
+			}
+			loop()
+				//			setInterval(loop,1000/60) ;
+
+			//子弹
+			function bullet(option) {
+				var def = {
+					x: kernel.x,
+					y: kernel.y,
+					dx: -Math.cos(kernel.deg + Math.PI / 2) * v * 1.5,
+					dy: Math.sin(kernel.deg + Math.PI / 2) * v * 1.5,
+					deg: kernel.deg
+				}
+				var opt = $.extend(def, option);
+				return opt;
+			}
+
+			$(document).keydown(function(e) {
+				//				console.log(e.keyCode);
+				switch(e.keyCode) {
+					case 16:
+						addbullet = 1;
+						break;
+					case 65:
+					case 37:
+						//					kernel.x-=v;
+						changeX = 1; //x--
+						break;
+					case 68:
+					case 39:
+						//					kernel.x+=v;
+						changeX = 2; //x++
+						break;
+					case 87:
+					case 38:
+						//					kernel.y-=v;
+						changeY = 1; //y--
+						break;
+					case 83:
+					case 40:
+						//					kernel.y+=v;
+						changeY = 2; //y++
+						break;
+					default:
+						break;
+				}
+
+			}).keyup(function(e) {
+				switch(e.keyCode) {
+					case 16:
+						addbullet = 0;
+						break;
+					case 65:
+					case 37:
+						if(changeX == 1) {
+							changeX = 0;
+						}
+						break;
+					case 68:
+					case 39:
+						if(changeX == 2) {
+							changeX = 0;
+						}
+						break;
+					case 87:
+					case 38:
+						if(changeY == 1) {
+							changeY = 0;
+						}
+						break;
+					case 83:
+					case 40:
+						if(changeY == 2) {
+							changeY = 0;
+						}
+						break;
+					default:
+						break;
+				}
+			})
+
+			$(document).mousemove(function(e) {
+				var dx = e.clientX - cx - kernel.x;
+				var dy = e.clientY - cy - kernel.y;
+				//				console.log(dx+","+dy);
+				var deg = Math.atan(dx / dy);
+				if(dy < 0) {
+					deg -= Math.PI;
+				}
+				kernel.deg = deg;
+				//				console.log(deg);
+			}).mousedown(function() {
+				addbullet = 1;
+			}).mouseup(function() {
+				addbullet = 0;
+			})
+
+			function resize() {
+				canvas.width = 500;
+			}
+		</script>
+	</body>
+
+</html>

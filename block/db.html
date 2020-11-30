@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>双指</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("body").on({
+					"touchstart":function(e){
+						console.log(e.originalEvent.touches.length)
+							var touchs = e.originalEvent.changedTouches;
+							for(var i = 0;i<touchs.length;i++){
+							$("body").append("<p>start "+i+"</p>");
+							$("body").append("<p>1手指 "+e.originalEvent.touches.length+"</p>")
+							}
+					},"touchmove":function(e){
+							var touchs = e.originalEvent.changedTouches;
+							for(var i = 0;i<touchs.length;i++){
+//							$("body").append("<p>move "+i+"</p>")
+							}
+					},"touchend":function(e){
+							var touchs = e.originalEvent.changedTouches;
+							for(var i = 0;i<touchs.length;i++){
+							$("body").append("<p>end "+i+"</p>")
+							$("body").append("<p>2手指 "+e.originalEvent.touches.length+"</p>")
+							}
+					},
+					
+				})
+			})
+		</script>
+		<style type="text/css">
+			body{height: 100vh;background: #f1f1f1;}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>

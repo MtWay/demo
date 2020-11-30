@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>像素</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				height: 100%;
+			}
+			.box{width: 150px;margin:20px auto;}
+			input{width: 100px;margin-right: 10px;}
+			canvas{width: 800px;height: 600px;margin: 0 auto;display: block;border: 1px solid #f00;}
+			/*canvas{background: #0f0 ;}*/
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload=function() {
+				//				var ctx =  $("#can")[0].getContext('2d');
+				canvas = document.getElementById("can");
+				context = canvas.getContext('2d');
+				show('123456')
+				
+				function show(txt){
+				resize();
+				drawText(txt)
+				var arr = getImageData();
+				draw(arr);
+				}
+				function drawText(text) {
+					//    context.save()
+					context.font = "200px 微软雅黑 bold";
+					context.fillStyle = "rgba(168,168,168,1)";
+					context.textAlign = "center";
+					context.textBaseline = "middle";
+					context.fillText(text, canvas.width / 2, canvas.height / 2);
+					//    context.restore();
+				}
+				
+				function Dot(centerX, centerY, centerZ, radius) {
+					this.dx = centerX; //保存原来的位置
+					this.dy = centerY;
+					this.dz = centerZ;
+					this.tx = 0; //保存粒子聚合后又飞散开的位置
+					this.ty = 0;
+					this.tz = 0;
+					this.z = centerZ;
+					this.x = centerX;
+					this.y = centerY;
+					this.radius = radius;
+				}
+
+				Dot.prototype = {
+					paint: function() {
+						context.save();
+						context.beginPath();
+						var scale = focallength / (focallength + this.z);
+						context.arc(canvas.width / 2 + (this.x - canvas.width / 2) * scale, canvas.height / 2 + (this.y - canvas.height / 2) * scale, this.radius * scale, 0, 2 * Math.PI);
+						context.fillStyle = "rgba(50,50,50," + scale + ")";
+						context.fill()
+						context.restore();
+					}
+				}
+				
+				function getImageData() {
+					var imageData = context.getImageData(0, 0, w, h);
+					console.log(imageData);
+					var place = 0,
+						places = [];
+					for(var x = 0; x < imageData.width; x++) {
+						for(var y = 0; y < imageData.height; y++) {
+							//var i = 4*(x * imageData.height + y);
+							var i = 4 * (y * imageData.width + x);
+							if(imageData.data[i + 3] > 128) {
+								place++;
+								(place % 4 == 0) && places.push(new Dot(x, y, 0, 3));
+							}
+						}
+					}
+					console.log(places);
+					return places;
+				}
+			function draw(arr){
+				resize()
+				let length = arr.length;
+				let  index = 0,drr=[];
+				
+				for(let i =0;i<length;i++){
+					var mark = 1;
+//					let l = ((arr[i].x-arr[index].x)*(arr[i].x-arr[index].x))+((arr[i].y-arr[index].y)*(arr[i].y-arr[index].y));
+					if(mark){
+					index++;
+					drr.push(arr[i])
+					context.beginPath()
+					var x = Math.floor(arr[i].x/(arr[i].radius*2))*arr[i].radius*2;
+					var y = Math.floor(arr[i].y/(arr[i].radius*2))*arr[i].radius*2;
+					context.arc(x,y,arr[i].radius,0,Math.PI*2,true);
+					context.fill();
+//					context.stroke();	
+					}
+					
+				}
+				console.log(index);
+			}
+				
+
+				//调整画布尺寸
+				function resize() {
+					w = $("canvas").width();
+					h = $("canvas").height();
+					$("canvas").attr({
+						width: w,
+						height: h
+					});
+				}
+				$('button').click(function(){
+					var txt = $("#txt").val();
+					show(txt);
+				})
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<canvas id="can" width="" height=""></canvas>
+		<div class="box">
+			<input type="text" name="txt" id="txt" value="" /><button>变</button>
+		</div>
+	</body>
+
+</html>

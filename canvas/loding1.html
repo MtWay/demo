@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			canvas {
+				background: #000;
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<canvas id="can" width="400" height="400"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById('can');
+			var context = canvas.getContext('2d');
+			var num = 100,
+				arr = [];
+			//			context.fillStyle = "rgba(255,255,255,1)";
+			//			context.strokeStyle = "#fff";
+			//			context.arc(200, 200, 100, 0,Math.PI, false)
+			//			context.fill()
+			for(var i = 1; i <= num; i++) {
+				arr.push(new adeg({
+						num: i,
+						index:i
+					}))
+//					//				arr["num"+i]=i;
+			}
+//			console.log(arr);
+			//度转角
+			hd = a => Math.PI * 2 * a / 360;
+
+			function adeg(obj) {
+				this.cacheCanvas = document.createElement("canvas");
+				this.ctx = this.cacheCanvas.getContext("2d");
+				this.cacheCanvas.width = 400;
+				this.cacheCanvas.height = 400;
+				var defaults = {
+					index:0,
+					num: 0,
+					cacheCanvas: this.cacheCanvas,
+					ctx: this.ctx,
+					mark: 1,
+					draw: function(context) {
+						if(this.mark) {
+							context.beginPath();
+							context.moveTo(200, 200)
+								//	console.log(arr["num"+i] / num );
+							context.fillStyle = "rgba(255,255,255," + this.num / num + ")";
+							context.arc(200, 200, 100, this.index / num * Math.PI * 2 - hd(1), this.index / num * Math.PI * 2 + hd(1), false);
+							context.fill();
+							context.closePath();
+							this.mark = 0;
+						} else {
+							context.drawImage(this.cacheCanvas,0,0);
+							this.mark = 1;
+							
+						}
+					},
+					move: function() {
+						this.num++;
+//						console.log(this.num)
+						if(this.num > num) {
+							this.num = 0
+						}
+						this.draw(context);
+					}
+				}
+				var opt = $.extend(defaults, obj);
+				return opt;
+			}
+			
+			var mark = 1;
+			function loop(){
+			context.clearRect(-400,-400,800,800);
+				if(mark){
+					for(var i= 0;i<arr.length;i++){
+						arr[i].draw(arr[i].ctx);
+					}
+					mark=0;
+					
+				}else{
+					for(var i= 0;i<arr.length;i++){
+						arr[i].move()
+					}
+//					console.log(arr)
+				}
+			requestAnimationFrame(loop)
+			}
+			
+			loop()
+//			var Game = {
+//				init: function() {
+//					for(var i = 0; i < num; i++) {
+//						arr.push(new adeg({
+//								num: i
+//							}))
+//							//                      var b = new ball(getRandom(0,canvas.width) , getRandom(0,canvas.height) , getRandom(-10 , 10) ,  getRandom(-10 , 10) , true)
+//							//                      Balls.push(b);
+//					}
+////					console.log(arr)
+//				},
+//				update: function() {
+//					context.clearRect(0, 0, canvas.width, canvas.height);
+//					for(var i = 0; i < arr.length; i++) {
+//						arr[i].move();
+//					}
+//				},
+//				loop: function() {
+////					console.log(this)
+//var _this = this
+//					this.update();
+////					requestAnimationFrame(this.loop.call(this))
+////					RAF(function() {
+////						_this.loop();
+////					})
+//				},
+//				start: function() {
+//					console.log(this)
+//					this.init();
+//					this.loop.call(this)
+////					this.loop();
+//				}
+//			}
+//			Game.start();
+//
+//			window.RAF = (function() {
+//				return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+//					window.setTimeout(callback, 1000 / 60);
+//				};
+//			})();
+
+//			function loop() {
+//				canvas.width = canvas.width;
+//				for(var i = 1; i <= num; i++) {
+//					context.beginPath();
+//					context.moveTo(200, 200)
+//						//	console.log(arr["num"+i] / num );
+//					context.fillStyle = "rgba(255,255,255," + arr["num" + i] / num + ")";
+//					context.arc(200, 200, 100, i / num * Math.PI * 2 - hd(1), i / num * Math.PI * 2 + hd(1), false);
+//					context.fill();
+//					context.closePath();
+//					//					console.log(arr["num"+i])
+//					arr["num" + i]++;
+//					//					console.log(arr["num"+i])
+//					if(arr["num" + i] > num) {
+//						arr["num" + i] = 1;
+//					}
+//				}
+//				//				console.log(arr['num1'])
+//				context.beginPath();
+//				context.fillStyle = "#000";
+//				context.arc(200, 200, 50, 0, Math.PI * 2, false);
+//				context.fill();
+//				context.closePath();
+//				timer = requestAnimationFrame(loop);
+//			}
+			//			loop()
+			//			var timer = setInterval(loop, 1000 / 6);
+//			var timer = requestAnimationFrame(loop);
+		</script>
+	</body>
+
+</html>

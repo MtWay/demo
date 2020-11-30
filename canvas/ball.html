@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>3d球体</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			canvas {
+				background: #000000;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			div {
+				display: none;
+			}
+		</style>
+		<script src="js/stats.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<canvas id="can" width="800" height="800"></canvas>
+		<script type="text/javascript">
+			stats = new Stats();
+
+			stats.setMode(0);
+
+			stats.domElement.style.position = 'absolute';
+
+			stats.domElement.style.right = '0px';
+
+			stats.domElement.style.top = '0px';
+
+			document.body.appendChild(stats.domElement);
+			var canvas = document.getElementById('can');
+			var context = canvas.getContext('2d'),
+				r = 2,
+				map = [],
+				deg = 1,
+				degx = 1,
+				degy = 1;
+			context.fillStyle = "#fff"
+			context.translate(400, 400)
+
+			var md = 360 / deg;
+			for(var i = 0; i < md; i++) {
+				var arr = [];
+
+				var x = Math.sin(Math.PI * i / md * 2) * 200;
+				for(var j = 0; j < md; j++) {
+					var y = Math.sin(Math.PI * j / md * 2) * 200;
+					//				console.log(y)
+					var z = Math.sqrt(Math.abs(md / 2 - j) / md * 2 * Math.abs(md / 2 - i) / md * 2);
+					//				console.log(z)
+					var d = new dot({
+						x: x,
+						y: y,
+						z: z
+					});
+					//map.push(d);
+				}
+			}
+			var num = 500
+			hd = a => Math.PI * 2 * a / 360;
+
+			for(var i = 1; i < num; i++) {
+				var ja = Math.acos(((2 * i) - 1) / num - 1);
+				//				console.log(ja)
+				var jb = ja * Math.sqrt(num * Math.PI);
+				var x = 200 * Math.sin(ja) * Math.cos(jb);
+				var y = 200 * Math.sin(ja) * Math.sin(jb);
+				var z = 200 * Math.cos(ja);
+				var d = new dot({
+					x: x,
+					y: y,
+					z: z
+				});
+				map.push(d);
+			}
+			console.log(map)
+
+			var index = 0
+			loop()
+
+			function loop() {
+				canvas.width = canvas.width;
+				//clear()
+				index++
+				var l = map.length;
+				//			console.log(index)
+				if(index % 10 == 0) {
+					//							context.clearRect(-400,-400,canvas.width,canvas.height);
+
+				}
+				//			deg+=10;
+				//			if(deg>360){
+				//				deg = 0
+				//			}
+				for(var i = 0; i < l; i++) {
+					var radius = (map[i].z + 400) / 500 * 2;
+					//				console.log(radius)
+					//				x缩减 	
+					//				var x = Math.cos(Math.abs(map[i].y)/200*Math.PI/2)*map[i].x;
+					var x = map[i].x;
+					var y = map[i].y;
+					var z = map[i].z;
+					context.beginPath()
+					var opa = radius / 2;
+					context.fillStyle = "rgba(255,255,255," + opa + ")"
+					context.arc(x, y, radius, Math.PI * 2, 0, true);
+					context.fill();
+					var du = Math.PI * 2 * degx / 360;
+					map[i].y = y * Math.cos(du) - z * Math.sin(du);
+					map[i].z = z * Math.cos(du) + y * Math.sin(du);
+
+					var z = map[i].z;
+					var du = Math.PI * 2 * degy / 360;
+					map[i].x = x * Math.cos(du) + z * Math.sin(du);
+					map[i].z = z * Math.cos(du) - x * Math.sin(du);
+					//
+				}
+				stats.update();
+				requestAnimationFrame(loop)
+			}
+			var cleft = canvas.offsetLeft;
+			canvas.onmousemove = function(e) {
+				var e = e || window.e;
+				var x = e.clientX - cleft - 400;
+				var y = e.clientY - 400;
+				degx = -y / 100;
+				degy = x / 100;
+			}
+
+			//			setInterval(loop,1000/60) 	
+
+			function dot(opt) {
+				this.x = opt.x;
+				this.y = opt.y;
+				this.z = opt.z;
+				this.r = r;
+			}
+
+			function clear() {
+				context.fillStyle = 'rgba(255,255,255,0.1)';
+				context.fillRect(-400, -400, canvas.width, canvas.height);
+			}
+		</script>
+	</body>
+
+</html>

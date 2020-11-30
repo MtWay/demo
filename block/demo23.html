@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.ghosting {
+  height: 300px;
+  background: #0ff;
+}
+.ghosting:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+p {
+  display: inline-block;
+  vertical-align: middle;
+	background:rgba(0,0,0,0.5);
+	-webkit-text-fill-color:transparent;
+	-webkit-background-clip: text;
+	/*color: transparent;*/
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="ghost-trick">
+  <div class="ghosting"><p>Vertically centered without changing the position property.</p></div>
+</div>
+	</body>
+</html>
