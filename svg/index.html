@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg学习</title>
+    <style>
+        .svg-border-animation {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-text {
+  position: absolute;
+  line-height: 60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  top: 0;
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shape {
+  fill: transparent;
+  stroke-width: 4px;
+  stroke: #333;
+  stroke-dasharray: 16  ;
+  stroke-dashoffset: -460;
+  transition: all 0.5s linear;
+}
+
+.svg-border-animation:hover .hover-text {
+  transition: 0.5s;
+  color: #3F51B5;
+}
+
+.svg-border-animation:hover .shape {
+  /* -webkit-animation: draw 0.5s linear forwards; */
+  /* animation: draw 0.5s linear forwards; */
+  stroke-dasharray: 760;
+    stroke-dashoffset:0;
+    stroke-width: 2px;
+    stroke: #3F51B5;
+}
+.svg-border-animation:hover .circle-load-svg{
+    /* 有点像角度， */
+    stroke-dasharray:720 720;
+}
+.circle-load-svg{
+  stroke-dasharray: 0 720;
+  transition: all 0.5s linear;
+
+}
+
+@-webkit-keyframes draw {
+  0% {
+    stroke-dasharray: 160 520;
+    stroke-dashoffset: -460;
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+    stroke: #3F51B5;
+  }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 160 520;
+    stroke-dashoffset: -460;
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+    stroke: #3F51B5;
+  }
+}
+    </style>
+</head>
+<body>
+    <hgroup class="svg-border-animation">
+        <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shape" height="3200" width="320"></rect>
+            <circle cx="110" cy="110" r="90" stroke-width="10" stroke="gainsboro" fill="none"></circle>
+            <circle cx="110" cy="110" r="90" stroke-width="10" stroke="darkturquoise" fill="none" class="circle-load-svg"></circle>
+        </svg>
+        <div class="hover-text">HOVER ME</div>
+    </hgroup>
+</body>
+</html>
