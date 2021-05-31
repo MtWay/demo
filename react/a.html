@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    5864987
+    <div class="cls">1</div>
+    <div id="mikhk">5646</div>
+    <script>
+        let a = document.getElementsByClassName("cls");
+        let b = document.querySelector(".cls");
+        console.log(a,b)
+        let c = document.createElement("div");
+        c.innerText = 3;
+        c.className="cls"
+        document.body.append(c)
+        console.log(a,b)
+        b = document.querySelector(".cls")
+        console.log(a,b)
+    </script>
+</body>
+</html>

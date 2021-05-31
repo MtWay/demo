@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new 的实现</title>
+    <script>
+        function Parent(age, name) {
+            this.age = age
+            this.name = name
+            this.sayAge = function () {
+                console.log('this.age :', this.age)
+            }
+        }
+       
+
+        let son = new Parent(18, 'lining')
+        let newSon = New(Parent, 18, 'lining1')
+        let newSon1 = New1(Parent, 18, 'lining2')
+        Parent.prototype.sayName = function () {
+            console.log('this.name :', this.name)
+        }
+        console.log(son)
+        console.log(newSon)
+        console.log(newSon1)
+        son.sayName()
+        newSon.sayName()
+        newSon1.sayName()
+        console.log(son.constructor)
+        console.log(newSon.constructor)
+        console.log(newSon1.constructor)
+
+        function New(Fn) {
+            let obj = {}
+            let arg = Array.prototype.slice.call(arguments, 1)
+            obj.__proto__ = Fn.prototype
+            // obj.__proto__.constructor = Fn
+            let ret = Fn.apply(obj, arg)
+            return typeof ret === 'object' ? ret || obj : obj
+        }
+
+        function New1(Fn) {
+            let obj = {}
+            let arg = Array.prototype.slice.call(arguments, 1)
+            // obj.__proto__ = Fn.prototype
+            //  obj = Object.create(Fn.prototype)
+            Object.setPrototypeOf(obj, Fn.prototype)
+            // obj.__proto__.constructor = Fn
+
+            // Object.setPrototypeOf(constructor, Fn)
+            let ret = Fn.apply(obj, arg)
+            // let ret = Fn(obj, arg)
+            return typeof ret === 'object' ? ret || obj : obj
+        }
+
+
+        function Person() {
+            this.name;
+        }
+        Person.prototype.say = function () {
+            console.log("hello");
+        }
+
+        var person = new Person();
+
+        console.log(Person.__proto__);
+        console.log(Function.prototype);
+
+        console.log(Person.prototype.__proto__);
+        console.log(Object.prototype);
+
+        console.log(person.__proto__);
+        console.log(Person.prototype);
+
+        console.log(Person.prototype.constructor);
+        console.log(Person);
+        document.write(` console.log(Person.__proto__);\n   
+        console.log(Function.prototype);
+
+        console.log(Person.prototype.__proto__);
+        console.log(Object.prototype);
+
+        console.log(person.__proto__);
+        console.log(Person.prototype);
+
+        console.log(Person.prototype.constructor);
+        console.log(Person);`)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

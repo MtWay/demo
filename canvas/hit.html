@@ -8,6 +8,7 @@
 			body {
 				margin: 0;
 				padding: 0;
+				/* background: #f00; */
 			}
 			
 			canvas {
@@ -57,9 +58,9 @@
 				}
 				console.log(arr)
 
-				var timer = setInterval(loop, 1000 / 60)
+				// var timer = setInterval(loop, 1000 / 60)
 				loop()
-
+				
 				function loop() {
 					clear();
 					var len = arr.length;
@@ -126,6 +127,7 @@ var vyj = ((arr[j].r-arr[i].r)*arr[j].vy+arr[i].r*arr[i].vy*2)/(arr[j].r+arr[i].
 								}
 						}
 					}
+					requestAnimationFrame(loop)
 				}
 
 				function ball(option) {
