@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css3</title>
+		<style type="text/css">
+		body{background:#eee;padding: 0 30%;}
+			.warp{position: relative;width: 100px;height: 100px;background: #fff;border-radius:5px;float:left;box-shadow:0 2px 4px rgba(0, 0, 0, 0.3);border:1px #ccc solid;margin:20px 20px 40px;}
+		.warp p{position: absolute;font-size: 15px;font-family: "微软雅黑";bottom:-45px;text-align: center;width: 100%;}	
+		
+		/*Akiyama*/
+		.akiyama{width: 50px;height: 50px;background: #f00;transform: rotate(-45deg)skew(14deg, 14deg);margin: 0 auto;position: relative;}
+		.akiyama:nth-of-type(1){width: 20px;height:20px;margin-top: 10px;}
+		.akiyama:nth-of-type(2){width: 30px;height:30px;top:-10px;}
+		.akiyama:nth-of-type(3){width: 40px;height:40px;top:-30px;}
+		
+		/*Amako*/
+		.amako{width:4px;height:4px;border: #000 solid 15px;float:left;margin: 1px;}
+		.box{padding: 13px;}
+		
+		/*amakusa*/
+		.amakusa{position: absolute;height: 10px;border-bottom: solid #00FF00 34px;border-right:solid 7px transparent;border-top: solid #00FF00 34px;border-left:solid 7px transparent;left:45%;}
+		.amakusa:nth-of-type(1){transform: rotate(30deg);}
+		.amakusa:nth-of-type(2){transform: rotate(60deg);}
+		.amakusa:nth-of-type(3){transform: rotate(90deg);}
+		.amakusa:nth-of-type(4){transform: rotate(120deg);}
+		.amakusa:nth-of-type(5){transform: rotate(150deg);}
+		.mid{position: absolute;width: 20px;height: 20px;background: #0f0;left: 37%;border-radius: 50%;border:5px solid #fff;top: 37%;}
+		
+		
+		.aso{border: 20px solid #db1500;border-radius:50%;width:50px;height: 50px;border-bottom: none;border-right-width:10px;border-left-width:10px;}
+		
+		
+		.baba{
+			 position: relative;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-right: 9px solid red;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+		}
+		.baba:after{content: "";
+  position: absolute;
+  border: 0 solid transparent;
+  border-top: 3px solid red;
+  border-radius: 20px 0 0 0;
+  top: -12px;
+  left: -9px;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);}
+  
+  
+  #curvedarrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-right: 9px solid red;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+#curvedarrow:after {
+  content: "";
+  position: absolute;
+  border: 0 solid transparent;
+  border-top: 3px solid red;
+  border-radius: 20px 0 0 0;
+  top: -12px;
+  left: -9px;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+.heart{width:40px;height: 40px;position: relative;left: 30px;top:35px;background: #f00;transform: rotate(45deg) ;}
+.heart:after,.heart:before{content:"";width:40px;height:40px;border-radius:50% ;border-bottom: transparent;border-left: transparent;position: absolute;top:-20px;background: #f00;}
+.heart:before{left: -20px;top: 0;}
+
+#test{width: 0;height: 0;border: 20px solid #f00;border-radius:20px;border-right-color:transparent ;}
+
+
+	.yy{width: 48px;height: 24px;border: 1px solid #000000;position: relative;border-bottom-width:25px;border-radius:50%;top: 25px;left: 25px;}
+	.yy:after,.yy:before{content: "";width: 4px;height: 4px;border: 10px solid #fff;top:50%;border-radius:20px ;position: absolute;background: #000;}
+	.yy:after{left:50%;background:#fff;border-color:#000 ;}
+	
+	#facebook-icon {
+  background: red;
+  text-indent: -999em;
+  width: 100px;
+  height: 110px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  border: 15px solid red;
+  border-bottom: 0;
+}
+#facebook-icon::before {
+  content: "";
+  position: absolute;
+  background: red;
+  width: 40px;
+  height: 90px;
+  bottom: -30px;
+  right: -37px;
+  border: 20px solid #eee;
+  border-radius: 25px;
+}
+#facebook-icon::after {
+  content: "";
+  position: absolute;
+  width: 55px;
+  top: 50px;
+  height: 20px;
+  background: #eee;
+  right: 5px;
+}
+		</style>
+	</head>
+	<body>
+		<div id="facebook-icon"></div>
+		<div id="test">
+			
+		</div>
+		
+		<div id="curvedarrow">
+			
+		</div>
+		<div id="heart">
+			
+		</div>
+		
+		<div class="warp">
+			<div class="akiyama">
+			</div>
+			<div class="akiyama">
+			</div>
+			<div class="akiyama">
+			</div>
+			<p>Akiyama</p>
+		</div>
+		<div class="warp">
+			<div class="box">
+				
+			<div class="amako">
+			</div>
+			<div class="amako">
+			</div>
+			<div class="amako">
+			</div>
+			<div class="amako">
+			</div>
+			</div>			
+			<p>Amako</p>
+		</div>
+		<div class="warp">
+			<div class="box">
+			<div class="amakusa">
+			</div>
+			<div class="amakusa">
+			</div>
+			<div class="amakusa">
+			</div>
+			<div class="amakusa">
+			</div>
+			<div class="amakusa">
+			</div>
+			<div class="amakusa">
+				
+			</div>
+			<div class="mid">
+				
+			</div>
+			</div>
+			<p>Amakusa</p>
+		</div><div class="warp">
+			<div class="aso">
+				
+			</div>
+			<p>Aso</p>
+		</div>
+		</div>
+		<div class="warp">
+			<div class="baba">
+				
+			</div>
+			<p>Baba</p>
+		</div>
+		<div class="warp">
+			<div class="heart">
+				
+			</div>
+			<p>Heart</p>
+		</div>
+		<div class="warp">
+			<div class="yy">
+				
+			</div>
+			<p>Yinyang</p>
+		</div>
+	</body>
+</html>

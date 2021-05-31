@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--<script type="text/javascript">
+			/*function getIframeContent(frameId){
+ var frameObj = document.getElementById(frameId);
+ var frameContent = frameObj.contentWindow.document.body.innerHTML;
+ alert("frame content : "+frameContent);
+ console.log(frameContent)
+ }*/
+			//getIframeContent('testFrame')
+			//console.log(document.getElementById('iframe的ID').contentWindow.document.getElementById('testFrame'))
+		//var a =	$("#testFrame", document.frames("iframename").document).html();
+		</script>-->
+		<script type="text/JavaScript">
+function onDataLoaded(datalist)
+{
+for (x in datalist)
+{
+//alert(datalist[x]);
+document.getElementById(x).innerHTML = datalist[x];
+document.getElementById(x).className = "";
+}
+}
+</script>
+<script src="new_file.php?uid=XXX&onloaded=onDataLoaded"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$("#token").click(function(){
+				console.log(1)
+				$.ajax({
+					type:"get",
+					url:"new_file.php",
+					async:false,
+					datatype:"json",
+					data:{
+						appid:"wxc82088a586201f2a",
+						secret:"dcd1a4ae9de57701c366d739f2b9421d"
+					},
+					success:function(a){
+						console.log(a)
+					}
+				});
+			})
+		})
+		
+		window.onload=function(){
+//			 var state = 0, 
+//  iframe = document.createElement('iframe'),
+//  loadfn = function() {
+//      if (state === 1) {
+//          var data = iframe.contentWindow.name;    // 读取数据
+//          alert(data);    //弹出'I was there!'
+//      } else if (state === 0) {
+//          state = 1;
+//          iframe.contentWindow.location = "can.html";    // 设置的代理文件
+//      }  
+//  };
+//  iframe.src = 'http://devchat.etongxing.com.cn/wx/dailybenefit.jsp?username=123&uid=71';
+//  if (iframe.attachEvent) {
+//      iframe.attachEvent('onload', loadfn);
+//  } else {
+//      iframe.onload  = loadfn;
+//  }
+//  document.body.appendChild(iframe);
+			
+//		 var iframe = document.getElementById("testFrame");
+//          var data = iframe.contentWindow.name;    // 读取数据
+//          alert(data);    //弹出'I was there!'
+
+//var xhr = new XMLHttpRequest();
+////然后，向远程主机发出一个HTTP请求。
+//　　xhr.open('GET', 'http://cztest.etongxing.com.cn/epass/withdrawSubmit');
+//　　xhr.send();
+////接着，就等待远程主机做出回应。这时需要监控XMLHttpRequest对象的状态变化，指定回调函数。
+//　　xhr.onreadystatechange = function(){
+//　　　　if ( xhr.readyState == 4 && xhr.status == 200 ) {
+//　　　　　　alert( xhr.responseText );
+//console.log(1)
+//　　　　} else {
+//　　　　　　alert( xhr.statusText );
+//console.log(2)
+//　　　　}
+//　　};
+ function proxy(url, func){
+    var isFirst = true,
+        ifr = document.createElement('iframe'),
+        loadFunc = function(){
+          if(isFirst){
+            ifr.contentWindow.location = 'can.html';
+            isFirst = false;
+          }else{
+            func(ifr.contentWindow.name);
+            ifr.contentWindow.close();
+            document.body.removeChild(ifr);
+            ifr.src = '';
+            ifr = null;
+          }
+        };
+
+    ifr.src = url;
+    ifr.style.display = 'none';
+    if(ifr.attachEvent) ifr.attachEvent('onload', loadFunc);
+    else ifr.onload = loadFunc;
+
+    document.body.appendChild(ifr);
+  }
+  proxy('http://devchat.etongxing.com.cn/wx/dailybenefit.jsp?username=123&uid=139', function(data){
+      console.log(data);
+    });
+   }
+		</script>
+	</head>
+	<body id="body">
+<!--<a href="#" onclick="getIframeContent('testFrame');">Get the content of Iframe</a>-->
+
+
+<button id="token">获取token</button>
+<button id="js">获取js</button>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function employee(name, job, born) {
+				this.name = name;
+				this.job = job;
+				this.born = born;
+			}
+
+			var bill = new employee("Bill Gates", "Engineer", 1985);
+
+			employee.prototype.salary = null;
+			//bill.salary=20000;
+
+			console.log(bill.salary);
+			console.log(employee);
+
+			function baseClass() {
+				this.showMsg = function() {
+				//alert("baseClass::showMsg");
+				}
+			}
+
+			function extendClass() {
+				this.showMsg = function() {
+					//alert("extendClass::showMsg");
+				}
+			}
+
+			extendClass.prototype = new baseClass();
+			var instance = new extendClass();
+
+			instance.showMsg(); //显示extendClass::showMsg
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

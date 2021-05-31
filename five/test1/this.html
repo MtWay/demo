@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		var x =1;
+			function test(){
+				var x = 2;
+　　　　	
+　　　	console.log(this.x);
+　　}
+			test()
+			
+			
+			var sex = "male";
+var saySex = {
+    sex:"female",
+    saySex:function(){
+        function getSex(){
+            console.log("this.sex="+this.sex);
+        }
+        getSex();
+    }
+}
+saySex.saySex(); //this.sex = ?
+var ccc = saySex.saySex;
+ccc();//this.sex = ?
+
+function a(xx){this.x=xx;return this};
+var x=a(5);
+var y=a(6);
+console.log(x.x);
+console.log(y.x);
+var i =0;
+var obj={
+	a:(function(){
+	i=1;
+	return function(){
+		i=2;
+	}
+})()}
+
+console.log(i);
+var b=obj.a
+console.log(i);
+b()
+console.log(i);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

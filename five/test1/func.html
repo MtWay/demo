@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function arg(...args){
+				console.log(args)
+			}
+			arg(1,23,{a:1})
+			//$.url().param('data');
+			sessionStorage["par1"]="123";
+			console.log(sessionStorage["par1"])
+			
+			var a = {n:1}; 
+var b = a;  
+a.x = a = {n:2}; 
+console.log(a.x);// --> undefined 
+console.log(b.x);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

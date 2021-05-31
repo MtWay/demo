@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() { //创建棋盘
+					for(let i = 0; i < 10; i++) {
+						let $tr = "<tr>";
+						for(let j = 0; j < 10; j++) {
+							$tr += "<td></td>";
+						}
+						$tr += "</tr>";
+						$("table").append($tr);
+					}
+					//$("table").delegate("td","click",function(){})
+					var mark = 1,
+						arr = ["黑", '白'];
+					$("td").click(function() {
+						if($(this).hasClass("fff") || $(this).hasClass("black")) return false;
+						$("i").text(arr[Number(mark)]);
+						mark = !mark;
+						if(mark) $(this).addClass("fff");
+						else $(this).addClass("black");
+					})
+				}
+
+			) < /script>
+			<style type="text/css
+			"> 
+
+			</style> 
+			</head >
+			<body >
+	<div id = "box" >
+	<table border = "1px"
+cellspacing = "0" >
+	</table> <div id = "state" >
+	<h2>当前： <i> 黑 </i> </h2>
+	</div>
+</body>  
+	</html >

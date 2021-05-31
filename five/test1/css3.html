@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.move{width: 100px;height: 100px;background: #f00;}
+			.move1{animation: 1.25s, 500ms name;}
+			@keyframes name{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$(function(){
+			$(".move").click(function(){
+				
+				$(this).addClass("move1")
+				setTimeout(function(){
+					$(".move1").removeClass("move1")
+				},500)
+				
+			})
+		})
+			
+		</script>
+	</head>
+	<body>
+		<div class="move">
+			
+		</div>
+	</body>
+</html>

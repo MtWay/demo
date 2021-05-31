@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>tab</title>
+		<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.d0 {
+			clear: both;
+		}
+		
+		#map {
+			width: 1022px;
+			margin: 0 auto;
+		}
+		
+		nav {
+			width: 100%;
+			background:rgba(242, 242, 242, 0.286274509803922);
+			height: 50px;
+			border: 1px rgb(228,228,228) solid;
+		}
+		
+		nav li {
+			list-style: none;
+			float: left;
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 16px;
+			text-align: center;
+			
+			border-right: 1px rgb(228,228,228) solid;
+		}
+			
+		</style>
+	</head>
+	<body>
+		<div id="map">
+		<nav>
+			<ul>
+				<li>项目信息</li>
+				<li>土建验收</li>
+				<li>安装验收</li>
+			</ul>	
+		</nav>
+		<div class="d0"></div>
+		<div id="tabList">
+			<div id="list1" class="list">
+					<div class="form-group">
+				<div class="col-sm-12">
+					<label class="control-label"><strong>基本信息</strong></label>
+				</div>
+			</div>
+            
+            <div class="form-group col-sm-6">
+					<label class="control-label">项目名称:</label>
+				  <span>${pro.ccom02ProjectName}</span>
+				  
+			</div>
+            <div class="form-group col-sm-6">
+					<label class="control-label">物业名称:</label>
+				  <span>${pro.ccom02PropertyName}</span>
+				  
+			</div>
+            <div class="form-group col-sm-6">
+					<label class="control-label">所属区域:</label>
+				  <span>${pro.ccom02RegionName}</span>
+				  
+			</div>
+            
+            <div class="form-group col-sm-6">
+					<label class="control-label">项目地址:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+            
+           <div class="form-group col-sm-6">
+					<label class="control-label">停车场类型:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div> 	
+			<div class="form-group col-sm-6">
+					<label class="control-label">收费情况:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div> 
+			<div class="form-group col-sm-6">
+					<label class="control-label">车位数量:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">混合通道数:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">普通进场车道数:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">普通出场车道数:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+            
+            <div class="form-group col-sm-6">
+                    <label class="control-label">预计施工日期:</label>
+                    <span  id="ccom02EstConDate"><fmt:formatDate value="${pro.ccom02EstConDate }" type="date" dateStyle="medium"/></span>
+            </div>
+            
+            <div class="form-group col-sm-6">
+                    <label class="control-label">正式营业日期:</label>
+                    <span  id="ccom02OffBusDate"><fmt:formatDate value="${pro.ccom02OffBusDate }" type="date" dateStyle="medium"/></span>
+            </div>
+            <div class="form-group col-sm-6">
+					<label class="control-label">计费标准：</label>
+				  <span >白天8 元/小时，晚上4元/小时</span>
+				  
+			</div>
+			<br style="clear: both;" />
+			<div class="form-group col-sm-6">
+					<label class="control-label">备注：</label>
+				  <span >无</span>
+				  
+			</div>
+			<br style="clear: both;" />
+			<div class="form-group col-sm-6">
+					<label class="control-label">签约状态:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">合同期限:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">合同签订方式:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">是否委托施工:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">岗亭数:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">广告位置:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">项目阶段:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">优惠标准:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">预计交工日期:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">联系人:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			<div class="form-group col-sm-6">
+					<label class="control-label">联系电话:</label>
+				  <span >${pro.ccom02Address}</span>
+				  
+			</div>
+			</div>
+			<div id="list2" class="list">
+					<table align="center" border="1" cellpadding="10" cellspacing="0" style="text-align: center;">
+						<thead>
+							<tr>
+								<th>一级菜单</th>
+								<th>二级菜单</th>
+								<th>三级菜单</th>
+								<th>重要程度</th>
+								<th>验收结果</th>
+								<th>验收标准</th>
+								<th>备 注</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>地感类</td>
+								<td>地感管理器</td>
+								<td>工作电压</td>
+								<td>重要</td>
+								<td>
+									<label><input type="radio" name="1" />通过</label>
+									<label><input type="radio" name="1" />不通过</label>
+								</td>
+								<td>220v</td>
+								<td>220v</td>
+							</tr>
+							<tr>
+								<td>地感类</td>
+								<td>地感管理器</td>
+								<td>工作电压</td>
+								<td>重要</td>
+								<td>
+									<label><input type="radio" name="1" />通过</label>
+									<label><input type="radio" name="1" />不通过</label>
+								</td>
+								<td>220v</td>
+								<td>220v</td>
+							</tr><tr>
+								<td>地感类</td>
+								<td>地感管理器</td>
+								<td>工作电压</td>
+								<td>重要</td>
+								<td>
+									<label><input type="radio" name="1" />通过</label>
+									<label><input type="radio" name="1" />不通过</label>
+								</td>
+								<td>220v</td>
+								<td>220v</td>
+							</tr><tr>
+								<td>地感类</td>
+								<td>地感管理器</td>
+								<td>工作电压</td>
+								<td>重要</td>
+								<td>
+									<label><input type="radio" name="1" />通过</label>
+									<label><input type="radio" name="1" />不通过</label>
+								</td>
+								<td>220v</td>
+								<td>220v</td>
+							</tr>
+						</tbody>
+					</table>
+			</div>
+			<div id="list3" class="list">
+				
+			</div>
+			
+		</div>
+		</div>
+	</body>
+</html>

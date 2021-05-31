@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() { //创建棋盘
+			var map=[];
+					for(let i = 0; i < 10; i++) {
+						let $tr = "<tr>",maps=[];
+						
+						for(let j = 0; j < 10; j++) {
+							maps.push(j)
+							$tr += "<td></td>";
+						}
+						$tr += "</tr>";
+						$("table").append($tr);
+						map.push(maps)
+					}
+					console.log(map)
+					//$("table").delegate("td","click",function(){})
+					var mark = 1,
+						arr = ["黑", '白'];
+					$("td").click(function() {
+						let x=$(this).parent().index(),y=$(this).index(),txt=arr[Number(!mark)],index=Number(!mark),colors=["black","fff"];
+						if($(this).hasClass("fff") || $(this).hasClass("black")) return false;
+						$("i").text(txt);
+						mark = !mark;
+						$(this).addClass(colors[index]);
+						
+						//替換數組內容
+							map[x].splice(y,1,txt);
+							let rule=[map[x][y+m],map[x][y+m],map[x][y-m],map[x+m][y],map[x-m][y]]
+						//	判断横向
+						for(let n=0;n<4;n++){
+							for(let m = 1;m<5;m++){
+							if(txt!=rule[n])
+								break;
+							if(m==4){
+								alert(txt+"棋胜");
+							history.go(0);
+							}
+						}
+						}
+//						for(let m = 1;m<5;m++){
+//							if(txt!=map[x][y+m])
+//								break;
+//							if(m==4){
+//								alert(txt+"棋胜");
+//							history.go(0);
+//							}
+//						}
+//						//	判断横向左
+//						for(let m = 1;m<5;m++){
+//							if(txt!=map[x][y-m])
+//								break;
+//							if(m==4){
+//								alert(txt+"棋胜");
+//							history.go(0);
+//							}
+//						}
+//						//	判断纵向
+//						for(let m = 1;m<5;m++){
+//							if(txt!=map[x+m][y])
+//								break;
+//							if(m==4){
+//								alert(txt+"棋胜");
+//							history.go(0);
+//							}
+//						}
+//						//	判断纵向上
+//						for(let m = 1;m<5;m++){
+//							if(txt!=map[x-m][y])
+//								break;
+//							if(m==4){
+//								alert(txt+"棋胜");
+//							history.go(0);
+//							}
+//						}
+					})
+		})
+	</script>
+	<style type="text/css">
+		table {
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			background: #e89262;
+			}
+
+			tr {
+				height: 10% ;
+			}
+
+			table td {
+				width: 10% ;
+				position: relative;
+			}
+
+			td:after {
+				width: 100% ;
+				height: 100% ;
+				background: #fff;
+				border-radius: 50% ;
+				content: "";
+				display: block;
+				top: 50% ;
+				left: 50% ;
+				position: absolute;
+				z-index: 2;
+				opacity: 0;
+				cursor: pointer;
+			}
+
+			.fff:after {
+				background: #fff;
+				opacity: 1;
+				border: 1px solid #000;
+}
+
+.black:after {
+	background: #000;
+				opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id = "box" >
+		<table border="1px" cellspacing="0" >
+		</table>
+	<h2>当前： <i> 黑 </i> </h2>
+	
+	</div>
+</body>
+</html>

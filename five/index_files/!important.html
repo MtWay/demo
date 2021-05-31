@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>！important</title>
+		<style type="text/css">
+			#box{background: #00f !important; width: 100px;height: 100px;}
+		</style>
+	</head>
+	<body>
+		<div id="box" style="background:#0f0 !important;">
+			
+		</div>
+		<script type="text/javascript">
+			var box =document.getElementById("box");
+			//此时为#0f0;
+			box.style.background="#f00";//此时为#00f因为js替换了内联样式，导致头部样式！important权重提升；
+			//总结js会替换内联样式。
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<canvas id="can" style="border: 1px solid #000000;"></canvas>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$("canvas").attr({width:$("body").width(),height:$(document).height()})
+		var oc =$("canvas")[0].getContext("2d");
+		function stroke(){
+			
+		
+		var a =$("body").width()-10;
+		var b = $("body").height()-10;
+		console.log(a);
+			
+			var n={
+				x:Math.floor(Math.random()*a)+5,
+				y:Math.floor(Math.random()*b)+5,
+				r:5
+			}
+			oc.beginPath()
+			oc.fillStyle="#FF0000";			
+			oc.arc(n.x,n.y,n.r,0,Math.PI*2,true);
+			oc.fill()
+			oc.closePath();
+			console.log(n.x)
+			}
+		stroke();
+		for(var i=0;i<100;i++){
+			stroke();
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+		body{display: flex; height:600px;}
+			@keyframes loding{
+				from{transform: rotate(0);}
+				/*50%{transform: rotate(180deg);}*/
+				to{transform: rotate(360deg);}
+			}
+			
+			div{resize: both;visibility: hidden;}
+			.box{width: 100px;height: 100px;margin: auto;border-top: 1px solid #f00;display: flex;border-radius:50% ;animation: loding 2s infinite linear;}
+			.father{width: 80px;height: 80px;margin: auto;border-top: 1px solid #0f0;display: flex;border-radius: 50%;animation: loding 3s infinite linear;}
+			.son{width: 60px;height: 60px;margin: auto;border-top: 1px solid #00f;display: flex;border-radius: 50%;animation: loding 5s infinite linear;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="father">
+				<div class="son">
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			console.log($(".box")[0].firstChild)
+		</script>
+	</body>
+</html>

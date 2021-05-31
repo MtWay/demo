@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>详情</title>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".iconList img").attr("src","img/no_show@3x.png");
+				$(".first img").attr("src","img/arrive@3x.png");
+			})
+		</script>
+		<style type="text/css">
+			*{margin:0;padding: 0;}
+			body{background: #eee;}
+			li{list-style: none;}
+			header{background: #fff;overflow: hidden;}
+			header li{list-style: none;float: left;position: relative;width: 20%;z-index: 2;}
+			.icon{width: 100%;box-sizing: border-box;padding: 12px 0;position: relative;}
+			.icon:after{width:75%;border-bottom: 1px dashed #7b7b7b;content: "";display: block;margin: 0 auto;position: relative;top:14px;z-index: 1;}
+			.iconList i{width: 50px;margin: 0 auto;display: block;background:#fff;text-align: center;}
+			.icon img{width:44px;}
+			.sale .last{display:none;}
+			.sale li{width:33%;}
+			.typeList{cololr:#313131;text-align: center;font-size: 10px;line-height: 24px;}
+			.cur{color:#187fc3;}
+			.hide{display: none;}
+			#main{padding: 10px;background: #fff;}
+			h3{height: 30px;background: #ededed;color: #313131;clear: both;padding-left:10px;line-height: 30px;font-size: 18px;}
+			.key{font-size: 14px;color: #313131;line-height: 26px;width:25%;display: inline-block;}
+			.value{font-size: 14px;color: #707070;line-height: 26px;}
+			.imgKey{float: left;}
+			.imgdata{width: 75%;float:left;}
+			.imgdata li{width: 25%;float: left;padding:5px;box-sizing: border-box;}
+			.imgdata li img{width: 60px;}
+			button{width:80px;height: 25px;background: #1880c2;color: #fff;margin: 5px 10px;border-radius:5px ;float: right;border: none;}
+			.d0{clear: both;}
+			.record{line-height: 40px;height: 40px;background: #fff;margin-bottom: 1px;padding: 0 10px;}
+			.record .left{font-size: 15px;color: #313131;}
+			.record .right{font-size: 10px;color: #707070;float: right;}
+			.red .left{color: #e60012;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<ul class="icon">
+				<li class="iconList first"><i><img src="img/arrive@3x.png"/></i></li>
+				<li class="iconList "><i><img src="img/no_show@3x.png"/></i></li>
+				<li class="iconList "><i><img src="img/no_show@3x.png"/></i></li>
+				<li class="iconList last"><i><img src="img/no_show@3x.png"/></i></li>
+				<li class="iconList last"><i><img src="img/no_show@3x.png"/></i></li>
+			</ul>
+			<ul class="type">
+				<li class="typeList cur">等待付款</li>
+				<li class="typeList">等待安装</li>
+				<li class="typeList">安装成功</li>
+				<li class="typeList last">退款审核中</li>
+				<li class="typeList last">退款成功</li>
+			</ul>
+		</header>
+		<h3>订单详情</h3>
+		<div id="main">
+			<ul>
+				<li><span class="key">预约ID</span><span id="obuid" class="value">123</span>	</li>
+				<li><span class="key">车牌号</span><span id="obuid" class="value">123</span>	</li>
+				<li><span class="key">申请时间</span><span id="obuid" class="value">123</span></li>
+				<li><span class="key">车主姓名</span><span id="obuid" class="value">123</span></li>
+				<li><span class="key">手机号码</span><span id="obuid" class="value">123</span></li>
+				<li><span class="key">安装地址</span><span id="obuid" class="value">123</span></li>
+				<li>
+					<span class="key imgKey">图片资料</span>
+					<ul class="imgdata">
+						<li><img src="img/arrive@3x.png" /></li>
+						<li><img src="img/arrive@3x.png" /></li>
+						<li><img src="img/arrive@3x.png" /></li>
+						<li><img src="img/arrive@3x.png" /></li>
+					</ul>
+				</li>
+				<button id="pay">去付款</button>
+				<div class="d0">
+					
+				</div>
+				<li><span class="key">预约金额</span><span id="obuid" class="value">600</span></li>
+				<li><span class="key">支付方式</span><span id="obuid" class="value">一网通</span></li>
+				<button id="refund">申请退款</button>
+				<div class="d0">
+				<li><span class="key">退款金额</span><span id="obuid" class="value">123</span></li>
+				<li><span class="key">退款账号</span><span id="obuid" class="value">123</span></li>
+				<li><span class="key ">退款申请时间</span><span id="obuid" class="value">123</span></li>
+			</ul>
+			
+		</div>
+		<h3>订单进度</h3>
+		<footer>
+			<ul>
+				<li class="red record"><span class="left">安居客放好久案说法叫</span><span class="right">2016/12/12 131313</span></li>
+				<li class="record"><span class="left">安居客放好久案说法叫</span><span class="right">2016/12/12 131313</span></li>
+				<li class="record"><span class="left">安居客放好久案说法叫</span><span class="right">2016/12/12 131313</span></li>
+			</ul>
+		</footer>
+	</body>
+</html>

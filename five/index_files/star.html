@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{padding:0;margin:0;font-size:12px;font-weight:700;}
+  input{border:0;background:#002DBF;color:#fff;font-weight:700;font-family:"黑体";fason:expression(this.readOnly=true)}
+  .box{color:#fff;background:#333;padding:5px;width:210px;height:270px;border:1px solid #ccc;margin:0 auto;margin-top:10px;text-align:center;}
+  .box div{margin-bottom:2px;}
+  a.del,a.red,a.yel,a.gre,a.blu,a.pur{overflow:hidden;line-height:18px;border:1px solid #000;border-color:#000;display:inline-block;width:18px;height:18px;background:#000;color:#000;float:left;text-align:center;cursor:default;}
+  /*无图版样式*/
+  a.red{background:#D72F31;color:#a50F31;}
+  a.yel{background:#E2E369;color:#b0c369;}
+  a.gre{background:#3DC133;color:#0ba133;}
+  a.blu{background:#4582D2;color:#1362D2;}
+  a.pur{background:#D147C5;color:#a027C5;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+  <div>高分:<input type="text" id="maxRecord" value="0" size=5 /> 分数:<input type="text" id="nowRecord" value="0" size=5 /></div>
+  <div>目标:<input type="text" id="lvlRecord" value="1000" size=5 /> 关卡:<input type="text" id="level" value="1" size=5 /></div>
+  <div><input type="text" id="info" value="" size=20 style="background:none;text-align:center;"/></div>
+  <div id="show"></div>
+</div>
+<div align=center><input type="button" onclick="autodo()" value="自动查找"></div>
+<div id="test"></div>
+		<script type="text/javascript">
+			var xx=new Array();
+var col=["red","yel","gre","blu","pur","del"];
+var val=[0,1000,3000,6000,8000,10000,13000,15000,17000,20000];
+var m=n=10,aSc=5,btn=0;
+var sel=new Array();//当前选中
+var xxnum=new Array(0,0,0,0,0);
+var xxsx=new Array();
+var aa;
+
+function $id(id){return document.getElementById(id);}
+
+function init(lvl){
+  xx=mysort();
+  //$id("test").innerHTML=xx.join(",");
+  getNum();
+  $id("test").innerHTML+=xxnum.join(",")+"<br>红,黄,青,绿,紫<br>";
+  
+  var xxnum1=xxnum.concat();
+  xxnum1.sort();
+  for(i=0;i<5;i++){
+    for(j=0;j<5;j++){
+      if(xxnum1[i]==xxnum[j]&&!inArray(j,xxsx,false)){xxsx[xxsx.length]=j;}
+    }
+  }
+  $id("test").innerHTML+=xxnum1.join(",")+"<br>"+xxsx.join(",")+"<br>";
+  showxx();
+  if(lvl>=val.length){v=parseInt($id("lvlRecord").value)+4000;}else{v=val[lvl];}  
+  $id("lvlRecord").value=v;
+  $id("level").value=lvl;
+  if(lvl==1){
+  $id("nowRecord").value=0;
+  }
+}
+
+function getNum(){
+  for(i=0;i<m*n;i++){xxnum[xx[i]]++;}
+}
+
+var sign=null;
+var cnxt=false;
+function autodo(){
+  cnxt=true;
+  sign=setInterval("autodo_()",1);
+ // cnxt=false;
+}
+function autodo_(){
+  if(!cnxt){return;}
+  cnxt=false;
+  var astr=all4();
+  if(astr=="|"||astr==''){clearInterval(sign);sign=null;return;}
+  $id("test").innerHTML+=astr+"<br>";
+  strArr=astr.split("|");
+  for(var ii=1;ii<strArr.length-1;ii++){//有15个以上的,直接先消除
+    tmp=strArr[ii].split(",");
+    if(tmp.length>=15){
+    var id=parseInt(tmp[0]);
+    lClk(id);lClk(id);
+    }
+  }
+  for(var jj=0;jj<5;jj++){
+  k=0;
+  aax=xxsx[jj];
+  //alert("jj="+jj);
+  for(var ii=1;ii<strArr.length-1;ii++){
+    var id=parseInt(strArr[ii].split(",")[0]);
+    if(xx[id]==aax){
+      //alert(id+" "+xx[id]+" "+aax);
+      k=1;lClk(id);lClk(id);break;
+    }
+  }
+  if(k==1)break;
+  }
+  cnxt=true;
+}
+
+function showxx(){
+  var str="";
+  for(i=0;i<m*n;i++)str+="<a class='"+col[xx[i]]+"' id='a"+i+"'>★</a>";//★
+  $id("show").innerHTML=str;
+  myclick();
+}
+
+window.onload=function(){init(1);}
+
+function mysort(){
+  var original = new Array; //原始数组 
+  var original1 = new Array;
+  for(var i=0;i<m;i++){for(var j=0;j<n;j++){original[i*n+j] = i % 5;}}
+  original.sort(function(){return(0.5 - Math.random());});//这句是关键 随机打乱数据序号
+  str="";
+  for(var j=0;j<m*n;j++){//再随机取出所有星星
+    var t=Math.round(Math.random() * (m*n-1));
+    original1[j] = original[t];
+  }
+  return(original1);
+}
+
+
+function myclick(){
+  var as=$id("show").getElementsByTagName("a");
+  for(var i=0;i<as.length;i++){
+    as[i].onmousedown=function(event){
+      event=event?event:window.event;
+      if(event.button==3){
+        btn=3;return false;
+      }
+    }
+    as[i].oncontextmenu=function(){return false;}
+    as[i].onmouseup=function(event){
+      var id=parseInt(this.id.replace("a",""));
+      if(btn==3){//左右双键
+        return false;
+      }else{
+       if(window.event.button==1||event.button==0){lClk(id);}//左键
+       if(event.button==2||window.event.button==2){return false;}//右键
+      }
+      return false;
+    }
+  }
+}
+
+function lClk(id){
+  $id("info").value="";
+  if(xx[id]==5){return false;}
+  if($id("a"+id).style.borderColor==""){//第一次点击
+    sel=new Array;
+    fall(id);
+    sellen=sel.length;
+    if(sellen>=2){
+   for(var i=0;i<sellen;i++){$id("a"+sel[i]).style.borderColor="#fff";}
+      var ttlfen=5 * sellen * sellen;
+      $id("info").value=sellen + "个星星 " + ttlfen + "分";
+    }
+  }else{//第二次点击,消除
+    $id("nowRecord").value=parseInt($id("nowRecord").value) + 5 * sel.length * sel.length;
+    if(parseInt($id("nowRecord").value)>parseInt($id("maxRecord").value)){$id("maxRecord").value=$id("nowRecord").value;}
+    sel.sort();
+    for(var i=0;i<sel.length;i++){
+      xx[sel[i]]=5;
+    }
+    for(var i=0;i<sel.length;i++){
+      alldown(sel[i]);
+    }
+    for(var j=n-1;j>=0;j--){//检测是否有列空,有则左移
+     s=1;
+     for(var i=0;i<m;i++){
+      if(xx[i*n+j]!=5){s=0;break;}
+     }
+     if(s==1){allleft(j);}
+    }
+    s=0;s=chkend();
+    if(s>0){//说明已经没有可消灭的星星了,本局结束
+     gameend(s);
+    }
+    showxx();
+  }
+}
+
+function alldown(id){
+  var nn=id % n;
+  var nm=(id-id%n)/n;
+  var s=1;
+ for(var i=0;i<nm;i++){//往下移
+  xx[(nm-i)*n+nn]=xx[(nm-i-1)*n+nn];
+  xx[(nm-i-1)*n+nn]=5;
+ }
+}
+
+function allleft(nn){
+ for(var i=0;i<m;i++){
+  for(var j=nn;j<n-1;j++){
+   xx[i*n+j]=xx[i*n+j+1];
+   xx[i*n+j+1]=5;
+  }
+ }
+}
+
+function fall(id){
+  sel[sel.length]=id;
+  var cname=$id("a"+id).className;
+  var a4=find_a4(id);
+  for(var ia=0;ia<a4.length;ia++){
+    if(xx[a4[ia]]==xx[id] && (!inArray(a4[ia],sel,false))){fall(a4[ia]);}
+  }
+}
+
+function all4(){
+  str="|";
+  for(i=0;i<m*n;i++){
+    if(str.replace(/\|/g,",").indexOf(","+i+",")<0 && xx[i]!=5){
+      sel=new Array();
+      fall(i);
+      if(sel.length>1){str+=sel.join(",")+"|";}
+      sel=new Array();
+    }
+  }
+  return(str);
+}
+
+function find_a4(id){
+  var as=new Array;
+  if(id-n>0){as[as.length]=id-n;}//上
+  if(id<(m*n-1) && ((id-id%n)/n==(id+1-(id+1)%n)/n)){as[as.length]=id+1;}//右
+  if((id+n)<m*n){as[as.length]=id+n;}//下
+  if((id>0) && ((id-id%n)/n==(id-1-(id-1)%n)/n)){as[as.length]=id-1;}//左
+  return(as);
+}
+
+function chkend(){
+ var k=0;
+ for(var i=0;i<m*n;i++){//检测是否游戏结束
+  if(xx[i]!=5){
+   k++;
+   var a4=find_a4(i);
+   for(var j=0;j<a4.length;j++){
+    if(xx[a4[j]]==xx[i]){return(0);}
+   }
+  }
+ }
+    if(k==0)k=100;
+ return(k);
+}
+
+function gameend(s){
+  if(sign){clearInterval(sign);sign=null;}
+    if(s==100)s=0;
+ if(s<10){
+  ttl=2000-20*s*s;
+  $id("nowRecord").value=parseInt($id("nowRecord").value) + ttl;
+  if(parseInt($id("nowRecord").value)>=parseInt($id("maxRecord").value)){$id("maxRecord").value=$id("nowRecord").value;}
+  str="剩余"+ s +"个星星,奖励"+ ttl +"分";
+ }else{str="";}
+ if(parseInt($id("nowRecord").value)>=parseInt($id("lvlRecord").value)){if(str!=""){alert(str);}init(parseInt($id("level").value)+1);}
+ else{alert("游戏结束,重新开始!");init(1);}
+}
+
+function inArray(needle,array,bool){
+ if(typeof needle=="string"||typeof needle=="number"){
+  var len=array.length;
+  for(var i=0;i<len;i++){
+   if(needle===array[i]){
+    if(bool){return i;}
+    return true;
+   }
+  }
+  return false;
+ }
+}
+		</script>
+	</body>
+</html>

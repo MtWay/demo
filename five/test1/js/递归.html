@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>递归</title>
+		<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var a={
+					a:"1"
+				}
+				console.log(a);
+				console.log(a.a);
+				console.log(a[a]);//错误写法
+				console.log(a["a"]);
+				
+			})
+		</script>
+		<style type="text/css">
+			li{width: 100px;height: 100px;border-radius: 100px;border: 1px solid #f00;}
+			.last{border-bottom: none;}
+			.secnd{border-bottom-color:rgba(0,0,0,0);}
+			.BBQ{border-bottom: #f00 solid 26px;width:0;height:0;border-right: rgba(0,0,0,0) 4px solid;border-left: rgba(0,0,0,1) 14px solid;}
+			#box{width:0;height:0;
+				border-top: 25px solid black;
+  border-bottom: 25px solid black;
+  border-left: 6px solid rgba(0,0,0,);
+  border-right: 6px solid transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<ol start="2" type="i">
+			<li class="last"></li><li class="secnd"></li><li id="last"></li><li></li>
+		</ol>
+		
+		<div id="" class="BBQ">
+			<div id="" class="corn">
+				
+			</div>
+		</div>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			
+		
+			function Fibonacci (n) {
+  if ( n <= 1 ) {return 1};
+
+  return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+
+//Fibonacci(10)
+
+function Fibonacci2 (n , ac1 = 1 , ac2 = 1) {
+  if( n <= 1 ) {return ac2};
+
+  return Fibonacci2 (n - 1, ac2, ac1 + ac2);
+}
+
+//Fibonacci2(100) // 573147844013817200000
+//Fibonacci2(1000) // 7.0330367711422765e+208
+//Fibonacci2(10000
+	function sum(i,n){
+		if(i===1)return n;
+		return sum(i-1,i+n);
+	}
+	console.log(sum(5,1))
+		</script>
+	</body>
+</html>

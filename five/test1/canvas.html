@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>画布学习</title>
+		<style type="text/css">
+			#can {
+				border: 1px #000000 solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="can" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		//const [bar, foo] = [1];
+		var s = "按𠮷'𠮷a'";
+		console.log(s.length, s.charAt(0), s.charAt(1), s.charCodeAt(0), s.charCodeAt(1), s, String.fromCharCode(0x20BB7))
+		s.length // 2
+		s.charAt(0) // ''
+		s.charAt(1) // ''
+		s.charCodeAt(0) // 55362
+		s.charCodeAt(1) // 57271
+		var map = new Map();
+		console.log('\u004F\u030C'.normalize())
+		var [a, b] = [2, 1];
+		[a, b] = [b, a];
+		console.log(a)
+		console.log(`
+			string text line 1
+			string text line 1
+string text line 2`);
+		//花
+var str="Visit W3School!"
+document.write(str.search("W3School"))
+		function draw1(id) {
+			var canvas = document.getElementById(id);
+			if(canvas == null)
+				return false;
+			var context = canvas.getContext("2d");
+			context.fillStyle = "#EEEEFF";
+			context.fillRect(0, 0, 400, 300);
+			var n = 0;
+			var dx = 150;
+			var dy = 150;
+			var s = 100;
+			context.beginPath();
+			context.fillStyle = 'rgb(100,255,100)';
+			context.strokeStyle = 'rgb(0,0,100)';
+			var x = Math.sin(0);
+			var y = Math.cos(0);
+			var dig = Math.PI / 15 * 17;
+			//for (var i = 0; i < 30; i++) {
+			var i = 0;
+			setInterval(function() {
+					if(i < 31) {
+						console.log(1)
+						var x = Math.sin(i * dig);
+						var y = Math.cos(i * dig);
+						context.lineTo(dx + x * s, dy + y * s);
+						context.fill();
+						context.stroke();
+					}
+					i++;
+				}, 100)
+				// context.rotate(Math.PI / 4);
+				//context.translate(200, -100);
+				//context.scale(1.5, 1.5);
+				//context.fillRect(0, 0, 100, 100);
+				//               var x = Math.sin(i * dig);
+				//               var y = Math.cos(i * dig);
+				//               context.lineTo(dx + x * s, dy + y * s);
+				//}
+				/*context.closePath();
+				context.fill();
+				context.stroke();*/
+
+		}
+		//贝塞尔曲线
+		function draw24(id) {
+			var canvas = document.getElementById(id);
+			if(canvas == null) {
+				return false;
+			}
+			var context = canvas.getContext("2d");
+
+			context.moveTo(50, 50);
+			context.bezierCurveTo(50, 50, 150, 50, 150, 150);
+			context.stroke();
+			context.quadraticCurveTo(150, 250, 250, 250);
+			context.stroke();
+		}
+
+		function draw2(id) {
+			var canvas = document.getElementById(id);
+			if(canvas == null) {
+				return false;
+			}
+			var context = canvas.getContext("2d");
+			context.fillStyle = "#EEEFF";
+			context.fillRect(0, 0, 400, 300);
+			var n = 0;
+			var dx = 150;
+			var dy = 150;
+			var s = 100;
+			context.beginPath();
+			context.globalCompositeOperation = 'and';
+			context.fillStyle = 'rgb(100,255,100)';
+			var x = Math.sin(0);
+			var y = Math.cos(0);
+			var dig = Math.PI / 15 * 11;
+			context.moveTo(dx, dy);
+			//for (var i = 0; i < 30; i++) {
+			var i = 0;
+			setInterval(function() {
+				if(i < 31) {
+					var x = Math.sin(i * dig);
+					var y = Math.cos(i * dig);
+
+					context.bezierCurveTo(dx + x * s, dy + y * s - 100, dx + x * s + 100, dy + y * s, dx + x * s, dy + y * s);
+					context.fill();
+					context.stroke();
+				}
+				i++;
+			}, 100)
+
+			//}
+			/*context.closePath();
+			context.fill();
+			context.stroke();*/
+		}
+
+		function draw26(id) {
+			//同一个圆心画球型
+			var canvas = document.getElementById(id);
+			if(canvas == null)
+				return false;
+			var context = canvas.getContext('2d');
+			var g1 = context.createRadialGradient(200, 150, 0, 200, 150, 100);
+			g1.addColorStop(0.1, 'rgb(255,0,0)');
+			g1.addColorStop(1, 'rgb(50,0,0)');
+			context.fillStyle = g1;
+			context.beginPath();
+			context.arc(200, 150, 100, 0, Math.PI * 2, true);
+			context.closePath();
+			context.fill();
+
+			//不同圆心看径向渐变模型
+			/*var canvas = document.getElementById(id);
+			if (canvas == null)
+			return false;
+			var context = canvas.getContext('2d');
+			var g1 = context.createRadialGradient(100, 150, 10, 300, 150, 50);
+			g1.addColorStop(0.1, 'rgb(255,0,0)');
+			g1.addColorStop(0.5, 'rgb(0,255,0)');
+			g1.addColorStop(1, 'rgb(0,0,255)');
+			context.fillStyle = g1;
+			context.fillRect(0, 0, 400, 300);*/
+
+		}
+
+		function draw10(id) {
+			var canvas = document.getElementById(id);
+			if(canvas == null) {
+				return false;
+			}
+			var context = canvas.getContext("2d");
+			var oprtns = new Array(
+				"source-over",
+				"destination-over",
+				"source-in",
+				"destination-in",
+				"source-out",
+				"destination-out",
+				"source-atop",
+				"destination-atop",
+				"lighter",
+				"xor",
+				"copy"
+			);
+			var i = 0; //组合效果编号
+
+			//结合setinterval动态显示组合
+			var interal = setInterval(function() {
+				if(i == 10) {
+					i = 0;
+				} else {
+					i++;
+				}
+				//蓝色矩形
+				context.fillStyle = "blue";
+				context.fillRect(10, 10, 60, 60);
+				//设置组合方式 
+				context.globalCompositeOperation = oprtns[i];
+				//设置新图形（红色圆形）
+				context.beginPath();
+				context.fillStyle = "red";
+				context.arc(60, 60, 30, 0, Math.PI * 2, false);
+				context.fill();
+			}, 1000);
+
+		}
+		//draw1("can");
+		//draw24("can")
+		//		draw2("can")
+		//draw26("can")
+		draw10("can")
+	</script>
+
+</html>
