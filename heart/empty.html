@@ -198,6 +198,7 @@
 			var oy = canvas.offsetTop;
 			//				console.log(oy)
 			$(document).on("touchmove", function (e) {
+				e.preventDefault();
 				// console.log(e);
 					var l = e.touches[0].clientX-25,
 						t = e.touches[0].clientY - 25,
