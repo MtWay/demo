@@ -159,7 +159,7 @@
 
 		canvas {
 			width: 100vw;
-			height: 100vw;
+			height: 100vh;
 			margin: 0 auto;
 			display: block;
 			/* border: 1px solid #f00; */
@@ -199,6 +199,7 @@
 			//				console.log(oy)
 			$(document).on("touchmove", function (e) {
 				e.preventDefault();
+				e.stopPropagation()
 				// console.log(e);
 					var l = e.touches[0].clientX-25,
 						t = e.touches[0].clientY - 25,
@@ -282,8 +283,9 @@
 
 			//				show('123456')
 			//				showimg('img/f28f240cb4f8156ba242bfd1feb7dc30.jpg');
-			showimg('../assess/76978.jpg');
+			showimg('../assess/b3.jpg');
 			var ww = $('body').width();
+			var wh = $('body').height();
 
 			function showimg(src, flag) {
 				resize();
@@ -293,16 +295,15 @@
 				//				img.width=800;
 				img.onload = function () {
 					var sw = img.width / ww;
-					var sh = img.height / ww;
+					var sh = img.height / wh;
 					var s = sw > sh ? sh : sw;
 
 					var w = img.width / s;
 					var h = img.height / s;
 					var x = -(w - ww) / 2;
-					var y = -(h - ww) / 2;
-					y=0
+					var y = -(h - wh) / 2;
 					dcontext.fillStyle = "#fff";
-dcontext.rect(0, 0, ww, ww);
+dcontext.rect(0, 0, ww, wh);
 					dcontext.fill();
 					dcontext.drawImage(img, x, y, w, h);
 					context.drawImage(img, x, y, w, h);
@@ -316,14 +317,14 @@ dcontext.rect(0, 0, ww, ww);
 					
 					var a = getImageData({
 						x: ww / 2,
-						y: ww / 2,
+						y: wh / 2,
 						dx:20,
 						dy:20,
 						w: 1,
 						h: 1
 					});
 					// console.log(a)
-					a.radius = ww;
+					a.radius = wh;
 					ans.push(a)
 					//				var arr = getImageData();
 					drawmsk(ans);
@@ -360,7 +361,7 @@ dcontext.rect(0, 0, ww, ww);
 				if(opt.x<0)opt.x=0;
 				if(opt.y<0)opt.y=0;
 				if(opt.x>ww-1)opt.x=ww-1;
-				if(opt.y>ww-1)opt.y=ww-1;
+				if(opt.y>wh-1)opt.y=wh-1;
 				opt.x+=opt.dx ||0;
 				opt.y+=opt.dy||0;
 				var imageData = dcontext.getImageData(opt.x, opt.y, opt.w, opt.h);
