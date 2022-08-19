@@ -178,8 +178,9 @@
 		/*canvas{background: #0f0 ;}*/
 	</style>
 	<!-- <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script> -->
-	<script src="https://www.17sucai.com/preview/1085771/2018-08-01/timetable/script/zepto.min.js"
-		type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="https://www.17sucai.com/preview/1085771/2018-08-01/timetable/script/zepto.min.js"
+		type="text/javascript" charset="utf-8"></script> -->
+		<script src="../data/js/zepto_1.1.3.js"></script>
 	<script type="text/javascript">
 		$(function () {
 			let kl = 8;
@@ -283,7 +284,17 @@
 
 			//				show('123456')
 			//				showimg('img/f28f240cb4f8156ba242bfd1feb7dc30.jpg');
-			showimg('../assess/b.jpg');
+			//获取url参数
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = decodeURI(window.location.search.substr(1)).match(reg);
+	if(r != null) return unescape(r[2]);
+	return null;
+}
+
+let num = getQueryString("img");
+
+			showimg('./img/xx'+num+'.jpg');
 			var ww = $('body').width();
 			var wh = $('body').height();
 
@@ -296,7 +307,7 @@
 				img.onload = function () {
 					var sw = img.width / ww;
 					var sh = img.height / wh;
-					var s = sw > sh ? sh : sw;
+					var s = sw < sh ? sh : sw;
 
 					var w = img.width / s;
 					var h = img.height / s;
